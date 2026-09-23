@@ -1,0 +1,105 @@
+{
+  "category": "vehicle",
+  "description": "",
+  "exports": [
+    {
+      "id": "in",
+      "node": "feed",
+      "socket": "in"
+    },
+    {
+      "id": "out",
+      "node": "through",
+      "socket": "out"
+    },
+    {
+      "id": "branch",
+      "node": "diverging",
+      "socket": "out"
+    }
+  ],
+  "id": "exp-transport-rail_junction",
+  "instances": [
+    {
+      "id": "switch",
+      "part": "exp.transport.rail_switch",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "out",
+        "socket": "in",
+        "target": "switch"
+      },
+      "id": "feed",
+      "part": "exp.transport.rail_straight"
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "out",
+        "target": "switch"
+      },
+      "id": "through",
+      "part": "exp.transport.rail_straight"
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "branch",
+        "target": "switch"
+      },
+      "id": "diverging",
+      "part": "exp.transport.rail_straight"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "transport",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "transport",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "theme": "rail",
+    "units": "metres"
+  },
+  "name": "道岔分支模块 · 三向接轨",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "rail",
+    "vehicle",
+    "D-E",
+    "transport"
+  ],
+  "version": "3.4.0"
+}

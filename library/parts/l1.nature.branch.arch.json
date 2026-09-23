@@ -1,0 +1,723 @@
+{
+  "anchor": "base",
+  "category": "nature",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.8
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            1,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.8
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "拱垂枝段；可复用的 自然与植被 语义部件，不包含上层设备行为。",
+  "id": "l1.nature.branch.arch",
+  "level": 1,
+  "material": "mat.leaf",
+  "name": "拱垂枝段",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 1,
+        "maximum": 1.75,
+        "minimum": 0.55,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "nature",
+    "repair39": {
+      "audit_id": "l1.nature.branch.arch",
+      "commercial_certification": false,
+      "scope": "authored-geometry; current evidence/v3.9.0"
+    },
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "repair39": {
+    "baseline": "3.8.0",
+    "change": "用连续曲率、多截面半径递减和自然弯曲取代折线拐角；根部保留装配直径，梢端逐渐变细。",
+    "connector_contract": "existing named sockets preserved; contact tests in release evidence",
+    "contracts": {},
+    "legacy_geometry_sha256": "cf062b51e57986a3ea70de2baffd3b9b7ba886df53bf1ffa61101ea3e5b4e142",
+    "source_revision": "3.9.0",
+    "stable_public_id": true
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative/anatomy component; owning assembly authors collision",
+      "type": "none"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/nature.json#l1.nature.branch.arch",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "nature",
+    "family": "branch",
+    "profile": "arch",
+    "purpose": "拱垂枝段",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#A77143",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "arch_00",
+        "rings": [
+          {
+            "c": [
+              -0.3,
+              0.0,
+              0.0
+            ],
+            "r": [
+              0.065,
+              0.065
+            ]
+          },
+          {
+            "c": [
+              -0.2994574652777778,
+              0.1175043402777778,
+              0.004317491319444445
+            ],
+            "r": [
+              0.06234702835175937,
+              0.06234702835175937
+            ]
+          },
+          {
+            "c": [
+              -0.29315972222222214,
+              0.2250347222222222,
+              0.008498263888888889
+            ],
+            "r": [
+              0.05972208440034538,
+              0.05972208440034538
+            ]
+          },
+          {
+            "c": [
+              -0.28160156249999996,
+              0.3226171875,
+              0.012509765625
+            ],
+            "r": [
+              0.05712618339748769,
+              0.05712618339748769
+            ]
+          },
+          {
+            "c": [
+              -0.2652777777777778,
+              0.41027777777777774,
+              0.016319444444444445
+            ],
+            "r": [
+              0.054560427300142315,
+              0.054560427300142315
+            ]
+          },
+          {
+            "c": [
+              -0.2446831597222223,
+              0.48804253472222225,
+              0.01989474826388889
+            ],
+            "r": [
+              0.05202601686839975,
+              0.05202601686839975
+            ]
+          },
+          {
+            "c": [
+              -0.22031250000000002,
+              0.5559375,
+              0.023203125
+            ],
+            "r": [
+              0.049524266175626476,
+              0.049524266175626476
+            ]
+          },
+          {
+            "c": [
+              -0.19266059027777782,
+              0.6139887152777777,
+              0.026212022569444444
+            ],
+            "r": [
+              0.04705662017240006,
+              0.04705662017240006
+            ]
+          },
+          {
+            "c": [
+              -0.1622222222222223,
+              0.6622222222222223,
+              0.02888888888888889
+            ],
+            "r": [
+              0.04462467616420821,
+              0.04462467616420821
+            ]
+          },
+          {
+            "c": [
+              -0.12949218750000002,
+              0.7006640625,
+              0.031201171875000003
+            ],
+            "r": [
+              0.04223021037396726,
+              0.04223021037396726
+            ]
+          },
+          {
+            "c": [
+              -0.09496527777777783,
+              0.7293402777777778,
+              0.033116319444444445
+            ],
+            "r": [
+              0.03987521121232433,
+              0.03987521121232433
+            ]
+          },
+          {
+            "c": [
+              -0.059136284722222265,
+              0.7482769097222222,
+              0.03460177951388889
+            ],
+            "r": [
+              0.03756192154985083,
+              0.03756192154985083
+            ]
+          },
+          {
+            "c": [
+              -0.0225,
+              0.7575,
+              0.035625000000000004
+            ],
+            "r": [
+              0.03529289330712403,
+              0.03529289330712403
+            ]
+          },
+          {
+            "c": [
+              0.01444878472222215,
+              0.7570355902777778,
+              0.036153428819444444
+            ],
+            "r": [
+              0.03307105927938026,
+              0.03307105927938026
+            ]
+          },
+          {
+            "c": [
+              0.051215277777777714,
+              0.7469097222222221,
+              0.036154513888888885
+            ],
+            "r": [
+              0.03089982970272925,
+              0.03089982970272925
+            ]
+          },
+          {
+            "c": [
+              0.08730468749999999,
+              0.7271484375,
+              0.035595703125
+            ],
+            "r": [
+              0.028783225422241192,
+              0.028783225422241192
+            ]
+          },
+          {
+            "c": [
+              0.12222222222222219,
+              0.6977777777777778,
+              0.034444444444444444
+            ],
+            "r": [
+              0.026726067171471666,
+              0.026726067171471666
+            ]
+          },
+          {
+            "c": [
+              0.15547309027777773,
+              0.6588237847222224,
+              0.0326681857638889
+            ],
+            "r": [
+              0.02473425464827341,
+              0.02473425464827341
+            ]
+          },
+          {
+            "c": [
+              0.18656250000000002,
+              0.6103125,
+              0.030234375
+            ],
+            "r": [
+              0.022815197102896985,
+              0.022815197102896985
+            ]
+          },
+          {
+            "c": [
+              0.2149956597222222,
+              0.5522699652777778,
+              0.027110460069444446
+            ],
+            "r": [
+              0.020978517276606788,
+              0.020978517276606788
+            ]
+          },
+          {
+            "c": [
+              0.24027777777777773,
+              0.48472222222222233,
+              0.023263888888888896
+            ],
+            "r": [
+              0.019237293786692113,
+              0.019237293786692113
+            ]
+          },
+          {
+            "c": [
+              0.2619140625,
+              0.40769531249999996,
+              0.018662109375
+            ],
+            "r": [
+              0.017610500887514882,
+              0.017610500887514882
+            ]
+          },
+          {
+            "c": [
+              0.2794097222222222,
+              0.3212152777777778,
+              0.013272569444444448
+            ],
+            "r": [
+              0.016128640185254867,
+              0.016128640185254867
+            ]
+          },
+          {
+            "c": [
+              0.2922699652777777,
+              0.2253081597222224,
+              0.007062717013888901
+            ],
+            "r": [
+              0.014851032284753603,
+              0.014851032284753603
+            ]
+          },
+          {
+            "c": [
+              0.3,
+              0.12,
+              0.0
+            ],
+            "r": [
+              0.014,
+              0.014
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 12,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.8,
+    1,
+    0.8
+  ],
+  "source": {
+    "authoring": "tools/repair39/nature.py",
+    "license": "project-authored",
+    "revision": "3.9.0",
+    "type": "original_structural_lowpoly_rebuild"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "nature",
+    "L1-Expansion",
+    "nature",
+    "branch",
+    "arch",
+    "Advanced-Lowpoly-3.9"
+  ],
+  "theme": "l1-nature",
+  "version": "3.9.0"
+}

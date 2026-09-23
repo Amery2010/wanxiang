@@ -1,0 +1,1306 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.64
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.16
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "target",
+      "interface": "surface",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.64
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.43,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.16
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "有清晰穿环空间和安装底座的钩索目标；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "traversal",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "有清晰穿环空间和安装底座的钩索目标",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.gameplay.game_traversal.grapple_ring.webp"
+  },
+  "id": "l1.gameplay.game_traversal.grapple_ring",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "钩索目标穿环",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.16,
+        "maximum": 0.28,
+        "minimum": 0.08800000000000001,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.64,
+        "maximum": 1.12,
+        "minimum": 0.35200000000000004,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "gameplay",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "gameplay",
+    "family": "game_traversal",
+    "game_kit": "traversal",
+    "game_use": "动作冒险 / 平台跳跃 / 跑酷",
+    "profile": "grapple_ring",
+    "purpose": "有清晰穿环空间和安装底座的钩索目标",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#BE8852",
+        "depth": 0.072,
+        "holes": [
+          [
+            [
+              0.245,
+              0.43
+            ],
+            [
+              0.23665182744082172,
+              0.4934106660501176
+            ],
+            [
+              0.2121762239271875,
+              0.5525
+            ],
+            [
+              0.17324116139070414,
+              0.603241161390704
+            ],
+            [
+              0.12250000000000003,
+              0.6421762239271874
+            ],
+            [
+              0.06341066605011758,
+              0.6666518274408217
+            ],
+            [
+              1.5001923289555077e-17,
+              0.675
+            ],
+            [
+              -0.06341066605011755,
+              0.6666518274408217
+            ],
+            [
+              -0.12249999999999994,
+              0.6421762239271875
+            ],
+            [
+              -0.1732411613907041,
+              0.6032411613907042
+            ],
+            [
+              -0.2121762239271875,
+              0.5525
+            ],
+            [
+              -0.2366518274408217,
+              0.49341066605011763
+            ],
+            [
+              -0.245,
+              0.43000000000000005
+            ],
+            [
+              -0.23665182744082172,
+              0.3665893339498824
+            ],
+            [
+              -0.21217622392718752,
+              0.30750000000000005
+            ],
+            [
+              -0.17324116139070422,
+              0.25675883860929594
+            ],
+            [
+              -0.12250000000000011,
+              0.21782377607281259
+            ],
+            [
+              -0.06341066605011755,
+              0.19334817255917827
+            ],
+            [
+              -4.500576986866523e-17,
+              0.185
+            ],
+            [
+              0.06341066605011747,
+              0.19334817255917824
+            ],
+            [
+              0.12250000000000003,
+              0.21782377607281253
+            ],
+            [
+              0.17324116139070408,
+              0.2567588386092958
+            ],
+            [
+              0.2121762239271874,
+              0.3074999999999999
+            ],
+            [
+              0.23665182744082167,
+              0.3665893339498822
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "grapple_ring_00",
+        "outline": [
+          [
+            0.32,
+            0.43
+          ],
+          [
+            0.3090962644125019,
+            0.5128220944328066
+          ],
+          [
+            0.27712812921102037,
+            0.59
+          ],
+          [
+            0.22627416997969524,
+            0.6562741699796952
+          ],
+          [
+            0.16000000000000003,
+            0.7071281292110203
+          ],
+          [
+            0.08282209443280664,
+            0.7390962644125019
+          ],
+          [
+            1.959434878635765e-17,
+            0.75
+          ],
+          [
+            -0.08282209443280661,
+            0.7390962644125019
+          ],
+          [
+            -0.15999999999999992,
+            0.7071281292110203
+          ],
+          [
+            -0.22627416997969518,
+            0.6562741699796952
+          ],
+          [
+            -0.27712812921102037,
+            0.59
+          ],
+          [
+            -0.3090962644125018,
+            0.5128220944328067
+          ],
+          [
+            -0.32,
+            0.43000000000000005
+          ],
+          [
+            -0.3090962644125019,
+            0.34717790556719336
+          ],
+          [
+            -0.2771281292110204,
+            0.2700000000000001
+          ],
+          [
+            -0.22627416997969532,
+            0.20372583002030492
+          ],
+          [
+            -0.16000000000000014,
+            0.15287187078897968
+          ],
+          [
+            -0.08282209443280661,
+            0.12090373558749812
+          ],
+          [
+            -5.878304635907295e-17,
+            0.10999999999999999
+          ],
+          [
+            0.0828220944328065,
+            0.12090373558749812
+          ],
+          [
+            0.16000000000000003,
+            0.15287187078897962
+          ],
+          [
+            0.22627416997969516,
+            0.20372583002030473
+          ],
+          [
+            0.2771281292110203,
+            0.26999999999999985
+          ],
+          [
+            0.3090962644125018,
+            0.3471779055671931
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.1056,
+            0.08800000000000001,
+            0.0704
+          ]
+        },
+        "color": "#4C6573",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.1,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "grapple_ring_01",
+        "roundable": false,
+        "size": [
+          0.24,
+          0.2,
+          0.16
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.0528,
+            0.0572,
+            0.044000000000000004
+          ]
+        },
+        "color": "#4C6573",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.23,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "grapple_ring_02",
+        "roundable": false,
+        "size": [
+          0.12,
+          0.13,
+          0.1
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#60CAD6",
+        "depth": 0.075,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.emissive.cyan",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.64
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.16
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "grapple_ring_03",
+        "outline": [
+          [
+            -0.05,
+            0.74
+          ],
+          [
+            0,
+            0.8
+          ],
+          [
+            0.05,
+            0.74
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.64,
+    0.8,
+    0.16
+  ],
+  "source": {
+    "authoring": "tools/game410/traversal.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "gameplay",
+    "L1-Expansion",
+    "gameplay",
+    "game_traversal",
+    "grapple_ring",
+    "Game-Expansion-3.10",
+    "traversal",
+    "攀爬与平台"
+  ],
+  "theme": "l1-gameplay",
+  "version": "3.10.0"
+}

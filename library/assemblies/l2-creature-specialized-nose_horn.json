@@ -1,0 +1,279 @@
+{
+  "category": "animal",
+  "description": "双鼻角根组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.creature.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.18
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.creature.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.7,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.18
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-creature-specialized-nose_horn",
+  "instances": [
+    {
+      "id": "socket",
+      "params": {},
+      "part": "l1.creature.foot.paw",
+      "pivot": [
+        -0.0032724477350711823,
+        0.02116423472762108,
+        0.02375621348619461
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.2800000381469738,
+        1.1666667289618022,
+        1.0568324563854912
+      ]
+    },
+    {
+      "id": "horn0",
+      "params": {},
+      "part": "l1.creature.horn.rhino",
+      "pivot": [
+        0.0,
+        -0.00635707238689065,
+        0.0
+      ],
+      "position": [
+        0,
+        0.09,
+        -0.08
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.36666665209664295,
+        0.6384767803968422,
+        0.4647651080650575
+      ]
+    },
+    {
+      "id": "horn1",
+      "params": {},
+      "part": "l1.creature.horn.rhino",
+      "pivot": [
+        0.0,
+        -0.00635707238689065,
+        0.0
+      ],
+      "position": [
+        0,
+        0.09,
+        0.09
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.36666665209664295,
+        0.4256511869312281,
+        0.4647651080650575
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "creature",
+    "functional": {
+      "assembly_order": [
+        "socket",
+        "horn0",
+        "horn1"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.8,
+        0.7,
+        0.6
+      ],
+      "family": "specialized",
+      "mount_dimensions_m": [
+        0.22,
+        0.18
+      ],
+      "notes": [
+        "复用现有角、爪、膜和软组织几何；不是解剖精度模型，需与目标生物比例匹配。"
+      ],
+      "purpose": "双鼻角根组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.creature.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.18
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.creature.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.7,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.18
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "type": "none"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/creature.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-creature",
+    "units": "metres"
+  },
+  "name": "双鼻角根组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "creature",
+    "specialized",
+    "nose_horn",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

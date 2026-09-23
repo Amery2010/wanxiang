@@ -1,0 +1,1818 @@
+{
+  "anchor": "base",
+  "category": "architecture",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.95
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.95
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.1
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.95
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.95,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.95
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.1
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "有实际提握槽的可拆卸地板或墙板；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "scifi",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "有实际提握槽的可拆卸地板或墙板",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.architecture.game_scifi.service_hatch.webp"
+  },
+  "id": "l1.architecture.game_scifi.service_hatch",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "带握槽检修盖板",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.1,
+        "maximum": 0.17500000000000002,
+        "minimum": 0.05500000000000001,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 0.95,
+        "maximum": 1.6624999999999999,
+        "minimum": 0.5225,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.95,
+        "maximum": 1.6624999999999999,
+        "minimum": 0.5225,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "architecture",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "architecture",
+    "family": "game_scifi",
+    "game_kit": "scifi",
+    "game_use": "科幻探索 / 空间站 / 舰船内饰",
+    "profile": "service_hatch",
+    "purpose": "有实际提握槽的可拆卸地板或墙板",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#4C6573",
+        "depth": 0.08,
+        "holes": [
+          [
+            [
+              0.105,
+              0.7775
+            ],
+            [
+              0.10232050807568877,
+              0.7875
+            ],
+            [
+              0.095,
+              0.7948205080756887
+            ],
+            [
+              0.08499999999999999,
+              0.7975
+            ],
+            [
+              -0.08499999999999999,
+              0.7975
+            ],
+            [
+              -0.09499999999999999,
+              0.7948205080756887
+            ],
+            [
+              -0.10232050807568877,
+              0.7875
+            ],
+            [
+              -0.105,
+              0.7775
+            ],
+            [
+              -0.105,
+              0.7625000000000001
+            ],
+            [
+              -0.10232050807568877,
+              0.7525000000000001
+            ],
+            [
+              -0.095,
+              0.7451794919243113
+            ],
+            [
+              -0.08499999999999999,
+              0.7425
+            ],
+            [
+              0.08499999999999999,
+              0.7425
+            ],
+            [
+              0.095,
+              0.7451794919243113
+            ],
+            [
+              0.10232050807568877,
+              0.7525000000000001
+            ],
+            [
+              0.105,
+              0.7625000000000001
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "service_hatch_00",
+        "outline": [
+          [
+            0.475,
+            0.83
+          ],
+          [
+            0.4589230484541326,
+            0.8899999999999999
+          ],
+          [
+            0.415,
+            0.9339230484541325
+          ],
+          [
+            0.355,
+            0.95
+          ],
+          [
+            -0.355,
+            0.95
+          ],
+          [
+            -0.4149999999999999,
+            0.9339230484541325
+          ],
+          [
+            -0.4589230484541326,
+            0.8899999999999999
+          ],
+          [
+            -0.475,
+            0.83
+          ],
+          [
+            -0.475,
+            0.12000000000000001
+          ],
+          [
+            -0.4589230484541326,
+            0.059999999999999984
+          ],
+          [
+            -0.41500000000000004,
+            0.0160769515458674
+          ],
+          [
+            -0.355,
+            0.0
+          ],
+          [
+            0.355,
+            0.0
+          ],
+          [
+            0.415,
+            0.01607695154586737
+          ],
+          [
+            0.45892304845413256,
+            0.05999999999999994
+          ],
+          [
+            0.475,
+            0.11999999999999997
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#A8B8B9",
+        "depth": 0.015,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.052,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "service_hatch_01",
+        "outline": [
+          [
+            0.385,
+            0.5449999999999999
+          ],
+          [
+            0.3756217782649107,
+            0.58
+          ],
+          [
+            0.35000000000000003,
+            0.6056217782649106
+          ],
+          [
+            0.315,
+            0.615
+          ],
+          [
+            -0.315,
+            0.615
+          ],
+          [
+            -0.35,
+            0.6056217782649106
+          ],
+          [
+            -0.3756217782649107,
+            0.58
+          ],
+          [
+            -0.385,
+            0.5449999999999999
+          ],
+          [
+            -0.385,
+            0.185
+          ],
+          [
+            -0.3756217782649107,
+            0.15
+          ],
+          [
+            -0.35000000000000003,
+            0.1243782217350893
+          ],
+          [
+            -0.315,
+            0.11499999999999999
+          ],
+          [
+            0.315,
+            0.11499999999999999
+          ],
+          [
+            0.35000000000000003,
+            0.12437822173508929
+          ],
+          [
+            0.3756217782649107,
+            0.14999999999999997
+          ],
+          [
+            0.385,
+            0.18499999999999997
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "depth": 0.026,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.05,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "service_hatch_02",
+        "outline": [
+          [
+            -0.32299999999999995,
+            0.13
+          ],
+          [
+            -0.3309081169079632,
+            0.14909188309203678
+          ],
+          [
+            -0.35,
+            0.157
+          ],
+          [
+            -0.3690918830920368,
+            0.1490918830920368
+          ],
+          [
+            -0.377,
+            0.13
+          ],
+          [
+            -0.3690918830920368,
+            0.11090811690796322
+          ],
+          [
+            -0.35,
+            0.10300000000000001
+          ],
+          [
+            -0.3309081169079632,
+            0.11090811690796322
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "depth": 0.026,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.05,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "service_hatch_03",
+        "outline": [
+          [
+            -0.32299999999999995,
+            0.82
+          ],
+          [
+            -0.3309081169079632,
+            0.8390918830920367
+          ],
+          [
+            -0.35,
+            0.847
+          ],
+          [
+            -0.3690918830920368,
+            0.8390918830920367
+          ],
+          [
+            -0.377,
+            0.82
+          ],
+          [
+            -0.3690918830920368,
+            0.8009081169079632
+          ],
+          [
+            -0.35,
+            0.7929999999999999
+          ],
+          [
+            -0.3309081169079632,
+            0.8009081169079632
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "depth": 0.026,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.05,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "service_hatch_04",
+        "outline": [
+          [
+            0.377,
+            0.13
+          ],
+          [
+            0.3690918830920368,
+            0.14909188309203678
+          ],
+          [
+            0.35,
+            0.157
+          ],
+          [
+            0.3309081169079632,
+            0.1490918830920368
+          ],
+          [
+            0.32299999999999995,
+            0.13
+          ],
+          [
+            0.3309081169079632,
+            0.11090811690796322
+          ],
+          [
+            0.35,
+            0.10300000000000001
+          ],
+          [
+            0.3690918830920368,
+            0.11090811690796322
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "depth": 0.026,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.95
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.05,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "service_hatch_05",
+        "outline": [
+          [
+            0.377,
+            0.82
+          ],
+          [
+            0.3690918830920368,
+            0.8390918830920367
+          ],
+          [
+            0.35,
+            0.847
+          ],
+          [
+            0.3309081169079632,
+            0.8390918830920367
+          ],
+          [
+            0.32299999999999995,
+            0.82
+          ],
+          [
+            0.3309081169079632,
+            0.8009081169079632
+          ],
+          [
+            0.35,
+            0.7929999999999999
+          ],
+          [
+            0.3690918830920368,
+            0.8009081169079632
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.95,
+    0.95,
+    0.1
+  ],
+  "source": {
+    "authoring": "tools/game410/scifi.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "architecture",
+    "L1-Expansion",
+    "architecture",
+    "game_scifi",
+    "service_hatch",
+    "Game-Expansion-3.10",
+    "scifi",
+    "科幻舱室"
+  ],
+  "theme": "l1-architecture",
+  "version": "3.10.0"
+}

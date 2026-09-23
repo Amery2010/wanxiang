@@ -1,0 +1,571 @@
+{
+  "anchor": "base",
+  "category": "mech",
+  "connectors": [],
+  "description": "",
+  "id": "exp.industry.tank",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "立式储罐 · 碟形罐顶与巡检梯",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "industry",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "radius": 0.68,
+      "segment_end": [
+        0,
+        1.75,
+        0
+      ],
+      "segment_start": [
+        0,
+        0.65,
+        0
+      ],
+      "type": "capsule"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "cap": true,
+        "color": "#A3ACAA",
+        "kind": "lathe",
+        "profile": [
+          [
+            0.5,
+            0.2
+          ],
+          [
+            0.68,
+            0.38
+          ],
+          [
+            0.68,
+            2.1
+          ],
+          [
+            0.54,
+            2.32
+          ],
+          [
+            0.24,
+            2.4
+          ],
+          [
+            0,
+            2.4
+          ]
+        ],
+        "roundable": false,
+        "sides": 20
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.044000000000000004,
+            0.17600000000000002,
+            0.044000000000000004
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          -0.425,
+          0.2,
+          -0.425
+        ],
+        "roundable": false,
+        "size": [
+          0.1,
+          0.4,
+          0.1
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.044000000000000004,
+            0.17600000000000002,
+            0.044000000000000004
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          -0.425,
+          0.2,
+          0.425
+        ],
+        "roundable": false,
+        "size": [
+          0.1,
+          0.4,
+          0.1
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.044000000000000004,
+            0.17600000000000002,
+            0.044000000000000004
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          0.425,
+          0.2,
+          -0.425
+        ],
+        "roundable": false,
+        "size": [
+          0.1,
+          0.4,
+          0.1
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.044000000000000004,
+            0.17600000000000002,
+            0.044000000000000004
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          0.425,
+          0.2,
+          0.425
+        ],
+        "roundable": false,
+        "size": [
+          0.1,
+          0.4,
+          0.1
+        ]
+      },
+      {
+        "color": "#53616A",
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              0.15,
+              0.73
+            ],
+            "r": [
+              0.019,
+              0.019
+            ]
+          },
+          {
+            "c": [
+              -0.15,
+              2.2,
+              0.73
+            ],
+            "r": [
+              0.019,
+              0.019
+            ]
+          }
+        ],
+        "sides": 8
+      },
+      {
+        "color": "#53616A",
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0.15,
+              0.15,
+              0.73
+            ],
+            "r": [
+              0.019,
+              0.019
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              2.2,
+              0.73
+            ],
+            "r": [
+              0.019,
+              0.019
+            ]
+          }
+        ],
+        "sides": 8
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              0.22,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              0.22,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              0.45,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              0.45,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              0.68,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              0.68,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              0.91,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              0.91,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              1.14,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              1.14,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              1.37,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              1.37,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              1.6,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              1.6,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              1.83,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              1.83,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#53616A",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              -0.15,
+              2.06,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          },
+          {
+            "c": [
+              0.15,
+              2.06,
+              0.73
+            ],
+            "r": [
+              0.016,
+              0.016
+            ]
+          }
+        ],
+        "sides": 6
+      }
+    ]
+  },
+  "size": [
+    1.4,
+    2.4,
+    1.6
+  ],
+  "source": {
+    "authoring": "tools/expansion/industry.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "industrial",
+    "mech",
+    "D-E",
+    "industry"
+  ],
+  "theme": "industrial",
+  "version": "3.4.0"
+}

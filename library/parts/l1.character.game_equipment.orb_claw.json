@@ -1,0 +1,1606 @@
+{
+  "anchor": "base",
+  "category": "wear",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.45
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.46
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.45
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.45
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.46,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.46
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.45
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "法杖和祭坛通用的中空三爪球体承托；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "equipment",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "法杖和祭坛通用的中空三爪球体承托",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.character.game_equipment.orb_claw.webp"
+  },
+  "id": "l1.character.game_equipment.orb_claw",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "三爪法球承托",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.45,
+        "maximum": 0.7875,
+        "minimum": 0.24750000000000003,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.46,
+        "maximum": 0.805,
+        "minimum": 0.25300000000000006,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.45,
+        "maximum": 0.7875,
+        "minimum": 0.24750000000000003,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "character",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative/anatomy component; owning assembly authors collision",
+      "type": "none"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "character",
+    "family": "game_equipment",
+    "game_kit": "equipment",
+    "game_use": "角色穿戴 / 武器外观 / 飞行装备",
+    "profile": "orb_claw",
+    "purpose": "法杖和祭坛通用的中空三爪球体承托",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#BE8852",
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            7,
+            0
+          ],
+          [
+            7,
+            8,
+            0
+          ],
+          [
+            8,
+            9,
+            0
+          ],
+          [
+            9,
+            10,
+            0
+          ],
+          [
+            10,
+            11,
+            0
+          ],
+          [
+            11,
+            12,
+            0
+          ],
+          [
+            12,
+            1,
+            0
+          ],
+          [
+            13,
+            14,
+            2,
+            1
+          ],
+          [
+            14,
+            15,
+            3,
+            2
+          ],
+          [
+            15,
+            16,
+            4,
+            3
+          ],
+          [
+            16,
+            17,
+            5,
+            4
+          ],
+          [
+            17,
+            18,
+            6,
+            5
+          ],
+          [
+            18,
+            19,
+            7,
+            6
+          ],
+          [
+            19,
+            20,
+            8,
+            7
+          ],
+          [
+            20,
+            21,
+            9,
+            8
+          ],
+          [
+            21,
+            22,
+            10,
+            9
+          ],
+          [
+            22,
+            23,
+            11,
+            10
+          ],
+          [
+            23,
+            24,
+            12,
+            11
+          ],
+          [
+            24,
+            13,
+            1,
+            12
+          ],
+          [
+            25,
+            26,
+            14,
+            13
+          ],
+          [
+            26,
+            27,
+            15,
+            14
+          ],
+          [
+            27,
+            28,
+            16,
+            15
+          ],
+          [
+            28,
+            29,
+            17,
+            16
+          ],
+          [
+            29,
+            30,
+            18,
+            17
+          ],
+          [
+            30,
+            31,
+            19,
+            18
+          ],
+          [
+            31,
+            32,
+            20,
+            19
+          ],
+          [
+            32,
+            33,
+            21,
+            20
+          ],
+          [
+            33,
+            34,
+            22,
+            21
+          ],
+          [
+            34,
+            35,
+            23,
+            22
+          ],
+          [
+            35,
+            36,
+            24,
+            23
+          ],
+          [
+            36,
+            25,
+            13,
+            24
+          ],
+          [
+            37,
+            26,
+            25
+          ],
+          [
+            37,
+            27,
+            26
+          ],
+          [
+            37,
+            28,
+            27
+          ],
+          [
+            37,
+            29,
+            28
+          ],
+          [
+            37,
+            30,
+            29
+          ],
+          [
+            37,
+            31,
+            30
+          ],
+          [
+            37,
+            32,
+            31
+          ],
+          [
+            37,
+            33,
+            32
+          ],
+          [
+            37,
+            34,
+            33
+          ],
+          [
+            37,
+            35,
+            34
+          ],
+          [
+            37,
+            36,
+            35
+          ],
+          [
+            37,
+            25,
+            36
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "orb_claw_00",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.1,
+            0.0,
+            0.0
+          ],
+          [
+            0.08660254037844388,
+            0.0,
+            0.049999999999999996
+          ],
+          [
+            0.05000000000000002,
+            0.0,
+            0.08660254037844387
+          ],
+          [
+            6.123233995736766e-18,
+            0.0,
+            0.1
+          ],
+          [
+            -0.04999999999999998,
+            0.0,
+            0.08660254037844388
+          ],
+          [
+            -0.08660254037844388,
+            0.0,
+            0.049999999999999996
+          ],
+          [
+            -0.1,
+            0.0,
+            1.2246467991473533e-17
+          ],
+          [
+            -0.08660254037844389,
+            0.0,
+            -0.049999999999999975
+          ],
+          [
+            -0.050000000000000044,
+            0.0,
+            -0.08660254037844384
+          ],
+          [
+            -1.8369701987210297e-17,
+            0.0,
+            -0.1
+          ],
+          [
+            0.05000000000000002,
+            0.0,
+            -0.08660254037844387
+          ],
+          [
+            0.08660254037844384,
+            0.0,
+            -0.050000000000000044
+          ],
+          [
+            0.13,
+            0.1,
+            0.0
+          ],
+          [
+            0.11258330249197704,
+            0.1,
+            0.06499999999999999
+          ],
+          [
+            0.06500000000000002,
+            0.1,
+            0.11258330249197702
+          ],
+          [
+            7.960204194457797e-18,
+            0.1,
+            0.13
+          ],
+          [
+            -0.06499999999999997,
+            0.1,
+            0.11258330249197704
+          ],
+          [
+            -0.11258330249197704,
+            0.1,
+            0.06499999999999999
+          ],
+          [
+            -0.13,
+            0.1,
+            1.5920408388915593e-17
+          ],
+          [
+            -0.11258330249197705,
+            0.1,
+            -0.06499999999999996
+          ],
+          [
+            -0.06500000000000006,
+            0.1,
+            -0.112583302491977
+          ],
+          [
+            -2.3880612583373387e-17,
+            0.1,
+            -0.13
+          ],
+          [
+            0.06500000000000002,
+            0.1,
+            -0.11258330249197702
+          ],
+          [
+            0.112583302491977,
+            0.1,
+            -0.06500000000000006
+          ],
+          [
+            0.075,
+            0.17,
+            0.0
+          ],
+          [
+            0.0649519052838329,
+            0.17,
+            0.03749999999999999
+          ],
+          [
+            0.037500000000000006,
+            0.17,
+            0.06495190528383289
+          ],
+          [
+            4.592425496802574e-18,
+            0.17,
+            0.075
+          ],
+          [
+            -0.037499999999999985,
+            0.17,
+            0.0649519052838329
+          ],
+          [
+            -0.0649519052838329,
+            0.17,
+            0.03749999999999999
+          ],
+          [
+            -0.075,
+            0.17,
+            9.184850993605149e-18
+          ],
+          [
+            -0.0649519052838329,
+            0.17,
+            -0.03749999999999998
+          ],
+          [
+            -0.03750000000000003,
+            0.17,
+            -0.06495190528383288
+          ],
+          [
+            -1.3777276490407722e-17,
+            0.17,
+            -0.075
+          ],
+          [
+            0.037500000000000006,
+            0.17,
+            -0.06495190528383289
+          ],
+          [
+            0.06495190528383288,
+            0.17,
+            -0.03750000000000003
+          ],
+          [
+            0.0,
+            0.17,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "kind": "loft",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "orb_claw_01",
+        "rings": [
+          {
+            "c": [
+              0.075,
+              0.1,
+              0.0
+            ],
+            "r": [
+              0.027,
+              0.027
+            ]
+          },
+          {
+            "c": [
+              0.2,
+              0.3,
+              0.0
+            ],
+            "r": [
+              0.023,
+              0.023
+            ]
+          },
+          {
+            "c": [
+              0.12,
+              0.44,
+              0.0
+            ],
+            "r": [
+              0.009,
+              0.009
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "kind": "loft",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "orb_claw_02",
+        "rings": [
+          {
+            "c": [
+              -0.037499999999999985,
+              0.1,
+              0.0649519052838329
+            ],
+            "r": [
+              0.027,
+              0.027
+            ]
+          },
+          {
+            "c": [
+              -0.09999999999999996,
+              0.3,
+              0.17320508075688776
+            ],
+            "r": [
+              0.023,
+              0.023
+            ]
+          },
+          {
+            "c": [
+              -0.05999999999999997,
+              0.44,
+              0.10392304845413264
+            ],
+            "r": [
+              0.009,
+              0.009
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "kind": "loft",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.46
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "orb_claw_03",
+        "rings": [
+          {
+            "c": [
+              -0.03750000000000003,
+              0.1,
+              -0.06495190528383288
+            ],
+            "r": [
+              0.027,
+              0.027
+            ]
+          },
+          {
+            "c": [
+              -0.10000000000000009,
+              0.3,
+              -0.17320508075688767
+            ],
+            "r": [
+              0.023,
+              0.023
+            ]
+          },
+          {
+            "c": [
+              -0.06000000000000005,
+              0.44,
+              -0.1039230484541326
+            ],
+            "r": [
+              0.009,
+              0.009
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.45,
+    0.46,
+    0.45
+  ],
+  "source": {
+    "authoring": "tools/game410/equipment.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "wear",
+    "L1-Expansion",
+    "character",
+    "game_equipment",
+    "orb_claw",
+    "Game-Expansion-3.10",
+    "equipment",
+    "冒险装备"
+  ],
+  "theme": "l1-character",
+  "version": "3.10.0"
+}

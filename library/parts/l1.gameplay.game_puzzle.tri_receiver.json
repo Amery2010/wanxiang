@@ -1,0 +1,818 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.59
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.57
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.258
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.59
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.57,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.57
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.258
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "与三角晶钥匹配且保留装配间隙的贯通槽；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "puzzle",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "与三角晶钥匹配且保留装配间隙的贯通槽",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.gameplay.game_puzzle.tri_receiver.webp"
+  },
+  "id": "l1.gameplay.game_puzzle.tri_receiver",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "三角晶钥贯通槽座",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.258,
+        "maximum": 0.4515,
+        "minimum": 0.14190000000000003,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 0.57,
+        "maximum": 0.9974999999999999,
+        "minimum": 0.3135,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.59,
+        "maximum": 1.0325,
+        "minimum": 0.3245,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "gameplay",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "gameplay",
+    "family": "game_puzzle",
+    "game_kit": "puzzle",
+    "game_use": "解谜 / 光路 / 符石 / 魔法装置",
+    "profile": "tri_receiver",
+    "purpose": "与三角晶钥匹配且保留装配间隙的贯通槽",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#505D64",
+        "depth": 0.22,
+        "holes": [
+          [
+            [
+              0,
+              0.445
+            ],
+            [
+              -0.19,
+              0.09
+            ],
+            [
+              0.19,
+              0.09
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "tri_receiver_00",
+        "outline": [
+          [
+            0.295,
+            0.51
+          ],
+          [
+            0.28696152422706633,
+            0.54
+          ],
+          [
+            0.265,
+            0.5619615242270664
+          ],
+          [
+            0.235,
+            0.5700000000000001
+          ],
+          [
+            -0.235,
+            0.5700000000000001
+          ],
+          [
+            -0.26499999999999996,
+            0.5619615242270664
+          ],
+          [
+            -0.28696152422706633,
+            0.54
+          ],
+          [
+            -0.295,
+            0.51
+          ],
+          [
+            -0.295,
+            0.060000000000000005
+          ],
+          [
+            -0.2869615242270663,
+            0.029999999999999992
+          ],
+          [
+            -0.265,
+            0.0080384757729337
+          ],
+          [
+            -0.235,
+            0.0
+          ],
+          [
+            0.235,
+            0.0
+          ],
+          [
+            0.265,
+            0.008038475772933686
+          ],
+          [
+            0.2869615242270663,
+            0.02999999999999997
+          ],
+          [
+            0.295,
+            0.059999999999999984
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "depth": 0.018,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.59
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.57
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.121,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.258
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "tri_receiver_01",
+        "outline": [
+          [
+            0.155,
+            0.5265
+          ],
+          [
+            0.15419615242270662,
+            0.5295
+          ],
+          [
+            0.152,
+            0.5316961524227066
+          ],
+          [
+            0.149,
+            0.5325
+          ],
+          [
+            -0.149,
+            0.5325
+          ],
+          [
+            -0.152,
+            0.5316961524227066
+          ],
+          [
+            -0.15419615242270662,
+            0.5295
+          ],
+          [
+            -0.155,
+            0.5265
+          ],
+          [
+            -0.155,
+            0.5135000000000001
+          ],
+          [
+            -0.15419615242270662,
+            0.5105000000000001
+          ],
+          [
+            -0.152,
+            0.5083038475772934
+          ],
+          [
+            -0.149,
+            0.5075000000000001
+          ],
+          [
+            0.149,
+            0.5075000000000001
+          ],
+          [
+            0.152,
+            0.5083038475772934
+          ],
+          [
+            0.15419615242270662,
+            0.5105000000000001
+          ],
+          [
+            0.155,
+            0.5135000000000001
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.59,
+    0.57,
+    0.258
+  ],
+  "source": {
+    "authoring": "tools/game410/puzzle.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "gameplay",
+    "L1-Expansion",
+    "gameplay",
+    "game_puzzle",
+    "tri_receiver",
+    "Game-Expansion-3.10",
+    "puzzle",
+    "机关与魔法"
+  ],
+  "theme": "l1-gameplay",
+  "version": "3.10.0"
+}

@@ -1,0 +1,246 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [],
+  "description": "",
+  "id": "exp.game.hazard_barrel",
+  "level": 1,
+  "material": "mat.paint",
+  "name": "危险桶道具 · 桶箍与警示铭牌",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "gameplay",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "radius": 0.39,
+      "segment_end": [
+        0,
+        0.58,
+        0
+      ],
+      "segment_start": [
+        0,
+        0.39,
+        0
+      ],
+      "type": "capsule"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "interaction": {
+      "authority": "consumer-game",
+      "damage_policy": "consumer-only",
+      "event": "barrel.destroyed",
+      "fragment_policy": "consumer-generated",
+      "kind": "breakable",
+      "schema": "wx.interaction/1.0",
+      "trigger": {
+        "shape": "none"
+      }
+    },
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "cap": true,
+        "color": "#B95343",
+        "kind": "lathe",
+        "profile": [
+          [
+            0.34,
+            0
+          ],
+          [
+            0.39,
+            0.12
+          ],
+          [
+            0.41,
+            0.48
+          ],
+          [
+            0.39,
+            0.87
+          ],
+          [
+            0.34,
+            0.96
+          ]
+        ],
+        "roundable": false,
+        "sides": 16
+      },
+      {
+        "closed_profile": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "position": [
+          0,
+          0.15,
+          0
+        ],
+        "profile": [
+          [
+            0.412,
+            -0.0325
+          ],
+          [
+            0.412,
+            0.0325
+          ],
+          [
+            0.38699999999999996,
+            0.0325
+          ],
+          [
+            0.38699999999999996,
+            -0.0325
+          ]
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "closed_profile": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "position": [
+          0,
+          0.77,
+          0
+        ],
+        "profile": [
+          [
+            0.412,
+            -0.0325
+          ],
+          [
+            0.412,
+            0.0325
+          ],
+          [
+            0.38699999999999996,
+            0.0325
+          ],
+          [
+            0.38699999999999996,
+            -0.0325
+          ]
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "cap": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "position": [
+          0.15,
+          0.975,
+          0
+        ],
+        "profile": [
+          [
+            0.052,
+            -0.0065
+          ],
+          [
+            0.052,
+            0.0065
+          ]
+        ],
+        "roundable": false,
+        "sides": 10
+      },
+      {
+        "color": "#E8AA32",
+        "depth": 0.007,
+        "kind": "extrude",
+        "outline": [
+          [
+            -0.12,
+            0
+          ],
+          [
+            0,
+            0.21
+          ],
+          [
+            0.12,
+            0
+          ]
+        ],
+        "position": [
+          0,
+          0.4,
+          0.41
+        ],
+        "roundable": false
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.01012,
+            0.03608,
+            0.0030800000000000003
+          ]
+        },
+        "color": "#374348",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0.471,
+          0.419
+        ],
+        "roundable": false,
+        "size": [
+          0.023,
+          0.082,
+          0.007
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.85,
+    1.0,
+    0.85
+  ],
+  "source": {
+    "authoring": "tools/expansion/gameplay.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "theme": "gameplay",
+  "version": "3.4.0"
+}

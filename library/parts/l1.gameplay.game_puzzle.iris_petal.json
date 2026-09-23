@@ -1,0 +1,762 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.45
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.47
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.054
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.45
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.47,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.47
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.054
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "带枢轴孔的机关虹膜叶片，不伪装为完整快门；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "puzzle",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "带枢轴孔的机关虹膜叶片，不伪装为完整快门",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.gameplay.game_puzzle.iris_petal.webp"
+  },
+  "id": "l1.gameplay.game_puzzle.iris_petal",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "虹膜快门单叶",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.054,
+        "maximum": 0.0945,
+        "minimum": 0.0297,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 0.47,
+        "maximum": 0.8225,
+        "minimum": 0.2585,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.45,
+        "maximum": 0.7875,
+        "minimum": 0.24750000000000003,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "gameplay",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "gameplay",
+    "family": "game_puzzle",
+    "game_kit": "puzzle",
+    "game_use": "解谜 / 光路 / 符石 / 魔法装置",
+    "profile": "iris_petal",
+    "purpose": "带枢轴孔的机关虹膜叶片，不伪装为完整快门",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#4C6573",
+        "depth": 0.024,
+        "holes": [
+          [
+            [
+              0.10300000000000001,
+              0.12
+            ],
+            [
+              0.09857883832488648,
+              0.13649999999999998
+            ],
+            [
+              0.08650000000000001,
+              0.14857883832488647
+            ],
+            [
+              0.07,
+              0.153
+            ],
+            [
+              0.05350000000000001,
+              0.14857883832488647
+            ],
+            [
+              0.04142116167511353,
+              0.13649999999999998
+            ],
+            [
+              0.037000000000000005,
+              0.12
+            ],
+            [
+              0.041421161675113526,
+              0.10350000000000001
+            ],
+            [
+              0.05349999999999999,
+              0.09142116167511352
+            ],
+            [
+              0.07,
+              0.087
+            ],
+            [
+              0.08650000000000001,
+              0.09142116167511352
+            ],
+            [
+              0.09857883832488648,
+              0.10349999999999998
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "iris_petal_00",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            0.24,
+            0.03
+          ],
+          [
+            0.39,
+            0.28
+          ],
+          [
+            0.2,
+            0.47
+          ],
+          [
+            -0.06,
+            0.21
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "depth": 0.012,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.47
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.022,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.054
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "iris_petal_01",
+        "outline": [
+          [
+            0.05,
+            0.18
+          ],
+          [
+            0.26,
+            0.15
+          ],
+          [
+            0.3,
+            0.28
+          ],
+          [
+            0.17,
+            0.38
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.45,
+    0.47,
+    0.054
+  ],
+  "source": {
+    "authoring": "tools/game410/puzzle.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "gameplay",
+    "L1-Expansion",
+    "gameplay",
+    "game_puzzle",
+    "iris_petal",
+    "Game-Expansion-3.10",
+    "puzzle",
+    "机关与魔法"
+  ],
+  "theme": "l1-gameplay",
+  "version": "3.10.0"
+}

@@ -1,0 +1,90 @@
+{
+  "category": "mech",
+  "description": "",
+  "exports": [
+    {
+      "id": "in",
+      "node": "straight",
+      "socket": "in"
+    },
+    {
+      "id": "out",
+      "node": "out",
+      "socket": "out"
+    }
+  ],
+  "id": "exp-industry-pipe_run",
+  "instances": [
+    {
+      "id": "straight",
+      "part": "exp.industry.pipe",
+      "position": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "out",
+        "target": "straight"
+      },
+      "id": "bend",
+      "part": "exp.industry.elbow"
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "out",
+        "target": "bend"
+      },
+      "id": "out",
+      "part": "exp.industry.pipe"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "industry",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "industry",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "D",
+    "theme": "industrial",
+    "units": "metres"
+  },
+  "name": "管线测试段 · 直管与弯头法兰吸附",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "industrial",
+    "mech",
+    "D-E",
+    "industry"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,474 @@
+{
+  "anchor": "base",
+  "category": "animal",
+  "connectors": [],
+  "description": "",
+  "id": "w.fauna.dog.body",
+  "level": 2,
+  "material": "mat.fur",
+  "name": "牧羊犬身体 · 可复用犬科肢体",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "body_length": {
+        "default": 1,
+        "maximum": 1.1,
+        "minimum": 0.9,
+        "step": 0.01,
+        "title": "体长",
+        "type": "number"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P3-P4",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "components": [
+      {
+        "id": "torso",
+        "part": "w.fauna.dog.torso",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          {
+            "$param": "body_length"
+          }
+        ]
+      },
+      {
+        "id": "tail",
+        "part": "w.fauna.dog.tail",
+        "position": [
+          0,
+          0.53,
+          {
+            "$op": "mul",
+            "args": [
+              -0.41,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bind": {
+          "knee": "kneeFL",
+          "leg": "legFL"
+        },
+        "id": "FL",
+        "params": {
+          "palette": {
+            "#D0783C": "#9B7854"
+          }
+        },
+        "part": "w.fauna.canine_leg",
+        "position": [
+          -0.1,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bone": "kneeFL",
+        "id": "pawFL",
+        "part": "w.fauna.canine_paw",
+        "position": [
+          -0.1,
+          0,
+          {
+            "$op": "add",
+            "args": [
+              {
+                "$op": "mul",
+                "args": [
+                  0.31,
+                  {
+                    "$param": "body_length"
+                  }
+                ]
+              },
+              0.03
+            ]
+          }
+        ]
+      },
+      {
+        "bind": {
+          "knee": "kneeFR",
+          "leg": "legFR"
+        },
+        "id": "FR",
+        "params": {
+          "palette": {
+            "#D0783C": "#9B7854"
+          }
+        },
+        "part": "w.fauna.canine_leg",
+        "position": [
+          0.1,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bone": "kneeFR",
+        "id": "pawFR",
+        "part": "w.fauna.canine_paw",
+        "position": [
+          0.1,
+          0,
+          {
+            "$op": "add",
+            "args": [
+              {
+                "$op": "mul",
+                "args": [
+                  0.31,
+                  {
+                    "$param": "body_length"
+                  }
+                ]
+              },
+              0.03
+            ]
+          }
+        ]
+      },
+      {
+        "bind": {
+          "knee": "kneeHL",
+          "leg": "legHL"
+        },
+        "id": "HL",
+        "params": {
+          "palette": {
+            "#D0783C": "#9B7854"
+          }
+        },
+        "part": "w.fauna.canine_leg",
+        "position": [
+          -0.115,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              -0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bone": "kneeHL",
+        "id": "pawHL",
+        "part": "w.fauna.canine_paw",
+        "position": [
+          -0.115,
+          0,
+          {
+            "$op": "add",
+            "args": [
+              {
+                "$op": "mul",
+                "args": [
+                  -0.31,
+                  {
+                    "$param": "body_length"
+                  }
+                ]
+              },
+              0.03
+            ]
+          }
+        ]
+      },
+      {
+        "bind": {
+          "knee": "kneeHR",
+          "leg": "legHR"
+        },
+        "id": "HR",
+        "params": {
+          "palette": {
+            "#D0783C": "#9B7854"
+          }
+        },
+        "part": "w.fauna.canine_leg",
+        "position": [
+          0.115,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              -0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bone": "kneeHR",
+        "id": "pawHR",
+        "part": "w.fauna.canine_paw",
+        "position": [
+          0.115,
+          0,
+          {
+            "$op": "add",
+            "args": [
+              {
+                "$op": "mul",
+                "args": [
+                  -0.31,
+                  {
+                    "$param": "body_length"
+                  }
+                ]
+              },
+              0.03
+            ]
+          }
+        ]
+      }
+    ],
+    "forms": [],
+    "rig": [
+      {
+        "name": "body",
+        "position": [
+          0,
+          0.49,
+          0
+        ]
+      },
+      {
+        "name": "head",
+        "parent": "body",
+        "position": [
+          0,
+          0.73,
+          {
+            "$op": "add",
+            "args": [
+              {
+                "$op": "mul",
+                "args": [
+                  0.31,
+                  {
+                    "$param": "body_length"
+                  }
+                ]
+              },
+              0.19
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tail",
+        "parent": "body",
+        "position": [
+          0,
+          0.53,
+          {
+            "$op": "mul",
+            "args": [
+              -0.41,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "legFL",
+        "parent": "body",
+        "position": [
+          -0.1,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "kneeFL",
+        "parent": "legFL",
+        "position": [
+          -0.1,
+          0.23,
+          {
+            "$op": "mul",
+            "args": [
+              0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "legFR",
+        "parent": "body",
+        "position": [
+          0.1,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "kneeFR",
+        "parent": "legFR",
+        "position": [
+          0.1,
+          0.23,
+          {
+            "$op": "mul",
+            "args": [
+              0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "legHL",
+        "parent": "body",
+        "position": [
+          -0.115,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              -0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "kneeHL",
+        "parent": "legHL",
+        "position": [
+          -0.115,
+          0.23,
+          {
+            "$op": "mul",
+            "args": [
+              -0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "legHR",
+        "parent": "body",
+        "position": [
+          0.115,
+          0.46,
+          {
+            "$op": "mul",
+            "args": [
+              -0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "kneeHR",
+        "parent": "legHR",
+        "position": [
+          0.115,
+          0.23,
+          {
+            "$op": "mul",
+            "args": [
+              -0.31,
+              {
+                "$param": "body_length"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.4,
+    0.9,
+    1.6
+  ],
+  "source": {
+    "authoring": "tools/worlds/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "camp",
+    "animal"
+  ],
+  "theme": "camp",
+  "version": "3.4.0"
+}

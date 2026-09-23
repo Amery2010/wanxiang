@@ -1,0 +1,524 @@
+{
+  "anchor": "base",
+  "category": "interior",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                1.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.12
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                1.5
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                1.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.12,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.12
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                1.5
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "波边桌面芯；可复用的 室内与家具 语义部件，不包含上层设备行为。",
+  "id": "l1.interior.tabletop.scalloped",
+  "level": 1,
+  "material": "mat.wood",
+  "name": "波边桌面芯",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 1.5,
+        "maximum": 2.625,
+        "minimum": 0.8250000000000001,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.12,
+        "maximum": 0.21,
+        "minimum": 0.066,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 1.8,
+        "maximum": 3.15,
+        "minimum": 0.9900000000000001,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "interior",
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/interior.json#l1.interior.tabletop.scalloped",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "interior",
+    "family": "tabletop",
+    "profile": "scalloped",
+    "purpose": "波边桌面芯",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#A77143",
+        "depth": 0.065,
+        "kind": "extrude",
+        "material": "mat.wood",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              6.123233995736766e-17,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              6.123233995736766e-17,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0325,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.5
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "outline": [
+          [
+            0.6799999999999999,
+            0.0
+          ],
+          [
+            0.5988740122992223,
+            0.12940952255126037
+          ],
+          [
+            0.4849742261192857,
+            0.21999999999999997
+          ],
+          [
+            0.43840620433565947,
+            0.35355339059327373
+          ],
+          [
+            0.34,
+            0.48497422611928565
+          ],
+          [
+            0.16046780796356286,
+            0.48296291314453416
+          ],
+          [
+            3.4290110376125894e-17,
+            0.44
+          ],
+          [
+            -0.16046780796356278,
+            0.48296291314453416
+          ],
+          [
+            -0.3399999999999998,
+            0.4849742261192857
+          ],
+          [
+            -0.4384062043356594,
+            0.3535533905932738
+          ],
+          [
+            -0.4849742261192857,
+            0.21999999999999997
+          ],
+          [
+            -0.5988740122992222,
+            0.12940952255126045
+          ],
+          [
+            -0.6799999999999999,
+            6.858022075225179e-17
+          ],
+          [
+            -0.5988740122992222,
+            -0.12940952255126037
+          ],
+          [
+            -0.4849742261192858,
+            -0.2199999999999999
+          ],
+          [
+            -0.43840620433565963,
+            -0.35355339059327345
+          ],
+          [
+            -0.34000000000000025,
+            -0.48497422611928553
+          ],
+          [
+            -0.16046780796356278,
+            -0.4829629131445341
+          ],
+          [
+            -1.0287033112837768e-16,
+            -0.44
+          ],
+          [
+            0.16046780796356253,
+            -0.48296291314453405
+          ],
+          [
+            0.34,
+            -0.48497422611928565
+          ],
+          [
+            0.43840620433565936,
+            -0.3535533905932738
+          ],
+          [
+            0.48497422611928553,
+            -0.2200000000000002
+          ],
+          [
+            0.598874012299222,
+            -0.12940952255126073
+          ]
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    1.8,
+    0.12,
+    1.5
+  ],
+  "source": {
+    "authoring": "tools/l1_expansion/interior.py",
+    "license": "project-authored",
+    "revision": "3.1.0",
+    "type": "original_semantic_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "interior",
+    "L1-Expansion",
+    "interior",
+    "tabletop",
+    "scalloped"
+  ],
+  "theme": "l1-interior",
+  "version": "3.4.0"
+}

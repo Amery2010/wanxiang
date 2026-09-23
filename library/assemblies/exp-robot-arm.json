@@ -1,0 +1,131 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "exp-robot-arm",
+  "instances": [
+    {
+      "id": "shoulder",
+      "part": "exp.robot.servo",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "upper",
+      "parent": "shoulder",
+      "part": "exp.robot.upper_link",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "elbow",
+      "parent": "shoulder",
+      "part": "exp.robot.servo",
+      "position": [
+        0,
+        0.72,
+        0
+      ]
+    },
+    {
+      "id": "forearm",
+      "parent": "elbow",
+      "part": "exp.robot.lower_link",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "assembly": "exp-robot-gripper",
+      "id": "grip",
+      "parent": "elbow",
+      "position": [
+        0,
+        0.58,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "robotics",
+    "interfaces": [],
+    "level": 2,
+    "motion_presets": [
+      "exp-robot-arm"
+    ],
+    "quality": {
+      "domain": "robotics",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "shoulder",
+        "max": 90,
+        "min": -90,
+        "node": "shoulder",
+        "title": "肩俯仰",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "elbow",
+        "max": 100,
+        "min": -100,
+        "node": "elbow",
+        "title": "肘关节",
+        "unit": "°"
+      }
+    ],
+    "theme": "robotics",
+    "units": "metres"
+  },
+  "name": "多轴操作臂链 · 正向运动学",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "robotics",
+    "mech",
+    "D-E",
+    "robotics"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,1032 @@
+{
+  "anchor": "base",
+  "category": "robot",
+  "connectors": [
+    {
+      "id": "pivot.lower",
+      "interface": "surface",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.2
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.1,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.08
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pivot.center",
+      "interface": "surface",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.2
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.08
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pivot.upper",
+      "interface": "surface",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.2
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.9,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.08
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "两个端轴孔与中央枢孔共面的剪叉臂；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "automation",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "两个端轴孔与中央枢孔共面的剪叉臂",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.robot.game_automation.scissor_link.webp"
+  },
+  "id": "l1.robot.game_automation.scissor_link",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "三孔剪叉升降连杆",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.08,
+        "maximum": 0.14,
+        "minimum": 0.044000000000000004,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 1.0,
+        "maximum": 1.75,
+        "minimum": 0.55,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.2,
+        "maximum": 0.35000000000000003,
+        "minimum": 0.11000000000000001,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "robot",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "robot",
+    "family": "game_automation",
+    "game_kit": "automation",
+    "game_use": "工厂 / 自动化 / 机器人",
+    "profile": "scissor_link",
+    "purpose": "两个端轴孔与中央枢孔共面的剪叉臂",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#4C6573",
+        "depth": 0.055,
+        "holes": [
+          [
+            [
+              0.047,
+              0.1
+            ],
+            [
+              0.04342233802803048,
+              0.11798612132115922
+            ],
+            [
+              0.033234018715767734,
+              0.13323401871576773
+            ],
+            [
+              0.01798612132115922,
+              0.14342233802803048
+            ],
+            [
+              2.8779199779962802e-18,
+              0.14700000000000002
+            ],
+            [
+              -0.017986121321159218,
+              0.14342233802803048
+            ],
+            [
+              -0.033234018715767734,
+              0.13323401871576773
+            ],
+            [
+              -0.04342233802803048,
+              0.11798612132115924
+            ],
+            [
+              -0.047,
+              0.1
+            ],
+            [
+              -0.043422338028030485,
+              0.08201387867884079
+            ],
+            [
+              -0.03323401871576774,
+              0.06676598128423228
+            ],
+            [
+              -0.017986121321159246,
+              0.05657766197196954
+            ],
+            [
+              -8.63375993398884e-18,
+              0.053000000000000005
+            ],
+            [
+              0.017986121321159232,
+              0.056577661971969534
+            ],
+            [
+              0.03323401871576773,
+              0.06676598128423226
+            ],
+            [
+              0.043422338028030465,
+              0.08201387867884076
+            ]
+          ],
+          [
+            [
+              0.047,
+              0.5
+            ],
+            [
+              0.04342233802803048,
+              0.5179861213211592
+            ],
+            [
+              0.033234018715767734,
+              0.5332340187157677
+            ],
+            [
+              0.01798612132115922,
+              0.5434223380280305
+            ],
+            [
+              2.8779199779962802e-18,
+              0.547
+            ],
+            [
+              -0.017986121321159218,
+              0.5434223380280305
+            ],
+            [
+              -0.033234018715767734,
+              0.5332340187157677
+            ],
+            [
+              -0.04342233802803048,
+              0.5179861213211592
+            ],
+            [
+              -0.047,
+              0.5
+            ],
+            [
+              -0.043422338028030485,
+              0.48201387867884077
+            ],
+            [
+              -0.03323401871576774,
+              0.46676598128423225
+            ],
+            [
+              -0.017986121321159246,
+              0.45657766197196953
+            ],
+            [
+              -8.63375993398884e-18,
+              0.453
+            ],
+            [
+              0.017986121321159232,
+              0.45657766197196953
+            ],
+            [
+              0.03323401871576773,
+              0.46676598128423225
+            ],
+            [
+              0.043422338028030465,
+              0.48201387867884077
+            ]
+          ],
+          [
+            [
+              0.047,
+              0.9
+            ],
+            [
+              0.04342233802803048,
+              0.9179861213211592
+            ],
+            [
+              0.033234018715767734,
+              0.9332340187157677
+            ],
+            [
+              0.01798612132115922,
+              0.9434223380280305
+            ],
+            [
+              2.8779199779962802e-18,
+              0.9470000000000001
+            ],
+            [
+              -0.017986121321159218,
+              0.9434223380280305
+            ],
+            [
+              -0.033234018715767734,
+              0.9332340187157677
+            ],
+            [
+              -0.04342233802803048,
+              0.9179861213211592
+            ],
+            [
+              -0.047,
+              0.9
+            ],
+            [
+              -0.043422338028030485,
+              0.8820138786788408
+            ],
+            [
+              -0.03323401871576774,
+              0.8667659812842323
+            ],
+            [
+              -0.017986121321159246,
+              0.8565776619719696
+            ],
+            [
+              -8.63375993398884e-18,
+              0.853
+            ],
+            [
+              0.017986121321159232,
+              0.8565776619719696
+            ],
+            [
+              0.03323401871576773,
+              0.8667659812842323
+            ],
+            [
+              0.043422338028030465,
+              0.8820138786788407
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scissor_link_00",
+        "outline": [
+          [
+            -0.1,
+            0.1
+          ],
+          [
+            -0.1,
+            0.9
+          ],
+          [
+            -0.06,
+            1.0
+          ],
+          [
+            0.06,
+            1.0
+          ],
+          [
+            0.1,
+            0.9
+          ],
+          [
+            0.1,
+            0.1
+          ],
+          [
+            0.06,
+            0
+          ],
+          [
+            -0.06,
+            0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#A8B8B9",
+        "depth": 0.025,
+        "enabled": {
+          "$param": "detail"
+        },
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.04,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.08
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scissor_link_01",
+        "outline": [
+          [
+            0.0375,
+            0.7849999999999999
+          ],
+          [
+            0.03415063509461097,
+            0.7974999999999999
+          ],
+          [
+            0.025,
+            0.8066506350946109
+          ],
+          [
+            0.012499999999999999,
+            0.8099999999999999
+          ],
+          [
+            -0.012499999999999995,
+            0.8099999999999999
+          ],
+          [
+            -0.024999999999999994,
+            0.8066506350946109
+          ],
+          [
+            -0.03415063509461097,
+            0.7974999999999999
+          ],
+          [
+            -0.0375,
+            0.7849999999999999
+          ],
+          [
+            -0.0375,
+            0.615
+          ],
+          [
+            -0.034150635094610964,
+            0.6025
+          ],
+          [
+            -0.02500000000000001,
+            0.593349364905389
+          ],
+          [
+            -0.012500000000000002,
+            0.59
+          ],
+          [
+            0.012499999999999992,
+            0.59
+          ],
+          [
+            0.025,
+            0.593349364905389
+          ],
+          [
+            0.03415063509461096,
+            0.6025
+          ],
+          [
+            0.0375,
+            0.615
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.2,
+    1.0,
+    0.08
+  ],
+  "source": {
+    "authoring": "tools/game410/automation.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "robot",
+    "L1-Expansion",
+    "robot",
+    "game_automation",
+    "scissor_link",
+    "Game-Expansion-3.10",
+    "automation",
+    "机械与自动化"
+  ],
+  "theme": "l1-robot",
+  "version": "3.10.0"
+}

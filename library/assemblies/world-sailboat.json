@@ -1,0 +1,123 @@
+{
+  "category": "vessel",
+  "description": "",
+  "id": "world-sailboat",
+  "instances": [
+    {
+      "id": "hull",
+      "params": {
+        "beam": 2.15,
+        "length": 5.3
+      },
+      "part": "p5.boat.open_hull",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "seatRear",
+      "params": {
+        "beam": 1.71
+      },
+      "part": "p5.boat.bench",
+      "position": [
+        0,
+        0.51,
+        -1.1
+      ]
+    },
+    {
+      "id": "seatFront",
+      "params": {
+        "beam": 1.5
+      },
+      "part": "p5.boat.bench",
+      "position": [
+        0,
+        0.6,
+        1.26
+      ]
+    },
+    {
+      "assembly": "kit-sail-rig",
+      "id": "rig",
+      "position": [
+        0,
+        0.22,
+        0.35
+      ]
+    },
+    {
+      "id": "shrouds",
+      "part": "p5.rig.shrouds",
+      "position": [
+        0,
+        0.22,
+        0.35
+      ]
+    },
+    {
+      "id": "rudder",
+      "part": "p5.boat.rudder",
+      "position": [
+        0,
+        0.4,
+        -2.67
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-2.0",
+    "level": 3,
+    "quality": {
+      "review_scope": "P5-P6",
+      "status": "worlds"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "sheet",
+        "max": 35,
+        "min": -35,
+        "nodes": [
+          "rig.sail",
+          "rig.boom"
+        ],
+        "title": "帆面与帆杆联动"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "rudder",
+        "max": 30,
+        "min": -30,
+        "node": "rudder",
+        "title": "船舵角度",
+        "unit": "°"
+      }
+    ],
+    "theme": "harbor",
+    "units": "metres"
+  },
+  "name": "沿岸帆船 · 真实船舱与独立帆装",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "harbor",
+    "vessel"
+  ],
+  "version": "3.4.0"
+}

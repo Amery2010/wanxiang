@@ -1,0 +1,304 @@
+{
+  "category": "body",
+  "description": "",
+  "id": "world-navigator",
+  "instances": [
+    {
+      "id": "skin",
+      "params": {
+        "build": {
+          "$param": "build"
+        },
+        "grip": true,
+        "height": {
+          "$param": "height"
+        },
+        "palette": {}
+      },
+      "part": "core.human.body"
+    },
+    {
+      "id": "head",
+      "parent": "skin.rig.head",
+      "part": "core.human.head",
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hair",
+      "parent": "skin.rig.head",
+      "part": "core.human.hair.short",
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beard",
+      "parent": "skin.rig.head",
+      "part": "core.human.beard",
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.76,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belt",
+      "part": "core.wear.belt",
+      "position": [
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            0.986,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        0
+      ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        1,
+        {
+          "$param": "build"
+        }
+      ]
+    },
+    {
+      "id": "outfit0",
+      "parent": "skin.rig.chest",
+      "part": "w.wear.field_vest",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        }
+      ],
+      "scale": [
+        {
+          "$op": "mul",
+          "args": [
+            1,
+            {
+              "$param": "build"
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            1,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            1,
+            {
+              "$param": "build"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held",
+      "parent": "skin.rig.handR",
+      "part": "p5.tool.chart",
+      "position": [
+        0,
+        -0.01,
+        0.03
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-2.0",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "build": {
+          "default": 0.99,
+          "maximum": 1.18,
+          "minimum": 0.92,
+          "step": 0.01,
+          "title": "体格",
+          "type": "number"
+        },
+        "height": {
+          "default": 1.82,
+          "maximum": 1.98,
+          "minimum": 1.64,
+          "step": 0.01,
+          "title": "身高",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "P5-P6",
+      "status": "worlds"
+    },
+    "role_recipe": true,
+    "shared_anatomy": "core.human.body",
+    "theme": "harbor",
+    "units": "metres"
+  },
+  "name": "领航员 · 轻装背心与航海图",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "harbor",
+    "body"
+  ],
+  "version": "3.4.0"
+}

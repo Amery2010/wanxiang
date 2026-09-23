@@ -1,0 +1,334 @@
+{
+  "category": "vehicle",
+  "description": "旋翼桨叶片翼面机匣组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.16,
+        0.24
+      ],
+      "span": 0.16,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.44,
+        0
+      ],
+      "profile": [
+        0.16,
+        0.24
+      ],
+      "span": 0.16,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-vehicle-flightmodule-rotor_blade",
+  "instances": [
+    {
+      "id": "hub",
+      "params": {},
+      "part": "l1.industry.drive.coupling",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.562500012572855,
+        0.5000000183398914,
+        0.562500012572855
+      ]
+    },
+    {
+      "id": "blade0",
+      "params": {},
+      "part": "l1.vehicle.aero.rotor_blade",
+      "pivot": [
+        0.9700000006705523,
+        0.019999999552965164,
+        -0.2460000067949295
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.072815534027987,
+        0.38888888953276624,
+        2.1857923251651563
+      ]
+    },
+    {
+      "id": "blade1",
+      "params": {},
+      "part": "l1.vehicle.aero.rotor_blade",
+      "pivot": [
+        0.9700000006705523,
+        0.019999999552965164,
+        -0.2460000067949295
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        120,
+        0
+      ],
+      "scale": [
+        0.072815534027987,
+        0.38888888953276624,
+        2.1857923251651563
+      ]
+    },
+    {
+      "id": "blade2",
+      "params": {},
+      "part": "l1.vehicle.aero.rotor_blade",
+      "pivot": [
+        0.9700000006705523,
+        0.019999999552965164,
+        -0.2460000067949295
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        240,
+        0
+      ],
+      "scale": [
+        0.072815534027987,
+        0.38888888953276624,
+        2.1857923251651563
+      ]
+    },
+    {
+      "id": "shaft",
+      "params": {},
+      "part": "l1.industry.drive.keyshaft",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0064999982714653015
+      ],
+      "position": [
+        0,
+        -0.24,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3999999841054287,
+        0.39999999999999997,
+        0.3680981538558582
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "vehicle",
+    "functional": {
+      "assembly_order": [
+        "hub",
+        "blade0",
+        "blade1",
+        "blade2",
+        "shaft"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        1.7,
+        0.44,
+        1.7
+      ],
+      "family": "flightmodule",
+      "mount_dimensions_m": [
+        0.16,
+        0.24
+      ],
+      "notes": [
+        "机构演示无空气动力学或推进仿真；不构成飞行器制造设计。"
+      ],
+      "purpose": "旋翼桨叶片翼面机匣组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.16,
+          0.24
+        ],
+        "span": 0.16,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.44,
+          0
+        ],
+        "profile": [
+          0.16,
+          0.24
+        ],
+        "span": 0.16,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/vehicle.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-vehicle",
+    "units": "metres"
+  },
+  "name": "旋翼桨叶片翼面机匣组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "vehicle",
+    "flightmodule",
+    "rotor_blade",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

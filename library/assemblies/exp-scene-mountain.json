@@ -1,0 +1,440 @@
+{
+  "category": "terrain",
+  "description": "可编辑的实例配方；开放前景与清晰通行带。几何按需构建，无预置 GLB。",
+  "id": "exp-scene-mountain",
+  "instances": [
+    {
+      "assembly": "exp-biome-canyon",
+      "id": "rocks",
+      "position": [
+        -2.4,
+        0,
+        -2
+      ]
+    },
+    {
+      "assembly": "exp-rope-bridge",
+      "id": "bridge",
+      "position": [
+        -1,
+        0.6,
+        2.7
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ]
+    },
+    {
+      "id": "supportL",
+      "part": "exp.road.bridge_abutment",
+      "position": [
+        -3.3,
+        -0.3,
+        2.7
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ]
+    },
+    {
+      "id": "supportR",
+      "part": "exp.road.bridge_abutment",
+      "position": [
+        1.3,
+        -0.3,
+        2.7
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ]
+    },
+    {
+      "id": "slab",
+      "part": "exp.nature.rock_slab",
+      "position": [
+        3.4,
+        0,
+        3.7
+      ]
+    },
+    {
+      "id": "boulder",
+      "part": "exp.nature.boulder",
+      "position": [
+        -5.4,
+        0,
+        4.5
+      ],
+      "scale": [
+        0.6,
+        0.7,
+        0.6
+      ]
+    },
+    {
+      "assembly": "world-wooden-cart",
+      "id": "minecart",
+      "position": [
+        -4.9,
+        0,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "assembly": "world-tent",
+      "id": "shelter",
+      "position": [
+        -4.3,
+        0,
+        -5.1
+      ],
+      "rotation": [
+        0,
+        -25,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "assembly": "world-supply-crate",
+      "id": "supplies",
+      "position": [
+        -2.4,
+        0,
+        -4.1
+      ]
+    },
+    {
+      "id": "mine_ore",
+      "params": {
+        "palette": {
+          "#79BCC8": "#A67C55"
+        }
+      },
+      "part": "exp.nature.crystal_cluster",
+      "position": [
+        -6.2,
+        0,
+        -2.4
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "assembly": "exp-spruce",
+      "id": "pine",
+      "position": [
+        5.9,
+        0,
+        3.5
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "ground",
+      "part": "r38.exp-scene-mountain.ground"
+    },
+    {
+      "id": "water",
+      "part": "r38.exp-scene-mountain.water"
+    },
+    {
+      "id": "west_mine_route",
+      "part": "r38.exp-scene-mountain.west_mine_route"
+    },
+    {
+      "id": "east_mine_route",
+      "part": "r38.exp-scene-mountain.east_mine_route"
+    },
+    {
+      "id": "west_bridge_steps",
+      "part": "r38.exp-scene-mountain.west_bridge_steps"
+    },
+    {
+      "id": "mine_outcrop",
+      "part": "r38.exp-scene-mountain.mine_outcrop"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-2.2",
+    "interfaces": [],
+    "level": 4,
+    "quality": {
+      "review_scope": "A-C",
+      "status": "expansion"
+    },
+    "repair38": {
+      "baseline": "3.7.1",
+      "change": "保留原场景主体与编辑节点，针对人工发现的断接/碰撞修复入口、围护、桥下水道、施工/瞭望梯具或区域动线；未用随机装饰替代问题修复。",
+      "evidence": "evidence/l4-v3.8.0",
+      "old_root_nodes": [
+        "boulder",
+        "bridge",
+        "cliff",
+        "ground_0_0",
+        "ground_0_1",
+        "ground_0_2",
+        "ground_0_3",
+        "ground_1_0",
+        "ground_1_1",
+        "ground_1_2",
+        "ground_1_3",
+        "ground_2_0",
+        "ground_2_1",
+        "ground_2_2",
+        "ground_2_3",
+        "ground_3_0",
+        "ground_3_1",
+        "ground_3_2",
+        "ground_3_3",
+        "mine_ore",
+        "minecart",
+        "pine",
+        "ravine_head",
+        "rocks",
+        "shelter",
+        "slab",
+        "slope",
+        "supplies",
+        "supportL",
+        "supportR",
+        "water"
+      ],
+      "problem": "峡谷和水道只是桥下的孤立片段，桥两端的地形与矿区路径未连贯。",
+      "retained_root_nodes": [
+        "boulder",
+        "bridge",
+        "mine_ore",
+        "minecart",
+        "pine",
+        "rocks",
+        "shelter",
+        "slab",
+        "supplies",
+        "supportL",
+        "supportR",
+        "water"
+      ],
+      "visual_status": "see human review ledger; not asserted by authoring code"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 250000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "scene": {
+      "camera_hint": {
+        "azimuth": 35,
+        "elevation": 36
+      },
+      "density": "curated",
+      "footprint": [
+        16,
+        16
+      ],
+      "groundY": 0.0,
+      "layers": {
+        "ground": {
+          "label": "ground",
+          "visible": true
+        },
+        "props": {
+          "label": "props",
+          "visible": true
+        },
+        "structures": {
+          "label": "structures",
+          "visible": true
+        }
+      },
+      "objects": {
+        "boulder": {
+          "label": "boulder",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "bridge": {
+          "label": "bridge",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "east_mine_route": {
+          "label": "east_mine_route",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "ground": {
+          "label": "ground",
+          "layer": "ground",
+          "locked": true,
+          "region": "site"
+        },
+        "mine_ore": {
+          "label": "mine_ore",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "mine_outcrop": {
+          "label": "mine_outcrop",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "minecart": {
+          "label": "minecart",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "pine": {
+          "label": "pine",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "rocks": {
+          "label": "rocks",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "shelter": {
+          "label": "shelter",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "slab": {
+          "label": "slab",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "supplies": {
+          "label": "supplies",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "supportL": {
+          "label": "supportL",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "supportR": {
+          "label": "supportR",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "water": {
+          "label": "water",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "west_bridge_steps": {
+          "label": "west_bridge_steps",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "west_mine_route": {
+          "label": "west_mine_route",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        }
+      },
+      "placement_seed": null,
+      "regions": {
+        "site": {
+          "label": "site"
+        }
+      },
+      "repetition_policy": "shared geometry; no merged duplicate definition",
+      "revision": "3.8.0",
+      "spawn_points": [
+        {
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "id": "visitor",
+          "position": [
+            0,
+            0.0,
+            9.8
+          ]
+        }
+      ],
+      "walkable_route": "authored centre/front clearing; collider sidecar, not a navigation mesh"
+    },
+    "source": {
+      "authoring": "tools/repair38/__init__.py",
+      "revision": "3.8.0"
+    },
+    "stage": "C",
+    "state_controls": [],
+    "theme": "mountain",
+    "units": "metres"
+  },
+  "name": "山地矿区与峡谷通道",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "mountain",
+    "terrain",
+    "场景",
+    "生境",
+    "静态",
+    "可步行"
+  ],
+  "version": "3.8.0"
+}

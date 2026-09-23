@@ -1,0 +1,723 @@
+{
+  "anchor": "base",
+  "category": "nature",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.8
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            1,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.8
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "下垂侧枝；可复用的 自然与植被 语义部件，不包含上层设备行为。",
+  "id": "l1.nature.branch.drooping",
+  "level": 1,
+  "material": "mat.leaf",
+  "name": "下垂侧枝",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 1,
+        "maximum": 1.75,
+        "minimum": 0.55,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "nature",
+    "repair39": {
+      "audit_id": "l1.nature.branch.drooping",
+      "commercial_certification": false,
+      "scope": "authored-geometry; current evidence/v3.9.0"
+    },
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "repair39": {
+    "baseline": "3.8.0",
+    "change": "用连续曲率、多截面半径递减和自然弯曲取代折线拐角；根部保留装配直径，梢端逐渐变细。",
+    "connector_contract": "existing named sockets preserved; contact tests in release evidence",
+    "contracts": {},
+    "legacy_geometry_sha256": "c440b81f8738f56e89a46b8a9d609862725fbe81cb6708a7793a0fd1111602ad",
+    "source_revision": "3.9.0",
+    "stable_public_id": true
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative/anatomy component; owning assembly authors collision",
+      "type": "none"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/nature.json#l1.nature.branch.drooping",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "nature",
+    "family": "branch",
+    "profile": "drooping",
+    "purpose": "下垂侧枝",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#A77143",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "drooping_00",
+        "rings": [
+          {
+            "c": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "r": [
+              0.065,
+              0.065
+            ]
+          },
+          {
+            "c": [
+              -0.0021679687500000006,
+              0.10533420138888891,
+              0.0016529224537037038
+            ],
+            "r": [
+              0.06218036168509271,
+              0.06218036168509271
+            ]
+          },
+          {
+            "c": [
+              0.000989583333333333,
+              0.20142361111111107,
+              0.0040567129629629625
+            ],
+            "r": [
+              0.05938875106701204,
+              0.05938875106701204
+            ]
+          },
+          {
+            "c": [
+              0.00896484375,
+              0.28839843750000005,
+              0.007128906250000001
+            ],
+            "r": [
+              0.05662618339748769,
+              0.05662618339748769
+            ]
+          },
+          {
+            "c": [
+              0.02125,
+              0.3663888888888889,
+              0.010787037037037038
+            ],
+            "r": [
+              0.053893760633475646,
+              0.053893760633475646
+            ]
+          },
+          {
+            "c": [
+              0.03733723958333331,
+              0.4355251736111112,
+              0.014948640046296296
+            ],
+            "r": [
+              0.05119268353506642,
+              0.05119268353506642
+            ]
+          },
+          {
+            "c": [
+              0.056718750000000005,
+              0.4959375,
+              0.01953125
+            ],
+            "r": [
+              0.048524266175626475,
+              0.048524266175626475
+            ]
+          },
+          {
+            "c": [
+              0.07888671874999997,
+              0.5477560763888888,
+              0.024452401620370365
+            ],
+            "r": [
+              0.04588995350573339,
+              0.04588995350573339
+            ]
+          },
+          {
+            "c": [
+              0.10333333333333332,
+              0.591111111111111,
+              0.02962962962962963
+            ],
+            "r": [
+              0.04329134283087488,
+              0.04329134283087488
+            ]
+          },
+          {
+            "c": [
+              0.12955078125,
+              0.6261328125000001,
+              0.03498046875
+            ],
+            "r": [
+              0.04073021037396726,
+              0.04073021037396726
+            ]
+          },
+          {
+            "c": [
+              0.15703124999999996,
+              0.6529513888888889,
+              0.0404224537037037
+            ],
+            "r": [
+              0.03820854454565767,
+              0.03820854454565767
+            ]
+          },
+          {
+            "c": [
+              0.18526692708333334,
+              0.6716970486111111,
+              0.045873119212962964
+            ],
+            "r": [
+              0.0357285882165175,
+              0.0357285882165175
+            ]
+          },
+          {
+            "c": [
+              0.21375,
+              0.6825000000000001,
+              0.05125000000000001
+            ],
+            "r": [
+              0.03329289330712403,
+              0.03329289330712403
+            ]
+          },
+          {
+            "c": [
+              0.24197265624999995,
+              0.6854904513888889,
+              0.05647063078703703
+            ],
+            "r": [
+              0.030904392612713598,
+              0.030904392612713598
+            ]
+          },
+          {
+            "c": [
+              0.26942708333333326,
+              0.6807986111111112,
+              0.06145254629629629
+            ],
+            "r": [
+              0.028566496369395917,
+              0.028566496369395917
+            ]
+          },
+          {
+            "c": [
+              0.29560546875,
+              0.6685546875,
+              0.06611328125
+            ],
+            "r": [
+              0.026283225422241194,
+              0.026283225422241194
+            ]
+          },
+          {
+            "c": [
+              0.31999999999999995,
+              0.6488888888888888,
+              0.07037037037037036
+            ],
+            "r": [
+              0.024059400504804998,
+              0.024059400504804998
+            ]
+          },
+          {
+            "c": [
+              0.34210286458333333,
+              0.6219314236111112,
+              0.07414134837962963
+            ],
+            "r": [
+              0.02190092131494008,
+              0.02190092131494008
+            ]
+          },
+          {
+            "c": [
+              0.36140625000000004,
+              0.5878125,
+              0.07734375
+            ],
+            "r": [
+              0.019815197102896986,
+              0.019815197102896986
+            ]
+          },
+          {
+            "c": [
+              0.37740234375,
+              0.5466623263888889,
+              0.0798951099537037
+            ],
+            "r": [
+              0.017811850609940123,
+              0.017811850609940123
+            ]
+          },
+          {
+            "c": [
+              0.3895833333333333,
+              0.4986111111111112,
+              0.08171296296296296
+            ],
+            "r": [
+              0.01590396045335878,
+              0.01590396045335878
+            ]
+          },
+          {
+            "c": [
+              0.39744140625,
+              0.4437890625,
+              0.08271484375
+            ],
+            "r": [
+              0.014110500887514884,
+              0.014110500887514884
+            ]
+          },
+          {
+            "c": [
+              0.40046875000000004,
+              0.3823263888888889,
+              0.08281828703703704
+            ],
+            "r": [
+              0.0124619735185882,
+              0.0124619735185882
+            ]
+          },
+          {
+            "c": [
+              0.39815755208333337,
+              0.3143532986111112,
+              0.0819408275462963
+            ],
+            "r": [
+              0.011017698951420268,
+              0.011017698951420268
+            ]
+          },
+          {
+            "c": [
+              0.39,
+              0.24,
+              0.08
+            ],
+            "r": [
+              0.01,
+              0.01
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 12,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.8,
+    1,
+    0.8
+  ],
+  "source": {
+    "authoring": "tools/repair39/nature.py",
+    "license": "project-authored",
+    "revision": "3.9.0",
+    "type": "original_structural_lowpoly_rebuild"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "nature",
+    "L1-Expansion",
+    "nature",
+    "branch",
+    "drooping",
+    "Advanced-Lowpoly-3.9"
+  ],
+  "theme": "l1-nature",
+  "version": "3.9.0"
+}

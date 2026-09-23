@@ -1,0 +1,141 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "exp-robot-leg",
+  "instances": [
+    {
+      "id": "hip",
+      "part": "exp.robot.servo",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "upper",
+      "parent": "hip",
+      "part": "exp.robot.upper_link",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "knee",
+      "parent": "hip",
+      "part": "exp.robot.servo",
+      "position": [
+        0,
+        -0.72,
+        0
+      ]
+    },
+    {
+      "id": "lower",
+      "parent": "knee",
+      "part": "exp.robot.lower_link",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ankle",
+      "parent": "knee",
+      "part": "exp.robot.foot",
+      "position": [
+        0,
+        -0.79,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "robotics",
+    "interfaces": [],
+    "level": 2,
+    "motion_presets": [
+      "exp-robot-leg"
+    ],
+    "quality": {
+      "domain": "robotics",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "hip",
+        "max": 45,
+        "min": -45,
+        "node": "hip",
+        "title": "髋关节",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "knee",
+        "max": 25,
+        "min": -75,
+        "node": "knee",
+        "title": "膝关节",
+        "unit": "°"
+      }
+    ],
+    "theme": "robotics",
+    "units": "metres"
+  },
+  "name": "两段机械腿链 · 髋、膝与接地足",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "robotics",
+    "mech",
+    "D-E",
+    "robotics"
+  ],
+  "version": "3.4.0"
+}

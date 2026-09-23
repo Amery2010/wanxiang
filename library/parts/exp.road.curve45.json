@@ -1,0 +1,1238 @@
+{
+  "anchor": "base",
+  "category": "terrain",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "in",
+      "interface": "road.lane.3m.v1",
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "position": [
+        {
+          "$param": "radius"
+        },
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 3,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "out",
+      "interface": "road.lane.3m.v1",
+      "normal": [
+        -0.7071067811865475,
+        0,
+        0.7071067811865476
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.7071067811865476,
+            {
+              "$param": "radius"
+            }
+          ]
+        },
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            0.7071067811865475,
+            {
+              "$param": "radius"
+            }
+          ]
+        }
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 3,
+      "tangent": [
+        0.7071067811865476,
+        0,
+        0.7071067811865475
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "",
+  "id": "exp.road.curve45",
+  "level": 1,
+  "material": "mat.stone",
+  "name": "三米车道 · 45°连续转弯",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "radius": {
+        "default": 6,
+        "maximum": 12,
+        "minimum": 4,
+        "step": 0.5,
+        "title": "转弯半径",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "A-C",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "source": "continuous-road-surface",
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 3000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#535C5D",
+        "faces": [
+          [
+            0,
+            4,
+            5,
+            1
+          ],
+          [
+            2,
+            3,
+            7,
+            6
+          ],
+          [
+            0,
+            2,
+            6,
+            4
+          ],
+          [
+            1,
+            5,
+            7,
+            3
+          ],
+          [
+            4,
+            8,
+            9,
+            5
+          ],
+          [
+            6,
+            7,
+            11,
+            10
+          ],
+          [
+            4,
+            6,
+            10,
+            8
+          ],
+          [
+            5,
+            9,
+            11,
+            7
+          ],
+          [
+            8,
+            12,
+            13,
+            9
+          ],
+          [
+            10,
+            11,
+            15,
+            14
+          ],
+          [
+            8,
+            10,
+            14,
+            12
+          ],
+          [
+            9,
+            13,
+            15,
+            11
+          ],
+          [
+            12,
+            16,
+            17,
+            13
+          ],
+          [
+            14,
+            15,
+            19,
+            18
+          ],
+          [
+            12,
+            14,
+            18,
+            16
+          ],
+          [
+            13,
+            17,
+            19,
+            15
+          ],
+          [
+            16,
+            20,
+            21,
+            17
+          ],
+          [
+            18,
+            19,
+            23,
+            22
+          ],
+          [
+            16,
+            18,
+            22,
+            20
+          ],
+          [
+            17,
+            21,
+            23,
+            19
+          ],
+          [
+            20,
+            24,
+            25,
+            21
+          ],
+          [
+            22,
+            23,
+            27,
+            26
+          ],
+          [
+            20,
+            22,
+            26,
+            24
+          ],
+          [
+            21,
+            25,
+            27,
+            23
+          ],
+          [
+            0,
+            1,
+            3,
+            2
+          ],
+          [
+            24,
+            26,
+            27,
+            25
+          ]
+        ],
+        "kind": "poly",
+        "points": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                1.0
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.0
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                1.0
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.0
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                1.0
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.0
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                1.0
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.0
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.9914448613738104
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.13052619222005157
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.9914448613738104
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.13052619222005157
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.9914448613738104
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.13052619222005157
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.9914448613738104
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.13052619222005157
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.9659258262890683
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.25881904510252074
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.9659258262890683
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.25881904510252074
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.9659258262890683
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.25881904510252074
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.9659258262890683
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.25881904510252074
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.9238795325112867
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.3826834323650898
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.9238795325112867
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.3826834323650898
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.9238795325112867
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.3826834323650898
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.9238795325112867
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.3826834323650898
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.8660254037844387
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.49999999999999994
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.8660254037844387
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.49999999999999994
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.8660254037844387
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.49999999999999994
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.8660254037844387
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.49999999999999994
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.7933533402912352
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.6087614290087207
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.7933533402912352
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.6087614290087207
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.7933533402912352
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.6087614290087207
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.7933533402912352
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.6087614290087207
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.7071067811865476
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.7071067811865475
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.7071067811865476
+              ]
+            },
+            0,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.7071067811865475
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.7071067811865476
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    -1.5
+                  ]
+                },
+                0.7071067811865475
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.7071067811865476
+              ]
+            },
+            -0.12,
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    1.5
+                  ]
+                },
+                0.7071067811865475
+              ]
+            }
+          ]
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    9,
+    0.12,
+    9
+  ],
+  "source": {
+    "authoring": "tools/expansion/",
+    "license": "project-authored",
+    "revision": "2.2.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "shared",
+    "terrain",
+    "道路",
+    "弯道"
+  ],
+  "theme": "shared",
+  "version": "3.4.0"
+}

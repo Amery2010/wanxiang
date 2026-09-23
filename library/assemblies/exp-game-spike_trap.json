@@ -1,0 +1,173 @@
+{
+  "category": "gameplay",
+  "description": "",
+  "id": "exp-game-spike_trap",
+  "instances": [
+    {
+      "id": "border0",
+      "part": "exp.arch.beam",
+      "position": [
+        0,
+        0,
+        -0.69
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.77,
+        0.5,
+        0.65
+      ]
+    },
+    {
+      "id": "border1",
+      "part": "exp.arch.beam",
+      "position": [
+        0,
+        0,
+        0.69
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.77,
+        0.5,
+        0.65
+      ]
+    },
+    {
+      "id": "border2",
+      "part": "exp.arch.beam",
+      "position": [
+        -0.69,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        0.77,
+        0.5,
+        0.65
+      ]
+    },
+    {
+      "id": "border3",
+      "part": "exp.arch.beam",
+      "position": [
+        0.69,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        0.77,
+        0.5,
+        0.65
+      ]
+    },
+    {
+      "id": "spikes",
+      "part": "exp.game.spike_plate",
+      "position": [
+        0,
+        -0.42,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "gameplay",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "gameplay",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "interaction": {
+        "active_threshold": 0.25,
+        "authority": "consumer-game",
+        "event": "hazard.contact",
+        "kind": "hazard",
+        "schema": "wx.interaction/1.0",
+        "state_control": "extend",
+        "trigger": {
+          "center": [
+            0,
+            0.22,
+            0
+          ],
+          "shape": "box",
+          "size": [
+            1.2,
+            0.45,
+            1.2
+          ]
+        }
+      },
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "extend",
+        "max": 0.42,
+        "min": 0,
+        "mode": "translation",
+        "node": "spikes",
+        "step": 0.01,
+        "title": "地刺伸出",
+        "unit": "m"
+      }
+    ],
+    "theme": "gameplay",
+    "units": "metres"
+  },
+  "name": "伸缩地刺 · 防护座与移动刺组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "version": "3.4.0"
+}

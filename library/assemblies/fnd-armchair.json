@@ -1,0 +1,173 @@
+{
+  "category": "interior",
+  "description": "",
+  "id": "fnd-armchair",
+  "instances": [
+    {
+      "assembly": "kit-seat-frame",
+      "id": "frame",
+      "params": {
+        "width": {
+          "$param": "width"
+        }
+      }
+    },
+    {
+      "id": "seat",
+      "params": {
+        "depth": 0.59,
+        "thickness": 0.16,
+        "width": {
+          "$op": "sub",
+          "args": [
+            {
+              "$param": "width"
+            },
+            0.27
+          ]
+        }
+      },
+      "part": "core.interior.cushion",
+      "position": [
+        0,
+        0.319,
+        0.033
+      ]
+    },
+    {
+      "id": "back",
+      "params": {
+        "depth": 0.61,
+        "thickness": 0.14,
+        "width": {
+          "$op": "sub",
+          "args": [
+            {
+              "$param": "width"
+            },
+            0.16
+          ]
+        }
+      },
+      "part": "core.interior.cushion",
+      "position": [
+        0,
+        0.706,
+        -0.222
+      ],
+      "rotation": [
+        76,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "armL",
+      "part": "core.interior.armrest",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -0.5,
+            {
+              "$op": "sub",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.15
+              ]
+            }
+          ]
+        },
+        0.31,
+        0
+      ]
+    },
+    {
+      "id": "armR",
+      "part": "core.interior.armrest",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$op": "sub",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.15
+              ]
+            }
+          ]
+        },
+        0.31,
+        0
+      ]
+    },
+    {
+      "id": "pillow",
+      "params": {
+        "depth": 0.48,
+        "palette": {
+          "#707952": "#E8AA32"
+        },
+        "thickness": 0.18,
+        "width": 0.5
+      },
+      "part": "core.interior.cushion",
+      "position": [
+        0.063,
+        0.608,
+        -0.074
+      ],
+      "rotation": [
+        71,
+        0,
+        -9
+      ],
+      "scale": [
+        0.61,
+        0.61,
+        0.61
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "foundation-1.8",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "default": 0.86,
+          "maximum": 1.1,
+          "minimum": 0.76,
+          "step": 0.01,
+          "title": "座椅外宽",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "P1-P2",
+      "status": "foundation"
+    },
+    "units": "metres"
+  },
+  "name": "扶手椅母版 · 木架与独立软包",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Foundation",
+    "interior",
+    "扶手椅母版 · 木架与独立软包"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,449 @@
+{
+  "category": "robot",
+  "description": "深度相机前罩标定支架组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.robot.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.robot.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.5,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-robot-sensor-depth",
+  "instances": [
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "flange",
+      "params": {},
+      "part": "l1.robot.end.tool_flange",
+      "pivot": [
+        0.0,
+        -0.02250000089406967,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4583333435778819,
+        0.6829268352252115,
+        0.4583333435778819
+      ]
+    },
+    {
+      "id": "bracket",
+      "params": {},
+      "part": "l1.robot.joint.crossed",
+      "pivot": [
+        0.0,
+        -0.14000000059604645,
+        0.0
+      ],
+      "position": [
+        0,
+        0.06,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7272727312135303,
+        0.6111111121229184,
+        0.5681818212605705
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "sensor",
+      "params": {},
+      "part": "l1.robot.sensor.depth",
+      "pivot": [
+        0.0,
+        0.0,
+        0.03750000149011612
+      ],
+      "position": [
+        0,
+        0.22,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8750000195577746,
+        1.1999999821186067,
+        0.7058823248919329
+      ]
+    },
+    {
+      "id": "connector",
+      "params": {},
+      "part": "l1.industry.power.terminal",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.1,
+        -0.12
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.16,
+        0.2749999959021807,
+        0.37500000838190334
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix0",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.1,
+        0.08,
+        0.08
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.20909091022388995,
+        0.07137931239874275,
+        0.2414373820776483
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix1",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.1,
+        0.08,
+        -0.08
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.20909091022388995,
+        0.07137931239874275,
+        0.2414373820776483
+      ]
+    },
+    {
+      "id": "lens0",
+      "params": {},
+      "parent": "sensor",
+      "part": "l1.props.device.lens_barrel",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.13,
+        0.09
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "scale": [
+        0.2539062379401008,
+        0.16,
+        0.2539062379401008
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "robot",
+    "functional": {
+      "assembly_order": [
+        "flange",
+        "bracket",
+        "sensor",
+        "connector",
+        "fix0",
+        "fix1",
+        "lens0"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.36,
+        0.5,
+        0.35
+      ],
+      "family": "sensor",
+      "mount_dimensions_m": [
+        0.22,
+        0.22
+      ],
+      "notes": [
+        "外观与朝向节点；不提供真实测距/相机标定内参。"
+      ],
+      "purpose": "深度相机前罩标定支架组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "sensor"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.robot.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.robot.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.5,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/robot.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "pitch",
+        "max": 45,
+        "min": -45,
+        "mode": "rotation",
+        "node": "sensor",
+        "step": 1,
+        "title": "俯仰角",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-robot",
+    "units": "metres"
+  },
+  "name": "深度相机前罩标定支架组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "robot",
+    "sensor",
+    "depth",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

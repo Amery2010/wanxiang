@@ -1,0 +1,278 @@
+{
+  "category": "vehicle",
+  "description": "船用系缆角船用功能组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.21
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.33,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.21
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-vehicle-marineunit-cleat",
+  "instances": [
+    {
+      "id": "cleat",
+      "params": {},
+      "part": "l1.vehicle.marine.cleat",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6785714256824279,
+        0.599999976158143,
+        1.0000000223517422
+      ]
+    },
+    {
+      "id": "fairlead",
+      "params": {},
+      "part": "l1.vehicle.marine.fairlead",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.05,
+        0.28
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.527777756805774,
+        0.5714285811599422,
+        1.0000000223517422
+      ]
+    },
+    {
+      "id": "deck",
+      "params": {},
+      "part": "l1.architecture.floor.plank",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        -0.08,
+        0.1
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5166666461361787,
+        0.7999999880790712,
+        0.49999998013178587
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "vehicle",
+    "functional": {
+      "assembly_order": [
+        "cleat",
+        "fairlead",
+        "deck"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.62,
+        0.33,
+        0.6
+      ],
+      "family": "marineunit",
+      "mount_dimensions_m": [
+        0.18,
+        0.21
+      ],
+      "notes": [],
+      "purpose": "船用系缆角船用功能组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.21
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.33,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.21
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/vehicle.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-vehicle",
+    "units": "metres"
+  },
+  "name": "船用系缆角船用功能组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "vehicle",
+    "marineunit",
+    "cleat",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

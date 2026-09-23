@@ -1,0 +1,306 @@
+{
+  "category": "animal",
+  "description": "鞘翅胸环组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.creature.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.18
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.creature.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.7,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.18
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-creature-specialized-insect_collar",
+  "instances": [
+    {
+      "id": "thorax",
+      "params": {},
+      "part": "l1.creature.foot.paw",
+      "pivot": [
+        -0.0032724477350711823,
+        0.02116423472762108,
+        0.02375621348619461
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0400000309944162,
+        1.5000000800937456,
+        0.6039042607917093
+      ]
+    },
+    {
+      "id": "left",
+      "params": {},
+      "part": "l1.creature.wing.insect_elytron",
+      "pivot": [
+        0.054999999701976776,
+        0.0,
+        0.006483573466539383
+      ],
+      "position": [
+        -0.075,
+        0.12,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "scale": [
+        0.4054054165078048,
+        0.5487804925916878,
+        0.5000000049670538
+      ]
+    },
+    {
+      "id": "right",
+      "params": {},
+      "part": "l1.creature.wing.insect_elytron",
+      "pivot": [
+        0.054999999701976776,
+        0.0,
+        0.006483573466539383
+      ],
+      "position": [
+        0.075,
+        0.12,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        180,
+        -30
+      ],
+      "scale": [
+        0.4054054165078048,
+        0.5487804925916878,
+        0.5000000049670538
+      ]
+    },
+    {
+      "id": "membrane",
+      "params": {},
+      "part": "l1.creature.wing.bat_membrane",
+      "pivot": [
+        0.0,
+        -0.010219193063676357,
+        0.004554334096610546
+      ],
+      "position": [
+        0,
+        0.14,
+        -0.028
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4919012234481724,
+        0.4224048124373352,
+        0.39903640119217765
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "creature",
+    "functional": {
+      "assembly_order": [
+        "thorax",
+        "left",
+        "right",
+        "membrane"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.8,
+        0.7,
+        0.6
+      ],
+      "family": "specialized",
+      "mount_dimensions_m": [
+        0.22,
+        0.18
+      ],
+      "notes": [
+        "复用现有角、爪、膜和软组织几何；不是解剖精度模型，需与目标生物比例匹配。"
+      ],
+      "purpose": "鞘翅胸环组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.creature.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.18
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.creature.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.7,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.18
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "type": "none"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/creature.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-creature",
+    "units": "metres"
+  },
+  "name": "鞘翅胸环组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "creature",
+    "specialized",
+    "insect_collar",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

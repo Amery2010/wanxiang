@@ -1,0 +1,278 @@
+{
+  "category": "vehicle",
+  "description": "分体轮辋轮系组件；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.085,
+        0.085
+      ],
+      "span": 0.085,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.48,
+        0
+      ],
+      "profile": [
+        0.085,
+        0.085
+      ],
+      "span": 0.085,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-vehicle-wheelhub-split_rim",
+  "instances": [
+    {
+      "id": "rim",
+      "params": {},
+      "part": "l1.vehicle.wheel.split_rim",
+      "pivot": [
+        0.0,
+        -0.019999999552965164,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6764705811198608,
+        0.4999999820720411,
+        0.6764705811198608
+      ]
+    },
+    {
+      "id": "tire",
+      "params": {},
+      "part": "l1.vehicle.wheel.road_tire",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6880734110508654,
+        0.4736842164702693,
+        0.6880734110508654
+      ]
+    },
+    {
+      "id": "bearing",
+      "params": {},
+      "part": "l1.industry.drive.bearing",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.11,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "scale": [
+        0.28333332207467865,
+        0.3555555649745614,
+        0.5454545484101476
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "vehicle",
+    "functional": {
+      "assembly_order": [
+        "rim",
+        "tire",
+        "bearing"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.62,
+        0.48,
+        0.62
+      ],
+      "family": "wheelhub",
+      "mount_dimensions_m": [
+        0.085,
+        0.085
+      ],
+      "notes": [],
+      "purpose": "分体轮辋轮系组件",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.085,
+          0.085
+        ],
+        "span": 0.085,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.48,
+          0
+        ],
+        "profile": [
+          0.085,
+          0.085
+        ],
+        "span": 0.085,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/vehicle.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-vehicle",
+    "units": "metres"
+  },
+  "name": "分体轮辋轮系组件",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "vehicle",
+    "wheelhub",
+    "split_rim",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

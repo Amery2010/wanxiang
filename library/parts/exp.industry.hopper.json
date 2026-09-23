@@ -1,0 +1,425 @@
+{
+  "anchor": "base",
+  "category": "mech",
+  "connectors": [],
+  "description": "",
+  "id": "exp.industry.hopper",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "料斗 · 开口漏斗与卸料颈",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "elevation": {
+        "default": 0,
+        "maximum": 1.5,
+        "minimum": 0,
+        "step": 0.05,
+        "title": "卸料高度",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "industry",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "closed_profile": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "position": [
+          0,
+          {
+            "$param": "elevation"
+          },
+          0
+        ],
+        "profile": [
+          [
+            0.22,
+            0
+          ],
+          [
+            0.22,
+            0.2
+          ],
+          [
+            0.61,
+            0.87
+          ],
+          [
+            0.62,
+            0.99
+          ],
+          [
+            0.57,
+            0.99
+          ],
+          [
+            0.56,
+            0.88
+          ],
+          [
+            0.17,
+            0.21
+          ],
+          [
+            0.17,
+            0
+          ]
+        ],
+        "roundable": false,
+        "sides": 8
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.033,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "add",
+                  "args": [
+                    0.75,
+                    {
+                      "$param": "elevation"
+                    }
+                  ]
+                }
+              ]
+            },
+            0.033
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          -0.415,
+          {
+            "$op": "add",
+            "args": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$op": "add",
+                    "args": [
+                      0.75,
+                      {
+                        "$param": "elevation"
+                      }
+                    ]
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          -0.415
+        ],
+        "roundable": false,
+        "size": [
+          0.075,
+          {
+            "$op": "add",
+            "args": [
+              0.75,
+              {
+                "$param": "elevation"
+              }
+            ]
+          },
+          0.075
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.033,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "add",
+                  "args": [
+                    0.75,
+                    {
+                      "$param": "elevation"
+                    }
+                  ]
+                }
+              ]
+            },
+            0.033
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          -0.415,
+          {
+            "$op": "add",
+            "args": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$op": "add",
+                    "args": [
+                      0.75,
+                      {
+                        "$param": "elevation"
+                      }
+                    ]
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0.415
+        ],
+        "roundable": false,
+        "size": [
+          0.075,
+          {
+            "$op": "add",
+            "args": [
+              0.75,
+              {
+                "$param": "elevation"
+              }
+            ]
+          },
+          0.075
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.033,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "add",
+                  "args": [
+                    0.75,
+                    {
+                      "$param": "elevation"
+                    }
+                  ]
+                }
+              ]
+            },
+            0.033
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          0.415,
+          {
+            "$op": "add",
+            "args": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$op": "add",
+                    "args": [
+                      0.75,
+                      {
+                        "$param": "elevation"
+                      }
+                    ]
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          -0.415
+        ],
+        "roundable": false,
+        "size": [
+          0.075,
+          {
+            "$op": "add",
+            "args": [
+              0.75,
+              {
+                "$param": "elevation"
+              }
+            ]
+          },
+          0.075
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.033,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "add",
+                  "args": [
+                    0.75,
+                    {
+                      "$param": "elevation"
+                    }
+                  ]
+                }
+              ]
+            },
+            0.033
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          0.415,
+          {
+            "$op": "add",
+            "args": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$op": "add",
+                    "args": [
+                      0.75,
+                      {
+                        "$param": "elevation"
+                      }
+                    ]
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0.415
+        ],
+        "roundable": false,
+        "size": [
+          0.075,
+          {
+            "$op": "add",
+            "args": [
+              0.75,
+              {
+                "$param": "elevation"
+              }
+            ]
+          },
+          0.075
+        ]
+      },
+      {
+        "closed_profile": true,
+        "color": "#A3ACAA",
+        "kind": "lathe",
+        "position": [
+          0,
+          {
+            "$op": "add",
+            "args": [
+              0.02,
+              {
+                "$param": "elevation"
+              }
+            ]
+          },
+          0
+        ],
+        "profile": [
+          [
+            0.27,
+            -0.025
+          ],
+          [
+            0.27,
+            0.025
+          ],
+          [
+            0.17,
+            0.025
+          ],
+          [
+            0.17,
+            -0.025
+          ]
+        ],
+        "roundable": false,
+        "sides": 12
+      }
+    ]
+  },
+  "size": [
+    1.24,
+    1.02,
+    1.24
+  ],
+  "source": {
+    "authoring": "tools/expansion/industry.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "industrial",
+    "mech",
+    "D-E",
+    "industry"
+  ],
+  "theme": "industrial",
+  "version": "3.4.0"
+}

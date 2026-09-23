@@ -1,0 +1,140 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "exp-robot-turret",
+  "instances": [
+    {
+      "id": "plinth",
+      "part": "exp.arch.column",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.58,
+        0.35,
+        0.58
+      ]
+    },
+    {
+      "id": "yaw",
+      "part": "exp.robot.servo",
+      "position": [
+        0,
+        1.03,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        90
+      ]
+    },
+    {
+      "id": "pitch",
+      "parent": "yaw",
+      "part": "exp.robot.turret_head",
+      "position": [
+        0,
+        0.17,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -90
+      ]
+    },
+    {
+      "id": "optic",
+      "parent": "pitch",
+      "part": "exp.robot.sensor",
+      "position": [
+        0,
+        0.44,
+        -0.05
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "robotics",
+    "interfaces": [],
+    "level": 2,
+    "motion_presets": [
+      "exp-robot-turret"
+    ],
+    "quality": {
+      "domain": "robotics",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "azimuth",
+        "max": 180,
+        "min": -180,
+        "node": "yaw",
+        "title": "方位",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "elevation",
+        "max": 65,
+        "min": -30,
+        "node": "pitch",
+        "title": "俯仰",
+        "unit": "°"
+      }
+    ],
+    "theme": "robotics",
+    "units": "metres"
+  },
+  "name": "云台作业站 · 方位、俯仰与观察头",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "robotics",
+    "mech",
+    "D-E",
+    "robotics"
+  ],
+  "version": "3.4.0"
+}

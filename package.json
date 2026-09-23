@@ -1,0 +1,28 @@
+{
+  "name": "wanxiang-monorepo",
+  "version": "3.10.0",
+  "private": true,
+  "packageManager": "pnpm@11.23.0",
+  "engines": {
+    "node": "24.18.0",
+    "pnpm": "11.23.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @wanxiang/runtime dev",
+    "build": "pnpm --filter @wanxiang/runtime build && pnpm --filter @wanxiang/studio build",
+    "typecheck": "pnpm --filter @wanxiang/runtime typecheck && pnpm --filter @wanxiang/studio typecheck",
+    "lint": "pnpm --filter @wanxiang/runtime lint && pnpm --filter @wanxiang/studio lint",
+    "test": "pnpm test:js && pnpm test:python",
+    "test:js": "pnpm --filter @wanxiang/runtime build && pnpm --filter @wanxiang/runtime test && pnpm --filter @wanxiang/studio test && node tests/scene_ops410.test.js",
+    "test:python": "node scripts/python.mjs -m pytest tests packages/kit/tests -q",
+    "verify": "pnpm build && pnpm typecheck && pnpm lint && pnpm test",
+    "verify:assets": "node scripts/python.mjs tools/check_game410.py && node scripts/python.mjs tools/verify_game410_previews.py",
+    "verify:authoring": "node scripts/python.mjs tools/rebuild_acceptance.py",
+    "pack:runtime": "pnpm --dir packages/runtime pack --pack-destination ../../generated/distributions",
+    "pack:python": "pnpm build && node scripts/python.mjs packages/kit/scripts/build_distribution.py --out generated/distributions/python",
+    "pack:source": "node scripts/python.mjs tools/package_checkpoint.py --out ../Wanxiang3D_Monorepo_Source.zip"
+  },
+  "dependencies": {
+    "@wanxiang/runtime": "workspace:*"
+  }
+}

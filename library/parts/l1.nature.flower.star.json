@@ -1,0 +1,1761 @@
+{
+  "anchor": "base",
+  "category": "nature",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.9
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.9
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.9
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.9
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.9,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.9
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.9
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "星状花冠；可复用的 自然与植被 语义部件，不包含上层设备行为。",
+  "id": "l1.nature.flower.star",
+  "level": 1,
+  "material": "mat.leaf",
+  "name": "星状花冠",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.9,
+        "maximum": 1.575,
+        "minimum": 0.49500000000000005,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.9,
+        "maximum": 1.575,
+        "minimum": 0.49500000000000005,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.9,
+        "maximum": 1.575,
+        "minimum": 0.49500000000000005,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "nature",
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative/anatomy component; owning assembly authors collision",
+      "type": "none"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/nature.json#l1.nature.flower.star",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "nature",
+    "family": "flower",
+    "profile": "star",
+    "purpose": "星状花冠",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "cap": true,
+        "color": "#E8AA32",
+        "kind": "lathe",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "profile": [
+          [
+            0.08,
+            0
+          ],
+          [
+            0.08,
+            0.05
+          ]
+        ],
+        "roundable": false,
+        "sides": 16
+      },
+      {
+        "color": "#D9B2B0",
+        "faces": [
+          [
+            4,
+            0,
+            1
+          ],
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            0
+          ],
+          [
+            5,
+            0,
+            3
+          ]
+        ],
+        "kind": "poly",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              0.37,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.1690473046962798,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.36252311481466,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.5437846722219899,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.2535709570444197,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.06,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "points": [
+          [
+            0,
+            0,
+            0.0
+          ],
+          [
+            0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0,
+            1,
+            0.03
+          ],
+          [
+            -0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0.0,
+            0.62,
+            0.050714
+          ],
+          [
+            0.0,
+            0.62,
+            -0.019286000000000005
+          ]
+        ],
+        "roundable": false
+      },
+      {
+        "color": "#D9B2B0",
+        "faces": [
+          [
+            4,
+            0,
+            1
+          ],
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            0
+          ],
+          [
+            5,
+            0,
+            3
+          ]
+        ],
+        "kind": "poly",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              0.11433628791873056,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.3518909110292068,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.3447799706520985,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.1690473046962798,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.11202580333147022,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.24116031104029376,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.5437846722219899,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.07835773500664547,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.06,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "points": [
+          [
+            0,
+            0,
+            0.0
+          ],
+          [
+            0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0,
+            1,
+            0.03
+          ],
+          [
+            -0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0.0,
+            0.62,
+            0.050714
+          ],
+          [
+            0.0,
+            0.62,
+            -0.019286000000000005
+          ]
+        ],
+        "roundable": false
+      },
+      {
+        "color": "#D9B2B0",
+        "faces": [
+          [
+            4,
+            0,
+            1
+          ],
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            0
+          ],
+          [
+            5,
+            0,
+            3
+          ]
+        ],
+        "kind": "poly",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.2993362879187305,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.2174805433482151,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.21308574050318818,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.1690473046962798,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.2932873607388002,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.1490452689603981,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.5437846722219899,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.20514321352885526,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.06,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "points": [
+          [
+            0,
+            0,
+            0.0
+          ],
+          [
+            0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0,
+            1,
+            0.03
+          ],
+          [
+            -0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0.0,
+            0.62,
+            0.050714
+          ],
+          [
+            0.0,
+            0.62,
+            -0.019286000000000005
+          ]
+        ],
+        "roundable": false
+      },
+      {
+        "color": "#D9B2B0",
+        "faces": [
+          [
+            4,
+            0,
+            1
+          ],
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            0
+          ],
+          [
+            5,
+            0,
+            3
+          ]
+        ],
+        "kind": "poly",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.29933628791873057,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.217480543348215,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.21308574050318807,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.1690473046962798,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.29328736073880024,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.14904526896039805,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.5437846722219899,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.20514321352885534,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.06,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "points": [
+          [
+            0,
+            0,
+            0.0
+          ],
+          [
+            0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0,
+            1,
+            0.03
+          ],
+          [
+            -0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0.0,
+            0.62,
+            0.050714
+          ],
+          [
+            0.0,
+            0.62,
+            -0.019286000000000005
+          ]
+        ],
+        "roundable": false
+      },
+      {
+        "color": "#D9B2B0",
+        "faces": [
+          [
+            4,
+            0,
+            1
+          ],
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            0
+          ],
+          [
+            5,
+            0,
+            3
+          ]
+        ],
+        "kind": "poly",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              0.11433628791873048,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.35189091102920683,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.34477997065209853,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.1690473046962798,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.11202580333147012,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.24116031104029378,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.5437846722219899,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.07835773500664542,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.06,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.9
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "points": [
+          [
+            0,
+            0,
+            0.0
+          ],
+          [
+            0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0,
+            1,
+            0.03
+          ],
+          [
+            -0.43,
+            0.74,
+            0.016427999999999998
+          ],
+          [
+            0.0,
+            0.62,
+            0.050714
+          ],
+          [
+            0.0,
+            0.62,
+            -0.019286000000000005
+          ]
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    0.9,
+    0.9,
+    0.9
+  ],
+  "source": {
+    "authoring": "tools/l1_expansion/nature.py",
+    "license": "project-authored",
+    "revision": "3.1.0",
+    "type": "original_semantic_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "nature",
+    "L1-Expansion",
+    "nature",
+    "flower",
+    "star"
+  ],
+  "theme": "l1-nature",
+  "version": "3.4.0"
+}

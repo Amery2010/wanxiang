@@ -1,0 +1,281 @@
+{
+  "category": "gameplay",
+  "description": "尖刺通道；完整安装结构 / 交互机构 / 稳定可寻址节点 / spike_corridor",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "ground",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l3-gameplay-interactive-spike_corridor",
+  "instances": [
+    {
+      "id": "foundation",
+      "material": "mat.paint",
+      "params": {
+        "palette": {
+          "#E5DCC8": "#8F998C"
+        }
+      },
+      "part": "l1.architecture.stair.closed_tread",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.8,
+        0.6818181855126846,
+        4.761904910578484
+      ]
+    },
+    {
+      "assembly": "l2-gameplay-trap-spike",
+      "id": "mechanism",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "pivot": [
+        0.0,
+        0.0,
+        -0.01000000536441803
+      ],
+      "position": [
+        0,
+        0.15,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.2499999664723878,
+        2.7272726189006504,
+        2.031249950814528
+      ]
+    },
+    {
+      "id": "guard0",
+      "params": {},
+      "part": "l1.gameplay.cover.barricade_leg",
+      "pivot": [
+        0.0,
+        -0.03889087215065956,
+        0.0
+      ],
+      "position": [
+        -1.15,
+        0.15,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4426203497914177,
+        0.8114706725048563,
+        4.545454570084564
+      ]
+    },
+    {
+      "id": "guard1",
+      "params": {},
+      "part": "l1.gameplay.cover.barricade_leg",
+      "pivot": [
+        0.0,
+        -0.03889087215065956,
+        0.0
+      ],
+      "position": [
+        1.15,
+        0.15,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4426203497914177,
+        0.8114706725048563,
+        4.545454570084564
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l3-3.4",
+    "domain": "gameplay",
+    "gameplay": {
+      "authority": "consumer-game",
+      "damage_implemented": false,
+      "events": [
+        "activate",
+        "release",
+        "reset"
+      ],
+      "physics_implemented": false,
+      "schema": "wx.gameplay-contract/1.0",
+      "states": [
+        "idle",
+        "active"
+      ],
+      "target": "mechanism"
+    },
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "production": {
+      "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
+      "dimensions_design_m": [
+        2.8,
+        3,
+        2
+      ],
+      "family": "interactive",
+      "features": [
+        "完整安装结构",
+        "交互机构",
+        "稳定可寻址节点",
+        "spike_corridor"
+      ],
+      "footprint_m": [
+        2.8,
+        2
+      ],
+      "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
+      "notes": [],
+      "purpose": "尖刺通道",
+      "render_contract": "editable nodes and source references retained; no CAD boolean union",
+      "rig": "rigid-hierarchy",
+      "schema": "wx.production-asset/1.0"
+    },
+    "quality": {
+      "approval": "authored; see versioned evidence",
+      "review_scope": "L3-L4",
+      "status": "l3"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 180000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l34_expansion/gameplay.py",
+      "license": "project-authored",
+      "revision": "3.4.0",
+      "type": "original_production_prefab"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "mechanism__stroke",
+        "max": 0.35,
+        "min": 0,
+        "mode": "translation",
+        "node": "mechanism.hazard",
+        "step": 0.01,
+        "title": "mechanism · 触发行程",
+        "unit": "m"
+      }
+    ],
+    "theme": "l3-gameplay",
+    "units": "metres"
+  },
+  "name": "尖刺通道",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L3",
+    "gameplay",
+    "interactive",
+    "spike_corridor",
+    "完整安装结构",
+    "交互机构",
+    "稳定可寻址节点",
+    "spike_corridor"
+  ],
+  "version": "3.4.0"
+}

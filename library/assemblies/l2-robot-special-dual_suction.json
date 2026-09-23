@@ -1,0 +1,391 @@
+{
+  "category": "robot",
+  "description": "双吸盘并联横梁；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.robot.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.robot.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.4,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-robot-special-dual_suction",
+  "instances": [
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "flange",
+      "params": {},
+      "part": "l1.robot.end.tool_flange",
+      "pivot": [
+        0.0,
+        -0.02250000089406967,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4583333435778819,
+        0.6829268352252115,
+        0.4583333435778819
+      ]
+    },
+    {
+      "id": "housing",
+      "params": {},
+      "part": "l1.robot.housing.servo",
+      "pivot": [
+        0.0,
+        -2.7755575615628914e-17,
+        0.0
+      ],
+      "position": [
+        0,
+        0.07,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8571428839041271,
+        0.37837837350203063,
+        1.3333332803514288
+      ]
+    },
+    {
+      "id": "crossbar",
+      "params": {},
+      "part": "l1.robot.link.box_beam",
+      "pivot": [
+        0.0,
+        0.375,
+        0.10500000417232513
+      ],
+      "position": [
+        0,
+        0.24,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "scale": [
+        0.3076923189783947,
+        0.64,
+        0.20512819697714293
+      ]
+    },
+    {
+      "id": "head0",
+      "params": {},
+      "part": "l1.robot.end.suction",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.19,
+        0.27,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.42499999366700664,
+        0.41666667597989265,
+        0.43592966468150696
+      ]
+    },
+    {
+      "id": "hose0",
+      "params": {},
+      "part": "l1.industry.pipe.hose_end",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.19,
+        0.19,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.24137931729043446,
+        0.2380952455289242,
+        0.24137931729043446
+      ]
+    },
+    {
+      "id": "head1",
+      "params": {},
+      "part": "l1.robot.end.suction",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.19,
+        0.27,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.42499999366700664,
+        0.41666667597989265,
+        0.43592966468150696
+      ]
+    },
+    {
+      "id": "hose1",
+      "params": {},
+      "part": "l1.industry.pipe.hose_end",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.19,
+        0.19,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.24137931729043446,
+        0.2380952455289242,
+        0.24137931729043446
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "robot",
+    "functional": {
+      "assembly_order": [
+        "flange",
+        "housing",
+        "crossbar",
+        "head0",
+        "hose0",
+        "head1",
+        "hose1"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.57,
+        0.4,
+        0.28
+      ],
+      "family": "special",
+      "mount_dimensions_m": [
+        0.22,
+        0.22
+      ],
+      "notes": [
+        "两个独立端头的安装结构，不含真空流体模拟。"
+      ],
+      "purpose": "双吸盘并联横梁",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.robot.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.robot.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.4,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/robot.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-robot",
+    "units": "metres"
+  },
+  "name": "双吸盘并联横梁",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "robot",
+    "special",
+    "dual_suction",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

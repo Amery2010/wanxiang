@@ -1,0 +1,104 @@
+{
+  "category": "nature",
+  "description": "",
+  "id": "exp-birch",
+  "instances": [
+    {
+      "id": "trunk",
+      "part": "exp.nature.birch_trunk",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "part": "exp.nature.leaf_crown",
+      "position": [
+        0,
+        2.6,
+        0
+      ],
+      "scale": [
+        0.85,
+        0.95,
+        0.85
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-2.2",
+    "interfaces": [],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": 1,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "轮廓精度",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "A-C",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": 1
+            },
+            "screen_height": 0.15
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": 0
+            },
+            "screen_height": 0.04
+          }
+        ],
+        "method": "authored-silhouette",
+        "preserves_pivot": true
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "theme": "forest",
+    "units": "metres"
+  },
+  "name": "白桦 · 完整植株",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "forest",
+    "nature",
+    "树木",
+    "LOD"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,182 @@
+{
+  "category": "vehicle",
+  "description": "",
+  "id": "fnd-hatchback",
+  "instances": [
+    {
+      "id": "body",
+      "params": {
+        "wheel_radius": {
+          "$param": "wheel_radius"
+        },
+        "wheelbase": {
+          "$param": "wheelbase"
+        }
+      },
+      "part": "core.vehicle.body_center"
+    },
+    {
+      "id": "sideL",
+      "params": {
+        "wheel_radius": {
+          "$param": "wheel_radius"
+        },
+        "wheelbase": {
+          "$param": "wheelbase"
+        }
+      },
+      "part": "core.vehicle.body_side",
+      "position": [
+        -0.866,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "params": {
+        "wheel_radius": {
+          "$param": "wheel_radius"
+        },
+        "wheelbase": {
+          "$param": "wheelbase"
+        }
+      },
+      "part": "core.vehicle.body_side",
+      "position": [
+        0.866,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ]
+    },
+    {
+      "id": "cabin",
+      "part": "core.vehicle.cabin"
+    },
+    {
+      "assembly": "kit-axle",
+      "id": "front",
+      "params": {
+        "radius": {
+          "$param": "wheel_radius"
+        },
+        "track": 1.62
+      },
+      "position": [
+        0,
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "wheelbase"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assembly": "kit-axle",
+      "id": "rear",
+      "params": {
+        "radius": {
+          "$param": "wheel_radius"
+        },
+        "track": 1.62
+      },
+      "position": [
+        0,
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            -1,
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "wheelbase"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "foundation-1.8",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "wheel_radius": {
+          "default": 0.34,
+          "maximum": 0.39,
+          "minimum": 0.29,
+          "step": 0.01,
+          "title": "轮胎半径",
+          "type": "number",
+          "unit": "m"
+        },
+        "wheelbase": {
+          "default": 2.46,
+          "maximum": 2.65,
+          "minimum": 2.25,
+          "step": 0.01,
+          "title": "轴距",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "P1-P2",
+      "status": "foundation"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "steering",
+        "max": 22,
+        "min": -22,
+        "nodes": [
+          "front.left",
+          "front.right"
+        ],
+        "title": "前轮转向",
+        "unit": "°"
+      }
+    ],
+    "units": "metres"
+  },
+  "name": "乘用车母版 · 轮拱 / 轮组 / 清晰座舱",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Foundation",
+    "vehicle",
+    "乘用车母版 · 轮拱 / 轮组 / 清晰座舱"
+  ],
+  "version": "3.4.0"
+}

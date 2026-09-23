@@ -1,0 +1,219 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "spawn",
+      "interface": "gameplay.trigger.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.14,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "",
+  "id": "exp.game.spawn_pad",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "出生平台 · 方位缺口与中心标记",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "gameplay",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "center": [
+        0,
+        0.05,
+        0
+      ],
+      "size": [
+        1.64,
+        0.1,
+        1.64
+      ],
+      "type": "box"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "interaction": {
+      "authority": "consumer-game",
+      "event": "spawn.request",
+      "kind": "spawn",
+      "schema": "wx.interaction/1.0",
+      "trigger": {
+        "center": [
+          0,
+          0.5,
+          0
+        ],
+        "radius": 0.8,
+        "shape": "sphere"
+      }
+    },
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "cap": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "position": [
+          0,
+          0.05,
+          0
+        ],
+        "profile": [
+          [
+            0.82,
+            -0.05
+          ],
+          [
+            0.82,
+            0.05
+          ]
+        ],
+        "roundable": false,
+        "sides": 16
+      },
+      {
+        "closed_profile": true,
+        "color": "#367A76",
+        "kind": "lathe",
+        "position": [
+          0,
+          0.11,
+          0
+        ],
+        "profile": [
+          [
+            0.74,
+            -0.009
+          ],
+          [
+            0.74,
+            0.009
+          ],
+          [
+            0.6849999999999999,
+            0.009
+          ],
+          [
+            0.6849999999999999,
+            -0.009
+          ]
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.044000000000000004,
+            0.00836,
+            0.1848
+          ]
+        },
+        "color": "#EFE2AD",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0.1235,
+          0.05
+        ],
+        "roundable": false,
+        "size": [
+          0.1,
+          0.019,
+          0.42
+        ]
+      },
+      {
+        "color": "#EFE2AD",
+        "depth": 0.021,
+        "kind": "extrude",
+        "outline": [
+          [
+            -0.17,
+            0
+          ],
+          [
+            0,
+            0.24
+          ],
+          [
+            0.17,
+            0
+          ]
+        ],
+        "position": [
+          0,
+          0.125,
+          0.29
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    1.65,
+    0.16,
+    1.65
+  ],
+  "source": {
+    "authoring": "tools/expansion/gameplay.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "theme": "gameplay",
+  "version": "3.4.0"
+}

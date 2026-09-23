@@ -1,0 +1,1152 @@
+{
+  "anchor": "base",
+  "category": "architecture",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                2.08
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                2.4
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.24
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                2.08
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            2.4,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                2.4
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.24
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "科幻走廊结构节律用开放支肋；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "scifi",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "科幻走廊结构节律用开放支肋",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.architecture.game_scifi.corridor_rib.webp"
+  },
+  "id": "l1.architecture.game_scifi.corridor_rib",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "六折角廊道支肋",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.24,
+        "maximum": 0.42,
+        "minimum": 0.132,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 2.4,
+        "maximum": 4.2,
+        "minimum": 1.32,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 2.08,
+        "maximum": 3.64,
+        "minimum": 1.1440000000000001,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "architecture",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "architecture",
+    "family": "game_scifi",
+    "game_kit": "scifi",
+    "game_use": "科幻探索 / 空间站 / 舰船内饰",
+    "profile": "corridor_rib",
+    "purpose": "科幻走廊结构节律用开放支肋",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#4C6573",
+        "faces": [
+          [
+            0,
+            1,
+            5,
+            4
+          ],
+          [
+            1,
+            2,
+            6,
+            5
+          ],
+          [
+            2,
+            3,
+            7,
+            6
+          ],
+          [
+            3,
+            0,
+            4,
+            7
+          ],
+          [
+            4,
+            5,
+            9,
+            8
+          ],
+          [
+            5,
+            6,
+            10,
+            9
+          ],
+          [
+            6,
+            7,
+            11,
+            10
+          ],
+          [
+            7,
+            4,
+            8,
+            11
+          ],
+          [
+            8,
+            9,
+            13,
+            12
+          ],
+          [
+            9,
+            10,
+            14,
+            13
+          ],
+          [
+            10,
+            11,
+            15,
+            14
+          ],
+          [
+            11,
+            8,
+            12,
+            15
+          ],
+          [
+            12,
+            13,
+            17,
+            16
+          ],
+          [
+            13,
+            14,
+            18,
+            17
+          ],
+          [
+            14,
+            15,
+            19,
+            18
+          ],
+          [
+            15,
+            12,
+            16,
+            19
+          ],
+          [
+            16,
+            17,
+            21,
+            20
+          ],
+          [
+            17,
+            18,
+            22,
+            21
+          ],
+          [
+            18,
+            19,
+            23,
+            22
+          ],
+          [
+            19,
+            16,
+            20,
+            23
+          ],
+          [
+            3,
+            2,
+            1,
+            0
+          ],
+          [
+            20,
+            21,
+            22,
+            23
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "corridor_rib_00",
+        "points": [
+          [
+            -1.0,
+            0.0,
+            0.1
+          ],
+          [
+            -0.8400000000000001,
+            0.0,
+            0.1
+          ],
+          [
+            -0.8400000000000001,
+            0.0,
+            -0.1
+          ],
+          [
+            -1.0,
+            0.0,
+            -0.1
+          ],
+          [
+            -0.9992982320546109,
+            1.9105730976072814,
+            0.1
+          ],
+          [
+            -0.8407017679453892,
+            1.8894269023927184,
+            0.1
+          ],
+          [
+            -0.8407017679453892,
+            1.8894269023927184,
+            -0.1
+          ],
+          [
+            -0.9992982320546109,
+            1.9105730976072814,
+            -0.1
+          ],
+          [
+            -0.6377296882871175,
+            2.328010628463317,
+            0.09999999999999998
+          ],
+          [
+            -0.6022703117128825,
+            2.171989371536683,
+            0.09999999999999998
+          ],
+          [
+            -0.6022703117128825,
+            2.171989371536683,
+            -0.09999999999999998
+          ],
+          [
+            -0.6377296882871175,
+            2.328010628463317,
+            -0.09999999999999998
+          ],
+          [
+            0.6377296882871174,
+            2.328010628463317,
+            0.1
+          ],
+          [
+            0.6022703117128826,
+            2.171989371536683,
+            0.1
+          ],
+          [
+            0.6022703117128826,
+            2.171989371536683,
+            -0.1
+          ],
+          [
+            0.6377296882871174,
+            2.328010628463317,
+            -0.1
+          ],
+          [
+            0.9992982320546108,
+            1.9105730976072814,
+            0.09999999999999998
+          ],
+          [
+            0.8407017679453893,
+            1.8894269023927184,
+            0.09999999999999998
+          ],
+          [
+            0.8407017679453893,
+            1.8894269023927184,
+            -0.09999999999999998
+          ],
+          [
+            0.9992982320546108,
+            1.9105730976072814,
+            -0.09999999999999998
+          ],
+          [
+            1.0,
+            0.0,
+            0.1
+          ],
+          [
+            0.8400000000000001,
+            0.0,
+            0.1
+          ],
+          [
+            0.8400000000000001,
+            0.0,
+            -0.1
+          ],
+          [
+            1.0,
+            0.0,
+            -0.1
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.01,
+            0.030800000000000004,
+            0.28600000000000003,
+            0.015400000000000002
+          ]
+        },
+        "color": "#60CAD6",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "bevelbox",
+        "material": "mat.emissive.cyan",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.925,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.9,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.115,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "corridor_rib_01",
+        "roundable": false,
+        "size": [
+          0.07,
+          0.65,
+          0.035
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.01,
+            0.030800000000000004,
+            0.28600000000000003,
+            0.015400000000000002
+          ]
+        },
+        "color": "#60CAD6",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "bevelbox",
+        "material": "mat.emissive.cyan",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.925,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  2.08
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.9,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  2.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.115,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.24
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "corridor_rib_02",
+        "roundable": false,
+        "size": [
+          0.07,
+          0.65,
+          0.035
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    2.08,
+    2.4,
+    0.24
+  ],
+  "source": {
+    "authoring": "tools/game410/scifi.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "architecture",
+    "L1-Expansion",
+    "architecture",
+    "game_scifi",
+    "corridor_rib",
+    "Game-Expansion-3.10",
+    "scifi",
+    "科幻舱室"
+  ],
+  "theme": "l1-architecture",
+  "version": "3.10.0"
+}

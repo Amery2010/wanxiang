@@ -1,0 +1,280 @@
+{
+  "anchor": "hinge",
+  "category": "aquatic",
+  "connectors": [],
+  "description": "",
+  "id": "exp.creature.tentacle",
+  "level": 1,
+  "material": "mat.skin",
+  "name": "弯曲触手 · 三骨架与吸盘",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "creatures",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative, non-solid geometry",
+      "type": "none"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-joint-pivot",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#B95343",
+        "kind": "loft",
+        "rings": [
+          {
+            "bone": "root",
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.1,
+              0.1
+            ]
+          },
+          {
+            "bone": "root",
+            "c": [
+              0.12,
+              -0.11,
+              0.06
+            ],
+            "r": [
+              0.088,
+              0.088
+            ],
+            "weights": {
+              "mid": 0.35,
+              "root": 0.65
+            }
+          },
+          {
+            "bone": "mid",
+            "c": [
+              0.35,
+              -0.18,
+              0.1
+            ],
+            "r": [
+              0.065,
+              0.065
+            ],
+            "weights": {
+              "mid": 0.8,
+              "root": 0.2
+            }
+          },
+          {
+            "bone": "mid",
+            "c": [
+              0.58,
+              -0.16,
+              0.16
+            ],
+            "r": [
+              0.047,
+              0.047
+            ],
+            "weights": {
+              "mid": 0.65,
+              "tip": 0.35
+            }
+          },
+          {
+            "bone": "tip",
+            "c": [
+              0.77,
+              -0.04,
+              0.24
+            ],
+            "r": [
+              0.025,
+              0.025
+            ],
+            "weights": {
+              "mid": 0.2,
+              "tip": 0.8
+            }
+          },
+          {
+            "bone": "tip",
+            "c": [
+              0.8,
+              0.1,
+              0.25
+            ],
+            "r": [
+              0.01,
+              0.01
+            ]
+          }
+        ],
+        "sides": 10
+      },
+      {
+        "bone": "root",
+        "cap": true,
+        "color": "#E4DEC9",
+        "kind": "lathe",
+        "position": [
+          0.12,
+          -0.165,
+          0.06
+        ],
+        "profile": [
+          [
+            0.018,
+            -0.006
+          ],
+          [
+            0.018,
+            0.006
+          ]
+        ],
+        "roundable": false,
+        "sides": 8
+      },
+      {
+        "bone": "mid",
+        "cap": true,
+        "color": "#E4DEC9",
+        "kind": "lathe",
+        "position": [
+          0.35,
+          -0.235,
+          0.1
+        ],
+        "profile": [
+          [
+            0.018,
+            -0.006
+          ],
+          [
+            0.018,
+            0.006
+          ]
+        ],
+        "roundable": false,
+        "sides": 8
+      },
+      {
+        "bone": "mid",
+        "cap": true,
+        "color": "#E4DEC9",
+        "kind": "lathe",
+        "position": [
+          0.58,
+          -0.215,
+          0.16
+        ],
+        "profile": [
+          [
+            0.018,
+            -0.006
+          ],
+          [
+            0.018,
+            0.006
+          ]
+        ],
+        "roundable": false,
+        "sides": 8
+      },
+      {
+        "bone": "tip",
+        "cap": true,
+        "color": "#E4DEC9",
+        "kind": "lathe",
+        "position": [
+          0.77,
+          -0.095,
+          0.24
+        ],
+        "profile": [
+          [
+            0.018,
+            -0.006
+          ],
+          [
+            0.018,
+            0.006
+          ]
+        ],
+        "roundable": false,
+        "sides": 8
+      }
+    ],
+    "rig": [
+      {
+        "name": "root",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "mid",
+        "parent": "root",
+        "position": [
+          0.35,
+          -0.18,
+          0.1
+        ]
+      },
+      {
+        "name": "tip",
+        "parent": "mid",
+        "position": [
+          0.77,
+          -0.04,
+          0.24
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.92,
+    0.44,
+    0.4
+  ],
+  "source": {
+    "authoring": "tools/expansion/creatures.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "wildlife",
+    "aquatic",
+    "D-E",
+    "creatures"
+  ],
+  "theme": "wildlife",
+  "version": "3.4.0"
+}

@@ -1,0 +1,116 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "exp-robot-gripper",
+  "instances": [
+    {
+      "id": "body",
+      "part": "exp.robot.servo",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        90
+      ]
+    },
+    {
+      "id": "fingerL",
+      "part": "exp.robot.finger",
+      "position": [
+        -0.12,
+        0.13,
+        0
+      ]
+    },
+    {
+      "id": "fingerR",
+      "part": "exp.robot.finger",
+      "position": [
+        0.12,
+        0.13,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "robotics",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "robotics",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "left",
+        "max": 20,
+        "min": -30,
+        "node": "fingerL",
+        "title": "左指",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "right",
+        "max": 30,
+        "min": -20,
+        "node": "fingerR",
+        "title": "右指",
+        "unit": "°"
+      }
+    ],
+    "theme": "robotics",
+    "units": "metres"
+  },
+  "name": "对指夹爪 · 双叶开闭",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "robotics",
+    "mech",
+    "D-E",
+    "robotics"
+  ],
+  "version": "3.4.0"
+}

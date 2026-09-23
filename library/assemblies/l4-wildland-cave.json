@@ -1,0 +1,434 @@
+{
+  "category": "scene",
+  "description": "可编辑主题场景；保存所有对象引用、图层与分区；不含烘焙导航或游戏逻辑。",
+  "id": "l4-wildland-cave",
+  "instances": [
+    {
+      "id": "ground",
+      "part": "r37.l4-wildland-cave.ground"
+    },
+    {
+      "assembly": "l3-terrain-cave-grotto",
+      "id": "grotto",
+      "position": [
+        0,
+        0.11795603343890979,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.1,
+        2.1,
+        2.1
+      ]
+    },
+    {
+      "assembly": "l3-props-lamp-tripod",
+      "id": "inspection_lamp",
+      "position": [
+        2.5,
+        0.108406,
+        4.703041
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "assembly": "l3-nature-tree-oak",
+      "id": "tree0",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        -6,
+        0.16103122928047992,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "assembly": "l3-nature-tree-oak",
+      "id": "tree1",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        6,
+        0.16103122928047992,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "assembly": "l3-nature-tree-oak",
+      "id": "tree2",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        -7,
+        0.14530606740429047,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "assembly": "l3-nature-tree-oak",
+      "id": "tree3",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        7,
+        0.15425973717048855,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "id": "trail",
+      "part": "r37.l4-wildland-cave.trail"
+    },
+    {
+      "assembly": "l3-character-profession-ranger",
+      "id": "actor",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        -1,
+        0.08223672481699194,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "rock_envelope",
+      "part": "r38.l4-wildland-cave.rock_envelope"
+    }
+  ],
+  "max_triangles": 400000,
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l4-3.4",
+    "domain": "scene",
+    "level": 4,
+    "quality": {
+      "approval": "editable scene; see evidence",
+      "review_scope": "L3-L4",
+      "status": "l4"
+    },
+    "repair37": {
+      "baseline": "3.5.0",
+      "geometry_redesigned": true,
+      "old_root_nodes": [
+        "ground",
+        "primary",
+        "secondary",
+        "access_lane",
+        "forest0",
+        "forest1",
+        "forest2",
+        "forest3",
+        "forest4",
+        "forest5",
+        "forest6",
+        "landmark",
+        "understory0",
+        "understory1",
+        "understory2",
+        "light0",
+        "light1",
+        "wayfinding",
+        "actor"
+      ],
+      "prior_visual_claims_not_inherited": true,
+      "retained_root_nodes": [
+        "actor",
+        "ground"
+      ],
+      "source": "tools/repair37"
+    },
+    "repair38": {
+      "baseline": "3.7.1",
+      "change": "针对真实地表修正步道/台阶、桥头高差和站立位置；洞口与岩体融合、独木舟从岸面埋藏状态抬起，湿地栈道增加干地登陆端。",
+      "evidence": "evidence/l4-v3.8.0",
+      "old_root_nodes": [
+        "actor",
+        "grotto",
+        "ground",
+        "inspection_lamp",
+        "trail",
+        "tree0",
+        "tree1",
+        "tree2",
+        "tree3"
+      ],
+      "problem": "山洞由规则桶形拱与方块组成，像人工管涵，缺少与山体融为一体的岩石洞口。",
+      "retained_root_nodes": [
+        "actor",
+        "grotto",
+        "ground",
+        "inspection_lamp",
+        "trail",
+        "tree0",
+        "tree1",
+        "tree2",
+        "tree3"
+      ],
+      "visual_status": "see human review ledger; not asserted by authoring code"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": []
+      },
+      "origin": "site-ground",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 400000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "scene": {
+      "bounds_design": [
+        [
+          -12.0,
+          -0.25,
+          -9.5
+        ],
+        [
+          12.0,
+          12,
+          9.5
+        ]
+      ],
+      "cameras": [
+        {
+          "id": "overview",
+          "position": [
+            23.8,
+            22,
+            20.9
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "edit_contract": "instances own transforms; metadata owns layer and region membership; GLB is derived",
+      "groundY": 0.0,
+      "layers": {
+        "actors": {
+          "label": "角色与生物",
+          "visible": true
+        },
+        "furnishings": {
+          "label": "家具与设备",
+          "visible": true
+        },
+        "ground": {
+          "label": "地形与通路",
+          "visible": true
+        },
+        "nature": {
+          "label": "自然装饰",
+          "visible": true
+        },
+        "props": {
+          "label": "道具",
+          "visible": true
+        },
+        "structures": {
+          "label": "主体构筑物",
+          "visible": true
+        }
+      },
+      "lighting": {
+        "ambient_intent": 0.6,
+        "environment": "studio",
+        "realtime_lights_created": false
+      },
+      "max_objects": 2500,
+      "navigation": "unbaked; consumer must derive navigation and physics from chosen colliders",
+      "objects": {
+        "actor": {
+          "label": "巡林者",
+          "layer": "actors",
+          "locked": false,
+          "region": "site"
+        },
+        "grotto": {
+          "label": "滴水岩洞",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "ground": {
+          "label": "ground",
+          "layer": "ground",
+          "locked": true,
+          "region": "site"
+        },
+        "inspection_lamp": {
+          "label": "摄影灯",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "rock_envelope": {
+          "label": "rock_envelope",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "trail": {
+          "label": "trail",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "tree0": {
+          "label": "橡树",
+          "layer": "nature",
+          "locked": false,
+          "region": "site"
+        },
+        "tree1": {
+          "label": "橡树",
+          "layer": "nature",
+          "locked": false,
+          "region": "site"
+        },
+        "tree2": {
+          "label": "橡树",
+          "layer": "nature",
+          "locked": false,
+          "region": "site"
+        },
+        "tree3": {
+          "label": "橡树",
+          "layer": "nature",
+          "locked": false,
+          "region": "site"
+        }
+      },
+      "regions": {
+        "east": {
+          "label": "东侧副区"
+        },
+        "landscape": {
+          "label": "环境边界"
+        },
+        "site": {
+          "label": "全场地"
+        },
+        "west": {
+          "label": "西侧主区"
+        }
+      },
+      "revision": "3.8.0",
+      "schema": "wx.scene/1.0",
+      "spawn_points": [
+        {
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "id": "visitor",
+          "position": [
+            0,
+            0.0,
+            8.3
+          ]
+        }
+      ],
+      "theme": "wildland",
+      "title": "自然野外 · 岩洞探查点",
+      "units": "m"
+    },
+    "source": {
+      "authoring": "tools/repair38/__init__.py",
+      "license": "project-authored",
+      "revision": "3.8.0",
+      "type": "original_editable_scene"
+    },
+    "state_controls": [],
+    "theme": "l4-wildland",
+    "units": "metres"
+  },
+  "name": "自然野外 · 岩洞探查点",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L4",
+    "wildland",
+    "cave",
+    "editable-scene"
+  ],
+  "version": "3.8.0"
+}

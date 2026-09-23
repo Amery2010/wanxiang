@@ -1,0 +1,312 @@
+{
+  "anchor": "base",
+  "category": "arch",
+  "connectors": [
+    {
+      "id": "left",
+      "interface": "wall.edge.v1",
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -1,
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "width"
+                }
+              ]
+            }
+          ]
+        },
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "right",
+      "interface": "wall.edge.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "width"
+            }
+          ]
+        },
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "window",
+      "interface": "window.1m.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.99,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "",
+  "id": "core.arch.window_wall",
+  "level": 1,
+  "material": "mat.plaster",
+  "name": "窗洞墙板 · 有厚度的真实洞口",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "height": {
+        "default": 2.7,
+        "maximum": 3.2,
+        "minimum": 2.45,
+        "step": 0.01,
+        "title": "墙高",
+        "type": "number",
+        "unit": "m"
+      },
+      "opening_height": {
+        "default": 1.05,
+        "maximum": 1.2,
+        "minimum": 0.9,
+        "step": 0.01,
+        "title": "窗洞高",
+        "type": "number",
+        "unit": "m"
+      },
+      "opening_width": {
+        "default": 1.06,
+        "maximum": 1.2,
+        "minimum": 0.85,
+        "step": 0.01,
+        "title": "窗洞宽",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 1.75,
+        "maximum": 2.3,
+        "minimum": 1.5,
+        "step": 0.01,
+        "title": "墙板宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#EFE3CB",
+        "depth": 0.22,
+        "holes": [
+          [
+            [
+              {
+                "$op": "mul",
+                "args": [
+                  -1,
+                  {
+                    "$op": "mul",
+                    "args": [
+                      0.5,
+                      {
+                        "$param": "opening_width"
+                      }
+                    ]
+                  }
+                ]
+              },
+              0.99
+            ],
+            [
+              {
+                "$op": "mul",
+                "args": [
+                  -1,
+                  {
+                    "$op": "mul",
+                    "args": [
+                      0.5,
+                      {
+                        "$param": "opening_width"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "$op": "add",
+                "args": [
+                  0.99,
+                  {
+                    "$param": "opening_height"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "$op": "mul",
+                "args": [
+                  0.5,
+                  {
+                    "$param": "opening_width"
+                  }
+                ]
+              },
+              {
+                "$op": "add",
+                "args": [
+                  0.99,
+                  {
+                    "$param": "opening_height"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "$op": "mul",
+                "args": [
+                  0.5,
+                  {
+                    "$param": "opening_width"
+                  }
+                ]
+              },
+              0.99
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "outline": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "width"
+                    }
+                  ]
+                }
+              ]
+            },
+            0
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            0
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            {
+              "$param": "height"
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "width"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$param": "height"
+            }
+          ]
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    1.75,
+    2.7,
+    0.22
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "arch"
+  ],
+  "version": "3.4.0"
+}

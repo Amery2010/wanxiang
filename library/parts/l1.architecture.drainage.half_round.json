@@ -1,0 +1,1010 @@
+{
+  "anchor": "base",
+  "category": "architecture",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                1.1
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.8,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                1.1
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "半圆檐槽段；可复用的 建筑与模块化结构 语义部件，不包含上层设备行为。",
+  "id": "l1.architecture.drainage.half_round",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "半圆檐槽段",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 1.1,
+        "maximum": 1.9250000000000003,
+        "minimum": 0.6050000000000001,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "architecture",
+    "repair39": {
+      "audit_id": "l1.architecture.drainage.half_round",
+      "commercial_certification": false,
+      "scope": "authored-geometry; current evidence/v3.9.0"
+    },
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "repair39": {
+    "baseline": "3.8.0",
+    "change": "用真实开口U形截面重建檐槽，连续内壁与双口沿；两端保留贯通接水通道。",
+    "connector_contract": "existing named sockets preserved; contact tests in release evidence",
+    "contracts": {
+      "opening": "top-and-ends",
+      "wall_m": 0.033
+    },
+    "legacy_geometry_sha256": "9ce08919a38a876e63532f96005e3862a421ebbb0fb74b417e27b5c98710fb44",
+    "source_revision": "3.9.0",
+    "stable_public_id": true
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/architecture.json#l1.architecture.drainage.half_round",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "architecture",
+    "family": "drainage",
+    "profile": "half_round",
+    "purpose": "半圆檐槽段",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#849598",
+        "depth": 1.0,
+        "holes": [],
+        "kind": "extrude",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.5,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "half_round_00",
+        "outline": [
+          [
+            -0.25,
+            0.26000000000000006
+          ],
+          [
+            -0.2451963201008076,
+            0.2112274194959679
+          ],
+          [
+            -0.2309698831278217,
+            0.1643291419087276
+          ],
+          [
+            -0.20786740307563636,
+            0.12110744174509952
+          ],
+          [
+            -0.17677669529663692,
+            0.08322330470336314
+          ],
+          [
+            -0.13889255825490054,
+            0.0521325969243637
+          ],
+          [
+            -0.09567085809127258,
+            0.02903011687217838
+          ],
+          [
+            -0.048772580504032166,
+            0.014803679899192429
+          ],
+          [
+            -4.592425496802574e-17,
+            0.010000000000000009
+          ],
+          [
+            0.048772580504032076,
+            0.014803679899192401
+          ],
+          [
+            0.0956708580912725,
+            0.029030116872178352
+          ],
+          [
+            0.13889255825490046,
+            0.052132596924363644
+          ],
+          [
+            0.17677669529663684,
+            0.08322330470336309
+          ],
+          [
+            0.2078674030756363,
+            0.12110744174509946
+          ],
+          [
+            0.23096988312782163,
+            0.1643291419087274
+          ],
+          [
+            0.24519632010080758,
+            0.21122741949596782
+          ],
+          [
+            0.25,
+            0.25999999999999995
+          ],
+          [
+            0.217,
+            0.25999999999999995
+          ],
+          [
+            0.212830405847501,
+            0.21766540012250007
+          ],
+          [
+            0.20048185855494918,
+            0.1769576951767754
+          ],
+          [
+            0.18042890586965232,
+            0.13944125943474633
+          ],
+          [
+            0.15344217151748077,
+            0.10655782848251916
+          ],
+          [
+            0.1205587405652536,
+            0.07957109413034766
+          ],
+          [
+            0.08304230482322453,
+            0.0595181414450508
+          ],
+          [
+            0.042334599877499844,
+            0.047169594152498995
+          ],
+          [
+            -3.9862253312246345e-17,
+            0.04300000000000001
+          ],
+          [
+            -0.04233459987749992,
+            0.04716959415249902
+          ],
+          [
+            -0.0830423048232246,
+            0.059518141445050826
+          ],
+          [
+            -0.12055874056525367,
+            0.07957109413034769
+          ],
+          [
+            -0.15344217151748085,
+            0.10655782848251921
+          ],
+          [
+            -0.18042890586965235,
+            0.1394412594347464
+          ],
+          [
+            -0.20048185855494924,
+            0.17695769517677556
+          ],
+          [
+            -0.21283040584750101,
+            0.21766540012250016
+          ],
+          [
+            -0.217,
+            0.26
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.008,
+            0.01628,
+            0.01716,
+            0.44
+          ]
+        },
+        "color": "#849598",
+        "kind": "bevelbox",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.236,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.26,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.5,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "half_round_01",
+        "roundable": false,
+        "size": [
+          0.037,
+          0.039,
+          1.0
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.008,
+            0.01628,
+            0.01716,
+            0.44
+          ]
+        },
+        "color": "#849598",
+        "kind": "bevelbox",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.236,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.26,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.5,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "half_round_02",
+        "roundable": false,
+        "size": [
+          0.037,
+          0.039,
+          1.0
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.8,
+    0.8,
+    1.1
+  ],
+  "source": {
+    "authoring": "tools/repair39/architecture.py",
+    "license": "project-authored",
+    "revision": "3.9.0",
+    "type": "original_structural_lowpoly_rebuild"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "architecture",
+    "L1-Expansion",
+    "architecture",
+    "drainage",
+    "half_round",
+    "Advanced-Lowpoly-3.9"
+  ],
+  "theme": "l1-architecture",
+  "version": "3.9.0"
+}

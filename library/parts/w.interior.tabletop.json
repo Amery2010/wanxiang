@@ -1,0 +1,234 @@
+{
+  "anchor": "center",
+  "category": "interior",
+  "connectors": [],
+  "description": "",
+  "id": "w.interior.tabletop",
+  "level": 1,
+  "material": "mat.wood",
+  "name": "实木桌面 · 圆钝边与拼板",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.75,
+        "maximum": 1.25,
+        "minimum": 0.35,
+        "step": 0.01,
+        "title": "台面深",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 1.3,
+        "maximum": 2.3,
+        "minimum": 0.5,
+        "step": 0.01,
+        "title": "台面宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P3-P4",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.025,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            0.0374,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#C38F55",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "width"
+          },
+          0.085,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.0005,
+            0.00132,
+            0.00088,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.27
+            ]
+          },
+          0.044,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.003,
+          0.002,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.0005,
+            0.00132,
+            0.00088,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0
+            ]
+          },
+          0.044,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.003,
+          0.002,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.0005,
+            0.00132,
+            0.00088,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.27
+            ]
+          },
+          0.044,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.003,
+          0.002,
+          {
+            "$param": "depth"
+          }
+        ]
+      }
+    ]
+  },
+  "size": [
+    1.3,
+    0.09,
+    0.75
+  ],
+  "source": {
+    "authoring": "tools/worlds/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "shared",
+    "interior"
+  ],
+  "theme": "shared",
+  "version": "3.4.0"
+}

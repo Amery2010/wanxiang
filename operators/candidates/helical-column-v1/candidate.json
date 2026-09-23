@@ -1,0 +1,45 @@
+{
+  "id": "helical-column-v1",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "height": {
+        "maximum": 5,
+        "minimum": 0.5,
+        "type": "number"
+      },
+      "turns": {
+        "maximum": 8,
+        "minimum": 1,
+        "type": "integer"
+      }
+    },
+    "type": "object"
+  },
+  "source_sha256": "4ddef3892e7c3eca67c18d7177e50ce8123afd9b2526787c1338ce5880b32356",
+  "status": "candidate",
+  "tests": [
+    {
+      "kind": "normal",
+      "params": {
+        "height": 2,
+        "turns": 3
+      }
+    },
+    {
+      "kind": "boundary",
+      "params": {
+        "height": 0.5,
+        "turns": 1
+      }
+    },
+    {
+      "kind": "negative",
+      "params": {
+        "height": -2,
+        "turns": 3
+      }
+    }
+  ],
+  "trusted_code_required": true
+}

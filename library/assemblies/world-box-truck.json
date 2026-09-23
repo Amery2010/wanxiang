@@ -1,0 +1,151 @@
+{
+  "category": "vehicle",
+  "description": "",
+  "id": "world-box-truck",
+  "instances": [
+    {
+      "id": "frame",
+      "params": {
+        "length": 4.5
+      },
+      "part": "w.vehicle.truck_chassis",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cab",
+      "part": "w.vehicle.truck_cab",
+      "position": [
+        0,
+        0,
+        1.53
+      ]
+    },
+    {
+      "id": "door",
+      "part": "w.vehicle.truck_door",
+      "position": [
+        0.96,
+        1.16,
+        2.16
+      ]
+    },
+    {
+      "id": "box",
+      "part": "w.vehicle.cargo_box",
+      "position": [
+        0,
+        0,
+        -0.7
+      ]
+    },
+    {
+      "id": "wheel0L",
+      "params": {
+        "radius": 0.42,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.915,
+        0.42,
+        1.53
+      ]
+    },
+    {
+      "id": "wheel0R",
+      "params": {
+        "radius": 0.42,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.915,
+        0.42,
+        1.53
+      ]
+    },
+    {
+      "id": "wheel1L",
+      "params": {
+        "radius": 0.42,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.915,
+        0.42,
+        -1.39
+      ]
+    },
+    {
+      "id": "wheel1R",
+      "params": {
+        "radius": 0.42,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.915,
+        0.42,
+        -1.39
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-1.9",
+    "level": 3,
+    "quality": {
+      "review_scope": "P3-P4",
+      "status": "worlds"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "steering",
+        "max": 25,
+        "min": -25,
+        "nodes": [
+          "wheel0L",
+          "wheel0R"
+        ],
+        "title": "前轮转向",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "door_open",
+        "max": 75,
+        "min": 0,
+        "node": "door",
+        "title": "驾驶室门",
+        "unit": "°"
+      }
+    ],
+    "theme": "depot",
+    "units": "metres"
+  },
+  "name": "厢式运输卡车",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "depot",
+    "vehicle"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,935 @@
+{
+  "anchor": "base",
+  "category": "terrain",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.72
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.173
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.61
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.72
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.173,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.173
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.61
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "顶面平稳、边缘不规则的渡溪落脚石；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "waterland",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "顶面平稳、边缘不规则的渡溪落脚石",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.terrain.game_waterland.stepping_stone.webp"
+  },
+  "id": "l1.terrain.game_waterland.stepping_stone",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "八面渡溪踏石",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.61,
+        "maximum": 1.0675,
+        "minimum": 0.3355,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 0.173,
+        "maximum": 0.30274999999999996,
+        "minimum": 0.09515,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.72,
+        "maximum": 1.26,
+        "minimum": 0.396,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "terrain",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": false,
+      "type": "convex-hull"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "terrain",
+    "family": "game_waterland",
+    "game_kit": "waterland",
+    "game_use": "水岸 / 洞穴 / 熔岩 / 雪地",
+    "profile": "stepping_stone",
+    "purpose": "顶面平稳、边缘不规则的渡溪落脚石",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#858B8C",
+        "faces": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            13,
+            12,
+            11,
+            10,
+            9,
+            8,
+            7
+          ],
+          [
+            7,
+            8,
+            1,
+            0
+          ],
+          [
+            8,
+            9,
+            2,
+            1
+          ],
+          [
+            9,
+            10,
+            3,
+            2
+          ],
+          [
+            10,
+            11,
+            4,
+            3
+          ],
+          [
+            11,
+            12,
+            5,
+            4
+          ],
+          [
+            12,
+            13,
+            6,
+            5
+          ],
+          [
+            13,
+            7,
+            0,
+            6
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "stepping_stone_00",
+        "points": [
+          [
+            -0.35,
+            0.0,
+            -0.18
+          ],
+          [
+            -0.21,
+            0.0,
+            -0.31
+          ],
+          [
+            0.17,
+            0.0,
+            -0.3
+          ],
+          [
+            0.37,
+            0.0,
+            -0.08
+          ],
+          [
+            0.3,
+            0.0,
+            0.22
+          ],
+          [
+            0.02,
+            0.0,
+            0.3
+          ],
+          [
+            -0.3,
+            0.0,
+            0.21
+          ],
+          [
+            -0.35,
+            0.15,
+            -0.18
+          ],
+          [
+            -0.21,
+            0.15,
+            -0.31
+          ],
+          [
+            0.17,
+            0.15,
+            -0.3
+          ],
+          [
+            0.37,
+            0.15,
+            -0.08
+          ],
+          [
+            0.3,
+            0.15,
+            0.22
+          ],
+          [
+            0.02,
+            0.15,
+            0.3
+          ],
+          [
+            -0.3,
+            0.15,
+            0.21
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#ABB1AC",
+        "enabled": {
+          "$param": "detail"
+        },
+        "faces": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            13,
+            12,
+            11,
+            10,
+            9,
+            8,
+            7
+          ],
+          [
+            7,
+            8,
+            1,
+            0
+          ],
+          [
+            8,
+            9,
+            2,
+            1
+          ],
+          [
+            9,
+            10,
+            3,
+            2
+          ],
+          [
+            10,
+            11,
+            4,
+            3
+          ],
+          [
+            11,
+            12,
+            5,
+            4
+          ],
+          [
+            12,
+            13,
+            6,
+            5
+          ],
+          [
+            13,
+            7,
+            0,
+            6
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.173
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.61
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "stepping_stone_01",
+        "points": [
+          [
+            -0.301,
+            0.15,
+            -0.153
+          ],
+          [
+            -0.18059999999999998,
+            0.15,
+            -0.2635
+          ],
+          [
+            0.1462,
+            0.15,
+            -0.255
+          ],
+          [
+            0.3182,
+            0.15,
+            -0.068
+          ],
+          [
+            0.258,
+            0.15,
+            0.187
+          ],
+          [
+            0.0172,
+            0.15,
+            0.255
+          ],
+          [
+            -0.258,
+            0.15,
+            0.1785
+          ],
+          [
+            -0.301,
+            0.173,
+            -0.153
+          ],
+          [
+            -0.18059999999999998,
+            0.173,
+            -0.2635
+          ],
+          [
+            0.1462,
+            0.173,
+            -0.255
+          ],
+          [
+            0.3182,
+            0.173,
+            -0.068
+          ],
+          [
+            0.258,
+            0.173,
+            0.187
+          ],
+          [
+            0.0172,
+            0.173,
+            0.255
+          ],
+          [
+            -0.258,
+            0.173,
+            0.1785
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.72,
+    0.173,
+    0.61
+  ],
+  "source": {
+    "authoring": "tools/game410/waterland.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "terrain",
+    "L1-Expansion",
+    "terrain",
+    "game_waterland",
+    "stepping_stone",
+    "Game-Expansion-3.10",
+    "waterland",
+    "水岸与洞穴"
+  ],
+  "theme": "l1-terrain",
+  "version": "3.10.0"
+}

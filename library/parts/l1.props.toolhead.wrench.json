@@ -1,0 +1,943 @@
+{
+  "anchor": "base",
+  "category": "props",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.7
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.5
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.7,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.7
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.5
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "开口扳手头；可复用的 道具与场景杂物 语义部件，不包含上层设备行为。",
+  "id": "l1.props.toolhead.wrench",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "开口扳手头",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.5,
+        "maximum": 0.875,
+        "minimum": 0.275,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.7,
+        "maximum": 1.2249999999999999,
+        "minimum": 0.385,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 1,
+        "maximum": 1.75,
+        "minimum": 0.55,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "props",
+    "repair39": {
+      "audit_id": "l1.props.toolhead.wrench",
+      "commercial_certification": false,
+      "scope": "authored-geometry; current evidence/v3.9.0"
+    },
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "repair39": {
+    "baseline": "3.8.0",
+    "change": "扳手头采用偏转开口、两片夹颚和圆弧肩部，颚面有明确夹持方向；颈部厚度和内嵌面保持工具辨识。",
+    "connector_contract": "existing named sockets preserved; contact tests in release evidence",
+    "contracts": {},
+    "legacy_geometry_sha256": "29144b52c51d63c30c55ef2239327674f3ce66818458e97ff853e1b276fb646b",
+    "source_revision": "3.9.0",
+    "stable_public_id": true
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/props.json#l1.props.toolhead.wrench",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "props",
+    "family": "toolhead",
+    "profile": "wrench",
+    "purpose": "开口扳手头",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#A3ACAA",
+        "depth": 0.048,
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "wrench_00",
+        "outline": [
+          [
+            -0.036,
+            0.0
+          ],
+          [
+            -0.014666666666666665,
+            -0.01759259259259259
+          ],
+          [
+            0.014555555555555561,
+            -0.017407407407407403
+          ],
+          [
+            0.036,
+            0.0
+          ],
+          [
+            0.0401111111111111,
+            0.04496296296296296
+          ],
+          [
+            0.03644444444444443,
+            0.10714814814814813
+          ],
+          [
+            0.038,
+            0.155
+          ],
+          [
+            0.05107407407407408,
+            0.1730740740740741
+          ],
+          [
+            0.06937037037037036,
+            0.17681481481481479
+          ],
+          [
+            0.087,
+            0.181
+          ],
+          [
+            0.10285185185185186,
+            0.18951851851851853
+          ],
+          [
+            0.11803703703703704,
+            0.19848148148148145
+          ],
+          [
+            0.13,
+            0.211
+          ],
+          [
+            0.138,
+            0.2295925925925926
+          ],
+          [
+            0.14277777777777775,
+            0.25174074074074076
+          ],
+          [
+            0.144,
+            0.273
+          ],
+          [
+            0.14140740740740737,
+            0.2922962962962963
+          ],
+          [
+            0.13525925925925927,
+            0.31070370370370365
+          ],
+          [
+            0.126,
+            0.327
+          ],
+          [
+            0.1118888888888889,
+            0.34270370370370373
+          ],
+          [
+            0.09466666666666666,
+            0.35629629629629633
+          ],
+          [
+            0.08,
+            0.362
+          ],
+          [
+            0.06866666666666668,
+            0.3557037037037037
+          ],
+          [
+            0.05988888888888888,
+            0.34151851851851844
+          ],
+          [
+            0.057,
+            0.326
+          ],
+          [
+            0.06496296296296296,
+            0.3102962962962963
+          ],
+          [
+            0.07881481481481481,
+            0.2932592592592593
+          ],
+          [
+            0.087,
+            0.278
+          ],
+          [
+            0.085,
+            0.26481481481481484
+          ],
+          [
+            0.07733333333333334,
+            0.25340740740740736
+          ],
+          [
+            0.066,
+            0.246
+          ],
+          [
+            0.049259259259259267,
+            0.24355555555555553
+          ],
+          [
+            0.028851851851851854,
+            0.2451111111111111
+          ],
+          [
+            0.012,
+            0.25
+          ],
+          [
+            0.001185185185185186,
+            0.25840740740740736
+          ],
+          [
+            -0.006074074074074072,
+            0.27014814814814814
+          ],
+          [
+            -0.01,
+            0.284
+          ],
+          [
+            -0.007555555555555555,
+            0.3018518518518518
+          ],
+          [
+            -0.001777777777777774,
+            0.3218148148148148
+          ],
+          [
+            -0.002,
+            0.337
+          ],
+          [
+            -0.013222222222222224,
+            0.3454814814814815
+          ],
+          [
+            -0.03044444444444444,
+            0.3491851851851852
+          ],
+          [
+            -0.048,
+            0.347
+          ],
+          [
+            -0.0654074074074074,
+            0.33699999999999997
+          ],
+          [
+            -0.08314814814814814,
+            0.3211111111111111
+          ],
+          [
+            -0.097,
+            0.304
+          ],
+          [
+            -0.10611111111111111,
+            0.28703703703703703
+          ],
+          [
+            -0.11133333333333333,
+            0.2688518518518518
+          ],
+          [
+            -0.111,
+            0.25
+          ],
+          [
+            -0.10277777777777777,
+            0.22933333333333336
+          ],
+          [
+            -0.089,
+            0.20800000000000002
+          ],
+          [
+            -0.075,
+            0.19
+          ],
+          [
+            -0.0611111111111111,
+            0.18259259259259258
+          ],
+          [
+            -0.046999999999999986,
+            0.17851851851851858
+          ],
+          [
+            -0.037,
+            0.16
+          ],
+          [
+            -0.03655555555555555,
+            0.1103703703703704
+          ],
+          [
+            -0.04022222222222222,
+            0.046296296296296294
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "color": "#45535A",
+        "depth": 0.001,
+        "holes": [],
+        "kind": "extrude",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.7
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0241,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.5
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "wrench_01",
+        "outline": [
+          [
+            0.0125,
+            0.129
+          ],
+          [
+            0.011562177826491072,
+            0.1325
+          ],
+          [
+            0.009000000000000001,
+            0.13506217782649108
+          ],
+          [
+            0.0055000000000000005,
+            0.136
+          ],
+          [
+            -0.0055000000000000005,
+            0.136
+          ],
+          [
+            -0.009,
+            0.13506217782649108
+          ],
+          [
+            -0.011562177826491072,
+            0.1325
+          ],
+          [
+            -0.0125,
+            0.129
+          ],
+          [
+            -0.0125,
+            0.025
+          ],
+          [
+            -0.01156217782649107,
+            0.021500000000000002
+          ],
+          [
+            -0.009000000000000005,
+            0.018937822173508933
+          ],
+          [
+            -0.005500000000000001,
+            0.018000000000000002
+          ],
+          [
+            0.0055,
+            0.018000000000000002
+          ],
+          [
+            0.009000000000000001,
+            0.01893782217350893
+          ],
+          [
+            0.01156217782649107,
+            0.0215
+          ],
+          [
+            0.0125,
+            0.025
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    1,
+    0.7,
+    0.5
+  ],
+  "source": {
+    "authoring": "tools/repair39/props.py",
+    "license": "project-authored",
+    "revision": "3.9.0",
+    "type": "original_structural_lowpoly_rebuild"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "props",
+    "L1-Expansion",
+    "props",
+    "toolhead",
+    "wrench",
+    "Advanced-Lowpoly-3.9"
+  ],
+  "theme": "l1-props",
+  "version": "3.9.0"
+}

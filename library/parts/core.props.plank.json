@@ -1,0 +1,188 @@
+{
+  "anchor": "center",
+  "category": "props",
+  "connectors": [
+    {
+      "id": "left",
+      "interface": "timber.end.v1",
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -0.5,
+            {
+              "$param": "length"
+            }
+          ]
+        },
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "right",
+      "interface": "timber.end.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "length"
+            }
+          ]
+        },
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "description": "",
+  "id": "core.props.plank",
+  "level": 1,
+  "material": "mat.wood",
+  "name": "木板 · 可控长宽厚与窄倒角",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "length": {
+        "default": 0.7,
+        "maximum": 5,
+        "minimum": 0.15,
+        "step": 0.01,
+        "title": "板长",
+        "type": "number",
+        "unit": "m"
+      },
+      "thickness": {
+        "default": 0.03,
+        "maximum": 0.22,
+        "minimum": 0.014,
+        "step": 0.002,
+        "title": "板厚",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.12,
+        "maximum": 0.4,
+        "minimum": 0.04,
+        "step": 0.01,
+        "title": "板宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "thickness"
+                },
+                0.18
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "length"
+                }
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "thickness"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "length"
+          },
+          {
+            "$param": "width"
+          },
+          {
+            "$param": "thickness"
+          }
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.7,
+    0.12,
+    0.03
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "props"
+  ],
+  "version": "3.4.0"
+}

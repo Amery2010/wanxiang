@@ -1,0 +1,202 @@
+{
+  "category": "mech",
+  "description": "真实开放铲斗与伸缩油缸。运行状态只更新节点变换，不重建网格；导出保留默认装配和端点约束元数据。",
+  "id": "fnd-excavator-arm",
+  "instances": [
+    {
+      "id": "base",
+      "part": "core.mech.pivot_base"
+    },
+    {
+      "id": "boom",
+      "part": "core.mech.boom",
+      "position": [
+        0,
+        0.64,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -58
+      ]
+    },
+    {
+      "id": "pinBase",
+      "part": "core.mech.pin",
+      "position": [
+        0,
+        0.64,
+        0
+      ]
+    },
+    {
+      "id": "stick",
+      "parent": "boom",
+      "part": "core.mech.stick",
+      "position": [
+        0,
+        1.7,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -92
+      ]
+    },
+    {
+      "id": "pinElbow",
+      "parent": "boom",
+      "part": "core.mech.pin",
+      "position": [
+        0,
+        1.7,
+        0
+      ]
+    },
+    {
+      "id": "bucket",
+      "parent": "stick",
+      "part": "core.mech.bucket",
+      "position": [
+        0,
+        1.34,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        115
+      ]
+    },
+    {
+      "id": "pinBucket",
+      "parent": "stick",
+      "part": "core.mech.pin",
+      "position": [
+        0,
+        1.34,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        1.15
+      ]
+    },
+    {
+      "assembly": "kit-hydraulic-cylinder",
+      "id": "lift",
+      "params": {
+        "barrel_length": 0.58,
+        "rod_length": 0.67
+      }
+    },
+    {
+      "assembly": "kit-hydraulic-cylinder",
+      "id": "curl",
+      "params": {
+        "barrel_length": 0.52,
+        "rod_length": 0.62
+      }
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "foundation-1.8",
+    "level": 3,
+    "quality": {
+      "review_scope": "P1-P2",
+      "status": "foundation"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "boom_raise",
+        "max": 10,
+        "min": -8,
+        "node": "boom",
+        "title": "动臂角度",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "stick_fold",
+        "max": 12,
+        "min": -12,
+        "node": "stick",
+        "title": "小臂折叠",
+        "unit": "°"
+      }
+    ],
+    "struts": [
+      {
+        "from": {
+          "node": "base",
+          "point": [
+            0.18,
+            0.4,
+            0.235
+          ]
+        },
+        "max_length": 1.2,
+        "min_length": 0.63,
+        "node": "lift",
+        "rod": "piston",
+        "rod_length": 0.67,
+        "to": {
+          "node": "boom",
+          "point": [
+            0.055,
+            0.91,
+            0.235
+          ]
+        }
+      },
+      {
+        "from": {
+          "node": "boom",
+          "point": [
+            0.008,
+            1.03,
+            -0.235
+          ]
+        },
+        "max_length": 1.13,
+        "min_length": 0.58,
+        "node": "curl",
+        "rod": "piston",
+        "rod_length": 0.62,
+        "to": {
+          "node": "stick",
+          "point": [
+            0,
+            0.59,
+            -0.235
+          ]
+        }
+      }
+    ],
+    "units": "metres"
+  },
+  "name": "动臂母版 · 枢轴与双液压实时联动",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Foundation",
+    "mech",
+    "动臂母版 · 枢轴与双液压实时联动"
+  ],
+  "version": "3.4.0"
+}

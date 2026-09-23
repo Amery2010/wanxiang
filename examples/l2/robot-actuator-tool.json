@@ -1,0 +1,74 @@
+{
+  "id": "example-l2-actuator-tool",
+  "instances": [
+    {
+      "assembly": "l2-robot-joint-prismatic",
+      "id": "actuator"
+    },
+    {
+      "assembly": "l2-robot-end-parallel_finger",
+      "attach": {
+        "mode": "opposed",
+        "own": "mount",
+        "socket": "output",
+        "target": "actuator"
+      },
+      "id": "tool",
+      "parent": "actuator.output"
+    }
+  ],
+  "metadata": {
+    "catalogue_counted": false,
+    "purpose": "L2 output-frame mate plus independent controls; example only, not an extra asset",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "stroke",
+        "max": 0.22,
+        "min": 0,
+        "mode": "translation",
+        "node": "actuator.output",
+        "title": "滑台行程",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "openL",
+        "max": 0.08,
+        "min": 0,
+        "mode": "translation",
+        "node": "tool.finger0",
+        "title": "左指张开",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "openR",
+        "max": 0.08,
+        "min": 0,
+        "mode": "translation",
+        "node": "tool.finger1",
+        "title": "右指张开",
+        "unit": "m"
+      }
+    ]
+  },
+  "name": "直线滑台与平行夹爪接口组合",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly"
+}

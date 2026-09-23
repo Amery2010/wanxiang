@@ -1,0 +1,148 @@
+{
+  "category": "gameplay",
+  "description": "",
+  "id": "exp-game-breakable_crate",
+  "instances": [
+    {
+      "id": "bottom",
+      "part": "exp.game.crate_panel",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "top",
+      "part": "exp.game.crate_panel",
+      "position": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "front",
+      "part": "exp.game.crate_panel",
+      "position": [
+        0,
+        0.5,
+        0.5
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "back",
+      "part": "exp.game.crate_panel",
+      "position": [
+        0,
+        0.5,
+        -0.5
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left",
+      "part": "exp.game.crate_panel",
+      "position": [
+        -0.5,
+        0.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        90
+      ]
+    },
+    {
+      "id": "right",
+      "part": "exp.game.crate_panel",
+      "position": [
+        0.5,
+        0.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        90
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "gameplay",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "gameplay",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "interaction": {
+        "authority": "consumer-game",
+        "event": "crate.break",
+        "fragments": [
+          "bottom",
+          "top",
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "kind": "breakable",
+        "schema": "wx.interaction/1.0",
+        "trigger": {
+          "shape": "none"
+        }
+      },
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "runtime_fragment_nodes": [
+      "bottom",
+      "top",
+      "front",
+      "back",
+      "left",
+      "right"
+    ],
+    "stage": "E",
+    "theme": "gameplay",
+    "units": "metres"
+  },
+  "name": "可拆分木箱 · 六个独立面板节点",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,113 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "exp-industry-drill_rig",
+  "instances": [
+    {
+      "id": "mast",
+      "part": "exp.industry.lift_frame",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "spindle",
+      "part": "exp.industry.drill_head",
+      "position": [
+        0,
+        0.9,
+        0.05
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "feed",
+      "part": "exp.industry.hopper",
+      "position": [
+        1.25,
+        0,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "industry",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "industry",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "D",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "spin",
+        "max": 360,
+        "min": 0,
+        "node": "spindle",
+        "title": "钻具旋转",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "depth",
+        "max": 0.5,
+        "min": -0.5,
+        "mode": "translation",
+        "node": "spindle",
+        "step": 0.01,
+        "title": "钻进深度",
+        "unit": "m"
+      }
+    ],
+    "theme": "industrial",
+    "units": "metres"
+  },
+  "name": "钻探机架 · 独立钻具与送料斗",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "industrial",
+    "mech",
+    "D-E",
+    "industry"
+  ],
+  "version": "3.4.0"
+}

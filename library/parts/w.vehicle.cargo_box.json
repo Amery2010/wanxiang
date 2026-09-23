@@ -1,0 +1,304 @@
+{
+  "anchor": "base",
+  "category": "vehicle",
+  "connectors": [],
+  "description": "",
+  "id": "w.vehicle.cargo_box",
+  "level": 2,
+  "material": "mat.paint",
+  "name": "厢式货箱 · 侧板与后门分缝",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "length": {
+        "default": 2.8,
+        "maximum": 4.5,
+        "minimum": 2.0,
+        "step": 0.1,
+        "title": "货厢长",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P3-P4",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.028,
+            0.924,
+            0.8140000000000001,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "length"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#F8F3E7",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          1.71,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          2.1,
+          1.85,
+          {
+            "$param": "length"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.006,
+            0.015400000000000002,
+            0.792,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "length"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "position": [
+          -1.065,
+          1.71,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.035,
+          1.8,
+          {
+            "$param": "length"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.006,
+            0.015400000000000002,
+            0.792,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "length"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "position": [
+          1.065,
+          1.71,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.035,
+          1.8,
+          {
+            "$param": "length"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.012,
+            0.9328000000000001,
+            0.030800000000000004,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "length"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "position": [
+          0,
+          2.66,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          2.12,
+          0.07,
+          {
+            "$param": "length"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.004,
+            0.00968,
+            0.7568,
+            0.011000000000000001
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          1.71,
+          {
+            "$op": "mul",
+            "args": [
+              -0.5,
+              {
+                "$param": "length"
+              }
+            ]
+          }
+        ],
+        "roundable": false,
+        "size": [
+          0.022,
+          1.72,
+          0.025
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.004,
+            0.011000000000000001,
+            0.6512,
+            0.011000000000000001
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "position": [
+          -0.63,
+          1.73,
+          {
+            "$op": "sub",
+            "args": [
+              {
+                "$op": "mul",
+                "args": [
+                  -0.5,
+                  {
+                    "$param": "length"
+                  }
+                ]
+              },
+              0.035
+            ]
+          }
+        ],
+        "roundable": false,
+        "size": [
+          0.025,
+          1.48,
+          0.025
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.004,
+            0.011000000000000001,
+            0.6512,
+            0.011000000000000001
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "position": [
+          0.63,
+          1.73,
+          {
+            "$op": "sub",
+            "args": [
+              {
+                "$op": "mul",
+                "args": [
+                  -0.5,
+                  {
+                    "$param": "length"
+                  }
+                ]
+              },
+              0.035
+            ]
+          }
+        ],
+        "roundable": false,
+        "size": [
+          0.025,
+          1.48,
+          0.025
+        ]
+      }
+    ]
+  },
+  "size": [
+    2.14,
+    2.7,
+    2.8
+  ],
+  "source": {
+    "authoring": "tools/worlds/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "shared",
+    "vehicle"
+  ],
+  "theme": "shared",
+  "version": "3.4.0"
+}

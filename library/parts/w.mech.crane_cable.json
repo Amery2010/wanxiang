@@ -1,0 +1,92 @@
+{
+  "anchor": "center",
+  "category": "mech",
+  "connectors": [],
+  "description": "",
+  "id": "w.mech.crane_cable",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "吊钩垂绳 · 可定长直线索",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "length": {
+        "default": 1.1,
+        "maximum": 4,
+        "minimum": 0.2,
+        "step": 0.02,
+        "title": "绳长",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P3-P4",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#53616A",
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.012,
+              0.012
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  -1,
+                  {
+                    "$param": "length"
+                  }
+                ]
+              },
+              0
+            ],
+            "r": [
+              0.012,
+              0.012
+            ]
+          }
+        ],
+        "sides": 6
+      }
+    ]
+  },
+  "size": [
+    0.03,
+    1.1,
+    0.03
+  ],
+  "source": {
+    "authoring": "tools/worlds/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "shared",
+    "mech"
+  ],
+  "theme": "shared",
+  "version": "3.4.0"
+}

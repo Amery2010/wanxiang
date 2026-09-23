@@ -1,0 +1,1493 @@
+{
+  "anchor": "base",
+  "category": "body",
+  "connectors": [
+    {
+      "id": "neck",
+      "interface": "human.neck.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            1.51,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "equipment.waist",
+      "interface": "human.waist.equipment.v1",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            0.99,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.13,
+            {
+              "$param": "build"
+            }
+          ]
+        }
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "语义作者层由躯干、上下臂、手、胯、腿和靴组成；编译为同一骨架的材质分组网格。 | 1.9.1: registered continuous interfaces.",
+  "id": "core.human.body",
+  "level": 2,
+  "material": "mat.fabric",
+  "name": "成人身体总成 · 统一骨架与可替换源部件",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "build": {
+        "default": 1,
+        "maximum": 1.18,
+        "minimum": 0.9,
+        "step": 0.01,
+        "title": "体格",
+        "type": "number"
+      },
+      "grip": {
+        "default": false,
+        "title": "握持手型",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 1.82,
+        "maximum": 1.98,
+        "minimum": 1.64,
+        "step": 0.01,
+        "title": "成人身高",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "components": [
+      {
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "torso",
+        "part": "core.human.torso",
+        "position": [
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.91,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ]
+      },
+      {
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "hips",
+        "part": "core.human.pelvis",
+        "position": [
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.91,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armL",
+          "elbow": "elbowL",
+          "foot": "footL",
+          "hand": "handL",
+          "knee": "kneeL",
+          "thigh": "thighL"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "upperarmL",
+        "part": "core.human.upperarm",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.235,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.37,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          -18
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armL",
+          "elbow": "elbowL",
+          "foot": "footL",
+          "hand": "handL",
+          "knee": "kneeL",
+          "thigh": "thighL"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "forearmL",
+        "part": "core.human.forearm",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.32461492836873473,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0941936102744056,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          -10
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armL",
+          "elbow": "elbowL",
+          "foot": "footL",
+          "hand": "handL",
+          "knee": "kneeL",
+          "thigh": "thighL"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "handL",
+        "mirror": "x",
+        "params": {
+          "grip": {
+            "$param": "grip"
+          }
+        },
+        "part": "core.human.hand",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.3725418254048075,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.8223866704430363,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.008,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          0,
+          -10
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armL",
+          "elbow": "elbowL",
+          "foot": "footL",
+          "hand": "handL",
+          "knee": "kneeL",
+          "thigh": "thighL"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "thighL",
+        "part": "core.human.thigh",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.91,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armL",
+          "elbow": "elbowL",
+          "foot": "footL",
+          "hand": "handL",
+          "knee": "kneeL",
+          "thigh": "thighL"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "shinL",
+        "part": "core.human.shin",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.51,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armL",
+          "elbow": "elbowL",
+          "foot": "footL",
+          "hand": "handL",
+          "knee": "kneeL",
+          "thigh": "thighL"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "bootL",
+        "part": "core.human.boot",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armR",
+          "elbow": "elbowR",
+          "foot": "footR",
+          "hand": "handR",
+          "knee": "kneeR",
+          "thigh": "thighR"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "upperarmR",
+        "part": "core.human.upperarm",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.235,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.37,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          18
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armR",
+          "elbow": "elbowR",
+          "foot": "footR",
+          "hand": "handR",
+          "knee": "kneeR",
+          "thigh": "thighR"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "forearmR",
+        "part": "core.human.forearm",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.32461492836873473,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0941936102744056,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          10
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armR",
+          "elbow": "elbowR",
+          "foot": "footR",
+          "hand": "handR",
+          "knee": "kneeR",
+          "thigh": "thighR"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "handR",
+        "params": {
+          "grip": {
+            "$param": "grip"
+          }
+        },
+        "part": "core.human.hand",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.3725418254048075,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.8223866704430363,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.008,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          0,
+          10
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armR",
+          "elbow": "elbowR",
+          "foot": "footR",
+          "hand": "handR",
+          "knee": "kneeR",
+          "thigh": "thighR"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "thighR",
+        "part": "core.human.thigh",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.91,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armR",
+          "elbow": "elbowR",
+          "foot": "footR",
+          "hand": "handR",
+          "knee": "kneeR",
+          "thigh": "thighR"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "shinR",
+        "part": "core.human.shin",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.51,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bind": {
+          "arm": "armR",
+          "elbow": "elbowR",
+          "foot": "footR",
+          "hand": "handR",
+          "knee": "kneeR",
+          "thigh": "thighR"
+        },
+        "frame_scale": [
+          {
+            "$param": "build"
+          },
+          {
+            "$op": "div",
+            "args": [
+              {
+                "$param": "height"
+              },
+              1.82
+            ]
+          },
+          {
+            "$param": "build"
+          }
+        ],
+        "id": "bootR",
+        "part": "core.human.boot",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "forms": [],
+    "rig": [
+      {
+        "name": "pelvis",
+        "position": [
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.91,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ]
+      },
+      {
+        "name": "chest",
+        "parent": "pelvis",
+        "position": [
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              1.25,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ]
+      },
+      {
+        "name": "head",
+        "parent": "chest",
+        "position": [
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              1.624,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          0
+        ]
+      },
+      {
+        "name": "thighL",
+        "parent": "pelvis",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.91,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "kneeL",
+        "parent": "thighL",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.51,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "footL",
+        "parent": "kneeL",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.15,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "armL",
+        "parent": "chest",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.235,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.37,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "elbowL",
+        "parent": "armL",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.32461492836873473,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0941936102744056,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "handL",
+        "parent": "elbowL",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.3725418254048075,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.8223866704430363,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.008,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "thighR",
+        "parent": "pelvis",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.91,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "kneeR",
+        "parent": "thighR",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.51,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "footR",
+        "parent": "kneeR",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.128,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.15,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.012,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "armR",
+        "parent": "chest",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.235,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.37,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "elbowR",
+        "parent": "armR",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.32461492836873473,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0941936102744056,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "handR",
+        "parent": "elbowR",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.3725418254048075,
+              {
+                "$param": "build"
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.8223866704430363,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.82
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.008,
+              {
+                "$param": "build"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.92,
+    1.56,
+    0.35
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "body"
+  ],
+  "version": "3.4.0"
+}

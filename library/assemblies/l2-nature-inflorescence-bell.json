@@ -1,0 +1,394 @@
+{
+  "category": "nature",
+  "description": "钟形花冠花梗模块；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.nature.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.035,
+        0.035
+      ],
+      "span": 0.035,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.nature.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        1.03,
+        0
+      ],
+      "profile": [
+        0.035,
+        0.035
+      ],
+      "span": 0.035,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-nature-inflorescence-bell",
+  "instances": [
+    {
+      "collision": {
+        "reason": "vegetation decoration; root owner supplies physics if needed",
+        "type": "none"
+      },
+      "id": "peduncle",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "part": "l1.nature.branch.segment",
+      "pivot": [
+        0.0,
+        -0.001528988592326641,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7594936359312626,
+        0.8797155421159262,
+        0.7594936359312626
+      ]
+    },
+    {
+      "collision": {
+        "reason": "vegetation decoration; root owner supplies physics if needed",
+        "type": "none"
+      },
+      "id": "head",
+      "params": {},
+      "part": "l1.nature.flower.bell",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.67,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.749999996806894,
+        0.625000013969839,
+        0.749999996806894
+      ]
+    },
+    {
+      "collision": {
+        "reason": "vegetation decoration; root owner supplies physics if needed",
+        "type": "none"
+      },
+      "id": "leafA",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "part": "l1.nature.leaf.lance",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0006065968773327768
+      ],
+      "position": [
+        0,
+        0.2,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        -45
+      ],
+      "scale": [
+        0.918342899662167,
+        0.6428571401201949,
+        25.1499174140496
+      ]
+    },
+    {
+      "collision": {
+        "reason": "vegetation decoration; root owner supplies physics if needed",
+        "type": "none"
+      },
+      "id": "leafB",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "part": "l1.nature.leaf.lance",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0006065968773327768
+      ],
+      "position": [
+        0,
+        0.38,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        180,
+        -45
+      ],
+      "scale": [
+        0.918342899662167,
+        0.6428571401201949,
+        25.1499174140496
+      ]
+    },
+    {
+      "collision": {
+        "reason": "vegetation decoration; root owner supplies physics if needed",
+        "type": "none"
+      },
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "bract",
+      "params": {},
+      "part": "l1.nature.flower.sepal",
+      "pivot": [
+        0.0,
+        0.0,
+        0.026590779423713684
+      ],
+      "position": [
+        0,
+        0.66,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.35344057126148243,
+        0.32904979371085874,
+        0.36385921854968023
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "nature",
+    "functional": {
+      "assembly_order": [
+        "peduncle",
+        "head",
+        "leafA",
+        "leafB",
+        "bract"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.55,
+        1.03,
+        0.46
+      ],
+      "family": "inflorescence",
+      "mount_dimensions_m": [
+        0.035,
+        0.035
+      ],
+      "notes": [],
+      "purpose": "钟形花冠花梗模块",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.nature.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.035,
+          0.035
+        ],
+        "span": 0.035,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.nature.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          1.03,
+          0
+        ],
+        "profile": [
+          0.035,
+          0.035
+        ],
+        "span": 0.035,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "reason": "vegetation decoration; root owner supplies physics if needed",
+        "type": "none"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/nature.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-nature",
+    "units": "metres"
+  },
+  "name": "钟形花冠花梗模块",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "nature",
+    "inflorescence",
+    "bell",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

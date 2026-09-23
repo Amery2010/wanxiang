@@ -1,0 +1,301 @@
+{
+  "category": "animal",
+  "description": "弯曲獠牙芯口器关节组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.creature.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.16
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.creature.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.4,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.16
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-creature-jaw-tusk",
+  "instances": [
+    {
+      "id": "upper",
+      "params": {},
+      "part": "l1.creature.mouth.tusk",
+      "pivot": [
+        1.0669231414794922e-05,
+        -0.011524099856615067,
+        0.07598141953349113
+      ],
+      "position": [
+        0,
+        0.12,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.6961512470211846,
+        0.48433763048769707,
+        1.2330403754465715
+      ]
+    },
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "lower",
+      "params": {},
+      "part": "l1.creature.mouth.tusk",
+      "pivot": [
+        1.0669231414794922e-05,
+        0.2362369503825903,
+        -0.053779132664203644
+      ],
+      "position": [
+        0,
+        0.12,
+        -0.08
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.5419556791101678,
+        0.20180734603654046,
+        1.0789103285157502
+      ]
+    },
+    {
+      "id": "hingeroot",
+      "params": {},
+      "part": "l1.creature.foot.paw",
+      "pivot": [
+        -0.0032724477350711823,
+        0.02116423472762108,
+        0.02375621348619461
+      ],
+      "position": [
+        0,
+        0.075,
+        -0.13
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9200000274181375,
+        1.333333404527774,
+        0.5435138347125383
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "creature",
+    "functional": {
+      "assembly_order": [
+        "upper",
+        "lower",
+        "hingeroot"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.3,
+        0.4,
+        0.5
+      ],
+      "family": "jaw",
+      "mount_dimensions_m": [
+        0.18,
+        0.16
+      ],
+      "notes": [
+        "局部颚部刚体摆动，无牙齿咬合或软组织变形认证。"
+      ],
+      "purpose": "弯曲獠牙芯口器关节组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "lower"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.creature.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.16
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.creature.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.4,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.16
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "type": "none"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/creature.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "gape",
+        "max": 42,
+        "min": 0,
+        "mode": "rotation",
+        "node": "lower",
+        "step": 1,
+        "title": "下颚开合",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-creature",
+    "units": "metres"
+  },
+  "name": "弯曲獠牙芯口器关节组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "creature",
+    "jaw",
+    "tusk",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,326 @@
+{
+  "category": "mech",
+  "description": "吊臂俯仰固定为33°，伸缩与水平回转可调，垂绳保持垂直；不是吊装物理仿真。",
+  "id": "world-mobile-crane",
+  "instances": [
+    {
+      "id": "frame",
+      "params": {
+        "length": 5.8
+      },
+      "part": "w.vehicle.truck_chassis",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cab",
+      "part": "w.vehicle.truck_cab",
+      "position": [
+        0,
+        0,
+        2.12
+      ]
+    },
+    {
+      "id": "turret",
+      "part": "w.mech.crane_turret",
+      "position": [
+        0,
+        0.93,
+        -0.79
+      ]
+    },
+    {
+      "id": "operator",
+      "parent": "turret",
+      "part": "w.mech.operator_cab",
+      "position": [
+        -0.57,
+        0.49,
+        0.31
+      ]
+    },
+    {
+      "id": "boom",
+      "parent": "turret",
+      "part": "w.mech.crane_boom",
+      "position": [
+        0.42,
+        0.79,
+        0.26
+      ],
+      "rotation": [
+        -33,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "extension",
+      "parent": "boom",
+      "part": "w.mech.crane_inner",
+      "position": [
+        0,
+        0,
+        2.1
+      ]
+    },
+    {
+      "id": "cable",
+      "parent": "extension",
+      "part": "w.mech.crane_cable",
+      "position": [
+        0,
+        0,
+        2.69
+      ],
+      "rotation": [
+        33,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hook",
+      "parent": "cable",
+      "part": "w.mech.crane_hook",
+      "position": [
+        0,
+        -1.14,
+        0
+      ]
+    },
+    {
+      "id": "support-1-2.02",
+      "part": "w.mech.outrigger",
+      "position": [
+        -0.68,
+        0,
+        -2.02
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ]
+    },
+    {
+      "id": "support-10.5",
+      "part": "w.mech.outrigger",
+      "position": [
+        -0.68,
+        0,
+        0.5
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ]
+    },
+    {
+      "id": "support1-2.02",
+      "part": "w.mech.outrigger",
+      "position": [
+        0.68,
+        0,
+        -2.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "support10.5",
+      "part": "w.mech.outrigger",
+      "position": [
+        0.68,
+        0,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "wheel0L",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.915,
+        0.44,
+        1.94
+      ]
+    },
+    {
+      "id": "wheel0R",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.915,
+        0.44,
+        1.94
+      ]
+    },
+    {
+      "id": "wheel1L",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.915,
+        0.44,
+        0.9
+      ]
+    },
+    {
+      "id": "wheel1R",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.915,
+        0.44,
+        0.9
+      ]
+    },
+    {
+      "id": "wheel2L",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.915,
+        0.44,
+        -1.18
+      ]
+    },
+    {
+      "id": "wheel2R",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.915,
+        0.44,
+        -1.18
+      ]
+    },
+    {
+      "id": "wheel3L",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.915,
+        0.44,
+        -2.14
+      ]
+    },
+    {
+      "id": "wheel3R",
+      "params": {
+        "radius": 0.44,
+        "width": 0.24
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.915,
+        0.44,
+        -2.14
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-1.9",
+    "level": 3,
+    "quality": {
+      "review_scope": "P3-P4",
+      "status": "worlds"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "steering",
+        "max": 25,
+        "min": -25,
+        "nodes": [
+          "wheel0L",
+          "wheel0R"
+        ],
+        "title": "前轮转向",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "slew",
+        "max": 45,
+        "min": -45,
+        "node": "turret",
+        "title": "吊臂回转",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "extension",
+        "max": 1.25,
+        "min": 0,
+        "mode": "translation",
+        "node": "extension",
+        "step": 0.02,
+        "title": "臂节伸出",
+        "unit": "m"
+      }
+    ],
+    "theme": "construction",
+    "units": "metres"
+  },
+  "name": "移动起重机 · 回转与伸缩吊臂",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "construction",
+    "mech"
+  ],
+  "version": "3.4.0"
+}

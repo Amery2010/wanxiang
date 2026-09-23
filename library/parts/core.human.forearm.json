@@ -1,0 +1,180 @@
+{
+  "anchor": "top",
+  "category": "body",
+  "connectors": [
+    {
+      "id": "elbow",
+      "interface": "human.elbow.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "wrist",
+      "interface": "human.wrist.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        -0.276,
+        0.008
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "",
+  "id": "core.human.forearm",
+  "level": 1,
+  "material": "mat.skin",
+  "name": "前臂 · 肘腕连续截面",
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#DDAA85",
+        "frame_axis": [
+          0,
+          -1,
+          0
+        ],
+        "join_end": "hand",
+        "join_start": "elbow",
+        "kind": "loft",
+        "outline": [
+          [
+            1,
+            0.62
+          ],
+          [
+            0.62,
+            1
+          ],
+          [
+            -0.62,
+            1
+          ],
+          [
+            -1,
+            0.62
+          ],
+          [
+            -1,
+            -0.62
+          ],
+          [
+            -0.62,
+            -1
+          ],
+          [
+            0.62,
+            -1
+          ],
+          [
+            1,
+            -0.62
+          ]
+        ],
+        "preserve_ends": true,
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.063,
+              0.063
+            ],
+            "weights": {
+              "arm": 0.5,
+              "elbow": 0.5
+            }
+          },
+          {
+            "bone": "elbow",
+            "c": [
+              0,
+              -0.06,
+              0.002
+            ],
+            "r": [
+              0.073,
+              0.063
+            ]
+          },
+          {
+            "bone": "elbow",
+            "c": [
+              0,
+              -0.19,
+              0.006
+            ],
+            "r": [
+              0.052,
+              0.047
+            ]
+          },
+          {
+            "c": [
+              0,
+              -0.276,
+              0.008
+            ],
+            "r": [
+              0.039,
+              0.037
+            ],
+            "weights": {
+              "elbow": 0.65,
+              "hand": 0.35
+            }
+          }
+        ],
+        "sides": 8
+      }
+    ]
+  },
+  "size": [
+    0.145,
+    0.276,
+    0.13
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "body"
+  ],
+  "version": "3.4.0"
+}

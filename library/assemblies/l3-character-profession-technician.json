@@ -1,0 +1,306 @@
+{
+  "category": "wear",
+  "description": "实验室技师；完整人体与蒙皮 / 骨骼挂接服饰 / electrician / coat",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "ground",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l3-character-profession-technician",
+  "instances": [
+    {
+      "id": "skin",
+      "params": {
+        "build": 1,
+        "grip": false,
+        "height": 1.82,
+        "palette": {
+          "#707952": "#607077",
+          "#EFE3CB": "#ECEDE5"
+        }
+      },
+      "part": "core.human.body"
+    },
+    {
+      "id": "head",
+      "parent": "skin.rig.head",
+      "part": "core.human.head"
+    },
+    {
+      "id": "hair",
+      "parent": "skin.rig.head",
+      "part": "r37.l3-character-profession-technician.hair"
+    },
+    {
+      "id": "hat",
+      "parent": "skin.rig.head",
+      "part": "w.wear.cap"
+    },
+    {
+      "id": "cape",
+      "params": {},
+      "parent": "skin.rig.chest",
+      "part": "l1.character.clothing.cape_panel",
+      "pivot": [
+        0.01000000536441803,
+        0.3424999942071736,
+        0.01962687447667122
+      ],
+      "position": [
+        0,
+        -0.27,
+        -0.17
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8333333320597298,
+        1.2587412803180298,
+        2.042683628272567
+      ]
+    },
+    {
+      "id": "skirt",
+      "params": {},
+      "parent": "skin.rig.pelvis",
+      "part": "l1.character.clothing.skirt_panel",
+      "pivot": [
+        0.0,
+        0.2991504773381166,
+        0.007250000722706318
+      ],
+      "position": [
+        0,
+        -0.16,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6571428683339335,
+        0.8309801457416891,
+        5.050504887825304
+      ]
+    },
+    {
+      "assembly": "l2-character-servicekit-electrician",
+      "id": "service",
+      "parent": "skin.rig.pelvis",
+      "pivot": [
+        0.0,
+        0.1749999960884452,
+        0.03500000014901161
+      ],
+      "position": [
+        0.24,
+        -0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.45454545700845644,
+        1.0344827817431816,
+        0.4666666597127916
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "identifier",
+      "params": {},
+      "parent": "skin.rig.chest",
+      "part": "l1.props.office.pen_barrel",
+      "pivot": [
+        0.0,
+        0.15000000596046448,
+        0.0
+      ],
+      "position": [
+        0,
+        -0.18,
+        0.14
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.6086956471035747,
+        0.3999999841054287,
+        0.8695652157011916
+      ]
+    },
+    {
+      "id": "medical_case",
+      "parent": "skin.rig.pelvis",
+      "part": "r37.l3-character-profession-technician.medical_case"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l3-3.4",
+    "domain": "character",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "production": {
+      "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
+      "dimensions_design_m": [
+        0.9,
+        1.95,
+        0.65
+      ],
+      "family": "profession",
+      "features": [
+        "完整人体与蒙皮",
+        "骨骼挂接服饰",
+        "electrician",
+        "coat"
+      ],
+      "footprint_m": [
+        0.9,
+        0.65
+      ],
+      "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
+      "notes": [
+        "继承原人体检查动作；新增服饰是刚性骨骼挂接，不是布料蒙皮或新动作认证"
+      ],
+      "purpose": "实验室技师",
+      "render_contract": "editable nodes and source references retained; no CAD boolean union",
+      "rig": "retained-human-rig",
+      "schema": "wx.production-asset/1.0"
+    },
+    "quality": {
+      "approval": "authored; see versioned evidence",
+      "review_scope": "L3-L4",
+      "status": "l3"
+    },
+    "repair37": {
+      "baseline": "3.5.0",
+      "geometry_redesigned": true,
+      "old_root_nodes": [
+        "skin",
+        "head",
+        "hair",
+        "hat",
+        "cape",
+        "skirt",
+        "service",
+        "identifier"
+      ],
+      "prior_visual_claims_not_inherited": true,
+      "retained_root_nodes": [
+        "cape",
+        "hair",
+        "hat",
+        "head",
+        "identifier",
+        "service",
+        "skin",
+        "skirt"
+      ],
+      "source": "tools/repair37"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 180000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/repair37/__init__.py",
+      "license": "project-authored",
+      "revision": "3.7.1",
+      "type": "original_production_prefab"
+    },
+    "state_controls": [],
+    "theme": "l3-character",
+    "units": "metres"
+  },
+  "name": "实验室技师",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L3",
+    "character",
+    "profession",
+    "technician",
+    "完整人体与蒙皮",
+    "骨骼挂接服饰",
+    "electrician",
+    "coat"
+  ],
+  "version": "3.7.1"
+}

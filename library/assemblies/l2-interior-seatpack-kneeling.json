@@ -1,0 +1,416 @@
+{
+  "category": "interior",
+  "description": "座面、靠背与安装盘；不包含桌椅底座。；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.interior.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.24,
+        0.22
+      ],
+      "span": 0.24,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.interior.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.8,
+        0
+      ],
+      "profile": [
+        0.24,
+        0.22
+      ],
+      "span": 0.24,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-interior-seatpack-kneeling",
+  "instances": [
+    {
+      "id": "seat",
+      "params": {},
+      "part": "l1.interior.seat.kneeling",
+      "pivot": [
+        0.015593379735946655,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.08,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0116071770046429,
+        0.48760434426423066,
+        1.4571428819578525
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "back",
+      "params": {},
+      "part": "l1.interior.seat.back_shell",
+      "pivot": [
+        0.0,
+        -0.010705754160881042,
+        0.004274357110261917
+      ],
+      "position": [
+        0,
+        0.19,
+        -0.225
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8999999642372146,
+        0.8126470343235828,
+        0.530411916362639
+      ]
+    },
+    {
+      "id": "mount",
+      "params": {},
+      "part": "l1.architecture.floor.plank",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.19999999205271435,
+        0.7999999880790712,
+        0.18333332604832148
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix0",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.085,
+        0.08,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.31818181990591954,
+        0.10862069278069551,
+        0.36740471185729096
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix1",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.085,
+        0.08,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.31818181990591954,
+        0.10862069278069551,
+        0.36740471185729096
+      ]
+    },
+    {
+      "id": "kneepad",
+      "params": {},
+      "part": "l1.interior.seat.kneeling",
+      "pivot": [
+        0.015593379735946655,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        -0.22,
+        0.34
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8309630382538138,
+        0.40633695355352556,
+        0.6857142973919306
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "interior",
+    "functional": {
+      "assembly_order": [
+        "seat",
+        "back",
+        "mount",
+        "fix0",
+        "fix1",
+        "kneepad"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.69,
+        0.8,
+        0.68
+      ],
+      "family": "seatpack",
+      "mount_dimensions_m": [
+        0.24,
+        0.22
+      ],
+      "notes": [],
+      "purpose": "座面、靠背与安装盘；不包含桌椅底座。",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "back"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.interior.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.24,
+          0.22
+        ],
+        "span": 0.24,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.interior.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.8,
+          0
+        ],
+        "profile": [
+          0.24,
+          0.22
+        ],
+        "span": 0.24,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/interior.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "recline",
+        "max": 24,
+        "min": -5,
+        "mode": "rotation",
+        "node": "back",
+        "step": 1,
+        "title": "靠背角",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-interior",
+    "units": "metres"
+  },
+  "name": "跪坐承托垫基件座背组件",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "interior",
+    "seatpack",
+    "kneeling",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

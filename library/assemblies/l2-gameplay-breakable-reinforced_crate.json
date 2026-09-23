@@ -1,0 +1,436 @@
+{
+  "category": "gameplay",
+  "description": "加固木箱可拆结构；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        1.05,
+        0.68
+      ],
+      "span": 1.05,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.88,
+        0
+      ],
+      "profile": [
+        1.05,
+        0.68
+      ],
+      "span": 1.05,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-gameplay-breakable-reinforced_crate",
+  "instances": [
+    {
+      "id": "base",
+      "params": {},
+      "part": "l1.props.container.crate_base",
+      "pivot": [
+        0.0,
+        -0.05000000074505806,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.214285734964877,
+        0.7999999880790712,
+        1.1818181562029633
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment0",
+      "params": {},
+      "part": "l1.props.container.crate_side",
+      "pivot": [
+        0.0,
+        0.0,
+        -0.026250001043081284
+      ],
+      "position": [
+        -0.38,
+        0.08,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1.1076923483222207,
+        0.88,
+        0.46153844319857157
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment1",
+      "params": {},
+      "part": "l1.props.container.crate_side",
+      "pivot": [
+        0.0,
+        0.0,
+        -0.026250001043081284
+      ],
+      "position": [
+        0.38,
+        0.08,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1.1076923483222207,
+        0.88,
+        0.46153844319857157
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment2",
+      "params": {},
+      "part": "l1.props.container.crate_side",
+      "pivot": [
+        0.0,
+        0.0,
+        -0.026250001043081284
+      ],
+      "position": [
+        0,
+        0.08,
+        -0.28
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.1076923483222207,
+        0.88,
+        0.46153844319857157
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment3",
+      "params": {},
+      "part": "l1.props.container.crate_side",
+      "pivot": [
+        0.0,
+        0.0,
+        -0.026250001043081284
+      ],
+      "position": [
+        0,
+        0.08,
+        0.28
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.1076923483222207,
+        0.88,
+        0.46153844319857157
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "band",
+      "params": {},
+      "part": "l1.props.container.crate_lid",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.52,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.18571430590688,
+        0.5333333121405716,
+        1.1636363384152253
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "gameplay",
+    "functional": {
+      "assembly_order": [
+        "base",
+        "fragment0",
+        "fragment1",
+        "fragment2",
+        "fragment3",
+        "band"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        1.05,
+        0.88,
+        0.68
+      ],
+      "family": "breakable",
+      "mount_dimensions_m": [
+        1.05,
+        0.68
+      ],
+      "notes": [
+        "预制可拆片，不是闭合 Voronoi 断裂体；按片层级与命名交给物理/销毁逻辑。"
+      ],
+      "purpose": "加固木箱可拆结构",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "band"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          1.05,
+          0.68
+        ],
+        "span": 1.05,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.88,
+          0
+        ],
+        "profile": [
+          1.05,
+          0.68
+        ],
+        "span": 1.05,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "interaction": {
+        "action": "break",
+        "authority": "consumer-game",
+        "consumer_implemented": true,
+        "event": "break",
+        "events": [
+          "activate",
+          "release",
+          "reset"
+        ],
+        "fragments": [
+          "fragment0",
+          "fragment1",
+          "fragment2",
+          "fragment3",
+          "band"
+        ],
+        "kind": "breakable",
+        "schema": "wx.interaction/1.0",
+        "target_node": "fragment0",
+        "trigger": {
+          "shape": "none"
+        }
+      },
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "runtime_fragment_nodes": [
+      "fragment0",
+      "fragment1",
+      "fragment2",
+      "fragment3",
+      "band"
+    ],
+    "source": {
+      "authoring": "tools/l2_expansion/gameplay.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "break",
+        "max": 0.5,
+        "min": 0,
+        "mode": "translation",
+        "node": "band",
+        "step": 0.01,
+        "title": "顶盖弹出",
+        "unit": "m"
+      }
+    ],
+    "theme": "l2-gameplay",
+    "units": "metres"
+  },
+  "name": "加固木箱可拆结构",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "gameplay",
+    "breakable",
+    "reinforced_crate",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,310 @@
+{
+  "anchor": "base",
+  "category": "arch",
+  "connectors": [
+    {
+      "id": "left",
+      "interface": "wall.edge.v1",
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -1,
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "width"
+                }
+              ]
+            }
+          ]
+        },
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "right",
+      "interface": "wall.edge.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "width"
+            }
+          ]
+        },
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "hinge",
+      "interface": "door.hinge.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -1,
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "opening_width"
+                }
+              ]
+            }
+          ]
+        },
+        0,
+        0.035
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "",
+  "id": "core.arch.door_wall",
+  "level": 1,
+  "material": "mat.plaster",
+  "name": "门洞墙板 · 真实贯穿 U 形开口",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "height": {
+        "default": 2.7,
+        "maximum": 3.2,
+        "minimum": 2.45,
+        "step": 0.01,
+        "title": "墙高",
+        "type": "number",
+        "unit": "m"
+      },
+      "opening_height": {
+        "default": 2.11,
+        "maximum": 2.25,
+        "minimum": 1.98,
+        "step": 0.01,
+        "title": "门洞高",
+        "type": "number",
+        "unit": "m"
+      },
+      "opening_width": {
+        "default": 0.91,
+        "maximum": 1.1,
+        "minimum": 0.78,
+        "step": 0.01,
+        "title": "门洞宽",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 1.75,
+        "maximum": 2.3,
+        "minimum": 1.45,
+        "step": 0.01,
+        "title": "墙板宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#EFE3CB",
+        "depth": 0.22,
+        "kind": "extrude",
+        "outline": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "width"
+                    }
+                  ]
+                }
+              ]
+            },
+            0
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "opening_width"
+                    }
+                  ]
+                }
+              ]
+            },
+            0
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "opening_width"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$param": "opening_height"
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "opening_width"
+                }
+              ]
+            },
+            {
+              "$param": "opening_height"
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "opening_width"
+                }
+              ]
+            },
+            0
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            0
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            {
+              "$param": "height"
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "width"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$param": "height"
+            }
+          ]
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    1.75,
+    2.7,
+    0.22
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "arch"
+  ],
+  "version": "3.4.0"
+}

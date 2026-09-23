@@ -1,0 +1,156 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "world-forklift",
+  "instances": [
+    {
+      "id": "body",
+      "part": "w.mech.forklift_body",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mast",
+      "part": "w.mech.forklift_mast",
+      "position": [
+        0,
+        0.36,
+        0.89
+      ]
+    },
+    {
+      "id": "fork",
+      "parent": "mast",
+      "part": "w.mech.fork_carriage",
+      "position": [
+        0,
+        0.035,
+        0.13
+      ]
+    },
+    {
+      "id": "wheel0L",
+      "params": {
+        "radius": 0.29,
+        "width": 0.2
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.605,
+        0.29,
+        0.58
+      ]
+    },
+    {
+      "id": "wheel0R",
+      "params": {
+        "radius": 0.29,
+        "width": 0.2
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.605,
+        0.29,
+        0.58
+      ]
+    },
+    {
+      "id": "wheel1L",
+      "params": {
+        "radius": 0.29,
+        "width": 0.2
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        -0.605,
+        0.29,
+        -0.65
+      ]
+    },
+    {
+      "id": "wheel1R",
+      "params": {
+        "radius": 0.29,
+        "width": 0.2
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        0.605,
+        0.29,
+        -0.65
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-1.9",
+    "level": 3,
+    "quality": {
+      "review_scope": "P3-P4",
+      "status": "worlds"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "steering",
+        "max": 25,
+        "min": -25,
+        "nodes": [
+          "wheel0L",
+          "wheel0R"
+        ],
+        "title": "前轮转向",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "tilt",
+        "max": 6,
+        "min": -6,
+        "node": "mast",
+        "title": "门架倾斜",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "lift",
+        "max": 1.18,
+        "min": 0,
+        "mode": "translation",
+        "node": "fork",
+        "step": 0.02,
+        "title": "货叉升高",
+        "unit": "m"
+      }
+    ],
+    "theme": "construction",
+    "units": "metres"
+  },
+  "name": "工业叉车 · 门架倾斜与货叉升降",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "construction",
+    "mech"
+  ],
+  "version": "3.4.0"
+}

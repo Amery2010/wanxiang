@@ -1,0 +1,101 @@
+{
+  "category": "vehicle",
+  "description": "",
+  "id": "kit-axle",
+  "instances": [
+    {
+      "id": "left",
+      "params": {
+        "radius": {
+          "$param": "radius"
+        },
+        "width": 0.22
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -0.5,
+            {
+              "$param": "track"
+            }
+          ]
+        },
+        {
+          "$param": "radius"
+        },
+        0
+      ]
+    },
+    {
+      "id": "right",
+      "params": {
+        "radius": {
+          "$param": "radius"
+        },
+        "width": 0.22
+      },
+      "part": "core.vehicle.wheel",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "track"
+            }
+          ]
+        },
+        {
+          "$param": "radius"
+        },
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "foundation-1.8",
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "radius": {
+          "default": 0.34,
+          "maximum": 0.42,
+          "minimum": 0.28,
+          "step": 0.01,
+          "title": "轮胎半径",
+          "type": "number",
+          "unit": "m"
+        },
+        "track": {
+          "default": 1.53,
+          "maximum": 1.67,
+          "minimum": 1.42,
+          "step": 0.01,
+          "title": "轮距",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "P1-P2",
+      "status": "foundation"
+    },
+    "units": "metres"
+  },
+  "name": "轮轴总成 · 轮距与轮径联动",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Foundation",
+    "vehicle",
+    "轮轴总成 · 轮距与轮径联动"
+  ],
+  "version": "3.4.0"
+}

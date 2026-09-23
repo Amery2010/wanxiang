@@ -1,0 +1,459 @@
+{
+  "category": "gameplay",
+  "description": "木梁断裂片可拆分结构；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        1.05,
+        0.68
+      ],
+      "span": 1.05,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.88,
+        0
+      ],
+      "profile": [
+        1.05,
+        0.68
+      ],
+      "span": 1.05,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-gameplay-breakable-beam_splinter",
+  "instances": [
+    {
+      "id": "frame",
+      "params": {},
+      "part": "l1.architecture.floor.plank",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.849999966224036,
+        0.7999999880790712,
+        0.3749999850988394
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment0",
+      "params": {},
+      "part": "l1.gameplay.destruction.beam_splinter",
+      "pivot": [
+        0.009999997913837433,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.24,
+        0.08,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.136363647939745,
+        0.5138888684687799,
+        2.0000000447034845
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment1",
+      "params": {},
+      "part": "l1.gameplay.destruction.beam_splinter",
+      "pivot": [
+        0.009999997913837433,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.24,
+        0.08,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        2.136363647939745,
+        0.5138888684687799,
+        2.0000000447034845
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment2",
+      "params": {},
+      "part": "l1.gameplay.destruction.beam_splinter",
+      "pivot": [
+        0.009999997913837433,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.2,
+        0.44,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        2.136363647939745,
+        0.5138888684687799,
+        2.0000000447034845
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "fragment3",
+      "params": {},
+      "part": "l1.gameplay.destruction.beam_splinter",
+      "pivot": [
+        0.009999997913837433,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.2,
+        0.44,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        270,
+        0
+      ],
+      "scale": [
+        2.136363647939745,
+        0.5138888684687799,
+        2.0000000447034845
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "connector",
+      "params": {},
+      "part": "l1.gameplay.destruction.hinge_remnant",
+      "pivot": [
+        0.01000000536441803,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.35,
+        0.11
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5357142834334957,
+        0.5333333121405716,
+        1.12500002514571
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "gameplay",
+    "functional": {
+      "assembly_order": [
+        "frame",
+        "fragment0",
+        "fragment1",
+        "fragment2",
+        "fragment3",
+        "connector"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        1.05,
+        0.88,
+        0.68
+      ],
+      "family": "breakable",
+      "mount_dimensions_m": [
+        1.05,
+        0.68
+      ],
+      "notes": [
+        "预制可拆片，不是闭合 Voronoi 断裂体；按片层级与命名交给物理/销毁逻辑。"
+      ],
+      "purpose": "木梁断裂片可拆分结构",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "fragment0"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          1.05,
+          0.68
+        ],
+        "span": 1.05,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.88,
+          0
+        ],
+        "profile": [
+          1.05,
+          0.68
+        ],
+        "span": 1.05,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "interaction": {
+        "action": "break",
+        "authority": "consumer-game",
+        "consumer_implemented": true,
+        "event": "break",
+        "events": [
+          "activate",
+          "release",
+          "reset"
+        ],
+        "fragments": [
+          "fragment0",
+          "fragment1",
+          "fragment2",
+          "fragment3"
+        ],
+        "kind": "breakable",
+        "schema": "wx.interaction/1.0",
+        "target_node": "fragment0",
+        "trigger": {
+          "shape": "none"
+        }
+      },
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "runtime_fragment_nodes": [
+      "fragment0",
+      "fragment1",
+      "fragment2",
+      "fragment3"
+    ],
+    "source": {
+      "authoring": "tools/l2_expansion/gameplay.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "separate",
+        "max": 0.5,
+        "min": 0,
+        "mode": "translation",
+        "node": "fragment0",
+        "step": 0.01,
+        "title": "首块位移",
+        "unit": "m"
+      }
+    ],
+    "theme": "l2-gameplay",
+    "units": "metres"
+  },
+  "name": "木梁断裂片可拆分结构",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "gameplay",
+    "breakable",
+    "beam_splinter",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

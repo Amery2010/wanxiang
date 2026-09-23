@@ -1,0 +1,278 @@
+{
+  "category": "props",
+  "description": "写字板夹扣；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.4,
+        0.3
+      ],
+      "span": 0.4,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.15,
+        0
+      ],
+      "profile": [
+        0.4,
+        0.3
+      ],
+      "span": 0.4,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-props-office-clipboard",
+  "instances": [
+    {
+      "id": "base",
+      "params": {},
+      "part": "l1.props.office.clipboard",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.999999985098839,
+        1.45161292694982,
+        0.5357142834334957
+      ]
+    },
+    {
+      "id": "insert",
+      "params": {},
+      "part": "l1.props.office.paper_stack",
+      "pivot": [
+        0.0,
+        -0.006000000052154064,
+        0.0
+      ],
+      "position": [
+        0,
+        0.08,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8363952263577297,
+        0.703125017762432,
+        0.4516783361522595
+      ]
+    },
+    {
+      "id": "fitting",
+      "params": {},
+      "part": "l1.props.office.clip",
+      "pivot": [
+        -0.00012072734534740448,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.13,
+        0.07,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.1284057610219065,
+        0.3570292119605808,
+        15.011106945494602
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "props",
+    "functional": {
+      "assembly_order": [
+        "base",
+        "insert",
+        "fitting"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.4,
+        0.15,
+        0.3
+      ],
+      "family": "office",
+      "mount_dimensions_m": [
+        0.4,
+        0.3
+      ],
+      "notes": [],
+      "purpose": "写字板夹扣",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.props.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.4,
+          0.3
+        ],
+        "span": 0.4,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.props.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.15,
+          0
+        ],
+        "profile": [
+          0.4,
+          0.3
+        ],
+        "span": 0.4,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/props.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-props",
+    "units": "metres"
+  },
+  "name": "写字板夹扣",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "props",
+    "office",
+    "clipboard",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

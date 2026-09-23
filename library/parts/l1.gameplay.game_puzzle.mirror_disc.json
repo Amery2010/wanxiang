@@ -1,0 +1,1603 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.72
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.73
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.29
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.72
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.73,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.73
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.29
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "分离反射面、镜框与旋转支承的解谜镜座；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "puzzle",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "分离反射面、镜框与旋转支承的解谜镜座",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.gameplay.game_puzzle.mirror_disc.webp"
+  },
+  "id": "l1.gameplay.game_puzzle.mirror_disc",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "双耳枢轴反射镜盘",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.29,
+        "maximum": 0.5075,
+        "minimum": 0.1595,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.73,
+        "maximum": 1.2774999999999999,
+        "minimum": 0.4015,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.72,
+        "maximum": 1.26,
+        "minimum": 0.396,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "gameplay",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "gameplay",
+    "family": "game_puzzle",
+    "game_kit": "puzzle",
+    "game_use": "解谜 / 光路 / 符石 / 魔法装置",
+    "profile": "mirror_disc",
+    "purpose": "分离反射面、镜框与旋转支承的解谜镜座",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#BE8852",
+        "depth": 0.056,
+        "holes": [
+          [
+            [
+              0.25,
+              0.4
+            ],
+            [
+              0.24148145657226708,
+              0.4647047612756302
+            ],
+            [
+              0.21650635094610968,
+              0.525
+            ],
+            [
+              0.1767766952966369,
+              0.5767766952966369
+            ],
+            [
+              0.12500000000000003,
+              0.6165063509461097
+            ],
+            [
+              0.06470476127563018,
+              0.6414814565722671
+            ],
+            [
+              1.5308084989341915e-17,
+              0.65
+            ],
+            [
+              -0.06470476127563016,
+              0.6414814565722671
+            ],
+            [
+              -0.12499999999999994,
+              0.6165063509461097
+            ],
+            [
+              -0.17677669529663687,
+              0.5767766952966369
+            ],
+            [
+              -0.21650635094610968,
+              0.525
+            ],
+            [
+              -0.24148145657226705,
+              0.46470476127563026
+            ],
+            [
+              -0.25,
+              0.4000000000000001
+            ],
+            [
+              -0.24148145657226708,
+              0.33529523872436984
+            ],
+            [
+              -0.2165063509461097,
+              0.2750000000000001
+            ],
+            [
+              -0.17677669529663698,
+              0.22322330470336324
+            ],
+            [
+              -0.1250000000000001,
+              0.18349364905389043
+            ],
+            [
+              -0.06470476127563016,
+              0.15851854342773294
+            ],
+            [
+              -4.592425496802574e-17,
+              0.15000000000000002
+            ],
+            [
+              0.06470476127563007,
+              0.15851854342773292
+            ],
+            [
+              0.12500000000000003,
+              0.18349364905389037
+            ],
+            [
+              0.17677669529663684,
+              0.2232233047033631
+            ],
+            [
+              0.2165063509461096,
+              0.2749999999999999
+            ],
+            [
+              0.24148145657226702,
+              0.3352952387243696
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "mirror_disc_00",
+        "outline": [
+          [
+            0.31,
+            0.4
+          ],
+          [
+            0.29943700614961116,
+            0.48023390398178145
+          ],
+          [
+            0.268467875173176,
+            0.5549999999999999
+          ],
+          [
+            0.21920310216782973,
+            0.6192031021678297
+          ],
+          [
+            0.15500000000000003,
+            0.668467875173176
+          ],
+          [
+            0.08023390398178143,
+            0.6994370061496111
+          ],
+          [
+            1.8982025386783976e-17,
+            0.71
+          ],
+          [
+            -0.08023390398178139,
+            0.6994370061496111
+          ],
+          [
+            -0.15499999999999994,
+            0.6684678751731761
+          ],
+          [
+            -0.2192031021678297,
+            0.6192031021678297
+          ],
+          [
+            -0.268467875173176,
+            0.5549999999999999
+          ],
+          [
+            -0.29943700614961116,
+            0.48023390398178156
+          ],
+          [
+            -0.31,
+            0.4000000000000001
+          ],
+          [
+            -0.29943700614961116,
+            0.3197660960182186
+          ],
+          [
+            -0.26846787517317605,
+            0.2450000000000001
+          ],
+          [
+            -0.21920310216782984,
+            0.1807968978321704
+          ],
+          [
+            -0.15500000000000014,
+            0.13153212482682414
+          ],
+          [
+            -0.08023390398178139,
+            0.10056299385038886
+          ],
+          [
+            -5.694607616035192e-17,
+            0.09000000000000002
+          ],
+          [
+            0.08023390398178129,
+            0.1005629938503888
+          ],
+          [
+            0.15500000000000003,
+            0.13153212482682408
+          ],
+          [
+            0.21920310216782968,
+            0.18079689783217023
+          ],
+          [
+            0.2684678751731759,
+            0.24499999999999988
+          ],
+          [
+            0.2994370061496111,
+            0.3197660960182183
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#A8B8B9",
+        "depth": 0.018,
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "mirror_disc_01",
+        "outline": [
+          [
+            0.245,
+            0.4
+          ],
+          [
+            0.23665182744082172,
+            0.4634106660501176
+          ],
+          [
+            0.2121762239271875,
+            0.5225
+          ],
+          [
+            0.17324116139070414,
+            0.5732411613907041
+          ],
+          [
+            0.12250000000000003,
+            0.6121762239271875
+          ],
+          [
+            0.06341066605011758,
+            0.6366518274408217
+          ],
+          [
+            1.5001923289555077e-17,
+            0.645
+          ],
+          [
+            -0.06341066605011755,
+            0.6366518274408217
+          ],
+          [
+            -0.12249999999999994,
+            0.6121762239271875
+          ],
+          [
+            -0.1732411613907041,
+            0.5732411613907041
+          ],
+          [
+            -0.2121762239271875,
+            0.5225
+          ],
+          [
+            -0.2366518274408217,
+            0.46341066605011766
+          ],
+          [
+            -0.245,
+            0.4000000000000001
+          ],
+          [
+            -0.23665182744082172,
+            0.33658933394988244
+          ],
+          [
+            -0.21217622392718752,
+            0.2775000000000001
+          ],
+          [
+            -0.17324116139070422,
+            0.22675883860929597
+          ],
+          [
+            -0.12250000000000011,
+            0.18782377607281261
+          ],
+          [
+            -0.06341066605011755,
+            0.1633481725591783
+          ],
+          [
+            -4.500576986866523e-17,
+            0.15500000000000003
+          ],
+          [
+            0.06341066605011747,
+            0.16334817255917827
+          ],
+          [
+            0.12250000000000003,
+            0.18782377607281256
+          ],
+          [
+            0.17324116139070408,
+            0.22675883860929585
+          ],
+          [
+            0.2121762239271874,
+            0.2774999999999999
+          ],
+          [
+            0.23665182744082167,
+            0.3365893339498822
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      },
+      {
+        "color": "#505D64",
+        "kind": "loft",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "mirror_disc_02",
+        "rings": [
+          {
+            "c": [
+              -0.19,
+              0,
+              0
+            ],
+            "r": [
+              0.0175,
+              0.0175
+            ]
+          },
+          {
+            "c": [
+              -0.32,
+              0.4,
+              0
+            ],
+            "r": [
+              0.0175,
+              0.0175
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 4,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        },
+        "twist": 0.7853981633974483
+      },
+      {
+        "color": "#505D64",
+        "kind": "loft",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "mirror_disc_03",
+        "rings": [
+          {
+            "c": [
+              0.19,
+              0,
+              0
+            ],
+            "r": [
+              0.0175,
+              0.0175
+            ]
+          },
+          {
+            "c": [
+              0.32,
+              0.4,
+              0
+            ],
+            "r": [
+              0.0175,
+              0.0175
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 4,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        },
+        "twist": 0.7853981633974483
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.198,
+            0.030800000000000004,
+            0.1276
+          ]
+        },
+        "color": "#505D64",
+        "kind": "bevelbox",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.72
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.035,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.73
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.29
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "mirror_disc_04",
+        "roundable": false,
+        "size": [
+          0.45,
+          0.07,
+          0.29
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.72,
+    0.73,
+    0.29
+  ],
+  "source": {
+    "authoring": "tools/game410/puzzle.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "gameplay",
+    "L1-Expansion",
+    "gameplay",
+    "game_puzzle",
+    "mirror_disc",
+    "Game-Expansion-3.10",
+    "puzzle",
+    "机关与魔法"
+  ],
+  "theme": "l1-gameplay",
+  "version": "3.10.0"
+}

@@ -1,0 +1,658 @@
+{
+  "anchor": "base",
+  "category": "wear",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.39
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.97
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.032
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.39
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.97,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.97
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.032
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "有可读弯曲轮廓与菱形截面的游戏武器刀身；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "equipment",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "有可读弯曲轮廓与菱形截面的游戏武器刀身",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.character.game_equipment.curved_sabre_blade.webp"
+  },
+  "id": "l1.character.game_equipment.curved_sabre_blade",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "弧刃单脊刀身",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.032,
+        "maximum": 0.056,
+        "minimum": 0.0176,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.97,
+        "maximum": 1.6975,
+        "minimum": 0.5335,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.39,
+        "maximum": 0.6825,
+        "minimum": 0.21450000000000002,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "character",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative/anatomy component; owning assembly authors collision",
+      "type": "none"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "character",
+    "family": "game_equipment",
+    "game_kit": "equipment",
+    "game_use": "角色穿戴 / 武器外观 / 飞行装备",
+    "profile": "curved_sabre_blade",
+    "purpose": "有可读弯曲轮廓与菱形截面的游戏武器刀身",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#A8B8B9",
+        "faces": [
+          [
+            0,
+            1,
+            5,
+            4
+          ],
+          [
+            1,
+            2,
+            6,
+            5
+          ],
+          [
+            2,
+            3,
+            7,
+            6
+          ],
+          [
+            3,
+            0,
+            4,
+            7
+          ],
+          [
+            4,
+            5,
+            9,
+            8
+          ],
+          [
+            5,
+            6,
+            10,
+            9
+          ],
+          [
+            6,
+            7,
+            11,
+            10
+          ],
+          [
+            7,
+            4,
+            8,
+            11
+          ],
+          [
+            8,
+            9,
+            13,
+            12
+          ],
+          [
+            9,
+            10,
+            14,
+            13
+          ],
+          [
+            10,
+            11,
+            15,
+            14
+          ],
+          [
+            11,
+            8,
+            12,
+            15
+          ],
+          [
+            12,
+            13,
+            17,
+            16
+          ],
+          [
+            13,
+            14,
+            18,
+            17
+          ],
+          [
+            14,
+            15,
+            19,
+            18
+          ],
+          [
+            15,
+            12,
+            16,
+            19
+          ],
+          [
+            3,
+            2,
+            1,
+            0
+          ],
+          [
+            16,
+            17,
+            18,
+            19
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.39
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.97
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.032
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.39
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.97
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.032
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.39
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.97
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.032
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.39
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.97
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.032
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "curved_sabre_blade_00",
+        "points": [
+          [
+            -0.04,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.016
+          ],
+          [
+            0.04,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.016
+          ],
+          [
+            -0.031,
+            0.18,
+            0.0
+          ],
+          [
+            0.015,
+            0.18,
+            0.016
+          ],
+          [
+            0.061,
+            0.18,
+            0.0
+          ],
+          [
+            0.015,
+            0.18,
+            -0.016
+          ],
+          [
+            0.020000000000000004,
+            0.45,
+            0.0
+          ],
+          [
+            0.07,
+            0.45,
+            0.016
+          ],
+          [
+            0.12000000000000001,
+            0.45,
+            0.0
+          ],
+          [
+            0.07,
+            0.45,
+            -0.016
+          ],
+          [
+            0.132,
+            0.75,
+            0.0
+          ],
+          [
+            0.17,
+            0.75,
+            0.016
+          ],
+          [
+            0.20800000000000002,
+            0.75,
+            0.0
+          ],
+          [
+            0.17,
+            0.75,
+            -0.016
+          ],
+          [
+            0.304,
+            0.97,
+            0.0
+          ],
+          [
+            0.31,
+            0.97,
+            0.016
+          ],
+          [
+            0.316,
+            0.97,
+            0.0
+          ],
+          [
+            0.31,
+            0.97,
+            -0.016
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.39,
+    0.97,
+    0.032
+  ],
+  "source": {
+    "authoring": "tools/game410/equipment.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "wear",
+    "L1-Expansion",
+    "character",
+    "game_equipment",
+    "curved_sabre_blade",
+    "Game-Expansion-3.10",
+    "equipment",
+    "冒险装备"
+  ],
+  "theme": "l1-character",
+  "version": "3.10.0"
+}

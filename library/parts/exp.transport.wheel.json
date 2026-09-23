@@ -1,0 +1,586 @@
+{
+  "anchor": "center",
+  "category": "vehicle",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "axle",
+      "interface": "vehicle.wheel.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "",
+  "id": "exp.transport.wheel",
+  "level": 1,
+  "material": "mat.rubber",
+  "name": "公路车轮 · 空心轮毂与六辐条",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "radius": {
+        "default": 0.36,
+        "maximum": 0.7,
+        "minimum": 0.2,
+        "step": 0.01,
+        "title": "轮胎半径",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "transport",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "source": "resolved wheel geometry",
+      "type": "convex-hull"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-joint-pivot",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "closed_profile": true,
+        "color": "#2B3031",
+        "kind": "lathe",
+        "profile": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.68
+              ]
+            },
+            -0.13
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.9
+              ]
+            },
+            -0.13
+          ],
+          [
+            {
+              "$param": "radius"
+            },
+            -0.07
+          ],
+          [
+            {
+              "$param": "radius"
+            },
+            0.07
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.9
+              ]
+            },
+            0.13
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.68
+              ]
+            },
+            0.13
+          ]
+        ],
+        "rotation": [
+          0,
+          0,
+          90
+        ],
+        "roundable": false,
+        "sides": 20
+      },
+      {
+        "closed_profile": true,
+        "color": "#A3ACAA",
+        "kind": "lathe",
+        "profile": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.65
+              ]
+            },
+            -0.115
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.75
+              ]
+            },
+            -0.115
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.75
+              ]
+            },
+            0.115
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.65
+              ]
+            },
+            0.115
+          ]
+        ],
+        "rotation": [
+          0,
+          0,
+          90
+        ],
+        "roundable": false,
+        "sides": 16
+      },
+      {
+        "cap": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.2
+              ]
+            },
+            -0.13
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.2
+              ]
+            },
+            0.13
+          ]
+        ],
+        "rotation": [
+          0,
+          0,
+          90
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "color": "#A3ACAA",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  0.0
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  0.7
+                ]
+              }
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#A3ACAA",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  0.606217782649107
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  0.35000000000000003
+                ]
+              }
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#A3ACAA",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  0.6062177826491071
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  -0.3499999999999998
+                ]
+              }
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#A3ACAA",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  8.572527594031472e-17
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  -0.7
+                ]
+              }
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#A3ACAA",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  -0.6062177826491069
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  -0.3500000000000003
+                ]
+              }
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          }
+        ],
+        "sides": 6
+      },
+      {
+        "color": "#A3ACAA",
+        "enabled": {
+          "$param": "detail"
+        },
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  -0.606217782649107
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "radius"
+                  },
+                  0.35000000000000003
+                ]
+              }
+            ],
+            "r": [
+              0.038,
+              0.038
+            ]
+          }
+        ],
+        "sides": 6
+      }
+    ]
+  },
+  "size": [
+    0.3,
+    0.72,
+    0.72
+  ],
+  "source": {
+    "authoring": "tools/expansion/transport.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "transport",
+    "vehicle",
+    "D-E",
+    "transport"
+  ],
+  "theme": "transport",
+  "version": "3.4.0"
+}

@@ -1,0 +1,335 @@
+{
+  "category": "gameplay",
+  "description": "能量标识芯拾取展示组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.45,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-gameplay-pickup-bolt",
+  "instances": [
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "ring",
+      "params": {},
+      "part": "l1.gameplay.fx.ring",
+      "pivot": [
+        0.0,
+        -0.02250000089406967,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6333333081669288,
+        1.555555493743334,
+        0.6333333081669288
+      ]
+    },
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "display",
+      "params": {},
+      "part": "l1.gameplay.pickup.bolt",
+      "pivot": [
+        0.009999997913837433,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.14,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6052631417552524,
+        0.3999999841054287,
+        5.142857120961559
+      ]
+    },
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "mount",
+      "params": {},
+      "part": "l1.gameplay.fx.emitter_cup",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.04,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.2954545470554967,
+        0.36363636560676516,
+        0.2954545470554967
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "gameplay",
+    "functional": {
+      "assembly_order": [
+        "ring",
+        "display",
+        "mount"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.42,
+        0.45,
+        0.42
+      ],
+      "family": "pickup",
+      "mount_dimensions_m": [
+        0.22,
+        0.22
+      ],
+      "notes": [
+        "不烘焙发光，不包含粒子；游戏侧处理得分、资源奖励与拾取消失。"
+      ],
+      "purpose": "能量标识芯拾取展示组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "display"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.45,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "type": "none"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "interaction": {
+        "action": "collect",
+        "authority": "consumer-game",
+        "consumer_implemented": true,
+        "event": "collect",
+        "events": [
+          "activate",
+          "release",
+          "reset"
+        ],
+        "kind": "pickup",
+        "schema": "wx.interaction/1.0",
+        "target_node": "display",
+        "trigger": {
+          "center": [
+            0,
+            0.25,
+            0
+          ],
+          "sensor": true,
+          "shape": "box",
+          "size": [
+            0.8,
+            0.5,
+            0.6
+          ]
+        }
+      },
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/gameplay.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "spin",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "display",
+        "step": 1,
+        "title": "展示转角",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-gameplay",
+    "units": "metres"
+  },
+  "name": "能量标识芯拾取展示组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "gameplay",
+    "pickup",
+    "bolt",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,417 @@
+{
+  "category": "gameplay",
+  "description": "手摇曲柄芯信号触发组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.44,
+        0.26
+      ],
+      "span": 0.44,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.48,
+        0
+      ],
+      "profile": [
+        0.44,
+        0.26
+      ],
+      "span": 0.44,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-gameplay-trigger-crank",
+  "instances": [
+    {
+      "id": "base",
+      "params": {},
+      "part": "l1.architecture.floor.plank",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.48333331412739294,
+        0.7499999888241292,
+        0.33333332008785727
+      ]
+    },
+    {
+      "id": "housing",
+      "params": {},
+      "part": "l1.industry.structure.saddle",
+      "pivot": [
+        -0.0009407401084899902,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.075,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3746839893788272,
+        0.3617752199379049,
+        0.8750000195577745
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "actuator",
+      "params": {},
+      "part": "l1.gameplay.trigger.crank",
+      "pivot": [
+        0.13500000163912773,
+        -0.029591817408800125,
+        0.0
+      ],
+      "position": [
+        0,
+        0.17,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7804877975028162,
+        0.8583942199177036,
+        1.8571428492361186
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix0",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.22,
+        0.07,
+        -0.13
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.2545454559247356,
+        0.0868965542245564,
+        0.29392376948583276
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix1",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.22,
+        0.07,
+        0.13
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.2545454559247356,
+        0.0868965542245564,
+        0.29392376948583276
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "gameplay",
+    "functional": {
+      "assembly_order": [
+        "base",
+        "housing",
+        "actuator",
+        "fix0",
+        "fix1"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.72,
+        0.48,
+        0.46
+      ],
+      "family": "trigger",
+      "mount_dimensions_m": [
+        0.44,
+        0.26
+      ],
+      "notes": [],
+      "purpose": "手摇曲柄芯信号触发组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "actuator"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.44,
+          0.26
+        ],
+        "span": 0.44,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.48,
+          0
+        ],
+        "profile": [
+          0.44,
+          0.26
+        ],
+        "span": 0.44,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "interaction": {
+        "action": "activate",
+        "authority": "consumer-game",
+        "consumer_implemented": true,
+        "event": "activate",
+        "events": [
+          "activate",
+          "release",
+          "reset"
+        ],
+        "kind": "trigger",
+        "schema": "wx.interaction/1.0",
+        "target_node": "actuator",
+        "trigger": {
+          "center": [
+            0,
+            0.25,
+            0
+          ],
+          "sensor": true,
+          "shape": "box",
+          "size": [
+            0.8,
+            0.5,
+            0.6
+          ]
+        }
+      },
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/gameplay.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "turn",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "actuator",
+        "step": 1,
+        "title": "转动角",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-gameplay",
+    "units": "metres"
+  },
+  "name": "手摇曲柄芯信号触发组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "gameplay",
+    "trigger",
+    "crank",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

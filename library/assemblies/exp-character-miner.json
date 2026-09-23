@@ -1,0 +1,309 @@
+{
+  "category": "body",
+  "description": "",
+  "id": "exp-character-miner",
+  "instances": [
+    {
+      "id": "skin",
+      "params": {
+        "build": {
+          "$param": "build"
+        },
+        "grip": true,
+        "height": {
+          "$param": "height"
+        },
+        "palette": {
+          "#707952": "#374348",
+          "#EFE3CB": "#A77143",
+          "#F8F3E7": "#A77143"
+        }
+      },
+      "part": "core.human.body",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "head",
+      "params": {
+        "jaw_width": 1.03
+      },
+      "parent": "skin.rig.head",
+      "part": "core.human.head",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outfit",
+      "parent": "skin.rig.chest",
+      "part": "exp.wear.leather_armor",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$param": "build"
+        }
+      ]
+    },
+    {
+      "id": "tool",
+      "parent": "skin.rig.handR",
+      "part": "exp.wear.tool_case",
+      "position": [
+        0,
+        -0.015,
+        0.027
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ]
+    },
+    {
+      "id": "hair",
+      "parent": "skin.rig.head",
+      "part": "core.human.hair.short",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "helmet",
+      "parent": "skin.rig.head",
+      "part": "w.wear.hardhat",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "back",
+      "parent": "skin.rig.chest",
+      "part": "exp.wear.radio",
+      "position": [
+        -0.2,
+        -0.1,
+        0.18
+      ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$param": "build"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "characters",
+    "garment_simulation": "rigid bone attachments; no cloth simulation",
+    "interfaces": [],
+    "inventory_kits": [
+      "exp-wear-fire",
+      "exp-wear-shield_loadout"
+    ],
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "build": {
+          "default": 1.16,
+          "maximum": 1.18,
+          "minimum": 0.92,
+          "step": 0.01,
+          "title": "体格",
+          "type": "number"
+        },
+        "height": {
+          "default": 1.78,
+          "maximum": 1.98,
+          "minimum": 1.64,
+          "step": 0.01,
+          "title": "身高",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "domain": "characters",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "radius": 0.29,
+        "segment_end": [
+          0,
+          {
+            "$op": "sub",
+            "args": [
+              {
+                "$param": "height"
+              },
+              0.29
+            ]
+          },
+          0
+        ],
+        "segment_start": [
+          0,
+          0.29,
+          0
+        ],
+        "type": "capsule"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "skeleton": "core.human.body shared stitched rig",
+    "stage": "E",
+    "theme": "adventure",
+    "units": "metres"
+  },
+  "name": "矿工",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "adventure",
+    "body",
+    "D-E",
+    "characters"
+  ],
+  "version": "3.4.0"
+}

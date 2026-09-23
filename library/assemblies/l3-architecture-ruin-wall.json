@@ -1,0 +1,163 @@
+{
+  "category": "architecture",
+  "description": "破损城墙；结构性断口 / 独立残片 / 可拆地基 / chipped_brick",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "ground",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l3-architecture-ruin-wall",
+  "instances": [
+    {
+      "id": "ruin",
+      "part": "r37.l3-architecture-ruin-wall.ruin"
+    },
+    {
+      "id": "ruin_detail",
+      "part": "r37.l3-architecture-ruin-wall.ruin.detail_group"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l3-3.4",
+    "domain": "architecture",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "production": {
+      "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
+      "dimensions_design_m": [
+        4,
+        2.3,
+        3.8
+      ],
+      "family": "ruin",
+      "features": [
+        "结构性断口",
+        "独立残片",
+        "可拆地基",
+        "chipped_brick"
+      ],
+      "footprint_m": [
+        4,
+        3.8
+      ],
+      "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
+      "notes": [],
+      "purpose": "破损城墙",
+      "render_contract": "editable nodes and source references retained; no CAD boolean union",
+      "rig": "none",
+      "schema": "wx.production-asset/1.0"
+    },
+    "quality": {
+      "approval": "authored; see versioned evidence",
+      "review_scope": "L3-L4",
+      "status": "l3"
+    },
+    "repair37": {
+      "baseline": "3.5.0",
+      "editable_group_split": "same geometry; each original face/form retained exactly once",
+      "geometry_redesigned": true,
+      "old_root_nodes": [
+        "footing",
+        "remnant0",
+        "remnant1",
+        "remnant2",
+        "remnant3",
+        "remnant4",
+        "remnant5",
+        "remnant6",
+        "debris"
+      ],
+      "prior_visual_claims_not_inherited": true,
+      "retained_root_nodes": [],
+      "source": "tools/repair37"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 180000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/repair37/__init__.py",
+      "license": "project-authored",
+      "revision": "3.7.1",
+      "type": "original_production_prefab"
+    },
+    "state_controls": [],
+    "theme": "l3-architecture",
+    "units": "metres"
+  },
+  "name": "破损城墙",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L3",
+    "architecture",
+    "ruin",
+    "wall",
+    "结构性断口",
+    "独立残片",
+    "可拆地基",
+    "chipped_brick"
+  ],
+  "version": "3.7.1"
+}

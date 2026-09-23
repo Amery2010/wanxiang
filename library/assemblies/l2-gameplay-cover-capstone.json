@@ -1,0 +1,450 @@
+{
+  "category": "gameplay",
+  "description": "胸墙压顶块部署支承组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.88,
+        0.48
+      ],
+      "span": 0.88,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "west",
+      "interface": "l2.gameplay.edge.v1",
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "position": [
+        -0.625,
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        1.07
+      ],
+      "span": 0.64,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "east",
+      "interface": "l2.gameplay.edge.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        0.625,
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        1.07
+      ],
+      "span": 0.64,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        1.07,
+        0
+      ],
+      "profile": [
+        0.88,
+        0.48
+      ],
+      "span": 0.88,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-gameplay-cover-capstone",
+  "instances": [
+    {
+      "id": "panel",
+      "params": {},
+      "part": "l1.gameplay.cover.capstone",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.12,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.4999999776482584,
+        3.6363636560676516,
+        0.3999999913302337
+      ]
+    },
+    {
+      "id": "footL",
+      "params": {},
+      "part": "l1.gameplay.cover.barricade_leg",
+      "pivot": [
+        0.0,
+        -0.03889087215065956,
+        0.0
+      ],
+      "position": [
+        -0.44,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.2655722098748506,
+        0.5163904279576358,
+        5.272727301298094
+      ]
+    },
+    {
+      "id": "footR",
+      "params": {},
+      "part": "l1.gameplay.cover.barricade_leg",
+      "pivot": [
+        0.0,
+        -0.03889087215065956,
+        0.0
+      ],
+      "position": [
+        0.44,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.2655722098748506,
+        0.5163904279576358,
+        5.272727301298094
+      ]
+    },
+    {
+      "id": "braceL",
+      "params": {},
+      "part": "l1.architecture.section.i",
+      "pivot": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "position": [
+        -0.46,
+        0.41,
+        -0.12
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        -67.52056560289688,
+        0.0,
+        0
+      ],
+      "scale": [
+        0.13,
+        0.13,
+        0.3923088648160228
+      ]
+    },
+    {
+      "id": "braceR",
+      "params": {},
+      "part": "l1.architecture.section.i",
+      "pivot": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "position": [
+        0.46,
+        0.41,
+        -0.12
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        -67.52056560289688,
+        0.0,
+        0
+      ],
+      "scale": [
+        0.13,
+        0.13,
+        0.3923088648160228
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "gameplay",
+    "functional": {
+      "assembly_order": [
+        "panel",
+        "footL",
+        "footR",
+        "braceL",
+        "braceR"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        1.25,
+        1.07,
+        0.64
+      ],
+      "family": "cover",
+      "mount_dimensions_m": [
+        0.88,
+        0.48
+      ],
+      "notes": [
+        "是否可射穿与掩体导航由消费者定义；开孔网格不使用实心选择框作为碰撞。"
+      ],
+      "purpose": "胸墙压顶块部署支承组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.88,
+          0.48
+        ],
+        "span": 0.88,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "west",
+        "interface": "l2.gameplay.edge.v1",
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "position": [
+          -0.625,
+          0,
+          0
+        ],
+        "profile": [
+          0,
+          1.07
+        ],
+        "span": 0.64,
+        "tangent": [
+          0,
+          0,
+          1
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "east",
+        "interface": "l2.gameplay.edge.v1",
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "position": [
+          0.625,
+          0,
+          0
+        ],
+        "profile": [
+          0,
+          1.07
+        ],
+        "span": 0.64,
+        "tangent": [
+          0,
+          0,
+          1
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.gameplay.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          1.07,
+          0
+        ],
+        "profile": [
+          0.88,
+          0.48
+        ],
+        "span": 0.88,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/gameplay.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-gameplay",
+    "units": "metres"
+  },
+  "name": "胸墙压顶块部署支承组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "gameplay",
+    "cover",
+    "capstone",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

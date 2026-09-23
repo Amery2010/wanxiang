@@ -1,0 +1,105 @@
+{
+  "category": "mech",
+  "description": "",
+  "exports": [
+    {
+      "id": "in",
+      "node": "inlet",
+      "socket": "in"
+    },
+    {
+      "id": "out",
+      "node": "outlet",
+      "socket": "out"
+    },
+    {
+      "id": "branch",
+      "node": "branch",
+      "socket": "out"
+    }
+  ],
+  "id": "exp-industry-valve_manifold",
+  "instances": [
+    {
+      "id": "tee",
+      "part": "exp.industry.tee",
+      "position": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "out",
+        "socket": "in",
+        "target": "tee"
+      },
+      "id": "inlet",
+      "part": "exp.industry.valve"
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "out",
+        "target": "tee"
+      },
+      "id": "outlet",
+      "part": "exp.industry.valve"
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "branch",
+        "target": "tee"
+      },
+      "id": "branch",
+      "part": "exp.industry.valve"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "industry",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "industry",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "D",
+    "theme": "industrial",
+    "units": "metres"
+  },
+  "name": "三通阀组 · 三向分流接口",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "industrial",
+    "mech",
+    "D-E",
+    "industry"
+  ],
+  "version": "3.4.0"
+}

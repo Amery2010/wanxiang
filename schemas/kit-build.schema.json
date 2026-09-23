@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wanxiang3D v1.5 component build",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "part",
+    "style"
+  ],
+  "properties": {
+    "schema": {
+      "const": "wx.part-build/1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "part": {
+      "type": "string",
+      "minLength": 1
+    },
+    "style": {
+      "enum": [
+        "lowpoly",
+        "toon",
+        "painted",
+        "voxel"
+      ]
+    },
+    "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "size": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 100
+          }
+        },
+        "roundness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "uv_scale": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "palette": {
+          "type": "object",
+          "maxProperties": 32,
+          "propertyNames": {
+            "pattern": "^#[0-9A-Fa-f]{6}$"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$"
+          }
+        }
+      }
+    },
+    "material": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

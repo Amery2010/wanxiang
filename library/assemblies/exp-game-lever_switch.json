@@ -1,0 +1,99 @@
+{
+  "category": "gameplay",
+  "description": "",
+  "id": "exp-game-lever_switch",
+  "instances": [
+    {
+      "id": "base",
+      "part": "exp.game.switch_box",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "lever",
+      "part": "exp.game.lever",
+      "position": [
+        0,
+        0.32,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "gameplay",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "gameplay",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "interaction": {
+        "authority": "consumer-game",
+        "event": "switch.changed",
+        "kind": "switch",
+        "schema": "wx.interaction/1.0",
+        "state_control": "lever",
+        "trigger": {
+          "center": [
+            0,
+            0.4,
+            0
+          ],
+          "radius": 0.6,
+          "shape": "sphere"
+        }
+      },
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "lever",
+        "max": 40,
+        "min": -40,
+        "node": "lever",
+        "title": "开关角度",
+        "unit": "°"
+      }
+    ],
+    "theme": "gameplay",
+    "units": "metres"
+  },
+  "name": "拉杆开关 · 实际转轴",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "version": "3.4.0"
+}

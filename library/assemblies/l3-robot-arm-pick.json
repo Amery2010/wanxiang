@@ -1,0 +1,452 @@
+{
+  "category": "robot",
+  "description": "拾放机械臂；控制柜 / 层级关节 / 输出端跟随挂接 / parallel_finger / 3轴",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "ground",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l3-robot-arm-pick",
+  "instances": [
+    {
+      "id": "plinth",
+      "material": "mat.paint",
+      "params": {
+        "palette": {
+          "#E5DCC8": "#708B8C"
+        }
+      },
+      "part": "l1.architecture.stair.closed_tread",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        1.000000005418604,
+        1.9047619642313935
+      ]
+    },
+    {
+      "assembly": "l2-robot-joint-revolute",
+      "id": "arm_base",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "pivot": [
+        0.034999996423721313,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "assembly": "l2-robot-link-box_beam",
+      "id": "arm_link0",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "parent": "arm_base.output",
+      "pivot": [
+        0.023749999701976776,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.04,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        25
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "assembly": "l2-robot-joint-revolute",
+      "id": "arm_joint0",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "parent": "arm_link0",
+      "pivot": [
+        0.034999996423721313,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.76,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "assembly": "l2-robot-link-tapered",
+      "id": "arm_link1",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "parent": "arm_joint0.output",
+      "pivot": [
+        0.023749999701976776,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.04,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -55
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "assembly": "l2-robot-joint-wrist",
+      "id": "arm_joint1",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "parent": "arm_link1",
+      "pivot": [
+        0.034999996423721313,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.76,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "assembly": "l2-robot-end-parallel_finger",
+      "id": "arm_tool",
+      "parent": "arm_joint1.output",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.06,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "controller",
+      "params": {},
+      "part": "l1.robot.housing.compute",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.5,
+        0,
+        -0.25
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        1.555555596763706,
+        1.1428571623198844
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l3-3.4",
+    "domain": "robot",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "production": {
+      "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
+      "dimensions_design_m": [
+        2.5,
+        3.8,
+        2
+      ],
+      "family": "arm",
+      "features": [
+        "控制柜",
+        "层级关节",
+        "输出端跟随挂接",
+        "parallel_finger",
+        "3轴"
+      ],
+      "footprint_m": [
+        2.5,
+        2
+      ],
+      "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
+      "notes": [
+        "刚性节点运动，不提供逆运动学或真实接触抓取"
+      ],
+      "purpose": "拾放机械臂",
+      "render_contract": "editable nodes and source references retained; no CAD boolean union",
+      "rig": "rigid-hierarchy",
+      "schema": "wx.production-asset/1.0"
+    },
+    "quality": {
+      "approval": "authored; see versioned evidence",
+      "review_scope": "L3-L4",
+      "status": "l3"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 180000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l34_expansion/robot.py",
+      "license": "project-authored",
+      "revision": "3.4.0",
+      "type": "original_production_prefab"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "arm_base__joint",
+        "max": 180,
+        "min": -180,
+        "mode": "rotation",
+        "node": "arm_base.output",
+        "step": 1,
+        "title": "arm_base · 输出转角",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "arm_joint0__joint",
+        "max": 180,
+        "min": -180,
+        "mode": "rotation",
+        "node": "arm_joint0.output",
+        "step": 1,
+        "title": "arm_joint0 · 输出转角",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "arm_joint1__joint",
+        "max": 180,
+        "min": -180,
+        "mode": "rotation",
+        "node": "arm_joint1.output",
+        "step": 1,
+        "title": "arm_joint1 · 输出转角",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "arm_tool__openL",
+        "max": 0.08,
+        "min": 0,
+        "mode": "translation",
+        "node": "arm_tool.finger0",
+        "step": 0.01,
+        "title": "arm_tool · 左指张开",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "arm_tool__openR",
+        "max": 0.08,
+        "min": 0,
+        "mode": "translation",
+        "node": "arm_tool.finger1",
+        "step": 0.01,
+        "title": "arm_tool · 右指张开",
+        "unit": "m"
+      }
+    ],
+    "theme": "l3-robot",
+    "units": "metres"
+  },
+  "name": "拾放机械臂",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L3",
+    "robot",
+    "arm",
+    "pick",
+    "控制柜",
+    "层级关节",
+    "输出端跟随挂接",
+    "parallel_finger",
+    "3轴"
+  ],
+  "version": "3.4.0"
+}

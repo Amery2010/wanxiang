@@ -1,0 +1,308 @@
+{
+  "category": "props",
+  "description": "虚拟场景中可拆解的医疗外观部件，无医疗或真实操作用途。；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.16,
+        0.18
+      ],
+      "span": 0.16,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.34,
+        0
+      ],
+      "profile": [
+        0.16,
+        0.18
+      ],
+      "span": 0.16,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-props-medical-vial",
+  "instances": [
+    {
+      "id": "vessel",
+      "params": {},
+      "part": "l1.props.medical.vial",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0000000223517422,
+        1.15384619616898,
+        1.0000000223517422
+      ]
+    },
+    {
+      "id": "lid",
+      "params": {},
+      "part": "l1.props.merch.bottle_cap",
+      "pivot": [
+        0.0,
+        -1.3877787807814457e-17,
+        0.0
+      ],
+      "position": [
+        0,
+        0.29,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.674603163752997,
+        0.6153846379567892,
+        0.674603163752997
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "label",
+      "params": {},
+      "part": "l1.props.merch.label_tag",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0037499999161809683
+      ],
+      "position": [
+        0,
+        0.1,
+        0.082
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.49999999787126276,
+        0.39130434072761333,
+        0.6451612814842229
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "props",
+    "functional": {
+      "assembly_order": [
+        "vessel",
+        "lid",
+        "label"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.16,
+        0.34,
+        0.18
+      ],
+      "family": "medical",
+      "mount_dimensions_m": [
+        0.16,
+        0.18
+      ],
+      "notes": [],
+      "purpose": "虚拟场景中可拆解的医疗外观部件，无医疗或真实操作用途。",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.props.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.16,
+          0.18
+        ],
+        "span": 0.16,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.props.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.34,
+          0
+        ],
+        "profile": [
+          0.16,
+          0.18
+        ],
+        "span": 0.16,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/props.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-props",
+    "units": "metres"
+  },
+  "name": "药瓶封装模块",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "props",
+    "medical",
+    "vial",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

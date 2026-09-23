@@ -1,0 +1,180 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "world-excavator",
+  "instances": [
+    {
+      "id": "under",
+      "part": "w.mech.undercarriage",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "trackL",
+      "part": "w.mech.track",
+      "position": [
+        -1.0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "trackR",
+      "part": "w.mech.track",
+      "position": [
+        1.0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "deck",
+      "part": "w.mech.excavator_deck",
+      "position": [
+        0,
+        0.86,
+        0
+      ]
+    },
+    {
+      "id": "cab",
+      "parent": "deck",
+      "part": "w.mech.operator_cab",
+      "position": [
+        -0.45,
+        0.16,
+        0.11
+      ]
+    },
+    {
+      "assembly": "fnd-excavator-arm",
+      "id": "arm",
+      "parent": "deck",
+      "position": [
+        0.47,
+        0.16,
+        0.55
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-1.9",
+    "level": 3,
+    "quality": {
+      "review_scope": "P3-P4",
+      "status": "worlds"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "slew",
+        "max": 100,
+        "min": -100,
+        "node": "deck",
+        "title": "上车体回转",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "boom_raise",
+        "max": 10,
+        "min": -8,
+        "node": "arm.boom",
+        "title": "动臂角度",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "stick_fold",
+        "max": 12,
+        "min": -12,
+        "node": "arm.stick",
+        "title": "小臂折叠",
+        "unit": "°"
+      }
+    ],
+    "struts": [
+      {
+        "from": {
+          "node": "arm.base",
+          "point": [
+            0.18,
+            0.4,
+            0.235
+          ]
+        },
+        "max_length": 1.2,
+        "min_length": 0.63,
+        "node": "arm.lift",
+        "rod": "piston",
+        "rod_length": 0.67,
+        "to": {
+          "node": "arm.boom",
+          "point": [
+            0.055,
+            0.91,
+            0.235
+          ]
+        }
+      },
+      {
+        "from": {
+          "node": "arm.boom",
+          "point": [
+            0.008,
+            1.03,
+            -0.235
+          ]
+        },
+        "max_length": 1.13,
+        "min_length": 0.58,
+        "node": "arm.curl",
+        "rod": "piston",
+        "rod_length": 0.62,
+        "to": {
+          "node": "arm.stick",
+          "point": [
+            0,
+            0.59,
+            -0.235
+          ]
+        }
+      }
+    ],
+    "theme": "construction",
+    "units": "metres"
+  },
+  "name": "履带挖掘机 · 可回转上车与双液压",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "construction",
+    "mech"
+  ],
+  "version": "3.4.0"
+}

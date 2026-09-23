@@ -1,0 +1,359 @@
+{
+  "category": "vehicle",
+  "description": "副翼段翼面机匣组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.16,
+        0.24
+      ],
+      "span": 0.16,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.34,
+        0
+      ],
+      "profile": [
+        0.16,
+        0.24
+      ],
+      "span": 0.16,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-vehicle-flightmodule-aileron",
+  "instances": [
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "control",
+      "params": {},
+      "part": "l1.vehicle.aero.aileron",
+      "pivot": [
+        0.42500001192092896,
+        0.008775000460445881,
+        -0.24500000476837158
+      ],
+      "position": [
+        0,
+        0.12,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.011764677503118,
+        1.5089163038681952,
+        0.6315789305272199
+      ]
+    },
+    {
+      "id": "hingeBeam",
+      "params": {},
+      "part": "l1.architecture.section.i",
+      "pivot": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "position": [
+        0.0,
+        0.095,
+        0.0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        -0.0,
+        90.0,
+        0
+      ],
+      "scale": [
+        0.1,
+        0.1,
+        0.5749999914318324
+      ]
+    },
+    {
+      "id": "hingeL",
+      "params": {},
+      "part": "l1.interior.fixture.hinge_leaf",
+      "pivot": [
+        0.047999998554587364,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.3,
+        0.07,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.38194445100538216,
+        0.3888888734358335,
+        2.409600911355797
+      ]
+    },
+    {
+      "id": "hingeR",
+      "params": {},
+      "part": "l1.interior.fixture.hinge_leaf",
+      "pivot": [
+        0.047999998554587364,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.3,
+        0.07,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.38194445100538216,
+        0.3888888734358335,
+        2.409600911355797
+      ]
+    },
+    {
+      "id": "horn",
+      "params": {},
+      "parent": "control",
+      "part": "l1.vehicle.attachment.rack_foot",
+      "pivot": [
+        0.009999997913837433,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.13,
+        0.08
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.16666666832235127,
+        0.2553191495837535,
+        0.4375000097788873
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "vehicle",
+    "functional": {
+      "assembly_order": [
+        "control",
+        "hingeBeam",
+        "hingeL",
+        "hingeR",
+        "horn"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.94,
+        0.34,
+        0.32
+      ],
+      "family": "flightmodule",
+      "mount_dimensions_m": [
+        0.16,
+        0.24
+      ],
+      "notes": [
+        "机构演示无空气动力学或推进仿真；不构成飞行器制造设计。"
+      ],
+      "purpose": "副翼段翼面机匣组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "control"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.16,
+          0.24
+        ],
+        "span": 0.16,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.34,
+          0
+        ],
+        "profile": [
+          0.16,
+          0.24
+        ],
+        "span": 0.16,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/vehicle.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "deflect",
+        "max": 30,
+        "min": -20,
+        "mode": "rotation",
+        "node": "control",
+        "step": 1,
+        "title": "独立操纵面偏角",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-vehicle",
+    "units": "metres"
+  },
+  "name": "副翼段翼面机匣组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "vehicle",
+    "flightmodule",
+    "aileron",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,636 @@
+{
+  "anchor": "base",
+  "category": "nature",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.8
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.8
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            1,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.8
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "卷须末梢；可复用的 自然与植被 语义部件，不包含上层设备行为。",
+  "id": "l1.nature.branch.tendril",
+  "level": 1,
+  "material": "mat.leaf",
+  "name": "卷须末梢",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 1,
+        "maximum": 1.75,
+        "minimum": 0.55,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.8,
+        "maximum": 1.4000000000000001,
+        "minimum": 0.44000000000000006,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "nature",
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative/anatomy component; owning assembly authors collision",
+      "type": "none"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/nature.json#l1.nature.branch.tendril",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "nature",
+    "family": "branch",
+    "profile": "tendril",
+    "purpose": "卷须末梢",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#3F6547",
+        "kind": "loft",
+        "material": "mat.leaf",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.8
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "rings": [
+          {
+            "c": [
+              0.19,
+              0.0,
+              0.0
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.16961451805185646,
+              0.03888888888888889,
+              0.0617346358702832
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.13099359977334524,
+              0.07777777777777778,
+              0.10991668125639822
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.08075000000000002,
+              0.11666666666666664,
+              0.13986310271118685
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.026394523005373427,
+              0.15555555555555556,
+              0.14969077845785564
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.02474486531753757,
+              0.19444444444444445,
+              0.14033510480423966
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.06649999999999996,
+              0.23333333333333328,
+              0.11518137870333033
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.09460648872519378,
+              0.2722222222222222,
+              0.07938426979628763
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.10712495876959353,
+              0.3111111111111111,
+              0.03899029633912625
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.10450000000000001,
+              0.35,
+              1.2797559051089842e-17
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.08927079897466131,
+              0.3888888888888889,
+              -0.03249191361593852
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.06549679988667265,
+              0.42777777777777776,
+              -0.05495834062819907
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.03800000000000004,
+              0.46666666666666656,
+              -0.06581793068761732
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              -0.011547603814850866,
+              0.5055555555555555,
+              -0.06548971557531183
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.009897946127015009,
+              0.5444444444444444,
+              -0.056134041921695875
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.02374999999999997,
+              0.5833333333333334,
+              -0.04113620667976085
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.02910968883852115,
+              0.6222222222222222,
+              -0.0244259291680885
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.026781239692398394,
+              0.661111111111111,
+              -0.009747574084781557
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0.018999999999999996,
+              0.7,
+              -4.653657836759941e-18
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          }
+        ],
+        "sides": 6
+      }
+    ]
+  },
+  "size": [
+    0.8,
+    1,
+    0.8
+  ],
+  "source": {
+    "authoring": "tools/l1_expansion/nature.py",
+    "license": "project-authored",
+    "revision": "3.1.0",
+    "type": "original_semantic_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "nature",
+    "L1-Expansion",
+    "nature",
+    "branch",
+    "tendril"
+  ],
+  "theme": "l1-nature",
+  "version": "3.4.0"
+}

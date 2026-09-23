@@ -1,0 +1,835 @@
+{
+  "anchor": "base",
+  "category": "wear",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.4
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.35
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.25
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.4
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.35,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.35
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.25
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "眼睑边片；可复用的 角色与穿戴 语义部件，不包含上层设备行为。",
+  "id": "l1.character.face.eyelid",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "眼睑边片",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.25,
+        "maximum": 0.4375,
+        "minimum": 0.1375,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.35,
+        "maximum": 0.6124999999999999,
+        "minimum": 0.1925,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.4,
+        "maximum": 0.7000000000000001,
+        "minimum": 0.22000000000000003,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "character",
+    "repair39": {
+      "audit_id": "l1.character.face.eyelid",
+      "commercial_certification": false,
+      "scope": "authored-geometry; current evidence/v3.9.0"
+    },
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "repair39": {
+    "baseline": "3.8.0",
+    "change": "将圆管环改为完整杏仁形眼睑薄壳，上睑更厚、下睑更缓，眼角连续闭合。",
+    "connector_contract": "existing named sockets preserved; contact tests in release evidence",
+    "contracts": {},
+    "legacy_geometry_sha256": "339442463809fcb451f6934aac3f403921dceb585a7a92b310334561c510bef3",
+    "source_revision": "3.9.0",
+    "stable_public_id": true
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative/anatomy component; owning assembly authors collision",
+      "type": "none"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/character.json#l1.character.face.eyelid",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "character",
+    "family": "face",
+    "profile": "eyelid",
+    "purpose": "眼睑边片",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#DDAA85",
+        "depth": 0.009,
+        "holes": [
+          [
+            [
+              0.064,
+              0.0
+            ],
+            [
+              0.05912829008072235,
+              0.00906147834551397
+            ],
+            [
+              0.04525483399593905,
+              0.018349242404917497
+            ],
+            [
+              0.02449173967136575,
+              0.025376343916889938
+            ],
+            [
+              3.91886975727153e-18,
+              0.028
+            ],
+            [
+              -0.024491739671365743,
+              0.025376343916889938
+            ],
+            [
+              -0.04525483399593904,
+              0.0183492424049175
+            ],
+            [
+              -0.05912829008072235,
+              0.009061478345513973
+            ],
+            [
+              -0.064,
+              2.5717582782094414e-18
+            ],
+            [
+              -0.05912829008072236,
+              -0.009061478345513966
+            ],
+            [
+              -0.045254833995939055,
+              -0.018349242404917497
+            ],
+            [
+              -0.02449173967136578,
+              -0.02537634391688993
+            ],
+            [
+              -1.1756609271814591e-17,
+              -0.028
+            ],
+            [
+              0.02449173967136576,
+              -0.025376343916889935
+            ],
+            [
+              0.045254833995939034,
+              -0.018349242404917504
+            ],
+            [
+              0.05912829008072234,
+              -0.009061478345513987
+            ]
+          ]
+        ],
+        "kind": "extrude",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "eyelid_00",
+        "outline": [
+          [
+            0.081,
+            0.0
+          ],
+          [
+            0.07483424213341423,
+            0.014563090198147449
+          ],
+          [
+            0.057275649276110355,
+            0.029489853865045976
+          ],
+          [
+            0.030997358021572278,
+            0.040783409866430254
+          ],
+          [
+            4.95981953654678e-18,
+            0.045
+          ],
+          [
+            -0.030997358021572267,
+            0.040783409866430254
+          ],
+          [
+            -0.05727564927611035,
+            0.02948985386504598
+          ],
+          [
+            -0.07483424213341423,
+            0.014563090198147454
+          ],
+          [
+            -0.081,
+            4.1331829471223164e-18
+          ],
+          [
+            -0.07483424213341423,
+            -0.014563090198147444
+          ],
+          [
+            -0.05727564927611036,
+            -0.029489853865045976
+          ],
+          [
+            -0.03099735802157232,
+            -0.04078340986643025
+          ],
+          [
+            -1.4879458609640342e-17,
+            -0.045
+          ],
+          [
+            0.03099735802157229,
+            -0.040783409866430254
+          ],
+          [
+            0.057275649276110334,
+            -0.029489853865045986
+          ],
+          [
+            0.0748342421334142,
+            -0.014563090198147477
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "color": "#DDAA85",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.35
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.25
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "eyelid_01",
+        "rings": [
+          {
+            "c": [
+              -0.073,
+              -0.001,
+              0.004
+            ],
+            "r": [
+              0.003,
+              0.003
+            ]
+          },
+          {
+            "c": [
+              -0.044,
+              0.035,
+              0.006
+            ],
+            "r": [
+              0.006,
+              0.006
+            ]
+          },
+          {
+            "c": [
+              0,
+              0.044,
+              0.004
+            ],
+            "r": [
+              0.006,
+              0.006
+            ]
+          },
+          {
+            "c": [
+              0.043,
+              0.033,
+              0.005
+            ],
+            "r": [
+              0.005,
+              0.005
+            ]
+          },
+          {
+            "c": [
+              0.073,
+              0.001,
+              0.004
+            ],
+            "r": [
+              0.003,
+              0.003
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.4,
+    0.35,
+    0.25
+  ],
+  "source": {
+    "authoring": "tools/repair39/characters.py",
+    "license": "project-authored",
+    "revision": "3.9.0",
+    "type": "original_structural_lowpoly_rebuild"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "wear",
+    "L1-Expansion",
+    "character",
+    "face",
+    "eyelid",
+    "Advanced-Lowpoly-3.9"
+  ],
+  "theme": "l1-character",
+  "version": "3.9.0"
+}

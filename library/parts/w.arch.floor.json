@@ -1,0 +1,318 @@
+{
+  "anchor": "base",
+  "category": "terrain",
+  "connectors": [],
+  "description": "",
+  "id": "w.arch.floor",
+  "level": 1,
+  "material": "mat.wood",
+  "name": "室内地板模块 · 整洁分板",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 5,
+        "maximum": 12,
+        "minimum": 2,
+        "step": 0.1,
+        "title": "地板深",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 5,
+        "maximum": 24,
+        "minimum": 2,
+        "step": 0.1,
+        "title": "地板宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P3-P4",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.018,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            0.044000000000000004,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#C38F55",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          -0.05,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "width"
+          },
+          0.1,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.001,
+            0.00176,
+            0.00132,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.4
+            ]
+          },
+          0.001,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.004,
+          0.003,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.001,
+            0.00176,
+            0.00132,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.2
+            ]
+          },
+          0.001,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.004,
+          0.003,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.001,
+            0.00176,
+            0.00132,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0
+            ]
+          },
+          0.001,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.004,
+          0.003,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.001,
+            0.00176,
+            0.00132,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.2
+            ]
+          },
+          0.001,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.004,
+          0.003,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.001,
+            0.00176,
+            0.00132,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.4
+            ]
+          },
+          0.001,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.004,
+          0.003,
+          {
+            "$param": "depth"
+          }
+        ]
+      }
+    ]
+  },
+  "size": [
+    5,
+    0.1,
+    5
+  ],
+  "source": {
+    "authoring": "tools/worlds/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "shared",
+    "terrain"
+  ],
+  "theme": "shared",
+  "version": "3.4.0"
+}

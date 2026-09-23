@@ -1,0 +1,395 @@
+{
+  "category": "vehicle",
+  "description": "船艉封板舷片船用功能组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.21
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.71,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.21
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-vehicle-marineunit-transom",
+  "instances": [
+    {
+      "id": "structure",
+      "params": {},
+      "part": "l1.vehicle.marine.transom",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7692307974459868,
+        0.8461538771905854,
+        8.125000181607906
+      ]
+    },
+    {
+      "id": "keel",
+      "params": {},
+      "part": "l1.vehicle.marine.keel",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        -0.11,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06428571538049349,
+        0.2909090846038063,
+        10.99999983608723
+      ]
+    },
+    {
+      "id": "seat",
+      "params": {},
+      "part": "l1.architecture.joinery.saddle",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.16,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.2999999880790715,
+        0.19999999205271435,
+        0.42
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "rivet0",
+      "params": {},
+      "part": "l1.props.fastener.rivet",
+      "pivot": [
+        -0.0012435317039489746,
+        0.0,
+        -0.0006218906491994858
+      ],
+      "position": [
+        -0.36,
+        0.18,
+        0.26
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.26315789803903855,
+        0.07811588522643606,
+        0.26315788771967497
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "rivet1",
+      "params": {},
+      "part": "l1.props.fastener.rivet",
+      "pivot": [
+        -0.0012435317039489746,
+        0.0,
+        -0.0006218906491994858
+      ],
+      "position": [
+        0,
+        0.18,
+        0.26
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.26315789803903855,
+        0.07811588522643606,
+        0.26315788771967497
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "rivet2",
+      "params": {},
+      "part": "l1.props.fastener.rivet",
+      "pivot": [
+        -0.0012435317039489746,
+        0.0,
+        -0.0006218906491994858
+      ],
+      "position": [
+        0.36,
+        0.18,
+        0.26
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.26315789803903855,
+        0.07811588522643606,
+        0.26315788771967497
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "vehicle",
+    "functional": {
+      "assembly_order": [
+        "structure",
+        "keel",
+        "seat",
+        "rivet0",
+        "rivet1",
+        "rivet2"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        1,
+        0.71,
+        1.1
+      ],
+      "family": "marineunit",
+      "mount_dimensions_m": [
+        0.18,
+        0.21
+      ],
+      "notes": [],
+      "purpose": "船艉封板舷片船用功能组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.21
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.71,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.21
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/vehicle.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-vehicle",
+    "units": "metres"
+  },
+  "name": "船艉封板舷片船用功能组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "vehicle",
+    "marineunit",
+    "transom",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

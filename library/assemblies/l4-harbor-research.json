@@ -1,0 +1,650 @@
+{
+  "category": "scene",
+  "description": "可编辑主题场景；保存所有对象引用、图层与分区；不含烘焙导航或游戏逻辑。",
+  "id": "l4-harbor-research",
+  "instances": [
+    {
+      "assembly": "l3-vehicle-marine-research",
+      "id": "primary",
+      "position": [
+        -1.975,
+        -0.29,
+        -3.373492
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-robot-underwater-rov",
+      "id": "secondary",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        -2.906047,
+        0.34,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "assembly": "l3-vehicle-utility-forklift",
+      "id": "harbor_cart",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        5.0,
+        0.34,
+        5.18
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-props-lamp-street",
+      "id": "light0",
+      "position": [
+        2.0,
+        0.34,
+        7.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-props-lamp-street",
+      "id": "light1",
+      "position": [
+        9.4,
+        0.34,
+        7.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-character-profession-fisher",
+      "id": "actor",
+      "position": [
+        1.7,
+        0.34,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "ground",
+      "part": "r37.l4-harbor-research.ground"
+    },
+    {
+      "id": "sea",
+      "part": "r37.l4-harbor-research.sea"
+    },
+    {
+      "id": "quay",
+      "part": "r37.l4-harbor-research.quay"
+    },
+    {
+      "id": "quay_walk",
+      "part": "r38.l4-harbor-research.quay_walk"
+    },
+    {
+      "id": "service_lane",
+      "part": "r38.l4-harbor-research.service_lane"
+    },
+    {
+      "id": "finger_pier",
+      "part": "r38.l4-harbor-research.finger_pier"
+    },
+    {
+      "id": "boarding_gangway",
+      "part": "r38.l4-harbor-research.boarding_gangway"
+    },
+    {
+      "id": "bollard0",
+      "part": "r38.l4-harbor-research.bollard0"
+    },
+    {
+      "id": "bollard1",
+      "part": "r38.l4-harbor-research.bollard1"
+    },
+    {
+      "id": "bollard2",
+      "part": "r38.l4-harbor-research.bollard2"
+    },
+    {
+      "id": "rov_hoist",
+      "part": "r38.l4-harbor-research.rov_hoist"
+    },
+    {
+      "id": "vessel_bulkheads",
+      "parent": "primary",
+      "part": "r38.l4-harbor-research.vessel_bulkheads"
+    }
+  ],
+  "max_triangles": 400000,
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l4-3.4",
+    "domain": "scene",
+    "level": 4,
+    "quality": {
+      "approval": "editable scene; see evidence",
+      "review_scope": "L3-L4",
+      "status": "l4"
+    },
+    "repair37": {
+      "baseline": "3.5.0",
+      "geometry_redesigned": true,
+      "old_root_nodes": [
+        "ground",
+        "primary",
+        "secondary",
+        "access_lane",
+        "water_basin",
+        "quay",
+        "finger_pier",
+        "mooring_post0",
+        "mooring_post1",
+        "mooring_post2",
+        "mooring_post3",
+        "harbor_cart",
+        "light0",
+        "light1",
+        "wayfinding",
+        "actor"
+      ],
+      "prior_visual_claims_not_inherited": true,
+      "retained_root_nodes": [
+        "actor",
+        "finger_pier",
+        "ground",
+        "harbor_cart",
+        "light0",
+        "light1",
+        "mooring_post0",
+        "mooring_post1",
+        "mooring_post2",
+        "mooring_post3",
+        "primary",
+        "quay",
+        "secondary"
+      ],
+      "source": "tools/repair37"
+    },
+    "repair38": {
+      "baseline": "3.7.1",
+      "change": "船艇移入可实际登乘的泊位，重做岸线与栈桥接合、登船跳板、系泊点和桩基；灯塔以有连接栈桥的独立岬角承托，设备不再悬空或远离作业水域。",
+      "evidence": "evidence/l4-v3.8.0",
+      "old_root_nodes": [
+        "actor",
+        "finger_pier",
+        "ground",
+        "harbor_cart",
+        "light0",
+        "light1",
+        "mooring_post0",
+        "mooring_post1",
+        "mooring_post2",
+        "mooring_post3",
+        "primary",
+        "quay",
+        "sea",
+        "secondary"
+      ],
+      "problem": "科考船与采样/吊装装置分离，装置够不到船或水边。",
+      "retained_root_nodes": [
+        "actor",
+        "finger_pier",
+        "ground",
+        "harbor_cart",
+        "light0",
+        "light1",
+        "primary",
+        "quay",
+        "sea",
+        "secondary"
+      ],
+      "visual_status": "see human review ledger; not asserted by authoring code"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": []
+      },
+      "origin": "site-ground",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 400000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "scene": {
+      "bounds_design": [
+        [
+          -14.0,
+          -0.2,
+          -11.0
+        ],
+        [
+          14.0,
+          15,
+          11.0
+        ]
+      ],
+      "cameras": [
+        {
+          "id": "overview",
+          "position": [
+            23.8,
+            22,
+            20.9
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "edit_contract": "instances own transforms; metadata owns layer and region membership; GLB is derived",
+      "groundY": 0.34,
+      "layers": {
+        "actors": {
+          "label": "角色与生物",
+          "visible": true
+        },
+        "furnishings": {
+          "label": "家具与设备",
+          "visible": true
+        },
+        "ground": {
+          "label": "地形与通路",
+          "visible": true
+        },
+        "nature": {
+          "label": "自然装饰",
+          "visible": true
+        },
+        "props": {
+          "label": "道具",
+          "visible": true
+        },
+        "structures": {
+          "label": "主体构筑物",
+          "visible": true
+        }
+      },
+      "lighting": {
+        "ambient_intent": 0.6,
+        "environment": "studio",
+        "realtime_lights_created": false
+      },
+      "max_objects": 2500,
+      "navigation": "unbaked; consumer must derive navigation and physics from chosen colliders",
+      "objects": {
+        "actor": {
+          "label": "渔夫",
+          "layer": "actors",
+          "locked": false,
+          "region": "site"
+        },
+        "boarding_gangway": {
+          "label": "boarding_gangway",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "bollard0": {
+          "label": "bollard0",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "bollard1": {
+          "label": "bollard1",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "bollard2": {
+          "label": "bollard2",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "finger_pier": {
+          "label": "finger_pier",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "ground": {
+          "label": "独立地面",
+          "layer": "ground",
+          "locked": true,
+          "region": "site"
+        },
+        "harbor_cart": {
+          "label": "叉车",
+          "layer": "props",
+          "locked": false,
+          "region": "east"
+        },
+        "light0": {
+          "label": "单臂路灯",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "light1": {
+          "label": "单臂路灯",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "primary": {
+          "label": "海洋调查船",
+          "layer": "structures",
+          "locked": false,
+          "region": "west"
+        },
+        "quay": {
+          "label": "quay",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "quay_walk": {
+          "label": "quay_walk",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "rov_hoist": {
+          "label": "rov_hoist",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "sea": {
+          "label": "sea",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "secondary": {
+          "label": "系留水下机器人",
+          "layer": "structures",
+          "locked": false,
+          "region": "east"
+        },
+        "service_lane": {
+          "label": "service_lane",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "vessel_bulkheads": {
+          "label": "随船移动的水密封板与艏部加强壳",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        }
+      },
+      "regions": {
+        "east": {
+          "label": "东侧副区"
+        },
+        "landscape": {
+          "label": "环境边界"
+        },
+        "site": {
+          "label": "全场地"
+        },
+        "west": {
+          "label": "西侧主区"
+        }
+      },
+      "revision": "3.8.0",
+      "schema": "wx.scene/1.0",
+      "spawn_points": [
+        {
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "id": "visitor",
+          "position": [
+            0,
+            0.34,
+            9.8
+          ]
+        }
+      ],
+      "theme": "harbor",
+      "title": "港口海岸 · 科考泊位",
+      "units": "m"
+    },
+    "source": {
+      "authoring": "tools/repair38/__init__.py",
+      "license": "project-authored",
+      "revision": "3.8.0",
+      "type": "original_editable_scene"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__camera__pitch",
+        "max": 45,
+        "min": -45,
+        "mode": "rotation",
+        "node": "secondary.camera.sensor",
+        "step": 1,
+        "title": "secondary · camera · 俯仰角",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__thruster0__fan",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "secondary.thruster0.fan",
+        "step": 1,
+        "title": "secondary · thruster0 · 风扇相位",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__thruster1__fan",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "secondary.thruster1.fan",
+        "step": 1,
+        "title": "secondary · thruster1 · 风扇相位",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__thruster2__fan",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "secondary.thruster2.fan",
+        "step": 1,
+        "title": "secondary · thruster2 · 风扇相位",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__thruster3__fan",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "secondary.thruster3.fan",
+        "step": 1,
+        "title": "secondary · thruster3 · 风扇相位",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__arm_base__joint",
+        "max": 180,
+        "min": -180,
+        "mode": "rotation",
+        "node": "secondary.arm_base.output",
+        "step": 1,
+        "title": "secondary · arm_base · 输出转角",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__arm_joint0__joint",
+        "max": 180,
+        "min": -180,
+        "mode": "rotation",
+        "node": "secondary.arm_joint0.output",
+        "step": 1,
+        "title": "secondary · arm_joint0 · 输出转角",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__arm_tool__openL",
+        "max": 0.08,
+        "min": 0,
+        "mode": "translation",
+        "node": "secondary.arm_tool.finger0",
+        "step": 0.01,
+        "title": "secondary · arm_tool · 左指张开",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "secondary__arm_tool__openR",
+        "max": 0.08,
+        "min": 0,
+        "mode": "translation",
+        "node": "secondary.arm_tool.finger1",
+        "step": 0.01,
+        "title": "secondary · arm_tool · 右指张开",
+        "unit": "m"
+      }
+    ],
+    "theme": "l4-harbor",
+    "units": "metres"
+  },
+  "name": "港口海岸 · 科考泊位",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L4",
+    "harbor",
+    "research",
+    "editable-scene"
+  ],
+  "version": "3.8.0"
+}

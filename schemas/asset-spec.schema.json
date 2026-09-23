@@ -1,0 +1,116 @@
+{
+  "$id": "urn:wanxiang:asset-spec:1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "budgets": {
+      "additionalProperties": false,
+      "properties": {
+        "output_bytes": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "sdf_bytes": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "seconds": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "triangles": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "vertices": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "host_requests": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "type": "string"
+          },
+          "prompt": {
+            "maxLength": 20000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "semantic": {
+            "type": "string"
+          },
+          "size": {
+            "maximum": 2048,
+            "minimum": 32,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "prompt"
+        ],
+        "type": "object"
+      },
+      "maxItems": 32,
+      "type": "array"
+    },
+    "id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "type": "string"
+    },
+    "materials": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "params": {
+      "type": "object"
+    },
+    "preset": {
+      "type": "string"
+    },
+    "profile": {
+      "enum": [
+        "draft",
+        "standard",
+        "hero",
+        "lod1",
+        "lod2"
+      ]
+    },
+    "quality": {
+      "maximum": 1.5,
+      "minimum": 0.25,
+      "type": "number"
+    },
+    "recipe": {
+      "type": "string"
+    },
+    "seed": {
+      "maximum": 4294967295,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "style": {
+      "enum": [
+        "natural",
+        "storybook",
+        "industrial"
+      ]
+    }
+  },
+  "required": [
+    "recipe"
+  ],
+  "type": "object"
+}

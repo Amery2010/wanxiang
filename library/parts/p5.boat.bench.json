@@ -1,0 +1,153 @@
+{
+  "anchor": "center",
+  "category": "props",
+  "connectors": [],
+  "description": "",
+  "id": "p5.boat.bench",
+  "level": 1,
+  "material": "mat.wood",
+  "name": "木船横凳 · 拱边支持件",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "beam": {
+        "default": 1.35,
+        "maximum": 1.85,
+        "minimum": 1.0,
+        "step": 0.05,
+        "title": "凳宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P5-P6",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.01,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "beam"
+                }
+              ]
+            },
+            0.0286,
+            0.1276
+          ]
+        },
+        "color": "#C38F55",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "beam"
+          },
+          0.065,
+          0.29
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.008,
+            0.030800000000000004,
+            0.1012,
+            0.0704
+          ]
+        },
+        "color": "#925F37",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.34,
+              {
+                "$param": "beam"
+              }
+            ]
+          },
+          -0.12,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.07,
+          0.23,
+          0.16
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.008,
+            0.030800000000000004,
+            0.1012,
+            0.0704
+          ]
+        },
+        "color": "#925F37",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.34,
+              {
+                "$param": "beam"
+              }
+            ]
+          },
+          -0.12,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.07,
+          0.23,
+          0.16
+        ]
+      }
+    ]
+  },
+  "size": [
+    1.35,
+    0.3,
+    0.3
+  ],
+  "source": {
+    "authoring": "tools/frontiers/",
+    "license": "project-authored",
+    "revision": "2.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "harbor",
+    "props"
+  ],
+  "theme": "harbor",
+  "version": "3.4.0"
+}

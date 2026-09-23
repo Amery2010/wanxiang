@@ -1,0 +1,258 @@
+{
+  "anchor": "base",
+  "category": "interior",
+  "connectors": [
+    {
+      "id": "base",
+      "interface": "seat.pad.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "",
+  "id": "core.interior.cushion",
+  "level": 1,
+  "material": "mat.fabric",
+  "name": "软包坐靠垫 · 宽厚与边缘独立控制",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.58,
+        "maximum": 2.2,
+        "minimum": 0.34,
+        "step": 0.01,
+        "title": "垫深",
+        "type": "number",
+        "unit": "m"
+      },
+      "thickness": {
+        "default": 0.16,
+        "maximum": 0.25,
+        "minimum": 0.045,
+        "step": 0.01,
+        "title": "垫厚",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.58,
+        "maximum": 1.65,
+        "minimum": 0.34,
+        "step": 0.01,
+        "title": "垫宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#707952",
+        "kind": "loft",
+        "outline": [
+          [
+            1,
+            0.9
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            -0.9,
+            1
+          ],
+          [
+            -1,
+            0.9
+          ],
+          [
+            -1,
+            -0.9
+          ],
+          [
+            -0.9,
+            -1
+          ],
+          [
+            0.9,
+            -1
+          ],
+          [
+            1,
+            -0.9
+          ]
+        ],
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.45
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.45
+                ]
+              }
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "thickness"
+                  },
+                  0.15
+                ]
+              },
+              0
+            ],
+            "r": [
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.495
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.495
+                ]
+              }
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "thickness"
+                  },
+                  0.72
+                ]
+              },
+              0
+            ],
+            "r": [
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.49
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "c": [
+              0,
+              {
+                "$param": "thickness"
+              },
+              0
+            ],
+            "r": [
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.43
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.43
+                ]
+              }
+            ]
+          }
+        ],
+        "sides": 8
+      }
+    ]
+  },
+  "size": [
+    0.58,
+    0.16,
+    0.58
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "interior"
+  ],
+  "version": "3.4.0"
+}

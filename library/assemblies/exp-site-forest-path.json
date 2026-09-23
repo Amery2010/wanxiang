@@ -1,0 +1,240 @@
+{
+  "category": "terrain",
+  "description": "",
+  "id": "exp-site-forest-path",
+  "instances": [
+    {
+      "id": "base",
+      "params": {
+        "relief": 0.4,
+        "surface": "forest"
+      },
+      "part": "exp.terrain.flat",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "west",
+        "socket": "east",
+        "target": "base"
+      },
+      "id": "inner",
+      "params": {
+        "relief": 0.4,
+        "surface": "forest"
+      },
+      "part": "exp.terrain.corner_in",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "north",
+        "socket": "south",
+        "target": "inner"
+      },
+      "id": "outer",
+      "params": {
+        "relief": 0.4,
+        "surface": "forest"
+      },
+      "part": "exp.terrain.corner_out",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "north",
+        "socket": "south",
+        "target": "base"
+      },
+      "id": "slope",
+      "params": {
+        "relief": 0.4,
+        "surface": "forest"
+      },
+      "part": "exp.terrain.slope",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "north",
+        "socket": "south",
+        "target": "slope"
+      },
+      "id": "steps",
+      "params": {
+        "relief": 0.4,
+        "surface": "forest"
+      },
+      "part": "exp.terrain.steps",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "north",
+        "socket": "south",
+        "target": "steps"
+      },
+      "id": "plateau",
+      "params": {
+        "relief": 0.4,
+        "surface": "forest"
+      },
+      "part": "exp.terrain.plateau",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "assembly": "fnd-oak",
+      "id": "oak",
+      "position": [
+        -1.2,
+        0,
+        0.1
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "assembly": "world-pine",
+      "id": "pine",
+      "position": [
+        4.3,
+        0.23,
+        3.5
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "assembly": "world-pine",
+      "id": "upper_pine",
+      "position": [
+        -0.8,
+        1.52,
+        12
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "path0",
+      "part": "exp.nature.rock_slab",
+      "position": [
+        0.2,
+        0.015,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.1,
+        0.45
+      ]
+    },
+    {
+      "id": "path1",
+      "part": "exp.nature.rock_slab",
+      "position": [
+        0.2,
+        0.16,
+        3.5
+      ],
+      "scale": [
+        0.3,
+        0.1,
+        0.45
+      ]
+    },
+    {
+      "id": "path2",
+      "part": "exp.nature.rock_slab",
+      "position": [
+        0.2,
+        0.35,
+        5.5
+      ],
+      "scale": [
+        0.3,
+        0.1,
+        0.45
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-2.2",
+    "interfaces": [],
+    "level": 3,
+    "quality": {
+      "review_scope": "A-C",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "seam_fixture": "six authored tiles; five attachments; corner_in.south matches corner_out.north",
+    "theme": "forest",
+    "units": "metres"
+  },
+  "name": "林间上坡路 · 精确拼接到台地",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "forest",
+    "terrain",
+    "森林",
+    "步道",
+    "接口验收"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,970 @@
+{
+  "anchor": "center",
+  "category": "vehicle",
+  "connectors": [
+    {
+      "id": "axle",
+      "interface": "axle.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "",
+  "id": "core.vehicle.hub",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "轮毂 · 镂空辐条与轴心",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "radius": {
+        "default": 0.34,
+        "maximum": 0.5,
+        "minimum": 0.26,
+        "step": 0.01,
+        "title": "轮胎半径",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.22,
+        "maximum": 0.32,
+        "minimum": 0.15,
+        "step": 0.01,
+        "title": "轮胎宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "closed_profile": true,
+        "color": "#A3ACAA",
+        "kind": "lathe",
+        "profile": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.47
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                -0.49
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.62
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                -0.49
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.63
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.49
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.47
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.49
+              ]
+            }
+          ]
+        ],
+        "roundable": false,
+        "sides": 16
+      },
+      {
+        "cap": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "profile": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.2
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                -0.58
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "radius"
+                },
+                0.2
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.58
+              ]
+            }
+          ]
+        ],
+        "roundable": false,
+        "sides": 10
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.37
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.0
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.11433628791873056
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.3518909110292068
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -72,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.2993362879187305
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.2174805433482151
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -144,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.29933628791873057
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.217480543348215
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -216,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.11433628791873048
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              -0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.35189091102920683
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -288,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.37
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.0
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.11433628791873056
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.3518909110292068
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -72,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.2993362879187305
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.2174805433482151
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -144,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.29933628791873057
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.217480543348215
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -216,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.003,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$param": "radius"
+                    },
+                    0.39
+                  ]
+                }
+              ]
+            },
+            0.00836,
+            0.02156
+          ]
+        },
+        "color": "#A3ACAA",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.11433628791873048
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              -0.35189091102920683
+            ]
+          }
+        ],
+        "rotation": [
+          0,
+          -288,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "radius"
+              },
+              0.39
+            ]
+          },
+          0.019,
+          0.049
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.44,
+    0.255,
+    0.44
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "vehicle"
+  ],
+  "version": "3.4.0"
+}

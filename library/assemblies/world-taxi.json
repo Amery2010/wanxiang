@@ -1,0 +1,212 @@
+{
+  "category": "vehicle",
+  "description": "",
+  "id": "world-taxi",
+  "instances": [
+    {
+      "id": "body",
+      "params": {
+        "palette": {
+          "#354C60": "#AE7625",
+          "#57778D": "#E8AA32"
+        },
+        "wheel_radius": {
+          "$param": "wheel_radius"
+        },
+        "wheelbase": {
+          "$param": "wheelbase"
+        }
+      },
+      "part": "core.vehicle.body_center"
+    },
+    {
+      "id": "sideL",
+      "params": {
+        "palette": {
+          "#354C60": "#AE7625",
+          "#57778D": "#E8AA32"
+        },
+        "wheel_radius": {
+          "$param": "wheel_radius"
+        },
+        "wheelbase": {
+          "$param": "wheelbase"
+        }
+      },
+      "part": "core.vehicle.body_side",
+      "position": [
+        -0.866,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "params": {
+        "palette": {
+          "#354C60": "#AE7625",
+          "#57778D": "#E8AA32"
+        },
+        "wheel_radius": {
+          "$param": "wheel_radius"
+        },
+        "wheelbase": {
+          "$param": "wheelbase"
+        }
+      },
+      "part": "core.vehicle.body_side",
+      "position": [
+        0.866,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -90,
+        0
+      ]
+    },
+    {
+      "id": "cabin",
+      "params": {
+        "palette": {
+          "#354C60": "#AE7625",
+          "#57778D": "#E8AA32"
+        }
+      },
+      "part": "core.vehicle.cabin"
+    },
+    {
+      "assembly": "kit-axle",
+      "id": "front",
+      "params": {
+        "radius": {
+          "$param": "wheel_radius"
+        },
+        "track": 1.62
+      },
+      "position": [
+        0,
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "wheelbase"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assembly": "kit-axle",
+      "id": "rear",
+      "params": {
+        "radius": {
+          "$param": "wheel_radius"
+        },
+        "track": 1.62
+      },
+      "position": [
+        0,
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            -1,
+            {
+              "$op": "mul",
+              "args": [
+                0.5,
+                {
+                  "$param": "wheelbase"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roofSign",
+      "part": "w.vehicle.taxi_sign",
+      "position": [
+        0,
+        1.59,
+        -0.28
+      ]
+    }
+  ],
+  "metadata": {
+    "archetype": "fnd-hatchback",
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-1.9",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "wheel_radius": {
+          "default": 0.34,
+          "maximum": 0.39,
+          "minimum": 0.29,
+          "step": 0.01,
+          "title": "轮胎半径",
+          "type": "number",
+          "unit": "m"
+        },
+        "wheelbase": {
+          "default": 2.46,
+          "maximum": 2.65,
+          "minimum": 2.25,
+          "step": 0.01,
+          "title": "轴距",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "P3-P4",
+      "status": "worlds"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "steering",
+        "max": 22,
+        "min": -22,
+        "nodes": [
+          "front.left",
+          "front.right"
+        ],
+        "title": "前轮转向",
+        "unit": "°"
+      }
+    ],
+    "theme": "city",
+    "units": "metres",
+    "variant_not_new_geometry_family": true
+  },
+  "name": "城市出租车 · 乘用车服务变体",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "city",
+    "vehicle"
+  ],
+  "version": "3.4.0"
+}

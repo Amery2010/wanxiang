@@ -1,0 +1,3963 @@
+{
+  "anchor": "base",
+  "category": "terrain",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.93
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.925
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.77
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.93
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.925,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.925
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.77
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "具有不同高度与平整断面的六棱柱状节理；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "waterland",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "具有不同高度与平整断面的六棱柱状节理",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.terrain.game_waterland.basalt_columns.webp"
+  },
+  "id": "l1.terrain.game_waterland.basalt_columns",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "错落六棱玄武岩簇",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.77,
+        "maximum": 1.3475000000000001,
+        "minimum": 0.42350000000000004,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 0.925,
+        "maximum": 1.6187500000000001,
+        "minimum": 0.50875,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.93,
+        "maximum": 1.6275000000000002,
+        "minimum": 0.5115000000000001,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "terrain",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "terrain",
+    "family": "game_waterland",
+    "game_kit": "waterland",
+    "game_use": "水岸 / 洞穴 / 熔岩 / 雪地",
+    "profile": "basalt_columns",
+    "purpose": "具有不同高度与平整断面的六棱柱状节理",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#505D64",
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.19,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.13,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_00",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.19,
+            0.0,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.0,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.0,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.0,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            -0.16454482671904333
+          ],
+          [
+            0.19,
+            0.64,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.64,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.64,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.64,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.64,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.64,
+            -0.16454482671904333
+          ],
+          [
+            0.0,
+            0.64,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#858B8C",
+        "enabled": {
+          "$param": "detail"
+        },
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.19,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.64,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.13,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_01",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.183,
+            0.0,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.0,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.0,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.0,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            -0.15848264889255226
+          ],
+          [
+            0.183,
+            0.025,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.025,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.025,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.025,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            -0.15848264889255226
+          ],
+          [
+            0.0,
+            0.025,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#505D64",
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.12,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.19,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_02",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.19,
+            0.0,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.0,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.0,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.0,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            -0.16454482671904333
+          ],
+          [
+            0.19,
+            0.9,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.9,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.9,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.9,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.9,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.9,
+            -0.16454482671904333
+          ],
+          [
+            0.0,
+            0.9,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#858B8C",
+        "enabled": {
+          "$param": "detail"
+        },
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.12,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.9,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.19,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_03",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.183,
+            0.0,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.0,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.0,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.0,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            -0.15848264889255226
+          ],
+          [
+            0.183,
+            0.025,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.025,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.025,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.025,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            -0.15848264889255226
+          ],
+          [
+            0.0,
+            0.025,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#505D64",
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.28,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.08,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_04",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.19,
+            0.0,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.0,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.0,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.0,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            -0.16454482671904333
+          ],
+          [
+            0.19,
+            0.52,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.52,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.52,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.52,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.52,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.52,
+            -0.16454482671904333
+          ],
+          [
+            0.0,
+            0.52,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#858B8C",
+        "enabled": {
+          "$param": "detail"
+        },
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.28,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.52,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.08,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_05",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.183,
+            0.0,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.0,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.0,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.0,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            -0.15848264889255226
+          ],
+          [
+            0.183,
+            0.025,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.025,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.025,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.025,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            -0.15848264889255226
+          ],
+          [
+            0.0,
+            0.025,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#505D64",
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.19,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_06",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.19,
+            0.0,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.0,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.0,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.0,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            -0.16454482671904333
+          ],
+          [
+            0.19,
+            0.78,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.78,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.78,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.78,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.78,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.78,
+            -0.16454482671904333
+          ],
+          [
+            0.0,
+            0.78,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#858B8C",
+        "enabled": {
+          "$param": "detail"
+        },
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.78,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.19,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_07",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.183,
+            0.0,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.0,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.0,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.0,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            -0.15848264889255226
+          ],
+          [
+            0.183,
+            0.025,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.025,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.025,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.025,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            -0.15848264889255226
+          ],
+          [
+            0.0,
+            0.025,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#505D64",
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.27,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.17,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_08",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.19,
+            0.0,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.0,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.0,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.0,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.0,
+            -0.16454482671904333
+          ],
+          [
+            0.19,
+            0.41,
+            0.0
+          ],
+          [
+            0.09500000000000003,
+            0.41,
+            0.16454482671904333
+          ],
+          [
+            -0.09499999999999996,
+            0.41,
+            0.16454482671904336
+          ],
+          [
+            -0.19,
+            0.41,
+            2.3268289183799712e-17
+          ],
+          [
+            -0.09500000000000008,
+            0.41,
+            -0.1645448267190433
+          ],
+          [
+            0.09500000000000003,
+            0.41,
+            -0.16454482671904333
+          ],
+          [
+            0.0,
+            0.41,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#858B8C",
+        "enabled": {
+          "$param": "detail"
+        },
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            7,
+            8,
+            2,
+            1
+          ],
+          [
+            8,
+            9,
+            3,
+            2
+          ],
+          [
+            9,
+            10,
+            4,
+            3
+          ],
+          [
+            10,
+            11,
+            5,
+            4
+          ],
+          [
+            11,
+            12,
+            6,
+            5
+          ],
+          [
+            12,
+            7,
+            1,
+            6
+          ],
+          [
+            13,
+            8,
+            7
+          ],
+          [
+            13,
+            9,
+            8
+          ],
+          [
+            13,
+            10,
+            9
+          ],
+          [
+            13,
+            11,
+            10
+          ],
+          [
+            13,
+            12,
+            11
+          ],
+          [
+            13,
+            7,
+            12
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          0.0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.27,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.93
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.41,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.925
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.17,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.77
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "basalt_columns_09",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.183,
+            0.0,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.0,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.0,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.0,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.0,
+            -0.15848264889255226
+          ],
+          [
+            0.183,
+            0.025,
+            0.0
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            0.15848264889255226
+          ],
+          [
+            -0.09149999999999996,
+            0.025,
+            0.15848264889255229
+          ],
+          [
+            -0.183,
+            0.025,
+            2.2411036424396563e-17
+          ],
+          [
+            -0.09150000000000008,
+            0.025,
+            -0.15848264889255223
+          ],
+          [
+            0.09150000000000001,
+            0.025,
+            -0.15848264889255226
+          ],
+          [
+            0.0,
+            0.025,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.93,
+    0.925,
+    0.77
+  ],
+  "source": {
+    "authoring": "tools/game410/waterland.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "terrain",
+    "L1-Expansion",
+    "terrain",
+    "game_waterland",
+    "basalt_columns",
+    "Game-Expansion-3.10",
+    "waterland",
+    "水岸与洞穴"
+  ],
+  "theme": "l1-terrain",
+  "version": "3.10.0"
+}

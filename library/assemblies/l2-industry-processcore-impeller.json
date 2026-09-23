@@ -1,0 +1,357 @@
+{
+  "category": "mechanism",
+  "description": "泵叶轮芯检修模块；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.industry.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.39,
+        0.39
+      ],
+      "span": 0.39,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.industry.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.9,
+        0
+      ],
+      "profile": [
+        0.39,
+        0.39
+      ],
+      "span": 0.39,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-industry-processcore-impeller",
+  "instances": [
+    {
+      "id": "mount",
+      "params": {},
+      "part": "l1.architecture.floor.plank",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3166666540834644,
+        0.8999999865889551,
+        0.3166666540834644
+      ]
+    },
+    {
+      "id": "bearing",
+      "params": {},
+      "part": "l1.industry.drive.bearing",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.09,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.36666665209664295,
+        0.5333333474618421,
+        0.6363636398118391
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "shaft",
+      "params": {},
+      "part": "l1.industry.drive.keyshaft",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0064999982714653015
+      ],
+      "position": [
+        0,
+        0.2,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3999999841054287,
+        0.8533333333333334,
+        0.3680981538558582
+      ]
+    },
+    {
+      "id": "work",
+      "params": {},
+      "parent": "shaft",
+      "part": "l1.industry.process.impeller",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.46,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8928571390558262,
+        1.3333333631356563,
+        0.8928571390558262
+      ]
+    },
+    {
+      "id": "collar",
+      "params": {},
+      "part": "l1.industry.drive.coupling",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.2,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4375000097788873,
+        0.3846153987229934,
+        0.4375000097788873
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "industry",
+    "functional": {
+      "assembly_order": [
+        "mount",
+        "bearing",
+        "shaft",
+        "work",
+        "collar"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.52,
+        0.9,
+        0.52
+      ],
+      "family": "processcore",
+      "mount_dimensions_m": [
+        0.39,
+        0.39
+      ],
+      "notes": [],
+      "purpose": "泵叶轮芯检修模块",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "shaft"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.industry.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.39,
+          0.39
+        ],
+        "span": 0.39,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.industry.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.9,
+          0
+        ],
+        "profile": [
+          0.39,
+          0.39
+        ],
+        "span": 0.39,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/industry.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "spin",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "shaft",
+        "step": 1,
+        "title": "转子旋转",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-industry",
+    "units": "metres"
+  },
+  "name": "泵叶轮芯检修模块",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "industry",
+    "processcore",
+    "impeller",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

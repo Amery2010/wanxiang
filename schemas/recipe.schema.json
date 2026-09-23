@@ -1,0 +1,89 @@
+{
+  "$id": "urn:wanxiang:recipe:1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "defaults": {
+      "type": "object"
+    },
+    "id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "type": "string"
+    },
+    "nodes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "type": "string"
+          },
+          "inputs": {
+            "additionalProperties": {
+              "additionalProperties": false,
+              "properties": {
+                "$node": {
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "$node"
+              ],
+              "type": "object"
+            },
+            "type": "object"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operator_version": {
+            "const": "1.0.0"
+          },
+          "params": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "operator",
+          "operator_version",
+          "params",
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "maxItems": 128,
+      "minItems": 1,
+      "type": "array"
+    },
+    "outputs": {
+      "items": {
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "parameter_schema": {
+      "type": "object"
+    },
+    "presets": {
+      "type": "object"
+    },
+    "schema": {
+      "const": "wx.recipe/1.0"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "version",
+    "parameter_schema",
+    "nodes",
+    "outputs"
+  ],
+  "type": "object"
+}

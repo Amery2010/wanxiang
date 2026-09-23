@@ -1,0 +1,390 @@
+{
+  "category": "robot",
+  "description": "室内配送机器人；移动底盘 / 感知组件 / battery / stereo / courier",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "ground",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l3-robot-mobile-courier",
+  "instances": [
+    {
+      "assembly": "l2-robot-housing-battery",
+      "id": "body",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "pivot": [
+        0.0,
+        0.0,
+        0.02499999850988388
+      ],
+      "position": [
+        0,
+        0.18,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.6666667108182565,
+        1.4876032588863133,
+        2.0512820481470273
+      ]
+    },
+    {
+      "id": "wheel0",
+      "params": {},
+      "part": "l1.vehicle.wheel.solid_tire",
+      "pivot": [
+        0.0,
+        0.1899999976158142,
+        0.0
+      ],
+      "position": [
+        -0.38,
+        0.15,
+        -0.25
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "scale": [
+        0.34883720349981834,
+        0.26315789803903855,
+        0.34883720349981834
+      ]
+    },
+    {
+      "id": "wheel1",
+      "params": {},
+      "part": "l1.vehicle.wheel.solid_tire",
+      "pivot": [
+        0.0,
+        0.1899999976158142,
+        0.0
+      ],
+      "position": [
+        0.38,
+        0.15,
+        -0.25
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "scale": [
+        0.34883720349981834,
+        0.26315789803903855,
+        0.34883720349981834
+      ]
+    },
+    {
+      "id": "wheel2",
+      "params": {},
+      "part": "l1.vehicle.wheel.solid_tire",
+      "pivot": [
+        0.0,
+        0.1899999976158142,
+        0.0
+      ],
+      "position": [
+        -0.38,
+        0.15,
+        0.25
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "scale": [
+        0.34883720349981834,
+        0.26315789803903855,
+        0.34883720349981834
+      ]
+    },
+    {
+      "id": "wheel3",
+      "params": {},
+      "part": "l1.vehicle.wheel.solid_tire",
+      "pivot": [
+        0.0,
+        0.1899999976158142,
+        0.0
+      ],
+      "position": [
+        0.38,
+        0.15,
+        0.25
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "scale": [
+        0.34883720349981834,
+        0.26315789803903855,
+        0.34883720349981834
+      ]
+    },
+    {
+      "id": "mast",
+      "material": "mat.paint",
+      "params": {
+        "palette": {
+          "#E5DCC8": "#E4DDCA"
+        }
+      },
+      "part": "l1.architecture.stair.closed_tread",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.45,
+        -0.15
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.07,
+        2.5000000135465106,
+        0.16666667187024695
+      ]
+    },
+    {
+      "assembly": "l2-robot-sensor-stereo",
+      "id": "sensor",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "pivot": [
+        0.0,
+        0.0,
+        -0.017500005662441254
+      ],
+      "position": [
+        0,
+        0.9500000000000001,
+        -0.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9375000209547584,
+        0.543478251010574,
+        1.0169491463781464
+      ]
+    },
+    {
+      "id": "cargo",
+      "params": {},
+      "part": "l1.interior.drawer.box",
+      "pivot": [
+        0.0,
+        -0.019999999552965164,
+        0.0
+      ],
+      "position": [
+        0,
+        0.62,
+        0.07
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.928571444384906,
+        1.555555558131065,
+        1.1
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l3-3.4",
+    "domain": "robot",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "production": {
+      "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
+      "dimensions_design_m": [
+        1,
+        1.7,
+        1
+      ],
+      "family": "mobile",
+      "features": [
+        "移动底盘",
+        "感知组件",
+        "battery",
+        "stereo",
+        "courier"
+      ],
+      "footprint_m": [
+        1,
+        1
+      ],
+      "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
+      "notes": [],
+      "purpose": "室内配送机器人",
+      "render_contract": "editable nodes and source references retained; no CAD boolean union",
+      "rig": "rigid-hierarchy",
+      "schema": "wx.production-asset/1.0"
+    },
+    "quality": {
+      "approval": "authored; see versioned evidence",
+      "review_scope": "L3-L4",
+      "status": "l3"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 180000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l34_expansion/robot.py",
+      "license": "project-authored",
+      "revision": "3.4.0",
+      "type": "original_production_prefab"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "body__lid",
+        "max": 100,
+        "min": 0,
+        "mode": "rotation",
+        "node": "body.serviceLid",
+        "step": 1,
+        "title": "body · 检修盖开启",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "sensor__pitch",
+        "max": 45,
+        "min": -45,
+        "mode": "rotation",
+        "node": "sensor.sensor",
+        "step": 1,
+        "title": "sensor · 俯仰角",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l3-robot",
+    "units": "metres"
+  },
+  "name": "室内配送机器人",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L3",
+    "robot",
+    "mobile",
+    "courier",
+    "移动底盘",
+    "感知组件",
+    "battery",
+    "stereo",
+    "courier"
+  ],
+  "version": "3.4.0"
+}

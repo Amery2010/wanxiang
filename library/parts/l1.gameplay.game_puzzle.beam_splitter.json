@@ -1,0 +1,1566 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.58
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.49
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.58
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.58
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0.49,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                0.49
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.58
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "光路解谜用棱镜与稳定支架，不含光线追踪行为；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "puzzle",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "光路解谜用棱镜与稳定支架，不含光线追踪行为",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.gameplay.game_puzzle.beam_splitter.webp"
+  },
+  "id": "l1.gameplay.game_puzzle.beam_splitter",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "三角分光晶座",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.58,
+        "maximum": 1.015,
+        "minimum": 0.319,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 0.49,
+        "maximum": 0.8574999999999999,
+        "minimum": 0.2695,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.58,
+        "maximum": 1.015,
+        "minimum": 0.319,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "gameplay",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "gameplay",
+    "family": "game_puzzle",
+    "game_kit": "puzzle",
+    "game_use": "解谜 / 光路 / 符石 / 魔法装置",
+    "profile": "beam_splitter",
+    "purpose": "光路解谜用棱镜与稳定支架，不含光线追踪行为",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#505D64",
+        "faces": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            0
+          ],
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            6,
+            7,
+            0
+          ],
+          [
+            7,
+            8,
+            0
+          ],
+          [
+            8,
+            9,
+            0
+          ],
+          [
+            9,
+            10,
+            0
+          ],
+          [
+            10,
+            11,
+            0
+          ],
+          [
+            11,
+            12,
+            0
+          ],
+          [
+            12,
+            1,
+            0
+          ],
+          [
+            13,
+            14,
+            2,
+            1
+          ],
+          [
+            14,
+            15,
+            3,
+            2
+          ],
+          [
+            15,
+            16,
+            4,
+            3
+          ],
+          [
+            16,
+            17,
+            5,
+            4
+          ],
+          [
+            17,
+            18,
+            6,
+            5
+          ],
+          [
+            18,
+            19,
+            7,
+            6
+          ],
+          [
+            19,
+            20,
+            8,
+            7
+          ],
+          [
+            20,
+            21,
+            9,
+            8
+          ],
+          [
+            21,
+            22,
+            10,
+            9
+          ],
+          [
+            22,
+            23,
+            11,
+            10
+          ],
+          [
+            23,
+            24,
+            12,
+            11
+          ],
+          [
+            24,
+            13,
+            1,
+            12
+          ],
+          [
+            25,
+            26,
+            14,
+            13
+          ],
+          [
+            26,
+            27,
+            15,
+            14
+          ],
+          [
+            27,
+            28,
+            16,
+            15
+          ],
+          [
+            28,
+            29,
+            17,
+            16
+          ],
+          [
+            29,
+            30,
+            18,
+            17
+          ],
+          [
+            30,
+            31,
+            19,
+            18
+          ],
+          [
+            31,
+            32,
+            20,
+            19
+          ],
+          [
+            32,
+            33,
+            21,
+            20
+          ],
+          [
+            33,
+            34,
+            22,
+            21
+          ],
+          [
+            34,
+            35,
+            23,
+            22
+          ],
+          [
+            35,
+            36,
+            24,
+            23
+          ],
+          [
+            36,
+            25,
+            13,
+            24
+          ],
+          [
+            37,
+            26,
+            25
+          ],
+          [
+            37,
+            27,
+            26
+          ],
+          [
+            37,
+            28,
+            27
+          ],
+          [
+            37,
+            29,
+            28
+          ],
+          [
+            37,
+            30,
+            29
+          ],
+          [
+            37,
+            31,
+            30
+          ],
+          [
+            37,
+            32,
+            31
+          ],
+          [
+            37,
+            33,
+            32
+          ],
+          [
+            37,
+            34,
+            33
+          ],
+          [
+            37,
+            35,
+            34
+          ],
+          [
+            37,
+            36,
+            35
+          ],
+          [
+            37,
+            25,
+            36
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.stone",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "beam_splitter_00",
+        "points": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.26,
+            0.0,
+            0.0
+          ],
+          [
+            0.22516660498395408,
+            0.0,
+            0.12999999999999998
+          ],
+          [
+            0.13000000000000003,
+            0.0,
+            0.22516660498395405
+          ],
+          [
+            1.5920408388915593e-17,
+            0.0,
+            0.26
+          ],
+          [
+            -0.12999999999999995,
+            0.0,
+            0.22516660498395408
+          ],
+          [
+            -0.22516660498395408,
+            0.0,
+            0.12999999999999998
+          ],
+          [
+            -0.26,
+            0.0,
+            3.1840816777831187e-17
+          ],
+          [
+            -0.2251666049839541,
+            0.0,
+            -0.12999999999999992
+          ],
+          [
+            -0.13000000000000012,
+            0.0,
+            -0.225166604983954
+          ],
+          [
+            -4.7761225166746774e-17,
+            0.0,
+            -0.26
+          ],
+          [
+            0.13000000000000003,
+            0.0,
+            -0.22516660498395405
+          ],
+          [
+            0.225166604983954,
+            0.0,
+            -0.13000000000000012
+          ],
+          [
+            0.29,
+            0.05,
+            0.0
+          ],
+          [
+            0.2511473670974872,
+            0.05,
+            0.14499999999999996
+          ],
+          [
+            0.14500000000000002,
+            0.05,
+            0.2511473670974872
+          ],
+          [
+            1.775737858763662e-17,
+            0.05,
+            0.29
+          ],
+          [
+            -0.14499999999999993,
+            0.05,
+            0.2511473670974872
+          ],
+          [
+            -0.2511473670974872,
+            0.05,
+            0.14499999999999996
+          ],
+          [
+            -0.29,
+            0.05,
+            3.551475717527324e-17
+          ],
+          [
+            -0.25114736709748725,
+            0.05,
+            -0.1449999999999999
+          ],
+          [
+            -0.14500000000000013,
+            0.05,
+            -0.2511473670974871
+          ],
+          [
+            -5.327213576290986e-17,
+            0.05,
+            -0.29
+          ],
+          [
+            0.14500000000000002,
+            0.05,
+            -0.2511473670974872
+          ],
+          [
+            0.2511473670974871,
+            0.05,
+            -0.14500000000000013
+          ],
+          [
+            0.2,
+            0.17,
+            0.0
+          ],
+          [
+            0.17320508075688776,
+            0.17,
+            0.09999999999999999
+          ],
+          [
+            0.10000000000000003,
+            0.17,
+            0.17320508075688773
+          ],
+          [
+            1.2246467991473533e-17,
+            0.17,
+            0.2
+          ],
+          [
+            -0.09999999999999996,
+            0.17,
+            0.17320508075688776
+          ],
+          [
+            -0.17320508075688776,
+            0.17,
+            0.09999999999999999
+          ],
+          [
+            -0.2,
+            0.17,
+            2.4492935982947065e-17
+          ],
+          [
+            -0.17320508075688779,
+            0.17,
+            -0.09999999999999995
+          ],
+          [
+            -0.10000000000000009,
+            0.17,
+            -0.17320508075688767
+          ],
+          [
+            -3.6739403974420595e-17,
+            0.17,
+            -0.2
+          ],
+          [
+            0.10000000000000003,
+            0.17,
+            -0.17320508075688773
+          ],
+          [
+            0.17320508075688767,
+            0.17,
+            -0.10000000000000009
+          ],
+          [
+            0.0,
+            0.17,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#BE8852",
+        "kind": "loft",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "beam_splitter_01",
+        "rings": [
+          {
+            "c": [
+              -0.17,
+              0.13,
+              0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.12,
+              0.4,
+              0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 4,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        },
+        "twist": 0.7853981633974483
+      },
+      {
+        "color": "#BE8852",
+        "kind": "loft",
+        "material": "mat.metal",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "beam_splitter_02",
+        "rings": [
+          {
+            "c": [
+              0.17,
+              0.13,
+              0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.12,
+              0.4,
+              0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 4,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        },
+        "twist": 0.7853981633974483
+      },
+      {
+        "color": "#60CAD6",
+        "depth": 0.16,
+        "holes": [],
+        "kind": "extrude",
+        "material": "mat.emissive.cyan",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.58
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "beam_splitter_03",
+        "outline": [
+          [
+            -0.15,
+            0.22
+          ],
+          [
+            0.15,
+            0.22
+          ],
+          [
+            0,
+            0.49
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 50
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.58,
+    0.49,
+    0.58
+  ],
+  "source": {
+    "authoring": "tools/game410/puzzle.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "gameplay",
+    "L1-Expansion",
+    "gameplay",
+    "game_puzzle",
+    "beam_splitter",
+    "Game-Expansion-3.10",
+    "puzzle",
+    "机关与魔法"
+  ],
+  "theme": "l1-gameplay",
+  "version": "3.10.0"
+}

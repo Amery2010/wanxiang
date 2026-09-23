@@ -1,0 +1,337 @@
+{
+  "category": "robot",
+  "description": "工具快换法兰末端执行组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.robot.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.robot.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.64,
+        0
+      ],
+      "profile": [
+        0.22,
+        0.22
+      ],
+      "span": 0.22,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-robot-end-tool_flange",
+  "instances": [
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "flange",
+      "params": {},
+      "part": "l1.robot.end.tool_flange",
+      "pivot": [
+        0.0,
+        -0.02250000089406967,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4583333435778819,
+        0.6829268352252115,
+        0.4583333435778819
+      ]
+    },
+    {
+      "id": "body",
+      "params": {},
+      "part": "l1.robot.housing.servo",
+      "pivot": [
+        0.0,
+        -2.7755575615628914e-17,
+        0.0
+      ],
+      "position": [
+        0,
+        0.06,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7142857365867725,
+        0.43243242685946354,
+        1.1666666203075002
+      ]
+    },
+    {
+      "collision": {
+        "type": "none"
+      },
+      "id": "output",
+      "params": {},
+      "part": "l1.robot.end.tool_flange",
+      "pivot": [
+        0.0,
+        -0.02250000089406967,
+        0.0
+      ],
+      "position": [
+        0,
+        0.22,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4583333435778819,
+        0.6829268352252115,
+        0.4583333435778819
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "lock",
+      "params": {},
+      "part": "l1.gameplay.lock.latch",
+      "pivot": [
+        0.059999994933605194,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.15,
+        0.15,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.13461538569549839,
+        0.5999999910593034,
+        0.49999998013178587
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "robot",
+    "functional": {
+      "assembly_order": [
+        "flange",
+        "body",
+        "output",
+        "lock"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.46,
+        0.64,
+        0.34
+      ],
+      "family": "end",
+      "mount_dimensions_m": [
+        0.22,
+        0.22
+      ],
+      "notes": [
+        "刚性开合示例，不具备抓取约束、力反馈、吸附或切割仿真。"
+      ],
+      "purpose": "工具快换法兰末端执行组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "lock"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.robot.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.robot.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.64,
+          0
+        ],
+        "profile": [
+          0.22,
+          0.22
+        ],
+        "span": 0.22,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/robot.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "release",
+        "max": 0.06,
+        "min": 0,
+        "mode": "translation",
+        "node": "lock",
+        "step": 0.01,
+        "title": "快换锁舌",
+        "unit": "m"
+      }
+    ],
+    "theme": "l2-robot",
+    "units": "metres"
+  },
+  "name": "工具快换法兰末端执行组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "robot",
+    "end",
+    "tool_flange",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

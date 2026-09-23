@@ -1,0 +1,5631 @@
+{
+  "anchor": "base",
+  "category": "architecture",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                1.2
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.15
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.12
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                1.2
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            1.15,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.15
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.12
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "涡线栅条芯；可复用的 建筑与模块化结构 语义部件，不包含上层设备行为。",
+  "id": "l1.architecture.railing.scroll",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "涡线栅条芯",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.12,
+        "maximum": 0.21,
+        "minimum": 0.066,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "height": {
+        "default": 1.15,
+        "maximum": 2.0124999999999997,
+        "minimum": 0.6325,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 1.2,
+        "maximum": 2.1,
+        "minimum": 0.66,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "architecture",
+    "repair39": {
+      "audit_id": "l1.architecture.railing.scroll",
+      "commercial_certification": false,
+      "scope": "authored-geometry; current evidence/v3.9.0"
+    },
+    "review_scope": "L1-only",
+    "status": "l1",
+    "visual_review": "pending-or-sampled"
+  },
+  "repair39": {
+    "baseline": "3.8.0",
+    "change": "以连接上下横档的连续S形主栅条和收卷细枝重建涡线，不再重复环饰模板。",
+    "connector_contract": "existing named sockets preserved; contact tests in release evidence",
+    "contracts": {},
+    "legacy_geometry_sha256": "d043b5a3187393556d8068aa081fada298b9c378b7045e305fec7fdb8cba5442",
+    "source_revision": "3.9.0",
+    "stable_public_id": true
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "simple primary silhouette; no redundant LOD"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "examples/l1/architecture.json#l1.architecture.railing.scroll",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "architecture",
+    "family": "railing",
+    "profile": "scroll",
+    "purpose": "涡线栅条芯",
+    "status": "implemented-not-production-certified"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.01,
+            0.528,
+            0.0286,
+            0.033
+          ]
+        },
+        "color": "#566775",
+        "kind": "bevelbox",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.04,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_00",
+        "roundable": false,
+        "size": [
+          1.2,
+          0.065,
+          0.075
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.01,
+            0.528,
+            0.0286,
+            0.033
+          ]
+        },
+        "color": "#566775",
+        "kind": "bevelbox",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.085,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_01",
+        "roundable": false,
+        "size": [
+          1.2,
+          0.065,
+          0.075
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.007,
+            0.022000000000000002,
+            0.4598,
+            0.022000000000000002
+          ]
+        },
+        "color": "#566775",
+        "kind": "bevelbox",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              -0.56,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.56,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_02",
+        "roundable": false,
+        "size": [
+          0.05,
+          1.045,
+          0.05
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.007,
+            0.022000000000000002,
+            0.4598,
+            0.022000000000000002
+          ]
+        },
+        "color": "#566775",
+        "kind": "bevelbox",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.56,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.56,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_03",
+        "roundable": false,
+        "size": [
+          0.05,
+          1.045,
+          0.05
+        ],
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 55
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_04",
+        "rings": [
+          {
+            "c": [
+              -0.36,
+              0.08,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.40309512972234873,
+              0.12397132453345475,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.4242876649977242,
+              0.16407828857533002,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.42759217114246695,
+              0.20107191624943102,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.4170232134729176,
+              0.23570323167956303,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.39659535730541645,
+              0.2687232589895312,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.37032316795630404,
+              0.3008830223031407,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.34222121074192074,
+              0.33293354574419665,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.31630405097860714,
+              0.36562585343650433,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.29658625398270366,
+              0.39971096950386886,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.2870823850705507,
+              0.4359399180700956,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.2918070095584888,
+              0.4750637232589896,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.31477469276285847,
+              0.5178334091943559,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.36,
+              0.565,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.4052253072371416,
+              0.6152799271734183,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.42819299044151116,
+              0.6624465179790622,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.43291761492944925,
+              0.7067592171142467,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.4234137460172963,
+              0.7484774692762858,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.40369594902139283,
+              0.7878607191624944,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.37777878925807923,
+              0.8251684114701867,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.34967683204369593,
+              0.8606599908966772,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.32340464269458347,
+              0.894594902139281,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.3029767865270824,
+              0.9272325898953118,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.29240782885753297,
+              0.9588324988620847,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.29571233500227584,
+              0.989654073736914,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.31690487027765135,
+              1.0199567592171142,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.36,
+              1.05,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_05",
+        "rings": [
+          {
+            "c": [
+              -0.23259134488063857,
+              0.34582701300335794,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.24270002719083938,
+              0.36610912148420993,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.25586929888878546,
+              0.383709313660794,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.27148423940187927,
+              0.3981997103168382,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.28887744262162446,
+              0.409282593810951,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3073551585114524,
+              0.4167951222889834,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3262233938851914,
+              0.42070899350699636,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.34481302672044345,
+              0.4211252290324152,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.36250304854209775,
+              0.4182644219113163,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.37874114020500077,
+              0.41245294717635717,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3930609040321693,
+              0.404105769513474,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4050952150396336,
+              0.3937065915329076,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.41458531049397357,
+              0.38178616591138814,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.421385404375537,
+              0.3688996427919461,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4254627852253562,
+              0.3556038390167925,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.42689352602190656,
+              0.3424352979946689,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.42585409699394516,
+              0.32988995941928384,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.42260932081840086,
+              0.31840517894322257,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.41749723923335286,
+              0.30834473259335643,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4109115662177873,
+              0.2999873134198713,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4032824819546007,
+              0.2935188835815268,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.39505657122465554,
+              0.289029089328891,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3866767282055166,
+              0.28651178505987696,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3785628365450374,
+              0.28586955183827106,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3710939898745292,
+              0.2869219414631832,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3645929455590111,
+              0.28941703504452493,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.35931340642854287,
+              0.2930457802745146,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.35543060539171356,
+              0.2974584687096514,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_06",
+        "rings": [
+          {
+            "c": [
+              -0.23259134488063857,
+              0.764172986996642,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.24270002719083938,
+              0.74389087851579,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.25586929888878546,
+              0.726290686339206,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.27148423940187927,
+              0.7118002896831619,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.28887744262162446,
+              0.7007174061890491,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3073551585114524,
+              0.6932048777110166,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3262233938851914,
+              0.6892910064930037,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.34481302672044345,
+              0.6888747709675848,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.36250304854209775,
+              0.6917355780886838,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.37874114020500077,
+              0.6975470528236429,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3930609040321693,
+              0.7058942304865261,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4050952150396336,
+              0.7162934084670924,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.41458531049397357,
+              0.728213834088612,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.421385404375537,
+              0.741100357208054,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4254627852253562,
+              0.7543961609832075,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.42689352602190656,
+              0.7675647020053312,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.42585409699394516,
+              0.7801100405807162,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.42260932081840086,
+              0.7915948210567775,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.41749723923335286,
+              0.8016552674066436,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4109115662177873,
+              0.8100126865801288,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.4032824819546007,
+              0.8164811164184732,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.39505657122465554,
+              0.820970910671109,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3866767282055166,
+              0.8234882149401231,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3785628365450374,
+              0.824130448161729,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3710939898745292,
+              0.8230780585368168,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.3645929455590111,
+              0.8205829649554751,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.35931340642854287,
+              0.8169542197254854,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.35543060539171356,
+              0.8125415312903486,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_07",
+        "rings": [
+          {
+            "c": [
+              0.0,
+              0.08,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.04309512972234866,
+              0.12397132453345475,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.06428766499772418,
+              0.16407828857533002,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.06759217114246699,
+              0.20107191624943102,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.0570232134729176,
+              0.23570323167956303,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.036595357305416465,
+              0.2687232589895312,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.01032316795630403,
+              0.3008830223031407,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.01777878925807924,
+              0.33293354574419665,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.043695949021392816,
+              0.36562585343650433,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.06341374601729632,
+              0.39971096950386886,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.07291761492944925,
+              0.4359399180700956,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.06819299044151114,
+              0.4750637232589896,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.04522530723714154,
+              0.5178334091943559,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.0,
+              0.565,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.04522530723714157,
+              0.6152799271734183,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.06819299044151116,
+              0.6624465179790622,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.07291761492944925,
+              0.7067592171142467,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.0634137460172963,
+              0.7484774692762858,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.0436959490213928,
+              0.7878607191624944,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              -0.017778789258079186,
+              0.8251684114701867,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.010323167956304086,
+              0.8606599908966772,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.03659535730541648,
+              0.894594902139281,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.05702321347291761,
+              0.9272325898953118,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.06759217114246699,
+              0.9588324988620847,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.06428766499772416,
+              0.989654073736914,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.043095129722348635,
+              1.0199567592171142,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.0,
+              1.05,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_08",
+        "rings": [
+          {
+            "c": [
+              0.12740865511936142,
+              0.34582701300335794,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.11729997280916062,
+              0.36610912148420993,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.10413070111121453,
+              0.383709313660794,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.08851576059812073,
+              0.3981997103168382,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.07112255737837553,
+              0.409282593810951,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.052644841488547575,
+              0.4167951222889834,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.033776606114808566,
+              0.42070899350699636,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.015186973279556535,
+              0.4211252290324152,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0025030485420977563,
+              0.4182644219113163,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.01874114020500077,
+              0.41245294717635717,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.03306090403216931,
+              0.404105769513474,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.045095215039633596,
+              0.3937065915329076,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0545853104939736,
+              0.38178616591138814,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06138540437553701,
+              0.3688996427919461,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06546278522535619,
+              0.3556038390167925,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0668935260219066,
+              0.3424352979946689,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06585409699394516,
+              0.32988995941928384,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06260932081840084,
+              0.31840517894322257,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.05749723923335285,
+              0.30834473259335643,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.050911566217787294,
+              0.2999873134198713,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0432824819546007,
+              0.2935188835815268,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.03505657122465554,
+              0.289029089328891,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.026676728205516614,
+              0.28651178505987696,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.01856283654503744,
+              0.28586955183827106,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.011093989874529182,
+              0.2869219414631832,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.004592945559011106,
+              0.28941703504452493,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.0006865935714570936,
+              0.2930457802745146,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.004569394608286408,
+              0.2974584687096514,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_09",
+        "rings": [
+          {
+            "c": [
+              0.12740865511936142,
+              0.764172986996642,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.11729997280916062,
+              0.74389087851579,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.10413070111121453,
+              0.726290686339206,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.08851576059812073,
+              0.7118002896831619,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.07112255737837553,
+              0.7007174061890491,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.052644841488547575,
+              0.6932048777110166,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.033776606114808566,
+              0.6892910064930037,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.015186973279556535,
+              0.6888747709675848,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0025030485420977563,
+              0.6917355780886838,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.01874114020500077,
+              0.6975470528236429,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.03306090403216931,
+              0.7058942304865261,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.045095215039633596,
+              0.7162934084670924,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0545853104939736,
+              0.728213834088612,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06138540437553701,
+              0.741100357208054,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06546278522535619,
+              0.7543961609832075,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0668935260219066,
+              0.7675647020053312,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06585409699394516,
+              0.7801100405807162,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.06260932081840084,
+              0.7915948210567775,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.05749723923335285,
+              0.8016552674066436,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.050911566217787294,
+              0.8100126865801288,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.0432824819546007,
+              0.8164811164184732,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.03505657122465554,
+              0.820970910671109,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.026676728205516614,
+              0.8234882149401231,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.01856283654503744,
+              0.824130448161729,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.011093989874529182,
+              0.8230780585368168,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              -0.004592945559011106,
+              0.8205829649554751,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.0006865935714570936,
+              0.8169542197254854,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.004569394608286408,
+              0.8125415312903486,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_10",
+        "rings": [
+          {
+            "c": [
+              0.36,
+              0.08,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.3169048702776514,
+              0.12397132453345475,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.2957123350022758,
+              0.16407828857533002,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.29240782885753297,
+              0.20107191624943102,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.3029767865270823,
+              0.23570323167956303,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.32340464269458363,
+              0.2687232589895312,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.349676832043696,
+              0.3008830223031407,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.37777878925807923,
+              0.33293354574419665,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.40369594902139283,
+              0.36562585343650433,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.4234137460172963,
+              0.39971096950386886,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.4329176149294492,
+              0.4359399180700956,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.4281929904415111,
+              0.4750637232589896,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.40522530723714156,
+              0.5178334091943559,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.36,
+              0.565,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.31477469276285847,
+              0.6152799271734183,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.2918070095584888,
+              0.6624465179790622,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.2870823850705507,
+              0.7067592171142467,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.2965862539827036,
+              0.7484774692762858,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.31630405097860725,
+              0.7878607191624944,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.34222121074192086,
+              0.8251684114701867,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.3703231679563041,
+              0.8606599908966772,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.3965953573054165,
+              0.894594902139281,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.4170232134729176,
+              0.9272325898953118,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.42759217114246695,
+              0.9588324988620847,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.4242876649977242,
+              0.989654073736914,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.4030951297223486,
+              1.0199567592171142,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          },
+          {
+            "c": [
+              0.36,
+              1.05,
+              0.0
+            ],
+            "r": [
+              0.022,
+              0.022
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_11",
+        "rings": [
+          {
+            "c": [
+              0.4874086551193614,
+              0.34582701300335794,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4772999728091606,
+              0.36610912148420993,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4641307011112145,
+              0.383709313660794,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4485157605981207,
+              0.3981997103168382,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4311225573783755,
+              0.409282593810951,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4126448414885476,
+              0.4167951222889834,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3937766061148086,
+              0.42070899350699636,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3751869732795565,
+              0.4211252290324152,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3574969514579022,
+              0.4182644219113163,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3412588597949992,
+              0.41245294717635717,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.32693909596783066,
+              0.404105769513474,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3149047849603664,
+              0.3937065915329076,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3054146895060264,
+              0.38178616591138814,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.29861459562446296,
+              0.3688996427919461,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2945372147746438,
+              0.3556038390167925,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2931064739780934,
+              0.3424352979946689,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2941459030060548,
+              0.32988995941928384,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2973906791815991,
+              0.31840517894322257,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3025027607666471,
+              0.30834473259335643,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3090884337822127,
+              0.2999873134198713,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.31671751804539927,
+              0.2935188835815268,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.32494342877534443,
+              0.289029089328891,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3333232717944834,
+              0.28651178505987696,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.34143716345496256,
+              0.28586955183827106,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3489060101254708,
+              0.2869219414631832,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.35540705444098886,
+              0.28941703504452493,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3606865935714571,
+              0.2930457802745146,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3645693946082864,
+              0.2974584687096514,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#849598",
+        "kind": "loft",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  1.2
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.15
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.12
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "scroll_12",
+        "rings": [
+          {
+            "c": [
+              0.4874086551193614,
+              0.764172986996642,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4772999728091606,
+              0.74389087851579,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4641307011112145,
+              0.726290686339206,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4485157605981207,
+              0.7118002896831619,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4311225573783755,
+              0.7007174061890491,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.4126448414885476,
+              0.6932048777110166,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3937766061148086,
+              0.6892910064930037,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3751869732795565,
+              0.6888747709675848,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3574969514579022,
+              0.6917355780886838,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3412588597949992,
+              0.6975470528236429,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.32693909596783066,
+              0.7058942304865261,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3149047849603664,
+              0.7162934084670924,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3054146895060264,
+              0.728213834088612,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.29861459562446296,
+              0.741100357208054,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2945372147746438,
+              0.7543961609832075,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2931064739780934,
+              0.7675647020053312,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2941459030060548,
+              0.7801100405807162,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.2973906791815991,
+              0.7915948210567775,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3025027607666471,
+              0.8016552674066436,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3090884337822127,
+              0.8100126865801288,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.31671751804539927,
+              0.8164811164184732,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.32494342877534443,
+              0.820970910671109,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3333232717944834,
+              0.8234882149401231,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.34143716345496256,
+              0.824130448161729,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3489060101254708,
+              0.8230780585368168,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.35540705444098886,
+              0.8205829649554751,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3606865935714571,
+              0.8169542197254854,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          },
+          {
+            "c": [
+              0.3645693946082864,
+              0.8125415312903486,
+              0
+            ],
+            "r": [
+              0.017,
+              0.017
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    1.2,
+    1.15,
+    0.12
+  ],
+  "source": {
+    "authoring": "tools/repair39/architecture.py",
+    "license": "project-authored",
+    "revision": "3.9.0",
+    "type": "original_structural_lowpoly_rebuild"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "architecture",
+    "L1-Expansion",
+    "architecture",
+    "railing",
+    "scroll",
+    "Advanced-Lowpoly-3.9"
+  ],
+  "theme": "l1-architecture",
+  "version": "3.9.0"
+}

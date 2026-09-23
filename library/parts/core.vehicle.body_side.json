@@ -1,0 +1,1354 @@
+{
+  "anchor": "center",
+  "category": "vehicle",
+  "connectors": [],
+  "description": "",
+  "id": "core.vehicle.body_side",
+  "level": 1,
+  "material": "mat.paint",
+  "name": "汽车侧围 · 真实前后轮拱",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "wheel_radius": {
+        "default": 0.34,
+        "maximum": 0.39,
+        "minimum": 0.29,
+        "step": 0.01,
+        "title": "轮胎半径",
+        "type": "number",
+        "unit": "m"
+      },
+      "wheelbase": {
+        "default": 2.46,
+        "maximum": 2.65,
+        "minimum": 2.25,
+        "step": 0.01,
+        "title": "轴距",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#57778D",
+        "depth": 0.075,
+        "kind": "extrude",
+        "outline": [
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    },
+                    0.63
+                  ]
+                }
+              ]
+            },
+            0.33
+          ],
+          [
+            {
+              "$op": "mul",
+              "args": [
+                -1,
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    },
+                    0.63
+                  ]
+                }
+              ]
+            },
+            0.85
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$op": "mul",
+                          "args": [
+                            0.5,
+                            {
+                              "$param": "wheelbase"
+                            }
+                          ]
+                        },
+                        0.63
+                      ]
+                    }
+                  ]
+                },
+                0.2
+              ]
+            },
+            0.99
+          ],
+          [
+            0.56,
+            0.99
+          ],
+          [
+            {
+              "$op": "sub",
+              "args": [
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    },
+                    0.63
+                  ]
+                },
+                0.18
+              ]
+            },
+            0.86
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                0.63
+              ]
+            },
+            0.68
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                0.63
+              ]
+            },
+            0.33
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "wheel_radius"
+                    },
+                    0.056
+                  ]
+                }
+              ]
+            },
+            0.33
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    1.0
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.0
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.9238795325112867
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.3826834323650898
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.7071067811865476
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.7071067811865475
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.38268343236508984
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.9238795325112867
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    6.123233995736766e-17
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    1.0
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -0.3826834323650897
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.9238795325112867
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -0.7071067811865475
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.7071067811865476
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -0.9238795325112867
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.3826834323650899
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -1.0
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    1.2246467991473532e-16
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "sub",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    0.5,
+                    {
+                      "$param": "wheelbase"
+                    }
+                  ]
+                },
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "wheel_radius"
+                    },
+                    0.056
+                  ]
+                }
+              ]
+            },
+            0.33
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "wheel_radius"
+                    },
+                    0.056
+                  ]
+                }
+              ]
+            },
+            0.33
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    1.0
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.0
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.9238795325112867
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.3826834323650898
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.7071067811865476
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.7071067811865475
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.38268343236508984
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.9238795325112867
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    6.123233995736766e-17
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    1.0
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -0.3826834323650897
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.9238795325112867
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -0.7071067811865475
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.7071067811865476
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -0.9238795325112867
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    0.3826834323650899
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    -1.0
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "add",
+              "args": [
+                {
+                  "$param": "wheel_radius"
+                },
+                {
+                  "$op": "mul",
+                  "args": [
+                    {
+                      "$op": "add",
+                      "args": [
+                        {
+                          "$param": "wheel_radius"
+                        },
+                        0.056
+                      ]
+                    },
+                    1.2246467991473532e-16
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "$op": "sub",
+              "args": [
+                {
+                  "$op": "mul",
+                  "args": [
+                    -1,
+                    {
+                      "$op": "mul",
+                      "args": [
+                        0.5,
+                        {
+                          "$param": "wheelbase"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$op": "add",
+                  "args": [
+                    {
+                      "$param": "wheel_radius"
+                    },
+                    0.056
+                  ]
+                }
+              ]
+            },
+            0.33
+          ]
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    3.74,
+    0.69,
+    0.075
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "vehicle"
+  ],
+  "version": "3.4.0"
+}

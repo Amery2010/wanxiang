@@ -1,0 +1,88 @@
+{
+  "category": "mech",
+  "description": "",
+  "id": "exp-robot-linear_drive",
+  "instances": [
+    {
+      "id": "sleeve",
+      "part": "exp.robot.actuator",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "piston",
+      "part": "exp.robot.piston",
+      "position": [
+        0,
+        0.35,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "robotics",
+    "interfaces": [],
+    "level": 2,
+    "motion_presets": [
+      "exp-robot-linear_drive"
+    ],
+    "quality": {
+      "domain": "robotics",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "stroke",
+        "max": 0.4,
+        "min": 0,
+        "mode": "translation",
+        "node": "piston",
+        "step": 0.01,
+        "title": "行程",
+        "unit": "m"
+      }
+    ],
+    "theme": "robotics",
+    "units": "metres"
+  },
+  "name": "伸缩驱动组件 · 活塞分离节点",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "robotics",
+    "mech",
+    "D-E",
+    "robotics"
+  ],
+  "version": "3.4.0"
+}

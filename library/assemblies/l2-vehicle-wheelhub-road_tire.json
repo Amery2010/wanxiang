@@ -1,0 +1,450 @@
+{
+  "category": "vehicle",
+  "description": "公路胎胎体轮系组件；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.085,
+        0.085
+      ],
+      "span": 0.085,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.48,
+        0
+      ],
+      "profile": [
+        0.085,
+        0.085
+      ],
+      "span": 0.085,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-vehicle-wheelhub-road_tire",
+  "instances": [
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "wheel",
+      "params": {},
+      "part": "l1.vehicle.wheel.road_tire",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6880734110508654,
+        0.5789473756858847,
+        0.6880734110508654
+      ]
+    },
+    {
+      "id": "hub",
+      "params": {},
+      "parent": "wheel",
+      "part": "l1.vehicle.wheel.disc_hub",
+      "pivot": [
+        0.0,
+        0.034999996423721313,
+        0.0
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5781250129221011,
+        1.0,
+        0.5781250129221011
+      ]
+    },
+    {
+      "id": "axle",
+      "params": {},
+      "part": "l1.industry.drive.keyshaft",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0064999982714653015
+      ],
+      "position": [
+        0,
+        0.11,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5666666441493573,
+        0.4666666666666666,
+        0.5214723846291326
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "stud0",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.11,
+        0.26,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.29090909248541214,
+        0.09931034768520731,
+        0.3359128794123803
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "stud1",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.11,
+        0.26,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.29090909248541214,
+        0.09931034768520731,
+        0.3359128794123803
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "stud2",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.26,
+        0.11
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.29090909248541214,
+        0.09931034768520731,
+        0.3359128794123803
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "stud3",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.26,
+        -0.11
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.29090909248541214,
+        0.09931034768520731,
+        0.3359128794123803
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "vehicle",
+    "functional": {
+      "assembly_order": [
+        "wheel",
+        "hub",
+        "axle",
+        "stud0",
+        "stud1",
+        "stud2",
+        "stud3"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.62,
+        0.48,
+        0.62
+      ],
+      "family": "wheelhub",
+      "mount_dimensions_m": [
+        0.085,
+        0.085
+      ],
+      "notes": [],
+      "purpose": "公路胎胎体轮系组件",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "wheel"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.085,
+          0.085
+        ],
+        "span": 0.085,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.48,
+          0
+        ],
+        "profile": [
+          0.085,
+          0.085
+        ],
+        "span": 0.085,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/vehicle.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "spin",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "wheel",
+        "step": 1,
+        "title": "滚动",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-vehicle",
+    "units": "metres"
+  },
+  "name": "公路胎胎体轮系组件",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "vehicle",
+    "wheelhub",
+    "road_tire",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

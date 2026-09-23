@@ -1,0 +1,634 @@
+{
+  "category": "scene",
+  "description": "可编辑主题场景；保存所有对象引用、图层与分区；不含烘焙导航或游戏逻辑。",
+  "id": "l4-factory-warehouse",
+  "instances": [
+    {
+      "id": "ground",
+      "part": "r38.l4-factory-warehouse.ground"
+    },
+    {
+      "assembly": "l3-architecture-building-warehouse",
+      "id": "primary",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        -2.605,
+        0.06,
+        -3.1225
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-vehicle-utility-forklift",
+      "id": "secondary",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        1.5,
+        0.06,
+        1.38
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "back_wall",
+      "part": "r38.l4-factory-warehouse.back_wall"
+    },
+    {
+      "assembly": "l3-props-toolkit-mechanic",
+      "id": "toolbench",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        -6.0,
+        0.06,
+        4.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-interior-storage-tool",
+      "id": "cabinet",
+      "params": {
+        "detail": false
+      },
+      "position": [
+        -8.6,
+        0.06,
+        -5.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-industry-power-switchgear",
+      "id": "distribution",
+      "position": [
+        8.1,
+        0.06,
+        -5.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-props-container-pallet",
+      "id": "stock",
+      "position": [
+        -3.8,
+        0.12,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-props-lamp-street",
+      "id": "light0",
+      "position": [
+        -8.8,
+        0.06,
+        5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-props-lamp-street",
+      "id": "light1",
+      "position": [
+        8.8,
+        0.06,
+        5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "assembly": "l3-character-profession-mechanic",
+      "id": "actor",
+      "position": [
+        -1.0,
+        0.06,
+        1.955974
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "walkway",
+      "part": "r38.l4-factory-warehouse.walkway"
+    },
+    {
+      "id": "loading_apron",
+      "part": "r38.l4-factory-warehouse.loading_apron"
+    },
+    {
+      "id": "dock_ramp",
+      "part": "r38.l4-factory-warehouse.dock_ramp"
+    },
+    {
+      "id": "forklift_lane",
+      "part": "r38.l4-factory-warehouse.forklift_lane"
+    }
+  ],
+  "max_triangles": 400000,
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l4-3.4",
+    "domain": "scene",
+    "level": 4,
+    "quality": {
+      "approval": "editable scene; see evidence",
+      "review_scope": "L3-L4",
+      "status": "l4"
+    },
+    "repair38": {
+      "baseline": "3.7.1",
+      "change": "紧凑布置工位与物料流，按设备工作范围靠拢机器人/工件；分别补齐管线、服务净空、围护、装卸区和可编辑地面标线。",
+      "evidence": "evidence/l4-v3.8.0",
+      "old_root_nodes": [
+        "access_lane",
+        "actor",
+        "back_wall",
+        "cabinet",
+        "distribution",
+        "ground",
+        "light0",
+        "light1",
+        "primary",
+        "safety_mark0",
+        "safety_mark7",
+        "safety_markn7",
+        "secondary",
+        "stock",
+        "toolbench",
+        "wayfinding"
+      ],
+      "problem": "仓库使用普通门庭外观，叉车与仓库之间没有装卸口、月台或可辨认的货区。",
+      "retained_root_nodes": [
+        "actor",
+        "back_wall",
+        "cabinet",
+        "distribution",
+        "ground",
+        "light0",
+        "light1",
+        "primary",
+        "secondary",
+        "stock",
+        "toolbench"
+      ],
+      "visual_status": "see human review ledger; not asserted by authoring code"
+    },
+    "runtime": {
+      "collision": {
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": []
+      },
+      "origin": "site-ground",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 400000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "scene": {
+      "bounds_design": [
+        [
+          -10.0,
+          -0.2,
+          -8.0
+        ],
+        [
+          10.0,
+          15,
+          8.0
+        ]
+      ],
+      "cameras": [
+        {
+          "id": "overview",
+          "position": [
+            17.0,
+            22,
+            15.2
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "edit_contract": "instances own transforms; metadata owns layer and region membership; GLB is derived",
+      "groundY": 0.06,
+      "layers": {
+        "actors": {
+          "label": "角色与生物",
+          "visible": true
+        },
+        "furnishings": {
+          "label": "家具与设备",
+          "visible": true
+        },
+        "ground": {
+          "label": "地形与通路",
+          "visible": true
+        },
+        "nature": {
+          "label": "自然装饰",
+          "visible": true
+        },
+        "props": {
+          "label": "道具",
+          "visible": true
+        },
+        "structures": {
+          "label": "主体构筑物",
+          "visible": true
+        }
+      },
+      "lighting": {
+        "ambient_intent": 0.6,
+        "environment": "studio",
+        "realtime_lights_created": false
+      },
+      "max_objects": 2500,
+      "navigation": "unbaked; consumer must derive navigation and physics from chosen colliders",
+      "objects": {
+        "actor": {
+          "label": "机械师",
+          "layer": "actors",
+          "locked": false,
+          "region": "site"
+        },
+        "back_wall": {
+          "label": "back_wall",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "cabinet": {
+          "label": "工具抽屉柜",
+          "layer": "furnishings",
+          "locked": false,
+          "region": "west"
+        },
+        "distribution": {
+          "label": "开关柜",
+          "layer": "furnishings",
+          "locked": false,
+          "region": "east"
+        },
+        "dock_ramp": {
+          "label": "dock_ramp",
+          "layer": "structures",
+          "locked": false,
+          "region": "site"
+        },
+        "forklift_lane": {
+          "label": "forklift_lane",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "ground": {
+          "label": "ground",
+          "layer": "ground",
+          "locked": true,
+          "region": "site"
+        },
+        "light0": {
+          "label": "单臂路灯",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "light1": {
+          "label": "单臂路灯",
+          "layer": "props",
+          "locked": false,
+          "region": "site"
+        },
+        "loading_apron": {
+          "label": "loading_apron",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        },
+        "primary": {
+          "label": "双跨仓库",
+          "layer": "structures",
+          "locked": false,
+          "region": "west"
+        },
+        "secondary": {
+          "label": "叉车",
+          "layer": "structures",
+          "locked": false,
+          "region": "east"
+        },
+        "stock": {
+          "label": "码放托盘",
+          "layer": "props",
+          "locked": false,
+          "region": "east"
+        },
+        "toolbench": {
+          "label": "维修工具车",
+          "layer": "furnishings",
+          "locked": false,
+          "region": "west"
+        },
+        "walkway": {
+          "label": "walkway",
+          "layer": "ground",
+          "locked": false,
+          "region": "site"
+        }
+      },
+      "regions": {
+        "east": {
+          "label": "东侧副区"
+        },
+        "landscape": {
+          "label": "环境边界"
+        },
+        "site": {
+          "label": "全场地"
+        },
+        "west": {
+          "label": "西侧主区"
+        }
+      },
+      "revision": "3.8.0",
+      "schema": "wx.scene/1.0",
+      "spawn_points": [
+        {
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "id": "visitor",
+          "position": [
+            0,
+            0.06,
+            6.8
+          ]
+        }
+      ],
+      "theme": "factory",
+      "title": "工业厂区 · 装卸仓储",
+      "units": "m"
+    },
+    "source": {
+      "authoring": "tools/repair38/__init__.py",
+      "license": "project-authored",
+      "revision": "3.8.0",
+      "type": "original_editable_scene"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "primary__open",
+        "max": 100,
+        "min": 0,
+        "mode": "rotation",
+        "node": "primary.entrance",
+        "step": 1,
+        "title": "primary · 开门",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "toolbench__tool2__jaw",
+        "max": 25,
+        "min": 0,
+        "mode": "rotation",
+        "node": "toolbench.tool2.opposingHead",
+        "step": 1,
+        "title": "toolbench · tool2 · 剪切张角",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "cabinet__carcase__pull",
+        "max": 0.3,
+        "min": 0,
+        "mode": "translation",
+        "node": "cabinet.carcase.tray",
+        "step": 0.01,
+        "title": "cabinet · carcase · 抽拉行程",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "cabinet__drawer0__pull",
+        "max": 0.3,
+        "min": 0,
+        "mode": "translation",
+        "node": "cabinet.drawer0.drawer",
+        "step": 0.01,
+        "title": "cabinet · drawer0 · 抽出行程",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "cabinet__drawer1__pull",
+        "max": 0.3,
+        "min": 0,
+        "mode": "translation",
+        "node": "cabinet.drawer1.drawer",
+        "step": 0.01,
+        "title": "cabinet · drawer1 · 抽出行程",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "cabinet__drawer2__pull",
+        "max": 0.3,
+        "min": 0,
+        "mode": "translation",
+        "node": "cabinet.drawer2.drawer",
+        "step": 0.01,
+        "title": "cabinet · drawer2 · 抽出行程",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "cabinet__drawer3__pull",
+        "max": 0.3,
+        "min": 0,
+        "mode": "translation",
+        "node": "cabinet.drawer3.drawer",
+        "step": 0.01,
+        "title": "cabinet · drawer3 · 抽出行程",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "cabinet__drawer4__pull",
+        "max": 0.3,
+        "min": 0,
+        "mode": "translation",
+        "node": "cabinet.drawer4.drawer",
+        "step": 0.01,
+        "title": "cabinet · drawer4 · 抽出行程",
+        "unit": "m"
+      },
+      {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "default": 0,
+        "id": "cabinet__drawer5__pull",
+        "max": 0.3,
+        "min": 0,
+        "mode": "translation",
+        "node": "cabinet.drawer5.drawer",
+        "step": 0.01,
+        "title": "cabinet · drawer5 · 抽出行程",
+        "unit": "m"
+      }
+    ],
+    "theme": "l4-factory",
+    "units": "metres"
+  },
+  "name": "工业厂区 · 装卸仓储",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L4",
+    "factory",
+    "warehouse",
+    "editable-scene"
+  ],
+  "version": "3.8.0"
+}

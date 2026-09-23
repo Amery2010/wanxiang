@@ -1,0 +1,181 @@
+{
+  "category": "robot",
+  "description": "",
+  "id": "world-service-robot",
+  "instances": [
+    {
+      "id": "body",
+      "part": "p5.robot.chassis",
+      "position": [
+        0,
+        0.81,
+        0
+      ]
+    },
+    {
+      "id": "head",
+      "part": "p5.robot.sensor",
+      "position": [
+        0,
+        1.08,
+        0.41
+      ],
+      "scale": [
+        1.16,
+        1.16,
+        1.16
+      ]
+    },
+    {
+      "id": "upper0",
+      "part": "p5.robot.upper_leg",
+      "position": [
+        -0.23,
+        0.81,
+        0.34
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ]
+    },
+    {
+      "id": "lower0",
+      "parent": "upper0",
+      "part": "p5.robot.lower_leg",
+      "position": [
+        0.084,
+        -0.38,
+        0.07
+      ]
+    },
+    {
+      "id": "upper1",
+      "part": "p5.robot.upper_leg",
+      "position": [
+        0.23,
+        0.81,
+        0.34
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ]
+    },
+    {
+      "id": "lower1",
+      "parent": "upper1",
+      "part": "p5.robot.lower_leg",
+      "position": [
+        0.084,
+        -0.38,
+        0.07
+      ]
+    },
+    {
+      "id": "upper2",
+      "part": "p5.robot.upper_leg",
+      "position": [
+        -0.23,
+        0.81,
+        -0.34
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ]
+    },
+    {
+      "id": "lower2",
+      "parent": "upper2",
+      "part": "p5.robot.lower_leg",
+      "position": [
+        0.084,
+        -0.38,
+        0.07
+      ]
+    },
+    {
+      "id": "upper3",
+      "part": "p5.robot.upper_leg",
+      "position": [
+        0.23,
+        0.81,
+        -0.34
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ]
+    },
+    {
+      "id": "lower3",
+      "parent": "upper3",
+      "part": "p5.robot.lower_leg",
+      "position": [
+        0.084,
+        -0.38,
+        0.07
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-2.0",
+    "level": 3,
+    "not_physics": true,
+    "quality": {
+      "review_scope": "P5-P6",
+      "status": "worlds"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "head",
+        "max": 90,
+        "min": -90,
+        "node": "head",
+        "title": "服务传感头角度",
+        "unit": "°"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "crouch",
+        "max": 24,
+        "min": 0,
+        "nodes": [
+          "lower0",
+          "lower1",
+          "lower2",
+          "lower3"
+        ],
+        "title": "膝部联动"
+      }
+    ],
+    "theme": "cyber",
+    "units": "metres"
+  },
+  "name": "四足服务机器人 · 真实铰接足与头部云台",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "cyber",
+    "robot"
+  ],
+  "version": "3.4.0"
+}

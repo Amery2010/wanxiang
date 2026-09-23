@@ -1,0 +1,97 @@
+{
+  "name": "@wanxiang/runtime",
+  "version": "3.10.0",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=24.18.0 <25"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/cjs/entries/index.d.ts",
+      "default": "./dist/compat/index.cjs"
+    },
+    "./browser": {
+      "types": "./dist/cjs/entries/globals.d.ts",
+      "default": "./dist/compat/browser.mjs"
+    },
+    "./sources": {
+      "types": "./dist/cjs/entries/sources.d.cts",
+      "default": "./dist/compat/sources.cjs"
+    },
+    "./source-manifest.json": "./dist/compat/source-manifest.json",
+    "./scene-document": {
+      "types": "./dist/cjs/entries/scene-document.d.cts",
+      "default": "./dist/compat/src/scene-document.js"
+    },
+    "./studio-core": {
+      "types": "./dist/cjs/entries/studio-core.d.cts",
+      "default": "./dist/compat/src/studio-core.js"
+    },
+    "./semantic": {
+      "types": "./dist/cjs/entries/semantic.d.cts",
+      "default": "./dist/compat/src/semantic.js"
+    },
+    "./pipeline": {
+      "types": "./dist/cjs/entries/pipeline.d.cts",
+      "default": "./dist/compat/src/pipeline.js"
+    },
+    "./workers/geometry": "./dist/compat/workers/node/geometry.mjs",
+    "./workers/live-geometry": "./dist/compat/workers/node/live_geometry.cjs",
+    "./vendor/*": "./dist/compat/vendor/*",
+    "./src/*": "./dist/compat/src/*",
+    "./package.json": "./package.json",
+    "./studio": {
+      "types": "./dist/cjs/entries/globals.d.ts",
+      "default": "./dist/compat/studio.mjs"
+    },
+    "./types": {
+      "types": "./dist/cjs/src/types.d.ts",
+      "default": "./dist/cjs/src/types.js"
+    },
+    "./modules/*": {
+      "import": {
+        "types": "./dist/esm/src/*.d.ts",
+        "default": "./dist/esm/src/*.js"
+      },
+      "require": {
+        "types": "./dist/cjs/src/*.d.ts",
+        "default": "./dist/cjs/src/*.js"
+      }
+    },
+    "./src/*.js": {
+      "types": "./dist/compat/src/*.d.cts",
+      "default": "./dist/compat/src/*.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "workers",
+    "entries",
+    "source-manifest.json"
+  ],
+  "main": "./dist/compat/index.cjs",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "build": "node scripts/build.mts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src workers entries scripts",
+    "prepack": "pnpm build",
+    "dev": "node scripts/dev.mts",
+    "benchmark": "node scripts/benchmark.mts"
+  },
+  "dependencies": {
+    "three": "0.186.0",
+    "@types/three": "0.186.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.6",
+    "eslint": "10.11.0",
+    "globals": "17.12.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.1",
+    "vite": "8.3.0"
+  },
+  "types": "./dist/cjs/entries/index.d.ts"
+}

@@ -1,0 +1,186 @@
+{
+  "anchor": "base",
+  "category": "arch",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "in",
+      "interface": "arch.floor.1m.v1",
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "position": [
+        0,
+        0,
+        -1.0
+      ],
+      "span": 1.6,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "out",
+      "interface": "arch.floor.1m.v1",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        0,
+        0,
+        1.0
+      ],
+      "span": 1.6,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "",
+  "id": "exp.arch.sewer",
+  "level": 1,
+  "material": "mat.stone",
+  "name": "地下水渠 · 不封闭的槽底",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "architecture",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.7040000000000001,
+            0.0704,
+            0.88
+          ]
+        },
+        "color": "#777E7E",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          -0.08,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          1.6,
+          0.16,
+          2
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.0968,
+            0.374,
+            0.88
+          ]
+        },
+        "color": "#9A9C96",
+        "kind": "bevelbox",
+        "position": [
+          -0.69,
+          0.425,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.22,
+          0.85,
+          2
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.0968,
+            0.374,
+            0.88
+          ]
+        },
+        "color": "#9A9C96",
+        "kind": "bevelbox",
+        "position": [
+          0.69,
+          0.425,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.22,
+          0.85,
+          2
+        ]
+      }
+    ]
+  },
+  "size": [
+    1.6,
+    1.01,
+    2
+  ],
+  "source": {
+    "authoring": "tools/expansion/architecture.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "dungeon",
+    "arch",
+    "D-E",
+    "architecture"
+  ],
+  "theme": "dungeon",
+  "version": "3.4.0"
+}

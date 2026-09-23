@@ -1,0 +1,459 @@
+{
+  "category": "terrain",
+  "description": "两种真实地表剖面与对应接边组成的局部过渡段；不是换色变体。；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.terrain.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        2.4,
+        1.6
+      ],
+      "span": 2.4,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "west",
+      "interface": "l2.terrain.edge.v1",
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "position": [
+        -1.2,
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        0.25
+      ],
+      "span": 1.6,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "east",
+      "interface": "l2.terrain.edge.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        1.2,
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        0.25
+      ],
+      "span": 1.6,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.terrain.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.25,
+        0
+      ],
+      "profile": [
+        2.4,
+        1.6
+      ],
+      "span": 2.4,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-terrain-transition-fractured_path",
+  "instances": [
+    {
+      "id": "sideA",
+      "params": {},
+      "part": "l1.terrain.surface.fractured",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.6,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6,
+        0.3103448365162728,
+        0.8
+      ]
+    },
+    {
+      "id": "sideB",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "part": "l1.terrain.surface.scree",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.6,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6,
+        0.3150385976932978,
+        0.8
+      ]
+    },
+    {
+      "id": "seam",
+      "params": {
+        "detail": {
+          "$param": "detail"
+        }
+      },
+      "part": "l1.terrain.edge.riprap",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.06,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.09,
+        0.22465288516408877,
+        0.8
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "params": {},
+      "part": "l1.architecture.ruin.cracked_slab",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.66,
+        0.17,
+        0.41
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.36,
+        0.2758620769033536,
+        0.44
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "terrain",
+    "functional": {
+      "assembly_order": [
+        "sideA",
+        "sideB",
+        "seam",
+        "detail"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        2.4,
+        0.25,
+        1.6
+      ],
+      "family": "transition",
+      "mount_dimensions_m": [
+        2.4,
+        1.6
+      ],
+      "notes": [],
+      "purpose": "两种真实地表剖面与对应接边组成的局部过渡段；不是换色变体。",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.terrain.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          2.4,
+          1.6
+        ],
+        "span": 2.4,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "west",
+        "interface": "l2.terrain.edge.v1",
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "position": [
+          -1.2,
+          0,
+          0
+        ],
+        "profile": [
+          0,
+          0.25
+        ],
+        "span": 1.6,
+        "tangent": [
+          0,
+          0,
+          1
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "east",
+        "interface": "l2.terrain.edge.v1",
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "position": [
+          1.2,
+          0,
+          0
+        ],
+        "profile": [
+          0,
+          0.25
+        ],
+        "span": 1.6,
+        "tangent": [
+          0,
+          0,
+          1
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.terrain.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.25,
+          0
+        ],
+        "profile": [
+          2.4,
+          1.6
+        ],
+        "span": 2.4,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/terrain.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-terrain",
+    "units": "metres"
+  },
+  "name": "断层接碎石坡过渡拼装块",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "terrain",
+    "transition",
+    "fractured_path",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

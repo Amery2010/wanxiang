@@ -1,0 +1,100 @@
+{
+  "category": "gameplay",
+  "description": "",
+  "id": "exp-game-platform_lift",
+  "instances": [
+    {
+      "id": "guide",
+      "part": "exp.industry.lift_frame",
+      "position": [
+        0,
+        0,
+        -0.7
+      ],
+      "scale": [
+        1.6,
+        1.45,
+        1
+      ]
+    },
+    {
+      "id": "deck",
+      "part": "exp.game.moving_deck",
+      "position": [
+        0,
+        0.22,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "gameplay",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "gameplay",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "interaction": {
+        "authority": "consumer-game",
+        "event": "platform.move",
+        "kind": "platform",
+        "schema": "wx.interaction/1.0",
+        "state_control": "height",
+        "trigger": {
+          "shape": "none"
+        }
+      },
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "height",
+        "max": 2.55,
+        "min": 0,
+        "mode": "translation",
+        "node": "deck",
+        "step": 0.01,
+        "title": "平台高度",
+        "unit": "m"
+      }
+    ],
+    "theme": "gameplay",
+    "units": "metres"
+  },
+  "name": "升降平台 · 导向架与独立地板",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "version": "3.4.0"
+}

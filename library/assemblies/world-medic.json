@@ -1,0 +1,291 @@
+{
+  "category": "body",
+  "description": "",
+  "id": "world-medic",
+  "instances": [
+    {
+      "id": "skin",
+      "params": {
+        "build": {
+          "$param": "build"
+        },
+        "grip": true,
+        "height": {
+          "$param": "height"
+        },
+        "palette": {
+          "#707952": "#707952",
+          "#EFE3CB": "#707952",
+          "#F8F3E7": "#707952"
+        }
+      },
+      "part": "core.human.body",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "head",
+      "params": {
+        "face_width": 0.96,
+        "jaw_width": 0.91
+      },
+      "parent": "skin.rig.head",
+      "part": "core.human.head",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hair",
+      "parent": "skin.rig.head",
+      "part": "w.wear.ponytail",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belt",
+      "part": "core.wear.belt",
+      "position": [
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            0.986,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        0
+      ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$param": "build"
+        }
+      ]
+    },
+    {
+      "id": "hat",
+      "parent": "skin.rig.head",
+      "part": "w.wear.field_helmet",
+      "position": [
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            0.018,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        0
+      ],
+      "scale": [
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outfit",
+      "parent": "skin.rig.chest",
+      "part": "w.wear.tactical_vest",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$param": "build"
+        }
+      ]
+    },
+    {
+      "id": "tool",
+      "parent": "skin.rig.handR",
+      "part": "w.tool.medkit",
+      "position": [
+        0,
+        -0.02,
+        0.025
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "worlds-1.9",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "build": {
+          "default": 1.02,
+          "maximum": 1.18,
+          "minimum": 0.92,
+          "step": 0.01,
+          "title": "体格",
+          "type": "number"
+        },
+        "height": {
+          "default": 1.74,
+          "maximum": 1.98,
+          "minimum": 1.64,
+          "step": 0.01,
+          "title": "身高",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "P3-P4",
+      "status": "worlds"
+    },
+    "theme": "outpost",
+    "units": "metres"
+  },
+  "name": "医疗兵",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Worlds",
+    "outpost",
+    "body"
+  ],
+  "version": "3.4.0"
+}

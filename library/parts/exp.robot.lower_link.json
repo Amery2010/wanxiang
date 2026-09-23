@@ -1,0 +1,209 @@
+{
+  "anchor": "center",
+  "category": "mech",
+  "connectors": [],
+  "description": "",
+  "id": "exp.robot.lower_link",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "机械下连杆 · 锥形闭合截面与检修面",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "robotics",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "radius": 0.11,
+      "segment_end": [
+        0,
+        0.58,
+        0
+      ],
+      "segment_start": [
+        0,
+        0,
+        0
+      ],
+      "type": "capsule"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-joint-pivot",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#E4DEC9",
+        "frame_axis": [
+          0,
+          1,
+          0
+        ],
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.115,
+              0.115
+            ]
+          },
+          {
+            "c": [
+              0,
+              0.18,
+              0
+            ],
+            "r": [
+              0.105,
+              0.095
+            ]
+          },
+          {
+            "c": [
+              0,
+              0.58,
+              0
+            ],
+            "r": [
+              0.075,
+              0.072
+            ]
+          }
+        ],
+        "sides": 8
+      },
+      {
+        "closed_profile": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "profile": [
+          [
+            0.115,
+            -0.075
+          ],
+          [
+            0.115,
+            0.075
+          ],
+          [
+            0.09,
+            0.075
+          ],
+          [
+            0.09,
+            -0.075
+          ]
+        ],
+        "rotation": [
+          0,
+          0,
+          90
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "closed_profile": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "position": [
+          0,
+          0.58,
+          0
+        ],
+        "profile": [
+          [
+            0.085,
+            -0.06
+          ],
+          [
+            0.085,
+            0.06
+          ],
+          [
+            0.061000000000000006,
+            0.06
+          ],
+          [
+            0.061000000000000006,
+            -0.06
+          ]
+        ],
+        "rotation": [
+          0,
+          0,
+          90
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.0374,
+            0.12320000000000002,
+            0.00704
+          ]
+        },
+        "color": "#374348",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0.28,
+          0.1
+        ],
+        "roundable": false,
+        "size": [
+          0.085,
+          0.28,
+          0.016
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.25,
+    0.75,
+    0.25
+  ],
+  "source": {
+    "authoring": "tools/expansion/robotics.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "robotics",
+    "mech",
+    "D-E",
+    "robotics"
+  ],
+  "theme": "robotics",
+  "version": "3.4.0"
+}

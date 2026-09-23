@@ -1,0 +1,154 @@
+{
+  "anchor": "center",
+  "category": "vehicle",
+  "connectors": [
+    {
+      "id": "axle",
+      "interface": "axle.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "contact",
+      "interface": "ground",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        {
+          "$op": "mul",
+          "args": [
+            -1,
+            {
+              "$param": "radius"
+            }
+          ]
+        },
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "",
+  "id": "core.vehicle.wheel",
+  "level": 2,
+  "material": "mat.rubber",
+  "name": "轮组总成 · 胎 / 毂分材质",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "radius": {
+        "default": 0.34,
+        "maximum": 0.5,
+        "minimum": 0.26,
+        "step": 0.01,
+        "title": "轮胎半径",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.22,
+        "maximum": 0.32,
+        "minimum": 0.15,
+        "step": 0.01,
+        "title": "轮胎宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "assistant-review-not-user-approval",
+    "review_scope": "P1-P2",
+    "status": "foundation"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "components": [
+      {
+        "id": "tire",
+        "params": {
+          "radius": {
+            "$param": "radius"
+          },
+          "width": {
+            "$param": "width"
+          }
+        },
+        "part": "core.vehicle.tire",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          90
+        ]
+      },
+      {
+        "id": "hub",
+        "params": {
+          "radius": {
+            "$param": "radius"
+          },
+          "width": {
+            "$param": "width"
+          }
+        },
+        "part": "core.vehicle.hub",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          90
+        ]
+      }
+    ],
+    "forms": []
+  },
+  "size": [
+    0.26,
+    0.69,
+    0.69
+  ],
+  "source": {
+    "authoring": "tools/foundation/",
+    "license": "project-authored",
+    "revision": "1.8.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "vehicle"
+  ],
+  "version": "3.4.0"
+}

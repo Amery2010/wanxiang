@@ -1,0 +1,39 @@
+{
+  "$id": "urn:wanxiang:host-material:1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "type": "string"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "receipt": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "request_hash": {
+      "type": "string"
+    },
+    "schema": {
+      "const": "wx.host-material/1.0"
+    },
+    "status": {
+      "enum": [
+        "waiting_host",
+        "ready"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "status",
+    "request_hash",
+    "prompt"
+  ],
+  "type": "object"
+}

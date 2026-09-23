@@ -1,0 +1,300 @@
+{
+  "anchor": "base",
+  "category": "arch",
+  "connectors": [],
+  "description": "",
+  "id": "w.arch.roof_flat",
+  "level": 2,
+  "material": "mat.plaster",
+  "name": "屋顶盖板 · 女儿墙收边",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 2.8,
+        "maximum": 8,
+        "minimum": 1,
+        "step": 0.1,
+        "title": "屋顶深",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 3.8,
+        "maximum": 8,
+        "minimum": 1,
+        "step": 0.1,
+        "title": "屋顶宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P3-P4",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.018,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            0.0528,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0.06,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "width"
+          },
+          0.12,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.012,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            0.066,
+            0.0374
+          ]
+        },
+        "color": "#EFE3CB",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0.145,
+          {
+            "$op": "mul",
+            "args": [
+              -0.5,
+              {
+                "$op": "sub",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.085
+                ]
+              }
+            ]
+          }
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "width"
+          },
+          0.15,
+          0.085
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.012,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            0.066,
+            0.0374
+          ]
+        },
+        "color": "#EFE3CB",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          0.145,
+          {
+            "$op": "mul",
+            "args": [
+              0.5,
+              {
+                "$op": "sub",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.085
+                ]
+              }
+            ]
+          }
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "width"
+          },
+          0.15,
+          0.085
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.012,
+            0.0374,
+            0.066,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#EFE3CB",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              -0.5,
+              {
+                "$op": "sub",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.085
+                ]
+              }
+            ]
+          },
+          0.145,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.085,
+          0.15,
+          {
+            "$param": "depth"
+          }
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.012,
+            0.0374,
+            0.066,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "depth"
+                }
+              ]
+            }
+          ]
+        },
+        "color": "#EFE3CB",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              0.5,
+              {
+                "$op": "sub",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.085
+                ]
+              }
+            ]
+          },
+          0.145,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.085,
+          0.15,
+          {
+            "$param": "depth"
+          }
+        ]
+      }
+    ]
+  },
+  "size": [
+    3.8,
+    0.23,
+    2.8
+  ],
+  "source": {
+    "authoring": "tools/worlds/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "shared",
+    "arch"
+  ],
+  "theme": "shared",
+  "version": "3.4.0"
+}

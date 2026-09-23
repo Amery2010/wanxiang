@@ -1,0 +1,249 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "checkpoint",
+      "interface": "gameplay.trigger.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "",
+  "id": "exp.game.checkpoint_flag",
+  "level": 1,
+  "material": "mat.fabric",
+  "name": "检查点旗 · 旗杆与弧面旗布",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "gameplay",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "radius": 0.03,
+      "segment_end": [
+        0,
+        2.2,
+        0
+      ],
+      "segment_start": [
+        0,
+        0.08,
+        0
+      ],
+      "type": "capsule"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "interaction": {
+      "authority": "consumer-game",
+      "event": "checkpoint.enter",
+      "kind": "checkpoint",
+      "schema": "wx.interaction/1.0",
+      "trigger": {
+        "center": [
+          0,
+          0.7,
+          0
+        ],
+        "radius": 1,
+        "shape": "sphere"
+      }
+    },
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "cap": true,
+        "color": "#777E7E",
+        "kind": "lathe",
+        "position": [
+          0,
+          0.04,
+          0
+        ],
+        "profile": [
+          [
+            0.25,
+            -0.04
+          ],
+          [
+            0.25,
+            0.04
+          ]
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "color": "#634530",
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0.08,
+              0
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          },
+          {
+            "c": [
+              0,
+              2.2,
+              0
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          }
+        ],
+        "sides": 8
+      },
+      {
+        "color": "#B49858",
+        "detail": 0,
+        "distort": 0,
+        "kind": "ico",
+        "position": [
+          0,
+          2.25,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.09,
+          0.1,
+          0.09
+        ]
+      },
+      {
+        "color": "#367A76",
+        "faces": [
+          [
+            0,
+            1,
+            6,
+            7
+          ],
+          [
+            1,
+            2,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "kind": "poly",
+        "points": [
+          [
+            0,
+            1.4,
+            0
+          ],
+          [
+            0.3,
+            1.45,
+            0.08
+          ],
+          [
+            0.61,
+            1.4,
+            0.06
+          ],
+          [
+            0.89,
+            1.49,
+            -0.03
+          ],
+          [
+            0.89,
+            2.1,
+            -0.03
+          ],
+          [
+            0.61,
+            2.01,
+            0.06
+          ],
+          [
+            0.3,
+            2.1,
+            0.08
+          ],
+          [
+            0,
+            2.04,
+            0
+          ]
+        ],
+        "roundable": false
+      }
+    ]
+  },
+  "size": [
+    1.18,
+    2.31,
+    0.5
+  ],
+  "source": {
+    "authoring": "tools/expansion/gameplay.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "theme": "gameplay",
+  "version": "3.4.0"
+}

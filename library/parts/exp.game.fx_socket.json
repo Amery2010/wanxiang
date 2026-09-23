@@ -1,0 +1,171 @@
+{
+  "anchor": "base",
+  "category": "gameplay",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "emitter",
+      "interface": "fx.emitter.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "编辑器可视代理；运行时按helper_only标记隐藏，不导出模拟粒子。",
+  "id": "exp.game.fx_socket",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "特效定位代理 · 发射方向与标定轴",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "gameplay",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "reason": "decorative, non-solid geometry",
+      "type": "none"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "helper_only": true,
+    "interaction": {
+      "authority": "consumer-game",
+      "event": "fx.emit",
+      "helper_only": true,
+      "kind": "emitter",
+      "schema": "wx.interaction/1.0",
+      "trigger": {
+        "shape": "none"
+      }
+    },
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "closed_profile": true,
+        "color": "#53616A",
+        "kind": "lathe",
+        "profile": [
+          [
+            0.15,
+            -0.006
+          ],
+          [
+            0.15,
+            0.006
+          ],
+          [
+            0.134,
+            0.006
+          ],
+          [
+            0.134,
+            -0.006
+          ]
+        ],
+        "roundable": false,
+        "sides": 12
+      },
+      {
+        "color": "#55D2E5",
+        "kind": "loft",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.009,
+              0.009
+            ]
+          },
+          {
+            "c": [
+              0,
+              0.35,
+              0
+            ],
+            "r": [
+              0.009,
+              0.009
+            ]
+          }
+        ],
+        "sides": 8
+      },
+      {
+        "cap": true,
+        "color": "#55D2E5",
+        "kind": "lathe",
+        "profile": [
+          [
+            0.031,
+            0.27
+          ],
+          [
+            0.004,
+            0.37
+          ]
+        ],
+        "roundable": false,
+        "sides": 8
+      }
+    ]
+  },
+  "size": [
+    0.34,
+    0.39,
+    0.34
+  ],
+  "source": {
+    "authoring": "tools/expansion/gameplay.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "gameplay",
+    "gameplay",
+    "D-E",
+    "gameplay"
+  ],
+  "theme": "gameplay",
+  "version": "3.4.0"
+}

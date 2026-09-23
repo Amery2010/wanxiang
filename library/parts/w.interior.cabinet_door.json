@@ -1,0 +1,249 @@
+{
+  "anchor": "hinge",
+  "category": "interior",
+  "connectors": [],
+  "description": "",
+  "id": "w.interior.cabinet_door",
+  "level": 1,
+  "material": "mat.wood",
+  "name": "柜门 · 左边铰轴与内凹板",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "height": {
+        "default": 0.9,
+        "maximum": 2.1,
+        "minimum": 0.35,
+        "step": 0.01,
+        "title": "门高",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.47,
+        "maximum": 1.2,
+        "minimum": 0.2,
+        "step": 0.01,
+        "title": "门宽",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "P3-P4",
+    "status": "worlds"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.012,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "height"
+                }
+              ]
+            },
+            0.019799999999999998
+          ]
+        },
+        "color": "#A77143",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "height"
+              },
+              0.5
+            ]
+          },
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "width"
+          },
+          {
+            "$param": "height"
+          },
+          0.045
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.01,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "sub",
+                  "args": [
+                    {
+                      "$param": "width"
+                    },
+                    0.08
+                  ]
+                }
+              ]
+            },
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$op": "sub",
+                  "args": [
+                    {
+                      "$param": "height"
+                    },
+                    0.08
+                  ]
+                }
+              ]
+            },
+            0.00704
+          ]
+        },
+        "color": "#C38F55",
+        "kind": "bevelbox",
+        "position": [
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.5
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "height"
+              },
+              0.5
+            ]
+          },
+          0.031
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$op": "sub",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.08
+            ]
+          },
+          {
+            "$op": "sub",
+            "args": [
+              {
+                "$param": "height"
+              },
+              0.08
+            ]
+          },
+          0.016
+        ]
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.005,
+            0.00792,
+            0.066,
+            0.00968
+          ]
+        },
+        "color": "#53616A",
+        "kind": "bevelbox",
+        "material": "mat.metal",
+        "position": [
+          {
+            "$op": "sub",
+            "args": [
+              {
+                "$param": "width"
+              },
+              0.07
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              {
+                "$param": "height"
+              },
+              0.5
+            ]
+          },
+          0.059
+        ],
+        "roundable": false,
+        "size": [
+          0.018,
+          0.15,
+          0.022
+        ]
+      }
+    ]
+  },
+  "size": [
+    0.47,
+    0.9,
+    0.08
+  ],
+  "source": {
+    "authoring": "tools/worlds/",
+    "license": "project-authored",
+    "revision": "1.9.1",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Worlds",
+    "shared",
+    "interior"
+  ],
+  "theme": "shared",
+  "version": "3.4.0"
+}

@@ -1,0 +1,90 @@
+{
+  "category": "vehicle",
+  "description": "",
+  "exports": [
+    {
+      "id": "in",
+      "node": "first",
+      "socket": "in"
+    },
+    {
+      "id": "out",
+      "node": "third",
+      "socket": "out"
+    }
+  ],
+  "id": "exp-transport-rail_run",
+  "instances": [
+    {
+      "id": "first",
+      "part": "exp.transport.rail_straight",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "out",
+        "target": "first"
+      },
+      "id": "second",
+      "part": "exp.transport.rail_straight"
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "in",
+        "socket": "out",
+        "target": "second"
+      },
+      "id": "third",
+      "part": "exp.transport.rail_straight"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "transport",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "transport",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "E",
+    "theme": "rail",
+    "units": "metres"
+  },
+  "name": "标准轨直线组 · 12米接口验证",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "rail",
+    "vehicle",
+    "D-E",
+    "transport"
+  ],
+  "version": "3.4.0"
+}

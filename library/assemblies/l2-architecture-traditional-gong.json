@@ -1,0 +1,394 @@
+{
+  "category": "architecture",
+  "description": "层叠斗栱构件簇；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.architecture.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.34,
+        0.24
+      ],
+      "span": 0.34,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.architecture.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.73,
+        0
+      ],
+      "profile": [
+        0.34,
+        0.24
+      ],
+      "span": 0.34,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-architecture-traditional-gong",
+  "instances": [
+    {
+      "id": "dou",
+      "params": {},
+      "part": "l1.architecture.traditional.dou",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6551724326454649,
+        0.5217391209701511,
+        0.6034482932260861
+      ]
+    },
+    {
+      "id": "gong",
+      "params": {},
+      "part": "l1.architecture.traditional.gong",
+      "pivot": [
+        0.0,
+        0.03999999910593033,
+        0.0
+      ],
+      "position": [
+        0,
+        0.18,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7916666352086609,
+        1.1764706016411832,
+        1.0416666899497316
+      ]
+    },
+    {
+      "id": "headBeam",
+      "params": {},
+      "part": "l1.architecture.traditional.fang",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.57,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7999999682108574,
+        0.32,
+        1.2083333603416886
+      ]
+    },
+    {
+      "id": "seat",
+      "params": {},
+      "part": "l1.architecture.joinery.tenon",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4666666481230002,
+        0.18181817459337668,
+        0.5999999910593034
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "pin0",
+      "params": {},
+      "part": "l1.props.fastener.clevis_pin",
+      "pivot": [
+        0.0,
+        0.0,
+        0.032499998807907104
+      ],
+      "position": [
+        0.28,
+        0.34,
+        0.13
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.31818181990591954,
+        0.11249999952103414,
+        0.2000000034059798
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "pin1",
+      "params": {},
+      "part": "l1.props.fastener.clevis_pin",
+      "pivot": [
+        0.0,
+        0.0,
+        0.032499998807907104
+      ],
+      "position": [
+        -0.28,
+        0.34,
+        0.13
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.31818181990591954,
+        0.11249999952103414,
+        0.2000000034059798
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "architecture",
+    "functional": {
+      "assembly_order": [
+        "dou",
+        "gong",
+        "headBeam",
+        "seat",
+        "pin0",
+        "pin1"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.96,
+        0.73,
+        0.35
+      ],
+      "family": "traditional",
+      "mount_dimensions_m": [
+        0.34,
+        0.24
+      ],
+      "notes": [
+        "传统结构的风格化游戏部件，不宣称古建营造尺度或历史复原。"
+      ],
+      "purpose": "层叠斗栱构件簇",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.architecture.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.34,
+          0.24
+        ],
+        "span": 0.34,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.architecture.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.73,
+          0
+        ],
+        "profile": [
+          0.34,
+          0.24
+        ],
+        "span": 0.34,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/architecture.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-architecture",
+    "units": "metres"
+  },
+  "name": "层叠斗栱构件簇",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "architecture",
+    "traditional",
+    "gong",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

@@ -1,0 +1,359 @@
+{
+  "category": "vehicle",
+  "description": "船用推进叶片船用功能组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.21
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.vehicle.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.74,
+        0
+      ],
+      "profile": [
+        0.18,
+        0.21
+      ],
+      "span": 0.18,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-vehicle-marineunit-propeller",
+  "instances": [
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "boss",
+      "params": {},
+      "part": "l1.industry.drive.coupling",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4687500104773792,
+        0.692307717701388,
+        0.4687500104773792
+      ]
+    },
+    {
+      "id": "blade0",
+      "params": {},
+      "parent": "boss",
+      "part": "l1.vehicle.marine.propeller",
+      "pivot": [
+        0.17733213119208813,
+        0.24180462770164013,
+        -0.033305466175079346
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.2809304085877741,
+        0.13618777869915474,
+        1.5375007813451125
+      ]
+    },
+    {
+      "id": "blade1",
+      "params": {},
+      "parent": "boss",
+      "part": "l1.vehicle.marine.propeller",
+      "pivot": [
+        0.17733213119208813,
+        0.24180462770164013,
+        -0.033305466175079346
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        120,
+        0
+      ],
+      "scale": [
+        0.2809304085877741,
+        0.13618777869915474,
+        1.5375007813451125
+      ]
+    },
+    {
+      "id": "blade2",
+      "params": {},
+      "parent": "boss",
+      "part": "l1.vehicle.marine.propeller",
+      "pivot": [
+        0.17733213119208813,
+        0.24180462770164013,
+        -0.033305466175079346
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        240,
+        0
+      ],
+      "scale": [
+        0.2809304085877741,
+        0.13618777869915474,
+        1.5375007813451125
+      ]
+    },
+    {
+      "id": "shaft",
+      "params": {},
+      "part": "l1.industry.drive.keyshaft",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0064999982714653015
+      ],
+      "position": [
+        0,
+        -0.45,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.43333331611421444,
+        0.7333333333333334,
+        0.3987730000105131
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "vehicle",
+    "functional": {
+      "assembly_order": [
+        "boss",
+        "blade0",
+        "blade1",
+        "blade2",
+        "shaft"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.85,
+        0.74,
+        0.85
+      ],
+      "family": "marineunit",
+      "mount_dimensions_m": [
+        0.18,
+        0.21
+      ],
+      "notes": [],
+      "purpose": "船用推进叶片船用功能组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "boss"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.21
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.vehicle.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.74,
+          0
+        ],
+        "profile": [
+          0.18,
+          0.21
+        ],
+        "span": 0.18,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "No detachable secondary features"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/vehicle.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "spin",
+        "max": 360,
+        "min": 0,
+        "mode": "rotation",
+        "node": "boss",
+        "step": 1,
+        "title": "桨轴转动",
+        "unit": "deg"
+      }
+    ],
+    "theme": "l2-vehicle",
+    "units": "metres"
+  },
+  "name": "船用推进叶片船用功能组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "vehicle",
+    "marineunit",
+    "propeller",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

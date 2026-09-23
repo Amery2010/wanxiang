@@ -1,0 +1,360 @@
+{
+  "category": "props",
+  "description": "盛装壳、可移盖和握持件组成的小型功能模块；无容量或流体仿真。；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.24700000000000003,
+        0.24700000000000003
+      ],
+      "span": 0.24700000000000003,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.45999999999999996,
+        0
+      ],
+      "profile": [
+        0.24700000000000003,
+        0.24700000000000003
+      ],
+      "span": 0.24700000000000003,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-props-closure-goblet",
+  "instances": [
+    {
+      "id": "body",
+      "params": {},
+      "part": "l1.props.vessel.goblet",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.0000000125483464,
+        0.6428571401201949,
+        1.0000000125483464
+      ]
+    },
+    {
+      "collision": {
+        "intent": "rigid moving solid; inspect hollow geometry before physics use",
+        "static_only": false,
+        "type": "convex-hull"
+      },
+      "id": "closure",
+      "params": {},
+      "part": "l1.props.merch.jar_lid",
+      "pivot": [
+        0.0,
+        -0.05000000074505806,
+        0.0
+      ],
+      "position": [
+        0,
+        0.348,
+        0
+      ],
+      "role": "moving_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.192413827414746,
+        0.624999994567285,
+        1.192413827414746
+      ]
+    },
+    {
+      "id": "grip",
+      "params": {},
+      "parent": "closure",
+      "part": "l1.props.handle.knob",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.036,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3458000077292325,
+        0.24999999006589294,
+        0.3458000077292325
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "tag",
+      "params": {},
+      "part": "l1.props.merch.label_tag",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0037499999161809683
+      ],
+      "position": [
+        0.1292,
+        0.2196,
+        0.08360000000000001
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        28,
+        -12
+      ],
+      "scale": [
+        0.49999999787126276,
+        0.43478260080845926,
+        0.7741935377810676
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "props",
+    "functional": {
+      "assembly_order": [
+        "body",
+        "closure",
+        "grip",
+        "tag"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.475,
+        0.45999999999999996,
+        0.38
+      ],
+      "family": "closure",
+      "mount_dimensions_m": [
+        0.24700000000000003,
+        0.24700000000000003
+      ],
+      "notes": [],
+      "purpose": "盛装壳、可移盖和握持件组成的小型功能模块；无容量或流体仿真。",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": [
+        "closure"
+      ]
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.props.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.24700000000000003,
+          0.24700000000000003
+        ],
+        "span": 0.24700000000000003,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.props.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.45999999999999996,
+          0
+        ],
+        "profile": [
+          0.24700000000000003,
+          0.24700000000000003
+        ],
+        "span": 0.24700000000000003,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/props.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "open",
+        "max": 0.13,
+        "min": 0,
+        "mode": "translation",
+        "node": "closure",
+        "step": 0.01,
+        "title": "盖体抬升",
+        "unit": "m"
+      }
+    ],
+    "theme": "l2-props",
+    "units": "metres"
+  },
+  "name": "高脚杯主体盖柄组件",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "props",
+    "closure",
+    "goblet",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}

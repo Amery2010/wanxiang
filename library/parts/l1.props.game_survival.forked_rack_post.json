@@ -1,0 +1,1458 @@
+{
+  "anchor": "base",
+  "category": "props",
+  "connectors": [
+    {
+      "id": "datum.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.4
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.14
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "datum.top",
+      "interface": "surface",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "width"
+                },
+                0.4
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            1.1,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.1
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            0,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "depth"
+                },
+                0.14
+              ]
+            }
+          ]
+        }
+      ],
+      "role": "author-datum; verify mating dimensions before assembly",
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "自然 Y 形承托，可接独立横杆；游戏用外观部件，交互和碰撞由接入引擎实现。",
+  "game_expansion": {
+    "authoring": "procedural-profile",
+    "kit": "survival",
+    "parameter_units": "m",
+    "physics_implemented": false,
+    "primary_role": "自然 Y 形承托，可接独立横杆",
+    "rig_implemented": false,
+    "version": "3.10.0",
+    "visual_evidence": "evidence/v3.10.0/game-models/l1.props.game_survival.forked_rack_post.webp"
+  },
+  "id": "l1.props.game_survival.forked_rack_post",
+  "level": 1,
+  "material": "mat.matte",
+  "name": "晾晒架叉口立柱",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "depth": {
+        "default": 0.14,
+        "maximum": 0.24500000000000002,
+        "minimum": 0.07700000000000001,
+        "step": 0.01,
+        "title": "纵深设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "detail": {
+        "default": true,
+        "title": "轮廓与次级结构细节",
+        "type": "boolean"
+      },
+      "height": {
+        "default": 1.1,
+        "maximum": 1.9250000000000003,
+        "minimum": 0.6050000000000001,
+        "step": 0.01,
+        "title": "竖向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      },
+      "width": {
+        "default": 0.4,
+        "maximum": 0.7000000000000001,
+        "minimum": 0.22000000000000003,
+        "step": 0.01,
+        "title": "横向设计尺寸",
+        "type": "number",
+        "unit": "m"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "not-user-approved",
+    "domain": "props",
+    "review_scope": "game-expansion-3.10",
+    "status": "l1",
+    "visual_review": "see evidence/v3.10.0; no automatic aesthetic rating"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "engine_adapter_required": true,
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": true
+          },
+          "screen_height": 0.2
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": false
+          },
+          "screen_height": 0.05
+        }
+      ],
+      "method": "authored feature removal, not duplicated meshes"
+    },
+    "origin": "authored-base-datum",
+    "schema": "wx.runtime-metadata/1.0",
+    "selection_bounds_are_colliders": false,
+    "triangle_budget": 12000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "semantic": {
+    "assembly_level": 1,
+    "consumer_example": "library/game-expansion.json",
+    "counting": "one functional/structural profile; style, colour, scale and LOD excluded",
+    "datums": "orientation and placement references; generic surface ports are not certified snap joints",
+    "dimension_contract": "metre-space design dimensions; inspect actual bounds in build report",
+    "domain": "props",
+    "family": "game_survival",
+    "game_kit": "survival",
+    "game_use": "生存 / 采集 / 工艺制作",
+    "profile": "forked_rack_post",
+    "purpose": "自然 Y 形承托，可接独立横杆",
+    "status": "implemented; geometry and interface checks, not commercial certification"
+  },
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#A57A4D",
+        "kind": "loft",
+        "material": "mat.wood",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "forked_rack_post_00",
+        "rings": [
+          {
+            "c": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0.063,
+              0.063
+            ]
+          },
+          {
+            "c": [
+              0.015,
+              0.75,
+              0
+            ],
+            "r": [
+              0.045,
+              0.045
+            ]
+          },
+          {
+            "c": [
+              -0.17,
+              1.05,
+              0
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 9,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#A57A4D",
+        "kind": "loft",
+        "material": "mat.wood",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "forked_rack_post_01",
+        "rings": [
+          {
+            "c": [
+              0.015,
+              0.72,
+              0
+            ],
+            "r": [
+              0.045,
+              0.045
+            ]
+          },
+          {
+            "c": [
+              0.2,
+              1.02,
+              0
+            ],
+            "r": [
+              0.025,
+              0.025
+            ]
+          }
+        ],
+        "roundable": false,
+        "sides": 8,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 70
+          }
+        }
+      },
+      {
+        "color": "#865D42",
+        "enabled": {
+          "$param": "detail"
+        },
+        "faces": [
+          [
+            12,
+            13,
+            1,
+            0
+          ],
+          [
+            13,
+            14,
+            2,
+            1
+          ],
+          [
+            14,
+            15,
+            3,
+            2
+          ],
+          [
+            15,
+            16,
+            4,
+            3
+          ],
+          [
+            16,
+            17,
+            5,
+            4
+          ],
+          [
+            17,
+            18,
+            6,
+            5
+          ],
+          [
+            18,
+            19,
+            7,
+            6
+          ],
+          [
+            19,
+            20,
+            8,
+            7
+          ],
+          [
+            20,
+            21,
+            9,
+            8
+          ],
+          [
+            21,
+            22,
+            10,
+            9
+          ],
+          [
+            22,
+            23,
+            11,
+            10
+          ],
+          [
+            23,
+            12,
+            0,
+            11
+          ],
+          [
+            24,
+            25,
+            13,
+            12
+          ],
+          [
+            25,
+            26,
+            14,
+            13
+          ],
+          [
+            26,
+            27,
+            15,
+            14
+          ],
+          [
+            27,
+            28,
+            16,
+            15
+          ],
+          [
+            28,
+            29,
+            17,
+            16
+          ],
+          [
+            29,
+            30,
+            18,
+            17
+          ],
+          [
+            30,
+            31,
+            19,
+            18
+          ],
+          [
+            31,
+            32,
+            20,
+            19
+          ],
+          [
+            32,
+            33,
+            21,
+            20
+          ],
+          [
+            33,
+            34,
+            22,
+            21
+          ],
+          [
+            34,
+            35,
+            23,
+            22
+          ],
+          [
+            35,
+            24,
+            12,
+            23
+          ],
+          [
+            36,
+            37,
+            25,
+            24
+          ],
+          [
+            37,
+            38,
+            26,
+            25
+          ],
+          [
+            38,
+            39,
+            27,
+            26
+          ],
+          [
+            39,
+            40,
+            28,
+            27
+          ],
+          [
+            40,
+            41,
+            29,
+            28
+          ],
+          [
+            41,
+            42,
+            30,
+            29
+          ],
+          [
+            42,
+            43,
+            31,
+            30
+          ],
+          [
+            43,
+            44,
+            32,
+            31
+          ],
+          [
+            44,
+            45,
+            33,
+            32
+          ],
+          [
+            45,
+            46,
+            34,
+            33
+          ],
+          [
+            46,
+            47,
+            35,
+            34
+          ],
+          [
+            47,
+            36,
+            24,
+            35
+          ],
+          [
+            0,
+            1,
+            37,
+            36
+          ],
+          [
+            1,
+            2,
+            38,
+            37
+          ],
+          [
+            2,
+            3,
+            39,
+            38
+          ],
+          [
+            3,
+            4,
+            40,
+            39
+          ],
+          [
+            4,
+            5,
+            41,
+            40
+          ],
+          [
+            5,
+            6,
+            42,
+            41
+          ],
+          [
+            6,
+            7,
+            43,
+            42
+          ],
+          [
+            7,
+            8,
+            44,
+            43
+          ],
+          [
+            8,
+            9,
+            45,
+            44
+          ],
+          [
+            9,
+            10,
+            46,
+            45
+          ],
+          [
+            10,
+            11,
+            47,
+            46
+          ],
+          [
+            11,
+            0,
+            36,
+            47
+          ]
+        ],
+        "kind": "poly",
+        "material": "mat.leather",
+        "matrix": [
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              -0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              1.0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          0,
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "width"
+                  },
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "height"
+                  },
+                  1.1
+                ]
+              }
+            ]
+          },
+          {
+            "$op": "mul",
+            "args": [
+              0,
+              {
+                "$op": "div",
+                "args": [
+                  {
+                    "$param": "depth"
+                  },
+                  0.14
+                ]
+              }
+            ]
+          },
+          1
+        ],
+        "name": "forked_rack_post_02",
+        "points": [
+          [
+            0.053000000000000005,
+            0.63,
+            0.0
+          ],
+          [
+            0.045899346400575254,
+            0.63,
+            0.0265
+          ],
+          [
+            0.02650000000000001,
+            0.63,
+            0.04589934640057525
+          ],
+          [
+            3.2453140177404865e-18,
+            0.63,
+            0.053000000000000005
+          ],
+          [
+            -0.026499999999999992,
+            0.63,
+            0.045899346400575254
+          ],
+          [
+            -0.045899346400575254,
+            0.63,
+            0.0265
+          ],
+          [
+            -0.053000000000000005,
+            0.63,
+            6.490628035480973e-18
+          ],
+          [
+            -0.04589934640057526,
+            0.63,
+            -0.02649999999999999
+          ],
+          [
+            -0.026500000000000027,
+            0.63,
+            -0.04589934640057524
+          ],
+          [
+            -9.735942053221458e-18,
+            0.63,
+            -0.053000000000000005
+          ],
+          [
+            0.02650000000000001,
+            0.63,
+            -0.04589934640057525
+          ],
+          [
+            0.04589934640057524,
+            0.63,
+            -0.026500000000000027
+          ],
+          [
+            0.065,
+            0.63,
+            0.0
+          ],
+          [
+            0.05629165124598852,
+            0.63,
+            0.032499999999999994
+          ],
+          [
+            0.03250000000000001,
+            0.63,
+            0.05629165124598851
+          ],
+          [
+            3.980102097228898e-18,
+            0.63,
+            0.065
+          ],
+          [
+            -0.03249999999999999,
+            0.63,
+            0.05629165124598852
+          ],
+          [
+            -0.05629165124598852,
+            0.63,
+            0.032499999999999994
+          ],
+          [
+            -0.065,
+            0.63,
+            7.960204194457797e-18
+          ],
+          [
+            -0.056291651245988526,
+            0.63,
+            -0.03249999999999998
+          ],
+          [
+            -0.03250000000000003,
+            0.63,
+            -0.0562916512459885
+          ],
+          [
+            -1.1940306291686694e-17,
+            0.63,
+            -0.065
+          ],
+          [
+            0.03250000000000001,
+            0.63,
+            -0.05629165124598851
+          ],
+          [
+            0.0562916512459885,
+            0.63,
+            -0.03250000000000003
+          ],
+          [
+            0.065,
+            0.665,
+            0.0
+          ],
+          [
+            0.05629165124598852,
+            0.665,
+            0.032499999999999994
+          ],
+          [
+            0.03250000000000001,
+            0.665,
+            0.05629165124598851
+          ],
+          [
+            3.980102097228898e-18,
+            0.665,
+            0.065
+          ],
+          [
+            -0.03249999999999999,
+            0.665,
+            0.05629165124598852
+          ],
+          [
+            -0.05629165124598852,
+            0.665,
+            0.032499999999999994
+          ],
+          [
+            -0.065,
+            0.665,
+            7.960204194457797e-18
+          ],
+          [
+            -0.056291651245988526,
+            0.665,
+            -0.03249999999999998
+          ],
+          [
+            -0.03250000000000003,
+            0.665,
+            -0.0562916512459885
+          ],
+          [
+            -1.1940306291686694e-17,
+            0.665,
+            -0.065
+          ],
+          [
+            0.03250000000000001,
+            0.665,
+            -0.05629165124598851
+          ],
+          [
+            0.0562916512459885,
+            0.665,
+            -0.03250000000000003
+          ],
+          [
+            0.053000000000000005,
+            0.665,
+            0.0
+          ],
+          [
+            0.045899346400575254,
+            0.665,
+            0.0265
+          ],
+          [
+            0.02650000000000001,
+            0.665,
+            0.04589934640057525
+          ],
+          [
+            3.2453140177404865e-18,
+            0.665,
+            0.053000000000000005
+          ],
+          [
+            -0.026499999999999992,
+            0.665,
+            0.045899346400575254
+          ],
+          [
+            -0.045899346400575254,
+            0.665,
+            0.0265
+          ],
+          [
+            -0.053000000000000005,
+            0.665,
+            6.490628035480973e-18
+          ],
+          [
+            -0.04589934640057526,
+            0.665,
+            -0.02649999999999999
+          ],
+          [
+            -0.026500000000000027,
+            0.665,
+            -0.04589934640057524
+          ],
+          [
+            -9.735942053221458e-18,
+            0.665,
+            -0.053000000000000005
+          ],
+          [
+            0.02650000000000001,
+            0.665,
+            -0.04589934640057525
+          ],
+          [
+            0.04589934640057524,
+            0.665,
+            -0.026500000000000027
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    0.4,
+    1.1,
+    0.14
+  ],
+  "source": {
+    "authoring": "tools/game410/survival.py",
+    "license": "project-authored",
+    "revision": "3.10.0",
+    "type": "original_game_asset_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Foundation",
+    "props",
+    "L1-Expansion",
+    "props",
+    "game_survival",
+    "forked_rack_post",
+    "Game-Expansion-3.10",
+    "survival",
+    "生存与采集"
+  ],
+  "theme": "l1-props",
+  "version": "3.10.0"
+}

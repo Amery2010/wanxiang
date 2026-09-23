@@ -1,0 +1,278 @@
+{
+  "category": "arch",
+  "description": "",
+  "id": "fnd-wall-kit",
+  "instances": [
+    {
+      "id": "doorWall",
+      "params": {
+        "width": {
+          "$param": "panel_width"
+        }
+      },
+      "part": "core.arch.door_wall",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -0.5,
+            {
+              "$param": "panel_width"
+            }
+          ]
+        },
+        0,
+        0
+      ]
+    },
+    {
+      "id": "windowWall",
+      "params": {
+        "width": {
+          "$param": "panel_width"
+        }
+      },
+      "part": "core.arch.window_wall",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "panel_width"
+            }
+          ]
+        },
+        0,
+        0
+      ]
+    },
+    {
+      "angle": 0,
+      "id": "door",
+      "joint": {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "limits": [
+          -100,
+          0
+        ]
+      },
+      "part": "core.arch.door",
+      "position": [
+        {
+          "$op": "sub",
+          "args": [
+            {
+              "$op": "mul",
+              "args": [
+                -0.5,
+                {
+                  "$param": "panel_width"
+                }
+              ]
+            },
+            0.446
+          ]
+        },
+        0.018,
+        0.043
+      ]
+    },
+    {
+      "assembly": "kit-window",
+      "id": "window",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "panel_width"
+            }
+          ]
+        },
+        0.99,
+        0.035
+      ]
+    },
+    {
+      "id": "header",
+      "params": {
+        "length": {
+          "$op": "mul",
+          "args": [
+            2,
+            {
+              "$param": "panel_width"
+            }
+          ]
+        },
+        "thickness": 0.05,
+        "width": 0.11
+      },
+      "part": "core.props.plank",
+      "position": [
+        0,
+        2.67,
+        0.131
+      ]
+    },
+    {
+      "id": "jambL",
+      "params": {
+        "height": 2.17,
+        "width": 0.08
+      },
+      "part": "core.arch.trim",
+      "position": [
+        {
+          "$op": "add",
+          "args": [
+            {
+              "$op": "mul",
+              "args": [
+                -0.5,
+                {
+                  "$param": "panel_width"
+                }
+              ]
+            },
+            -0.481
+          ]
+        },
+        0,
+        0.115
+      ]
+    },
+    {
+      "id": "jambR",
+      "params": {
+        "height": 2.17,
+        "width": 0.08
+      },
+      "part": "core.arch.trim",
+      "position": [
+        {
+          "$op": "add",
+          "args": [
+            {
+              "$op": "mul",
+              "args": [
+                -0.5,
+                {
+                  "$param": "panel_width"
+                }
+              ]
+            },
+            0.481
+          ]
+        },
+        0,
+        0.115
+      ]
+    },
+    {
+      "id": "lintel",
+      "params": {
+        "height": 0.081,
+        "width": 1.05
+      },
+      "part": "core.arch.trim",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            -0.5,
+            {
+              "$param": "panel_width"
+            }
+          ]
+        },
+        2.1,
+        0.115
+      ]
+    },
+    {
+      "id": "sill",
+      "params": {
+        "length": 1.25,
+        "thickness": 0.049,
+        "width": 0.25
+      },
+      "part": "core.props.plank",
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            0.5,
+            {
+              "$param": "panel_width"
+            }
+          ]
+        },
+        0.97,
+        0.18
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "foundation-1.8",
+    "level": 3,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "panel_width": {
+          "default": 1.75,
+          "maximum": 2.2,
+          "minimum": 1.55,
+          "step": 0.01,
+          "title": "单墙板宽",
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "review_scope": "P1-P2",
+      "status": "foundation"
+    },
+    "state_controls": [
+      {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "default": 0,
+        "id": "door_open",
+        "max": 0,
+        "min": -100,
+        "node": "door",
+        "title": "开门角度",
+        "unit": "°"
+      }
+    ],
+    "units": "metres"
+  },
+  "name": "门窗墙母版 · 真实洞口与门铰链",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Foundation",
+    "arch",
+    "门窗墙母版 · 真实洞口与门铰链"
+  ],
+  "version": "3.4.0"
+}

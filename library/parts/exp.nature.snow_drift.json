@@ -1,0 +1,125 @@
+{
+  "anchor": "base",
+  "category": "nature",
+  "connectors": [],
+  "description": "",
+  "id": "exp.nature.snow_drift",
+  "level": 1,
+  "material": "mat.stone",
+  "name": "雪堆与覆冰体 · 双瓣积雪",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "detail": {
+        "default": 1,
+        "maximum": 1,
+        "minimum": 0,
+        "title": "轮廓精度",
+        "type": "integer"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "review_scope": "A-C",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "source": "visible-geometry",
+      "type": "convex-hull"
+    },
+    "forward": "+Z",
+    "lod": {
+      "levels": [
+        {
+          "level": 0,
+          "parameters": {
+            "detail": 1
+          },
+          "screen_height": 0.15
+        },
+        {
+          "level": 1,
+          "parameters": {
+            "detail": 0
+          },
+          "screen_height": 0.04
+        }
+      ],
+      "method": "authored-silhouette",
+      "preserves_pivot": true
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 3000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#E4EFF0",
+        "detail": {
+          "$param": "detail"
+        },
+        "distort": 0.05,
+        "kind": "ico",
+        "position": [
+          0,
+          0.25,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          2.3,
+          0.8,
+          1.6
+        ]
+      },
+      {
+        "color": "#E4EFF0",
+        "detail": {
+          "$param": "detail"
+        },
+        "distort": 0.025,
+        "kind": "ico",
+        "position": [
+          0.6,
+          0.22,
+          0.25
+        ],
+        "roundable": false,
+        "size": [
+          1.3,
+          0.6,
+          1.25
+        ]
+      }
+    ]
+  },
+  "size": [
+    2.8,
+    0.9,
+    2.0
+  ],
+  "source": {
+    "authoring": "tools/expansion/",
+    "license": "project-authored",
+    "revision": "2.2.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "snow",
+    "nature",
+    "雪堆",
+    "浮冰"
+  ],
+  "theme": "snow",
+  "version": "3.4.0"
+}

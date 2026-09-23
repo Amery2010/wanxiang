@@ -1,0 +1,160 @@
+{
+  "anchor": "center",
+  "category": "mech",
+  "connectors": [],
+  "description": "",
+  "id": "exp.robot.finger",
+  "level": 1,
+  "material": "mat.metal",
+  "name": "弯指夹爪叶片 · 末端软接触垫",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "robotics",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "source": "finger geometry",
+      "type": "convex-hull"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-joint-pivot",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#53616A",
+        "depth": 0.075,
+        "kind": "extrude",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            0.095,
+            0
+          ],
+          [
+            0.095,
+            0.26
+          ],
+          [
+            -0.012,
+            0.39
+          ],
+          [
+            -0.072,
+            0.39
+          ],
+          [
+            -0.072,
+            0.32
+          ],
+          [
+            0.016,
+            0.22
+          ],
+          [
+            0.016,
+            0.095
+          ],
+          [
+            0,
+            0.095
+          ]
+        ],
+        "roundable": false
+      },
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            0.0132,
+            0.0484,
+            0.0352
+          ]
+        },
+        "color": "#374348",
+        "kind": "bevelbox",
+        "position": [
+          -0.073,
+          0.335,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          0.03,
+          0.11,
+          0.08
+        ]
+      },
+      {
+        "cap": true,
+        "color": "#DEA842",
+        "kind": "lathe",
+        "position": [
+          0,
+          0.028,
+          0
+        ],
+        "profile": [
+          [
+            0.06,
+            -0.055
+          ],
+          [
+            0.06,
+            0.055
+          ]
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ],
+        "roundable": false,
+        "sides": 10
+      }
+    ]
+  },
+  "size": [
+    0.18,
+    0.4,
+    0.12
+  ],
+  "source": {
+    "authoring": "tools/expansion/robotics.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "robotics",
+    "mech",
+    "D-E",
+    "robotics"
+  ],
+  "theme": "robotics",
+  "version": "3.4.0"
+}

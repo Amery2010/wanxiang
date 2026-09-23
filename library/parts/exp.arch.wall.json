@@ -1,0 +1,184 @@
+{
+  "anchor": "base",
+  "category": "arch",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "west",
+      "interface": "arch.wall.1m.v1",
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            {
+              "$param": "width"
+            },
+            -0.5
+          ]
+        },
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        3
+      ],
+      "span": 0.24,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "east",
+      "interface": "arch.wall.1m.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        {
+          "$op": "mul",
+          "args": [
+            {
+              "$param": "width"
+            },
+            0.5
+          ]
+        },
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        3
+      ],
+      "span": 0.24,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "",
+  "id": "exp.arch.wall",
+  "level": 1,
+  "material": "mat.plaster",
+  "name": "模块墙段 · 1/2/4米同源",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "width": {
+        "default": 2,
+        "enum": [
+          1,
+          2,
+          4
+        ],
+        "title": "墙宽（米）",
+        "type": "number"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "approval": "development-review-not-user-approval",
+    "domain": "architecture",
+    "review_scope": "D-E",
+    "status": "expansion"
+  },
+  "runtime": {
+    "collision": {
+      "source": "parameter-resolved wall",
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "coordinate_contract": "metres, Y-up, Z-forward; no implicit normalization",
+    "forward": "+Z",
+    "lod": {
+      "levels": [],
+      "reason": "small asset: LOD disabled"
+    },
+    "origin": "authored-ground-contact",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 5000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "bevel": {
+          "$op": "min",
+          "args": [
+            0.015,
+            {
+              "$op": "mul",
+              "args": [
+                0.44,
+                {
+                  "$param": "width"
+                }
+              ]
+            },
+            1.32,
+            0.1056
+          ]
+        },
+        "color": "#E4D4B4",
+        "kind": "bevelbox",
+        "position": [
+          0,
+          1.5,
+          0
+        ],
+        "roundable": false,
+        "size": [
+          {
+            "$param": "width"
+          },
+          3,
+          0.24
+        ]
+      }
+    ]
+  },
+  "size": [
+    2,
+    3,
+    0.24
+  ],
+  "source": {
+    "authoring": "tools/expansion/architecture.py",
+    "license": "project-authored",
+    "revision": "3.0.0",
+    "type": "original_authored_modular_profiles"
+  },
+  "status": "implemented",
+  "tags": [
+    "Expansion",
+    "medieval",
+    "arch",
+    "D-E",
+    "architecture"
+  ],
+  "theme": "medieval",
+  "version": "3.4.0"
+}

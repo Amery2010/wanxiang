@@ -1,0 +1,90 @@
+{
+  "category": "arch",
+  "description": "",
+  "exports": [
+    {
+      "id": "west",
+      "node": "left",
+      "socket": "west"
+    },
+    {
+      "id": "east",
+      "node": "right",
+      "socket": "east"
+    }
+  ],
+  "id": "exp-arch-wall_run",
+  "instances": [
+    {
+      "id": "left",
+      "part": "exp.arch.wall",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "west",
+        "socket": "east",
+        "target": "left"
+      },
+      "id": "middle",
+      "part": "exp.arch.wall"
+    },
+    {
+      "attach": {
+        "mode": "opposed",
+        "own": "west",
+        "socket": "east",
+        "target": "middle"
+      },
+      "id": "right",
+      "part": "exp.arch.wall"
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "expansion-3.0",
+    "domain": "architecture",
+    "interfaces": [],
+    "level": 2,
+    "quality": {
+      "domain": "architecture",
+      "review_scope": "D-E",
+      "status": "expansion"
+    },
+    "runtime": {
+      "collision": {
+        "source": "authored child collider recipes",
+        "type": "children"
+      },
+      "forward": "+Z",
+      "lod": {
+        "levels": [],
+        "reason": "small asset: LOD disabled"
+      },
+      "origin": "authored-ground-contact",
+      "schema": "wx.runtime-metadata/1.0",
+      "triangle_budget": 25000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "stage": "D",
+    "theme": "medieval",
+    "units": "metres"
+  },
+  "name": "可拼接立面 · 三段真实吸附",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "Expansion",
+    "medieval",
+    "arch",
+    "D-E",
+    "architecture"
+  ],
+  "version": "3.4.0"
+}

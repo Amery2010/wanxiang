@@ -1,0 +1,394 @@
+{
+  "category": "mechanism",
+  "description": "端子底座导轨接线组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "exports": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "mount",
+      "interface": "l2.industry.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.58,
+        0.16
+      ],
+      "span": 0.58,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "service",
+      "interface": "l2.industry.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.46,
+        0
+      ],
+      "profile": [
+        0.58,
+        0.16
+      ],
+      "span": 0.58,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    }
+  ],
+  "id": "l2-industry-electric-terminal",
+  "instances": [
+    {
+      "id": "rail",
+      "params": {},
+      "part": "l1.architecture.floor.plank",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5499999781449645,
+        0.7999999880790712,
+        0.19999999205271435
+      ]
+    },
+    {
+      "id": "unit",
+      "params": {},
+      "part": "l1.industry.power.terminal",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0.08,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.68,
+        1.8999999716877942,
+        0.791666684361796
+      ]
+    },
+    {
+      "id": "terminalA",
+      "params": {},
+      "part": "l1.industry.power.terminal",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.24,
+        0.08,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.32,
+        0.3499999947845937,
+        0.5000000111758711
+      ]
+    },
+    {
+      "id": "terminalB",
+      "params": {},
+      "part": "l1.industry.power.terminal",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.24,
+        0.08,
+        0
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.32,
+        0.3499999947845937,
+        0.5000000111758711
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix0",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        -0.28,
+        0.03,
+        0.1
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.22727272850422822,
+        0.07758620912906822,
+        0.2624319370409221
+      ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "fix1",
+      "params": {},
+      "part": "l1.props.fastener.hex_bolt",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0.28,
+        0.03,
+        0.1
+      ],
+      "role": "functional_subpart",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.22727272850422822,
+        0.07758620912906822,
+        0.2624319370409221
+      ]
+    }
+  ],
+  "metadata": {
+    "art_direction": "designed-faceted-surfaces",
+    "collection": "l2-3.2",
+    "domain": "industry",
+    "functional": {
+      "assembly_order": [
+        "rail",
+        "unit",
+        "terminalA",
+        "terminalB",
+        "fix0",
+        "fix1"
+      ],
+      "consumer_responsibility": "Mount frame and rigid state only; physics, gameplay and rigging belong to consumer",
+      "counting": "One functional module; style, material, scale, handedness and LOD are not new assets",
+      "dimensions_m": [
+        0.7,
+        0.46,
+        0.24
+      ],
+      "family": "electric",
+      "mount_dimensions_m": [
+        0.58,
+        0.16
+      ],
+      "notes": [
+        "纯外观接线结构，无带电模拟，无电气额定值。"
+      ],
+      "purpose": "端子底座导轨接线组",
+      "schema": "wx.functional-assembly/1.0",
+      "serviceable_nodes": []
+    },
+    "interfaces": [
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "mount",
+        "interface": "l2.industry.mount.v1",
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "profile": [
+          0.58,
+          0.16
+        ],
+        "span": 0.58,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      },
+      {
+        "allowed_scale": "none",
+        "gender": "neutral",
+        "id": "service",
+        "interface": "l2.industry.mount.v1",
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "position": [
+          0,
+          0.46,
+          0
+        ],
+        "profile": [
+          0.58,
+          0.16
+        ],
+        "span": 0.58,
+        "tangent": [
+          1,
+          0,
+          0
+        ],
+        "tolerance": 0.0001,
+        "units": "m",
+        "version": 1
+      }
+    ],
+    "level": 2,
+    "parameter_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "default": true,
+          "title": "轮廓与次级结构细节",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "parameters": {},
+    "quality": {
+      "approval": "implemented; not external production certification",
+      "review_scope": "L2",
+      "status": "l2"
+    },
+    "runtime": {
+      "collision": {
+        "source": "L1 collider recipes; moving-node overrides explicit",
+        "type": "children"
+      },
+      "engine_adapter_required": true,
+      "forward": "+Z",
+      "lod": {
+        "levels": [
+          {
+            "level": 0,
+            "parameters": {
+              "detail": true
+            },
+            "screen_height": 0.2
+          },
+          {
+            "level": 1,
+            "parameters": {
+              "detail": false
+            },
+            "screen_height": 0.05
+          }
+        ],
+        "method": "authored feature removal, not duplicated meshes"
+      },
+      "origin": "authored-functional-mount",
+      "schema": "wx.runtime-metadata/1.0",
+      "selection_bounds_are_colliders": false,
+      "triangle_budget": 95000,
+      "units": "m",
+      "up": "+Y"
+    },
+    "source": {
+      "authoring": "tools/l2_expansion/industry.py",
+      "license": "project-authored",
+      "revision": "3.2.0",
+      "type": "original_functional_recipe"
+    },
+    "source_bounds": "authoring/l1-bounds.json",
+    "state_controls": [],
+    "theme": "l2-industry",
+    "units": "metres"
+  },
+  "name": "端子底座导轨接线组",
+  "schema": "wx.assembly/1.0",
+  "style": "lowpoly",
+  "tags": [
+    "L2-Expansion",
+    "industry",
+    "electric",
+    "terminal",
+    "functional-subassembly"
+  ],
+  "version": "3.4.0"
+}
