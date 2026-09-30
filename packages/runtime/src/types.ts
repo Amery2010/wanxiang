@@ -131,6 +131,7 @@ export interface RuntimeMetadata extends Record<string, unknown> {
 }
 /** Consumed fields are typed; untouched author extensions stay opaque. */
 export interface RuntimeSpec extends Record<string, unknown> {
+  internal?: boolean;
   id?: string;
   schema?: string;
   name?: string;

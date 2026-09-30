@@ -100,39 +100,39 @@
       "part": "l1.vehicle.aero.flap",
       "pivot": [
         0.5,
-        0.02000000048428774,
+        0.019999999552965164,
         -0.15000000596046448
       ],
       "position": [
         0.22,
-        0.055,
-        0.27
+        0.06998879837764013,
+        0.11521217650037599
       ],
       "role": "moving_subpart",
       "rotation": [
         0,
-        0,
+        14.039183032871826,
         0
       ],
       "scale": [
-        0.7,
-        0.3500000013038516,
-        0.4776119284014791
+        0.5199999809265137,
+        0.12999999523162842,
+        0.43283578753471375
       ]
     },
     {
       "id": "hingeL",
       "params": {},
-      "part": "l1.interior.fixture.hinge_leaf",
+      "part": "a411.l2-vehicle-flightmodule-wing.remaining__hingeL",
       "pivot": [
-        0.047999998554587364,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
-        -0.02,
-        0.035,
-        0.24
+        0,
+        0,
+        0
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -141,24 +141,24 @@
         0
       ],
       "scale": [
-        0.24305555973069776,
-        0.15555554937433339,
-        1.3143277698304345
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "hingeR",
       "params": {},
-      "part": "l1.interior.fixture.hinge_leaf",
+      "part": "a411.l2-vehicle-flightmodule-wing.remaining__hingeR",
       "pivot": [
-        0.047999998554587364,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
-        0.46,
-        0.035,
-        0.24
+        0,
+        0,
+        0
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -167,9 +167,9 @@
         0
       ],
       "scale": [
-        0.24305555973069776,
-        0.15555554937433339,
-        1.3143277698304345
+        1,
+        1,
+        1
       ]
     }
   ],
@@ -266,10 +266,49 @@
       }
     ],
     "level": 2,
+    "motion_design_migration": {
+      "new_world_frame": {
+        "position": [
+          0.22,
+          0.06998879837764013,
+          0.11521217650037599
+        ],
+        "rotation": [
+          0,
+          14.039183032871826,
+          0
+        ]
+      },
+      "node": "control",
+      "old_world_frame": {
+        "position": [
+          0.22,
+          0.055,
+          0.27
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "preserved": [
+        "root/export mounting interfaces",
+        "local X hinge axis",
+        "deflect -15..25 range",
+        "clip names/targets/time and numeric samples"
+      ],
+      "reason": "Approved correction: template hinge was suspended 0.10-0.44m away from the actual swept trailing edge."
+    },
     "quality": {
       "approval": "implemented; not external production certification",
       "review_scope": "L2",
       "status": "l2"
+    },
+    "remodel_closure": {
+      "before_sha256": "88d6d56fc498519ad832caffd401206c3a133ced96bed2464ab94bf292d3c2e2",
+      "change": "Align the actual control-surface leading edge to its preserved local X hinge axis, including the documented swept-edge frame migrations, keep its thin airfoil profile, and connect each fixed hinge bearing to the measured wing surface instead of floating a template support.",
+      "visual_status": "pending-actual-six-view-review"
     },
     "runtime": {
       "collision": {
@@ -290,9 +329,9 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l2_expansion/vehicle.py",
+      "authoring": "tools/aesthetic411/remaining_l2.py",
       "license": "project-authored",
-      "revision": "3.2.0",
+      "revision": "3.11.0",
       "type": "original_functional_recipe"
     },
     "source_bounds": "authoring/l1-bounds.json",
@@ -327,5 +366,5 @@
     "wing",
     "functional-subassembly"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

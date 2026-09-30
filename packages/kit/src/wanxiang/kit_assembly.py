@@ -73,7 +73,7 @@ def expanded_instances(instances):
 
 
 class Assembler:
-    def __init__(self,style='lowpoly',max_nodes=10000,max_triangles=400000):
+    def __init__(self,style='lowpoly',max_nodes=10000,max_triangles=500000):
         if style not in STYLES:raise WXError('RECIPE_INVALID','Unknown kit style')
         self.style=style;self.cache={};self.max_nodes=max_nodes;self.max_triangles=max_triangles;self.cache_hits=0
     def part(self,id,style,params=None,material=None):
@@ -87,8 +87,9 @@ class Assembler:
         from .contracts import validate_runtime
         validate_runtime(spec.get('metadata',{}).get('runtime',{}))
         if not isinstance(spec,dict) or spec.get('schema')!='wx.assembly/1.0':raise WXError('RECIPE_INVALID','Expected wx.assembly/1.0')
-        allowed={'schema','id','name','version','category','tags','description','instances','exports','style','max_triangles','metadata'}
+        allowed={'schema','id','name','version','category','tags','description','instances','exports','style','max_triangles','metadata','internal'}
         if set(spec)-allowed:raise WXError('RECIPE_INVALID',f'Unknown assembly fields: {set(spec)-allowed}')
+        if 'internal' in spec and not isinstance(spec['internal'],bool):raise WXError('RECIPE_INVALID','Assembly internal flag must be boolean')
         id=safe_id(spec['id'])
         if id in stack or len(stack)>12:raise WXError('RECIPE_INVALID','Recursive/cyclic assembly')
         style=spec.get('style',self.style)
@@ -212,7 +213,7 @@ class Assembler:
         if not any(s['id']=='mount' for s in a.sockets):
             a.socket('mount','root',[0,0,0],[0,-1,0],'surface');a.sockets[-1]['tangent']=[1,0,0]
         triangles=sum(len(a.meshes[n['mesh']].faces) for n in a.nodes if n.get('mesh'))
-        if triangles>min(self.max_triangles,spec.get('max_triangles',self.max_triangles)):raise WXError('BUDGET_EXCEEDED','Expanded triangle budget exceeded')
+        if triangles>min(self.max_triangles,spec.get('max_triangles',400000)):raise WXError('BUDGET_EXCEEDED','Expanded triangle budget exceeded')
         # Evaluate mates after hierarchy construction. Offset/joint effects are recorded.
         worlds=a.world_matrices()
         for j in attachments:

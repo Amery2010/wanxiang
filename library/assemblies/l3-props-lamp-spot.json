@@ -1,6 +1,6 @@
 {
   "category": "props",
-  "description": "检修射灯；基座与支架 / 独立发光材质 / reflector / spot",
+  "description": "检修灯前向反光灯头与双侧转轴支架。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -25,93 +25,126 @@
       "tolerance": 0.0001,
       "units": "m",
       "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "frame_node": "stand",
+      "gender": "neutral",
+      "id": "light0.mount",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "position": [
+        0,
+        0.47,
+        -0.13
+      ],
+      "profile": [
+        0.24,
+        0.24
+      ],
+      "span": 0.24,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "frame_node": "stand",
+      "gender": "neutral",
+      "id": "light0.service",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        0,
+        0.47,
+        0.07
+      ],
+      "profile": [
+        0.42,
+        0.42
+      ],
+      "span": 0.42,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
     }
   ],
   "id": "l3-props-lamp-spot",
   "instances": [
     {
-      "id": "base",
-      "params": {},
-      "part": "l1.props.lamp.lamp_base",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.8,
-        0.6666666401757145,
-        0.8
-      ]
+      "id": "stand",
+      "part": "a411.l3-props-lamp-spot.stand"
     },
     {
-      "id": "stem",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#64747D"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0.08,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.06,
-        4.0909091130761075,
-        0.1428571473173545
-      ]
-    },
-    {
-      "assembly": "l2-props-luminaire-reflector",
-      "id": "light0",
-      "pivot": [
-        0.0,
-        -0.05999999865889549,
-        0.0
-      ],
-      "position": [
-        0.0,
-        0.9,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.7499999888241292,
-        0.9090909217137938,
-        0.7499999888241292
-      ]
+      "id": "detail",
+      "part": "a411.l3-props-lamp-spot.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "d44350ec2c6c52dce7acfa5bf63e5c6fb2bb64aebb6c00cefbc8f3109acf78d7",
+      "change": "检修灯前向反光灯头与双侧转轴支架。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
+    "aesthetic411_socket_compat": {
+      "aliases": {},
+      "authoring": "tools/aesthetic411/remaining_l3_socket_compat.py",
+      "dimensions_migrated_to_actual_carrier": true,
+      "geometry_unchanged": true,
+      "local_motion_unchanged": true,
+      "original_interface_type_and_version_preserved": true,
+      "original_interface_version_dimensions_preserved": false,
+      "restored_paths": [
+        "light0.mount",
+        "light0.service"
+      ],
+      "six_real_light_units_restored": false,
+      "world_frames_migrated_to_current_geometry": true
+    },
+    "aesthetic411_socket_dimensions": {
+      "all_positions_are_local_to_declared_real_carrier": true,
+      "authoring": "tools/aesthetic411/remaining_l3_socket_dimensions.py",
+      "changed_fields": {
+        "light0.mount": [
+          "span",
+          "profile"
+        ],
+        "light0.service": [
+          "span",
+          "profile"
+        ]
+      },
+      "geometry_and_motion_unchanged": true,
+      "legacy_nominal_l2_frames_unchanged": true,
+      "semantics": {
+        "light0.mount": "反光灯头封闭后盘名义直径240mm",
+        "light0.service": "反光灯头前环口外径420mm，内径360mm；中心为开放检修口，不以中心到环边的距离误判浮空"
+      }
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "props",
@@ -165,10 +198,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/props.py",
+      "authoring": "tools/aesthetic411/remaining_l3_props.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-props",
@@ -187,5 +220,5 @@
     "reflector",
     "spot"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

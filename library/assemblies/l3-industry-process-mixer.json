@@ -1,6 +1,6 @@
 {
   "category": "mechanism",
-  "description": "立式混合机；整体撬装底座 / 主处理机构 / 可拆管路 / agitator / cap",
+  "description": "立式混合机：开口厚边搅拌桶、双侧承桥与落座电机，真实轴穿过承桥进入桶内并连接双层桨叶，排料管从桶壁连续导出。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -31,14 +31,32 @@
   "instances": [
     {
       "id": "frame",
-      "part": "r37.l3-industry-process-mixer.frame"
+      "part": "a411.l3-industry-process-mixer.frame"
     },
     {
       "id": "working_parts",
-      "part": "r37.l3-industry-process-mixer.working_parts"
+      "part": "a411.l3-industry-process-mixer.working_parts"
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-industry-process-mixer.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "df0c66af9e9ed6a1c61fdc47e808e1590c00d01f8378163ee04e6d3bce045394",
+      "change": "立式混合机：开口厚边搅拌桶、双侧承桥与落座电机，真实轴穿过承桥进入桶内并连接双层桨叶，排料管从桶壁连续导出。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "industry",
@@ -138,10 +156,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3_mechanisms.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-industry",
@@ -161,5 +179,5 @@
     "agitator",
     "cap"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

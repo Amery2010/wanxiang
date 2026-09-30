@@ -5,24 +5,29 @@
   "instances": [
     {
       "id": "chassis",
-      "part": "w.vehicle.motorcycle_frame",
-      "position": [
-        0,
-        0,
-        0
-      ]
+      "part": "a411.world-motorcycle.chassis"
     },
     {
       "id": "front",
+      "part": "a411.world-motorcycle.front",
+      "position": [
+        0,
+        0.9,
+        0.4
+      ]
+    },
+    {
+      "id": "front_wheel",
       "params": {
         "radius": 0.3,
         "width": 0.12
       },
+      "parent": "front",
       "part": "w.vehicle.cycle_wheel",
       "position": [
         0,
-        0.3,
-        0.64
+        -0.6000000000000001,
+        0.24
       ]
     },
     {
@@ -40,6 +45,47 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "f4c42091cdd9ff24858b073b9ae27d941ca329bf8a6f9c958ba3dcbd9e45065b",
+      "change": "前轮、前叉、联板、灯架及车把组成同一转向组，轴心迁至真实头管并沿前叉倾角；固定车架补连续承托，保持转向控件±25度的原输入范围。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
+    "aesthetic411_steering_migration": {
+      "intent": "repair actual steering support and coherent assembly motion",
+      "new_axis": [
+        0,
+        0.930827,
+        -0.36546
+      ],
+      "new_pivot": [
+        0,
+        0.9,
+        0.4
+      ],
+      "new_target": "front fork, wheel, handlebar and headlamp group",
+      "old_axis": [
+        0,
+        1,
+        0
+      ],
+      "old_pivot": [
+        0,
+        0.3,
+        0.64
+      ],
+      "old_target": "front wheel only",
+      "range_preserved": [
+        -25,
+        25
+      ],
+      "world_frame_equal": false
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "worlds-1.9",
     "level": 3,
@@ -47,12 +93,17 @@
       "review_scope": "P3-P4",
       "status": "worlds"
     },
+    "source": {
+      "authoring": "tools/aesthetic411/remaining_l3_direct_dependents.py",
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
+    },
     "state_controls": [
       {
         "axis": [
           0,
-          1,
-          0
+          0.930827,
+          -0.36546
         ],
         "default": 0,
         "id": "steering",
@@ -74,5 +125,5 @@
     "depot",
     "vehicle"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

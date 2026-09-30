@@ -490,6 +490,7 @@ dd {
   grid-column: 3;
   grid-row: 1;
   min-width: 0;
+  container-type: inline-size;
 }
 .is-scene .viewport-slot {
   grid-column: 3;
@@ -508,6 +509,7 @@ dd {
   min-width: 0;
   overflow: hidden;
   border-top: 1px solid var(--line);
+  container-type: inline-size;
 }
 #sceneTopbar,
 #sceneToolbar {
@@ -569,7 +571,8 @@ dd {
   height: 13px;
 }
 .shelf-bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto minmax(100px, 1fr) auto auto auto auto;
   align-items: center;
   gap: 10px;
   padding: 8px 12px;
@@ -579,7 +582,7 @@ dd {
   white-space: nowrap;
 }
 .shelf-bar input {
-  flex: 1;
+  width: 100%;
   max-width: 250px;
 }
 .shelf-items {
@@ -587,13 +590,16 @@ dd {
   overflow: auto;
   gap: 8px;
   padding: 0 12px 10px;
+  min-height: 112px;
 }
 .shelf-card {
   width: 108px;
   min-width: 108px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 4px;
   padding: 4px;
   border: 1px solid var(--line);
   background: var(--surface);
@@ -601,11 +607,13 @@ dd {
 }
 .shelf-card img {
   object-fit: contain;
+  flex: 0 0 64px;
 }
 .shelf-card span {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 10px;
 }
 .shelf-card > svg {
@@ -1421,6 +1429,14 @@ dd {
   font-size: 11px;
   padding: 4px;
 }
+@container (max-width: 620px) {
+  #sceneTopbar {
+    flex-wrap: wrap;
+  }
+  .scene-title-group {
+    flex: 1 0 100%;
+  }
+}
 .scene-empty-selection {
   text-align: center;
   padding: 24px 0;
@@ -1458,10 +1474,45 @@ dd {
   background: var(--secondary);
 }
 .shelf-card img {
-  height: 70px;
+  height: 64px;
 }
 .shelf-items {
   padding-bottom: 12px;
+}
+@container (max-width: 580px) {
+  .shelf-bar {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+  .shelf-bar > strong {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .shelf-bar > #shelfBrowse {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .shelf-bar > input {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-width: none;
+  }
+  .shelf-bar > #shelfLevel {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .shelf-bar > select[aria-label="资产架用途"] {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .shelf-bar > button[aria-label="仅收藏资产"] {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .shelf-bar > button[aria-label="折叠资产架"],
+  .shelf-bar > button[aria-label="展开资产架"] {
+    grid-column: 3;
+    grid-row: 1;
+  }
 }
 .tasks-drawer {
   position: fixed;

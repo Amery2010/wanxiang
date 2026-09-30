@@ -95,11 +95,11 @@
     {
       "id": "body",
       "params": {},
-      "part": "l1.robot.housing.servo",
+      "part": "a411.l2-robot-end-adaptive_finger.remaining_wrap__body",
       "pivot": [
-        0.0,
-        -2.7755575615628914e-17,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
@@ -113,9 +113,9 @@
         0
       ],
       "scale": [
-        0.7142857365867725,
-        0.43243242685946354,
-        1.1666666203075002
+        1,
+        1,
+        1
       ]
     },
     {
@@ -126,11 +126,11 @@
       },
       "id": "finger0",
       "params": {},
-      "part": "l1.robot.end.adaptive_finger",
+      "part": "a411.l2-robot-end-adaptive_finger.remaining_wrap__finger0",
       "pivot": [
-        0.010000001639127731,
-        0.0,
-        0.06500000320374966
+        0,
+        0,
+        0
       ],
       "position": [
         -0.11,
@@ -144,9 +144,9 @@
         0
       ],
       "scale": [
-        0.38888888953276624,
-        0.6249999906867744,
-        0.43478259376632294
+        1,
+        1,
+        1
       ]
     },
     {
@@ -184,11 +184,11 @@
       },
       "id": "finger1",
       "params": {},
-      "part": "l1.robot.end.adaptive_finger",
+      "part": "a411.l2-robot-end-adaptive_finger.remaining_wrap__finger1",
       "pivot": [
-        0.010000001639127731,
-        0.0,
-        0.06500000320374966
+        0,
+        0,
+        0
       ],
       "position": [
         0.11,
@@ -202,9 +202,9 @@
         0
       ],
       "scale": [
-        0.38888888953276624,
-        0.6249999906867744,
-        0.43478259376632294
+        1,
+        1,
+        1
       ]
     },
     {
@@ -237,15 +237,16 @@
     {
       "id": "knuckle0",
       "params": {},
-      "part": "l1.robot.joint.compliant",
+      "parent": "finger0",
+      "part": "a411.l2-robot-end-adaptive_finger.remaining__knuckle0",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
-        -0.11,
-        0.29,
+        0,
+        0.09,
         0
       ],
       "role": "functional_subpart",
@@ -255,23 +256,24 @@
         0
       ],
       "scale": [
-        0.13749999795109036,
-        0.16666667039195704,
-        0.527777756805774
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "knuckle1",
       "params": {},
-      "part": "l1.robot.joint.compliant",
+      "parent": "finger1",
+      "part": "a411.l2-robot-end-adaptive_finger.remaining__knuckle1",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
-        0.11,
-        0.29,
+        0,
+        0.09,
         0
       ],
       "role": "functional_subpart",
@@ -281,9 +283,9 @@
         0
       ],
       "scale": [
-        0.13749999795109036,
-        0.16666667039195704,
-        0.527777756805774
+        1,
+        1,
+        1
       ]
     }
   ],
@@ -390,6 +392,11 @@
       "review_scope": "L2",
       "status": "l2"
     },
+    "remodel_closure": {
+      "before_sha256": "c0a86ab07c77a06c29787af55d8d07227c9d0b12cd3dcc4f0128df22fc9c34cc",
+      "change": "Give both moving fingers slotted guide carriages and continuous support rails across the full 0.08m stroke; adaptive knuckle caps now follow their actual finger parents instead of remaining behind.",
+      "visual_status": "pending-actual-six-view-review"
+    },
     "runtime": {
       "collision": {
         "source": "L1 collider recipes; moving-node overrides explicit",
@@ -409,9 +416,9 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l2_expansion/robot.py",
+      "authoring": "tools/aesthetic411/remaining_l2.py",
       "license": "project-authored",
-      "revision": "3.2.0",
+      "revision": "3.11.0",
       "type": "original_functional_recipe"
     },
     "source_bounds": "authoring/l1-bounds.json",
@@ -462,5 +469,5 @@
     "adaptive_finger",
     "functional-subassembly"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

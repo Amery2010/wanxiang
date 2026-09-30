@@ -1,6 +1,6 @@
 {
   "category": "terrain",
-  "description": "支护矿洞；可通行洞口 / 独立底面 / ledge / mine",
+  "description": "按用途重建非等厚、前后截面变化的连续洞壳与清楚入口，宽洞厅/狭裂隙/长隧道使用不同体量；支护木框、斜撑与轨道明确处于洞内，不穿出洞顶。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,15 +30,30 @@
   "id": "l3-terrain-cave-mine",
   "instances": [
     {
-      "id": "vault",
-      "part": "r37.l3-terrain-cave-mine.vault"
+      "id": "remodel__geological_vault",
+      "part": "a411.l3-terrain-cave-mine.remodel__geological_vault"
     },
     {
-      "id": "formations",
-      "part": "r37.l3-terrain-cave-mine.formations"
+      "id": "remodel__natural_floor",
+      "part": "a411.l3-terrain-cave-mine.remodel__natural_floor"
+    },
+    {
+      "id": "remodel__formations",
+      "part": "a411.l3-terrain-cave-mine.remodel__formations"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "cf2925b00a8dfadd1070bce3ca2b98008c298db47c4e4c66f952b03e5f8f45d6",
+      "change": "按用途重建非等厚、前后截面变化的连续洞壳与清楚入口，宽洞厅/狭裂隙/长隧道使用不同体量；支护木框、斜撑与轨道明确处于洞内，不穿出洞顶。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "terrain",
@@ -116,11 +131,11 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3_terrain.py",
       "license": "project-authored",
       "refinements": "tools/l34_expansion/refinements.py",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-terrain",
@@ -139,5 +154,5 @@
     "ledge",
     "mine"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

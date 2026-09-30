@@ -9,6 +9,7 @@ import {
 } from "../ui/dialog";
 import { zipStore, type ArchiveFile } from "../runtime/archive";
 import { download, closedManifest, type Session } from "./session";
+import { hasMaterialImage } from "./library/utils";
 export function MaterialDialog({ session }: { session: Session }) {
   const s = useStore(session.store),
     material = s.data.materials?.find((m) => m.id === s.materialId),
@@ -23,7 +24,11 @@ export function MaterialDialog({ session }: { session: Session }) {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>{material?.name || "材质详情"}</DialogTitle>
-          <DialogDescription>原创表面纹理和可复用材质参数</DialogDescription>
+          <DialogDescription>
+            {hasMaterialImage(material?.record)
+              ? "原始图片与可复用材质参数"
+              : "参数材质示意图 · 无贴图，模型颜色由顶点色提供"}
+          </DialogDescription>
         </DialogHeader>
         {material ? (
           <>

@@ -1,6 +1,6 @@
 {
   "category": "terrain",
-  "description": "红树湿地岛；独立水域 / 多片岸线 / mangrove / root",
+  "description": "岛屿按具体地貌重建不对称岸线、宽窄变化的沙岸和主次地势；三组潮滩由水道分隔，根系树群疏密有别。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -34,15 +34,29 @@
       "part": "r37.l3-terrain-island-mangrove.water"
     },
     {
-      "id": "island",
-      "part": "r37.l3-terrain-island-mangrove.island"
+      "id": "authored_landform",
+      "part": "a411.l3-terrain-island-mangrove.authored_landform"
     },
     {
-      "id": "mangroves",
-      "part": "r37.l3-terrain-island-mangrove.mangroves"
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "secondary_landform",
+      "part": "a411.l3-terrain-island-mangrove.secondary_landform"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "e65ff2bedc0368dfd977d9b4b579e768181344602265af703a795b52ffc89e1c",
+      "change": "岛屿按具体地貌重建不对称岸线、宽窄变化的沙岸和主次地势；三组潮滩由水道分隔，根系树群疏密有别。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "terrain",
@@ -142,10 +156,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3_islands.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-terrain",
@@ -164,5 +178,5 @@
     "mangrove",
     "root"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

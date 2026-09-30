@@ -163,7 +163,7 @@
     {
       "id": "outfit0",
       "parent": "skin.rig.chest",
-      "part": "p5.wear.cyber_coat",
+      "part": "a411.world-cyber-merchant.dependency_outfit0_fitted_shell",
       "position": [
         {
           "$op": "mul",
@@ -259,8 +259,55 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "f24b41bc90192e0ac40e87e5559d25b949ba4875585f90821c86060255366497",
+      "change": "针对该人物原八边倒角躯干，将新椭圆衣壳的胸腰角部局部展开并留出穿衣余量；原领口、袖孔、面板厚度、口袋、开襟和胸骨随动保留，不改变公共衣壳。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "worlds-2.0",
+    "dependency_regression_repair": {
+      "cause": "shared elliptical clothing section intersects existing chamfered torso corners",
+      "fitted_instances": [
+        {
+          "node": "outfit0",
+          "private_part": "a411.world-cyber-merchant.dependency_outfit0_fitted_shell",
+          "public_part": "p5.wear.cyber_coat"
+        }
+      ],
+      "scope": "private current-shell envelope fit; body/rig/controls unchanged"
+    },
     "level": 3,
     "parameter_schema": {
       "additionalProperties": false,
@@ -292,6 +339,11 @@
     },
     "role_recipe": true,
     "shared_anatomy": "core.human.body",
+    "source": {
+      "authoring": "tools/aesthetic411/remaining_l3_dependency_regressions.py",
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
+    },
     "theme": "cyber",
     "units": "metres"
   },
@@ -303,5 +355,5 @@
     "cyber",
     "body"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

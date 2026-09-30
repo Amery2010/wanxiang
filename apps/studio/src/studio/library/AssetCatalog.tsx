@@ -38,6 +38,7 @@ import {
   formatTriangles,
   getStudioCore,
   hasActiveFilters,
+  hasMaterialImage,
   interfaceOptions,
   levelMap,
   materialName,
@@ -579,7 +580,7 @@ function CatalogHeading({
 }) {
   const subtitle =
     filters.collection === "materials"
-      ? "统一色板、原创纹理和可导出的材质参数。"
+      ? "查看材质参数预览；有贴图的材质保留原图。"
       : filters.collection === "favorites"
         ? "从收藏中继续下一次创作。"
         : filters.collection === "recent"
@@ -811,7 +812,11 @@ function MaterialGrid({
             <strong>{materialName(material)}</strong>
             <div>
               <span>{material.id}</span>
-              <span>材质角色</span>
+              <span>
+                {hasMaterialImage(material.record)
+                  ? "含原图"
+                  : "无贴图 · 参数材质"}
+              </span>
             </div>
           </div>
         </article>

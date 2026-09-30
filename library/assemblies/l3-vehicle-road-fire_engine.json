@@ -1,6 +1,6 @@
 {
   "category": "vehicle",
-  "description": "消防车；独立底盘 / 接地车轮 / 驾驶区 / ladder",
+  "description": "消防车重建分区器材卷帘舱、成组泵口、固定梯架和灯条，车厢不再只靠细梯提示用途。 原轮位与轮径保留，门/机构为清楚的静态造型，不添加未实现的活动控制。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -54,23 +54,33 @@
       "part": "r37.l3-vehicle-road-fire_engine.wheel2_1"
     },
     {
-      "id": "frame",
-      "part": "r37.l3-vehicle-road-fire_engine.frame"
-    },
-    {
       "id": "body",
-      "part": "r37.l3-vehicle-road-fire_engine.body"
+      "part": "a411.l3-vehicle-road-fire_engine.body"
     },
     {
       "id": "glazing",
-      "part": "r37.l3-vehicle-road-fire_engine.glazing"
+      "part": "a411.l3-vehicle-road-fire_engine.glazing"
     },
     {
+      "enabled": {
+        "$param": "detail"
+      },
       "id": "fittings",
-      "part": "r37.l3-vehicle-road-fire_engine.fittings"
+      "part": "a411.l3-vehicle-road-fire_engine.fittings"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "d6d13f4e93fe7235bdfe615a20f7e14c6ad601e1359ce8528f77c7bcef2e4f69",
+      "change": "消防车重建分区器材卷帘舱、成组泵口、固定梯架和灯条，车厢不再只靠细梯提示用途。 原轮位与轮径保留，门/机构为清楚的静态造型，不添加未实现的活动控制。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "vehicle",
@@ -90,9 +100,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        2.1,
-        2.45,
-        6.7
+        2.38,
+        2.85,
+        6.75
       ],
       "family": "road",
       "features": [
@@ -102,8 +112,8 @@
         "ladder"
       ],
       "footprint_m": [
-        2.1,
-        6.7
+        2.38,
+        6.75
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [
@@ -183,10 +193,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-vehicle",
@@ -205,5 +215,5 @@
     "驾驶区",
     "ladder"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

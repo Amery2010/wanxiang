@@ -1,6 +1,6 @@
 {
   "category": "interior",
-  "description": "三抽斗柜；完整柜体 / 内部储存区 / open_front / 3独立层格",
+  "description": "三抽斗柜；独立可抽拉抽屉、柜顶下拉出式工作板与完整柜体。工作板与各抽屉分别控制，适用于静态陈设及刚性抽拉预览。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,154 +30,78 @@
   "id": "l3-interior-storage-dresser",
   "instances": [
     {
-      "assembly": "l2-interior-carcase-open_front",
+      "assembly": "a411.l3-interior-storage-dresser.functional_carcase",
       "id": "carcase",
       "params": {
         "detail": {
           "$param": "detail"
         }
-      },
-      "pivot": [
-        0.0,
-        0.0,
-        0.016249999403953552
-      ],
-      "position": [
-        0,
-        0.08,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.222222254600055,
-        0.85,
-        1.0328638520775018
-      ]
+      }
     },
     {
       "id": "plinth",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#E4DDCA"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.0,
-        0.36363636560676516,
-        1.071428604880159
-      ]
+      "part": "a411.l3-interior-storage-dresser.plinth"
     },
     {
-      "assembly": "l2-interior-drawercartridge-box",
+      "assembly": "a411.l3-interior-storage-dresser.drawer0_cartridge",
       "id": "drawer0",
       "params": {
         "detail": {
           "$param": "detail"
         }
       },
-      "pivot": [
-        0.0,
-        0.019999999552965164,
-        0.012500002980232239
-      ],
       "position": [
         0,
-        0.12,
-        0.03
-      ],
-      "rotation": [
-        0,
-        0,
+        0.137,
         0
-      ],
-      "scale": [
-        1.3243243072571071,
-        0.9130434764862511,
-        1.010752680398423
       ]
     },
     {
-      "assembly": "l2-interior-drawercartridge-box",
+      "assembly": "a411.l3-interior-storage-dresser.drawer1_cartridge",
       "id": "drawer1",
       "params": {
         "detail": {
           "$param": "detail"
         }
       },
-      "pivot": [
-        0.0,
-        0.019999999552965164,
-        0.012500002980232239
-      ],
       "position": [
         0,
-        0.35,
-        0.03
-      ],
-      "rotation": [
-        0,
-        0,
+        0.32533333333333336,
         0
-      ],
-      "scale": [
-        1.3243243072571071,
-        0.9130434764862511,
-        1.010752680398423
       ]
     },
     {
-      "assembly": "l2-interior-drawercartridge-box",
+      "assembly": "a411.l3-interior-storage-dresser.drawer2_cartridge",
       "id": "drawer2",
       "params": {
         "detail": {
           "$param": "detail"
         }
       },
-      "pivot": [
-        0.0,
-        0.019999999552965164,
-        0.012500002980232239
-      ],
       "position": [
         0,
-        0.58,
-        0.03
-      ],
-      "rotation": [
-        0,
-        0,
+        0.5136666666666667,
         0
-      ],
-      "scale": [
-        1.3243243072571071,
-        0.9130434764862511,
-        1.010752680398423
       ]
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "f97e7cd1ce912e5cb668d263c5ce9b238384567d09fce0b8e04965899843136f",
+      "change": "重建适配柜体的独立抽屉与合理缝隙，消除继承托盘/把手与抽屉重叠；原 carcase.tray 整理为柜顶下可抽拉工作板，保留全部控制ID、运动节点路径、0.3米行程与pull_cycle曲线。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "carcase.pull_cycle",
+        "drawer0.pull_cycle",
+        "drawer1.pull_cycle",
+        "drawer2.pull_cycle"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "interior",
@@ -257,10 +181,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/interior.py",
+      "authoring": "tools/aesthetic411/assemblies_l3.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -276,7 +200,7 @@
         "mode": "translation",
         "node": "carcase.tray",
         "step": 0.01,
-        "title": "carcase · 抽拉行程",
+        "title": "拉出工作板",
         "unit": "m"
       },
       {
@@ -292,7 +216,7 @@
         "mode": "translation",
         "node": "drawer0.drawer",
         "step": 0.01,
-        "title": "drawer0 · 抽出行程",
+        "title": "抽屉 1 · 抽出行程",
         "unit": "m"
       },
       {
@@ -308,7 +232,7 @@
         "mode": "translation",
         "node": "drawer1.drawer",
         "step": 0.01,
-        "title": "drawer1 · 抽出行程",
+        "title": "抽屉 2 · 抽出行程",
         "unit": "m"
       },
       {
@@ -324,7 +248,7 @@
         "mode": "translation",
         "node": "drawer2.drawer",
         "step": 0.01,
-        "title": "drawer2 · 抽出行程",
+        "title": "抽屉 3 · 抽出行程",
         "unit": "m"
       }
     ],
@@ -344,5 +268,5 @@
     "open_front",
     "3独立层格"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

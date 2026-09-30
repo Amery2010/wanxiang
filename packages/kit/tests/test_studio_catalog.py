@@ -1,7 +1,57 @@
+import base64
 import json
+from xml.etree import ElementTree
 import pytest
 from wanxiang.errors import WXError
-from wanxiang.live_viewer import asset_data, bundle_data, catalog_data
+from wanxiang.live_viewer import _materials, asset_data, bundle_data, catalog_data
+from wanxiang.util import ROOT
+from wanxiang.viewer import create_viewer
+
+
+def test_material_previews_distinguish_parameter_roles_and_preserve_real_image():
+    materials = {material['id']: material for material in _materials()}
+    assert {'mat.wood', 'mat.metal', 'mat.voxel_chart'} <= materials.keys()
+    assert len({material['preview'] for material in materials.values()}) == len(materials)
+    wood = materials['mat.wood']
+    metal = materials['mat.metal']
+    assert wood['preview'] != metal['preview']
+    assert wood['preview'].startswith('data:image/svg+xml;base64,')
+    svg = ElementTree.fromstring(base64.b64decode(wood['preview'].split(',', 1)[1]))
+    assert 'MATERIAL ROLE / NO TEXTURE' in ''.join(svg.itertext())
+    assert materials['mat.voxel_chart']['preview'].startswith('data:image/png;base64,')
+    assert base64.b64decode(materials['mat.voxel_chart']['files']['basecolor.png']) == (
+        ROOT / 'library/materials/mat.voxel_chart/basecolor.png'
+    ).read_bytes()
+
+
+def test_offline_viewer_accepts_materials_without_texture_channels(tmp_path):
+    output = tmp_path / 'viewer.html'
+    create_viewer([], output)
+    html = output.read_text()
+    assert 'mat.wood' in html
+    assert 'data:image/svg+xml;base64,' in html
+    assert 'mat.voxel_chart' in html
+
+
+def test_material_catalog_keeps_only_declared_texture_channels(tmp_path, monkeypatch):
+    from wanxiang import live_viewer
+    folder = tmp_path / 'library/materials/mat.sample'
+    folder.mkdir(parents=True)
+    source = (ROOT / 'library/materials/mat.voxel_chart/basecolor.png').read_bytes()
+    channels = {}
+    for kind in ('basecolor', 'normal', 'orm'):
+        file = f'{kind}.png'
+        (folder / file).write_bytes(source)
+        channels[kind] = {'file': file}
+    (folder / 'material.json').write_text(json.dumps({
+        'id': 'mat.sample', 'name': 'sample', 'channels': channels,
+    }))
+    monkeypatch.setattr(live_viewer, 'ROOT', tmp_path)
+    material = live_viewer._materials()[0]
+    assert material['preview'] == 'data:image/png;base64,' + material['files']['basecolor.png']
+    assert material['normal'] == 'data:image/png;base64,' + material['files']['normal.png']
+    assert material['orm'] == 'data:image/png;base64,' + material['files']['orm.png']
+    assert len(material['files']) == 3
 
 
 def test_catalogue_summary_matches_full_asset_index():

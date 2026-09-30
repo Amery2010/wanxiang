@@ -1,6 +1,6 @@
 {
   "category": "props",
-  "description": "旋转警示灯；基座与支架 / 独立发光材质 / dome_shade / beacon",
+  "description": "短底盘有色警示罩与内部灯芯/反射面，取消台灯长杆及乳白罩。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -25,93 +25,126 @@
       "tolerance": 0.0001,
       "units": "m",
       "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "frame_node": "housing",
+      "gender": "neutral",
+      "id": "light0.mount",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "profile": [
+        0.38,
+        0.38
+      ],
+      "span": 0.38,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "frame_node": "housing",
+      "gender": "neutral",
+      "id": "light0.service",
+      "interface": "l2.props.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0,
+        0.319,
+        0
+      ],
+      "profile": [
+        0.31,
+        0.31
+      ],
+      "span": 0.31,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
     }
   ],
   "id": "l3-props-lamp-beacon",
   "instances": [
     {
-      "id": "base",
-      "params": {},
-      "part": "l1.props.lamp.lamp_base",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.8,
-        0.6666666401757145,
-        0.8
-      ]
+      "id": "housing",
+      "part": "a411.l3-props-lamp-beacon.housing"
     },
     {
-      "id": "stem",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#64747D"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0.08,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.06,
-        1.5909090995295974,
-        0.1428571473173545
-      ]
-    },
-    {
-      "assembly": "l2-props-luminaire-dome_shade",
-      "id": "light0",
-      "pivot": [
-        0.0,
-        -0.05999999865889549,
-        0.0
-      ],
-      "position": [
-        0.0,
-        0.35,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.7499999888241292,
-        0.9090909217137938,
-        0.7499999888241292
-      ]
+      "id": "detail",
+      "part": "a411.l3-props-lamp-beacon.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "376cdb0b9ec73e544bbe770ebe8c58e8bfef726d47364c04d623519d3d4dca99",
+      "change": "短底盘有色警示罩与内部灯芯/反射面，取消台灯长杆及乳白罩。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
+    "aesthetic411_socket_compat": {
+      "aliases": {},
+      "authoring": "tools/aesthetic411/remaining_l3_socket_compat.py",
+      "dimensions_migrated_to_actual_carrier": true,
+      "geometry_unchanged": true,
+      "local_motion_unchanged": true,
+      "original_interface_type_and_version_preserved": true,
+      "original_interface_version_dimensions_preserved": false,
+      "restored_paths": [
+        "light0.mount",
+        "light0.service"
+      ],
+      "six_real_light_units_restored": false,
+      "world_frames_migrated_to_current_geometry": true
+    },
+    "aesthetic411_socket_dimensions": {
+      "all_positions_are_local_to_declared_real_carrier": true,
+      "authoring": "tools/aesthetic411/remaining_l3_socket_dimensions.py",
+      "changed_fields": {
+        "light0.mount": [
+          "span",
+          "profile"
+        ],
+        "light0.service": [
+          "span",
+          "profile"
+        ]
+      },
+      "geometry_and_motion_unchanged": true,
+      "legacy_nominal_l2_frames_unchanged": true,
+      "semantics": {
+        "light0.mount": "警示灯底座名义外径380mm",
+        "light0.service": "警示罩拆装净空投影直径310mm；基准位于罩顶，表示沿+Y取罩的包络，不声称尖顶具有310mm平端面"
+      }
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "props",
@@ -165,10 +198,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/props.py",
+      "authoring": "tools/aesthetic411/remaining_l3_props.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-props",
@@ -187,5 +220,5 @@
     "dome_shade",
     "beacon"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

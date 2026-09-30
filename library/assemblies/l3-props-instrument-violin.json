@@ -1,6 +1,6 @@
 {
   "category": "props",
-  "description": "小提琴；完整演奏器物 / 构造附件 / violin_plate / guitar_neck",
+  "description": "重建四弦无品小提琴、卷轴与尾板；琴头/琴颈实体连接，琴弦由琴桥到弦枕再到弦轴，细节开关只影响弦与品标。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -31,194 +31,36 @@
   "instances": [
     {
       "id": "body",
-      "params": {},
-      "part": "l1.props.musical.violin_plate",
-      "pivot": [
-        0.005000002682209015,
-        0.0,
-        0.0018202858045697212
-      ],
-      "position": [
-        0,
-        0.05,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.285714252870911,
-        1.1,
-        3.571428579981534
-      ]
+      "part": "a411.l3-props-instrument-violin.body"
     },
     {
-      "id": "fitting",
-      "params": {},
-      "part": "l1.props.musical.guitar_neck",
-      "pivot": [
-        0.01249999925494194,
-        0.0,
-        0.004750000312924385
-      ],
-      "position": [
-        0,
-        0.45,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.3913043225870696,
-        0.7746479107354097,
-        2.2018347648586616
-      ]
+      "id": "neck",
+      "part": "a411.l3-props-instrument-violin.neck"
+    },
+    {
+      "id": "bridge",
+      "part": "a411.l3-props-instrument-violin.bridge"
     },
     {
       "enabled": {
         "$param": "detail"
       },
-      "id": "string0",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#E1D4B0"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.10999999940395355,
-        0.0
-      ],
-      "position": [
-        -0.024,
-        0.575,
-        0.105
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        -90.0,
-        0.0,
-        0
-      ],
-      "scale": [
-        0.003,
-        0.013636363710253693,
-        1.5476190959380072
-      ]
-    },
-    {
-      "enabled": {
-        "$param": "detail"
-      },
-      "id": "string1",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#E1D4B0"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.10999999940395355,
-        0.0
-      ],
-      "position": [
-        -0.012,
-        0.575,
-        0.105
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        -90.0,
-        0.0,
-        0
-      ],
-      "scale": [
-        0.003,
-        0.013636363710253693,
-        1.5476190959380072
-      ]
-    },
-    {
-      "enabled": {
-        "$param": "detail"
-      },
-      "id": "string2",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#E1D4B0"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.10999999940395355,
-        0.0
-      ],
-      "position": [
-        0.0,
-        0.575,
-        0.105
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        -90.0,
-        0.0,
-        0
-      ],
-      "scale": [
-        0.003,
-        0.013636363710253693,
-        1.5476190959380072
-      ]
-    },
-    {
-      "enabled": {
-        "$param": "detail"
-      },
-      "id": "string3",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#E1D4B0"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.10999999940395355,
-        0.0
-      ],
-      "position": [
-        0.012,
-        0.575,
-        0.105
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        -90.0,
-        0.0,
-        0
-      ],
-      "scale": [
-        0.003,
-        0.013636363710253693,
-        1.5476190959380072
-      ]
+      "id": "detail",
+      "part": "a411.l3-props-instrument-violin.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "de15e4f4f5b8252741f03e2cc0bd4ac66da0c622d515aba0eaa10cfe9e7115d0",
+      "change": "重建四弦无品小提琴、卷轴与尾板；琴头/琴颈实体连接，琴弦由琴桥到弦枕再到弦轴，细节开关只影响弦与品标。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "props",
@@ -238,9 +80,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        0.65,
-        1.2,
-        0.5
+        0.2706,
+        0.6559999999999999,
+        0.12546
       ],
       "family": "instrument",
       "features": [
@@ -250,8 +92,8 @@
         "guitar_neck"
       ],
       "footprint_m": [
-        0.65,
-        0.5
+        0.2706,
+        0.12546
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [],
@@ -298,10 +140,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/props.py",
+      "authoring": "tools/aesthetic411/remaining_l3_props.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-props",
@@ -320,5 +162,5 @@
     "violin_plate",
     "guitar_neck"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

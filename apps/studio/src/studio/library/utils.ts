@@ -162,6 +162,13 @@ export function materialPreview(material: MaterialRecord): string | null {
     : null;
 }
 
+export function hasMaterialImage(record: unknown): boolean {
+  return Boolean(
+    (record as { channels?: { basecolor?: unknown } } | null)?.channels
+      ?.basecolor,
+  );
+}
+
 export function readString(value: unknown, fallback = ""): string {
   return typeof value === "string" ? value : fallback;
 }

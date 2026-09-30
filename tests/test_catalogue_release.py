@@ -78,13 +78,13 @@ def test_catalogue_is_replaced_not_side_loaded():
  counts=json.loads((ROOT/'library/collection-manifest.json').read_text()) if (ROOT/'library/collection-manifest.json').exists() else {}
  manifest=json.loads((ROOT/'tool.manifest.json').read_text())['library']
  assert len(PARTS)==manifest['parts'] and len(ASSEMBLIES)==manifest['assembly_specs']
- # Historical definitions keep their original version; new authored definitions
- # must use the actual current release, not a stale hard-coded 1.8 whitelist.
- current=json.loads((ROOT/'tool.manifest.json').read_text())['version']
+ # Imported model revisions can advance independently of the application release.
+ current=manifest.get('definition_revision',json.loads((ROOT/'tool.manifest.json').read_text())['version'])
+ remodeled=set(json.loads((ROOT/'authoring/remodel411-manifest.json').read_text())['definitions_sha256']['parts'])
  version=lambda v:tuple(int(x) for x in v.split('.'))
  assert all(version(definition(p)['version'])<=version(current) for p in PARTS)
- assert all(definition(p)['version']=='3.8.0' for p in PARTS if p.startswith('r38.'))
- assert all(definition(p)['version']=='3.9.0' for p in PARTS if definition(p).get('repair39'))
+ assert all(definition(p)['version']=='3.8.0' for p in PARTS if p.startswith('r38.') and p not in remodeled)
+ assert all(definition(p)['version']=='3.9.0' for p in PARTS if definition(p).get('repair39') and p not in remodeled)
  assert not (ROOT/'packages/runtime/src/organic.js').exists()
  pngs=list((ROOT/'library').rglob('*.png'))
  assert {p.name for p in pngs}<= {'basecolor.png'}

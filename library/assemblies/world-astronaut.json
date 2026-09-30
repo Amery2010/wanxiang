@@ -14,8 +14,10 @@
           "$param": "height"
         },
         "palette": {
+          "#624632": "#323D4B",
           "#634530": "#323D4B",
           "#707952": "#E5E8DE",
+          "#93724F": "#E5E8DE",
           "#DDAA85": "#323D4B",
           "#EFE3CB": "#E5E8DE",
           "#F8F3E7": "#E5E8DE"
@@ -271,27 +273,107 @@
     {
       "id": "bootL",
       "parent": "skin.rig.footL",
-      "part": "p5.suit.boot",
+      "part": "a411.world-astronaut.dependency_outer_boot_envelope",
       "position": [
         0,
         0,
         0
+      ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$param": "build"
+        }
       ]
     },
     {
       "id": "bootR",
       "parent": "skin.rig.footR",
-      "part": "p5.suit.boot",
+      "part": "a411.world-astronaut.dependency_outer_boot_envelope",
       "position": [
         0,
         0,
         0
+      ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$param": "build"
+        }
       ]
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "390b9037e928c050a77bea2934135f93250917139cc3b138280399bc3b521d25",
+      "change": "保留真实内鞋和足骨，将本角色白外靴的脚背与后跟包络按当前内鞋扩大，鞋底回到真实足骨地面基准，并与身高/体格参数同步；保留开口靴筒和原足部动作。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "worlds-2.0",
+    "dependency_regression_repair": {
+      "cause": "new fixed form colours #624632/#93724F bypassed role old #634530 mapping",
+      "geometry": "Private outer boot envelope accommodates current inner shoe; foot bones and skin retained; sole bottom local -0.15 scaled with height",
+      "maps": {
+        "#624632": "#323D4B",
+        "#93724F": "#E5E8DE"
+      },
+      "scope": "per-instance palette-only; geometry, nodes, parameters, connectors, skin weights and motions retained",
+      "shared_root": "core.human.boot"
+    },
     "level": 3,
     "parameter_schema": {
       "additionalProperties": false,
@@ -323,6 +405,11 @@
     },
     "role_recipe": true,
     "shared_anatomy": "core.human.body",
+    "source": {
+      "authoring": "tools/aesthetic411/remaining_l3_dependency_regressions.py",
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
+    },
     "theme": "space",
     "units": "metres"
   },
@@ -334,5 +421,5 @@
     "space",
     "body"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

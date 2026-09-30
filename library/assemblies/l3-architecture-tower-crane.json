@@ -1,6 +1,6 @@
 {
   "category": "architecture",
-  "description": "固定起重塔；基础承重体 / 检修平台 / crane",
+  "description": "固定起重塔改为四角立柱与四面交叉腹杆的方截面塔身，双侧主弦/横联组成空间桁架臂，塔帽拉索、配重、操作舱及吊钩连续装接，侧视不再退化为单条线。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,15 +30,22 @@
   "id": "l3-architecture-tower-crane",
   "instances": [
     {
-      "id": "support",
-      "part": "r37.l3-architecture-tower-crane.support"
-    },
-    {
-      "id": "superstructure",
-      "part": "r37.l3-architecture-tower-crane.superstructure"
+      "id": "spatial_mast_and_jib",
+      "part": "a411.l3-architecture-tower-crane.spatial_mast_and_jib"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "ea95a9d8b75bc0ec0b719f22e5b2cb8a8e0736ff361a39bbc1655ae8377a691d",
+      "change": "固定起重塔改为四角立柱与四面交叉腹杆的方截面塔身，双侧主弦/横联组成空间桁架臂，塔帽拉索、配重、操作舱及吊钩连续装接，侧视不再退化为单条线。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "architecture",
@@ -46,9 +53,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        3.1,
-        7.6,
-        3.1
+        9.4,
+        9.0,
+        2.0
       ],
       "family": "tower",
       "features": [
@@ -57,8 +64,8 @@
         "crane"
       ],
       "footprint_m": [
-        3.1,
-        3.1
+        9.4,
+        2.0
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [],
@@ -114,10 +121,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-architecture",
@@ -135,5 +142,5 @@
     "检修平台",
     "crane"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

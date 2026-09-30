@@ -1,6 +1,6 @@
 {
   "category": "architecture",
-  "description": "消防车库；可进入围护结构 / 分层楼板 / 独立屋顶 / garage / flat",
+  "description": "消防车库重建双层站房及后侧两扇2.64米宽、3.2米净高的真实车库开口，提升首层高度并露出卷帘收纳端；普通可开行人门维持原坐标与动作，车辆开口不被玻璃或假面遮堵。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,24 +30,27 @@
   "id": "l3-architecture-building-firehouse",
   "instances": [
     {
-      "id": "foundation",
-      "part": "r37.l3-architecture-building-firehouse.foundation"
+      "id": "floors",
+      "part": "a411.l3-architecture-building-firehouse.floors"
     },
     {
       "id": "walls",
-      "part": "r37.l3-architecture-building-firehouse.walls"
+      "part": "a411.l3-architecture-building-firehouse.walls"
     },
     {
       "id": "frames",
-      "part": "r37.l3-architecture-building-firehouse.frames"
-    },
-    {
-      "id": "glazing",
-      "part": "r37.l3-architecture-building-firehouse.glazing"
+      "part": "a411.l3-architecture-building-firehouse.frames"
     },
     {
       "id": "roof",
-      "part": "r37.l3-architecture-building-firehouse.roof"
+      "part": "a411.l3-architecture-building-firehouse.roof"
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-architecture-building-firehouse.detail"
     },
     {
       "id": "entrance",
@@ -60,6 +63,19 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "3a03174cd544095c8ba925ad9031f8d83ee8acd5302f56c4b432892caf48396b",
+      "change": "消防车库重建双层站房及后侧两扇2.64米宽、3.2米净高的真实车库开口，提升首层高度并露出卷帘收纳端；普通可开行人门维持原坐标与动作，车辆开口不被玻璃或假面遮堵。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "open_inspect"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "architecture",
@@ -79,9 +95,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        7.3999999999999995,
-        6.38,
-        7.1
+        7.2,
+        6.3,
+        5.5
       ],
       "family": "building",
       "features": [
@@ -92,8 +108,8 @@
         "flat"
       ],
       "footprint_m": [
-        7.3999999999999995,
-        7.1
+        7.2,
+        5.5
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [
@@ -192,10 +208,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -232,5 +248,5 @@
     "garage",
     "flat"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

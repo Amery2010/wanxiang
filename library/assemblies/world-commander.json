@@ -72,7 +72,7 @@
     {
       "id": "hair",
       "parent": "skin.rig.head",
-      "part": "core.human.hair.short",
+      "part": "a411.world-commander.dependency_cap_compressed_hair",
       "position": [
         0,
         0,
@@ -157,7 +157,7 @@
         {
           "$op": "mul",
           "args": [
-            0.018,
+            0.028,
             {
               "$op": "div",
               "args": [
@@ -204,7 +204,7 @@
     {
       "id": "outfit",
       "parent": "skin.rig.chest",
-      "part": "w.wear.field_vest",
+      "part": "a411.world-commander.dependency_outfit_fitted_shell",
       "position": [
         0,
         0,
@@ -284,8 +284,48 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "8d81b4d2617c46e0bf2d678e7866b6f3ceff9854aa09e645ef8b1a5439c765ed",
+      "change": "该角色本地短发仅在帽檐以上做压顶与内收，保留发际线和后脑露发；头骨、公共头/发、参数缩放和动作不变；三顶司机式帽另上提10mm×身高比例容纳原头皮，避免压发后露出皮肤细条。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "worlds-1.9",
+    "dependency_regression_repair": {
+      "cause": "new public hair crown pierces unchanged upper headgear",
+      "scope": "private crown fit above hairline; head bone retained; commander/police/driver hat Y explicitly raised 10mm times height/1.82 to cover scalp"
+    },
     "level": 3,
     "parameter_schema": {
       "additionalProperties": false,
@@ -315,6 +355,11 @@
       "review_scope": "P3-P4",
       "status": "worlds"
     },
+    "source": {
+      "authoring": "tools/aesthetic411/remaining_l3_dependency_regressions.py",
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
+    },
     "theme": "outpost",
     "units": "metres"
   },
@@ -326,5 +371,5 @@
     "outpost",
     "body"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

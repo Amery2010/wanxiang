@@ -1,5 +1,46 @@
 """Species-specific silhouettes. Coat markings colour the existing surface, never shells."""
 from .common import *
+
+def fox_surface(stations, bone, coat, underside=None, white_from=None):
+ """Closed, deliberately faceted XY sections along Z; markings are face colours."""
+ outline=[(0,1),(-.70,.76),(-1,.08),(-.74,-.70),(0,-1),(.74,-.70),(1,.08),(.70,.76)]
+ points=[];faces=[];colors=[]
+ for z,y,width,top,bottom in stations:
+  points.extend([[x*width,y+v*(top if v>=0 else bottom),z] for x,v in outline])
+ for j in range(len(stations)-1):
+  for k in range(8):
+   a=j*8+k;b=j*8+(k+1)%8;c=a+8;d=b+8
+   # Broad back/side planes, with purposeful diagonal transitions at shoulders and hips.
+   triangles=[[a,b,c],[b,d,c]] if (j+k)%2 else [[a,b,d],[a,d,c]]
+   color=coat
+   if underside and k in (2,3,4,5):
+    color=underside if j>=3 or k in (3,4) else '#C36A32'
+   if white_from is not None and j>=white_from:color='#F2E6CC'
+   for face in triangles:
+    faces.append(face);colors.append(C(color))
+ faces.extend([list(range(7,-1,-1)),list(range((len(stations)-1)*8,len(stations)*8))])
+ colors.extend([C(coat),'#F2E6CC' if white_from is not None else C(coat)])
+ if stations[-1][0]<stations[0][0]:faces=[list(reversed(face)) for face in faces]
+ return poly(points,faces,coat,colors=colors,bone=bone)
+
+def fox_limbs():
+ # Upper limbs enter the shoulder/haunch; the hock bends behind the hind knee.
+ for hind in (False,True):
+  stations=([(0,0,.092,.107),(-.085,.030,.077,.090),(-.16,.038,.050,.057),(-.235,-.027,.029,.034),(-.35,-.005,.023,.030)] if hind else
+            [(0,0,.068,.081),(-.10,-.012,.049,.055),(-.19,-.012,.031,.037),(-.27,.008,.024,.030),(-.35,.012,.022,.028)])
+  rings=[]
+  for i,(y,z,rx,rz) in enumerate(stations):
+   rings.append({'c':[0,y,z],'r':[rx,rz],
+                 'weights':({'body':.30,'leg':.70} if i==0 else {'leg':1} if i==1 else {'leg':.35,'knee':.65} if i==2 else {'knee':1}),
+                 'color':C('orange') if i<2 else '#40352F'})
+  wp('w.fauna.fox.'+('hindleg' if hind else 'foreleg'),'狐狸'+('后肢 · 髋膝跗部折线' if hind else '前肢 · 肩肘与深色袜'), 'animal',
+     [loft(rings,'orange',8,frame_axis=[0,-1,0])],[.19,.36,.24],anchor='top',material='mat.fur',theme='camp')
+ # Compact flattened paw, with a broad toe plane and a tapered ankle.
+ wp('w.fauna.fox.paw','狐狸足掌 · 扁平趾端与踝根','animal',
+    [profile([[0,.004,.025,.031,.052],[0,.024,.030,.035,.054],[0,.057,.009,.023,.031]],'#40352F',frame_axis=[0,1,0])],
+    [.075,.06,.13],material='mat.fur',theme='camp')
+ for suffix in ('foreleg','hindleg','paw'):PARTS['w.fauna.fox.'+suffix]['internal']=True
+
 def author():
  h=Q('length');r=Q('thickness');b=Q('bend')
  wp('w.fauna.hoofleg','有蹄动物腿 · 肌肉、跗部与蹄部接口','animal',[
@@ -52,22 +93,32 @@ def author():
    tracks += [track('skin.rig.leg'+s,[1,0,0],[sg*12,-sg*12,sg*12]),track('skin.rig.knee'+s,[1,0,0],[0,15,0])]
   clip(id,[{'name':'Walk inspection','duration':1.4,'tracks':tracks}])
  for cfg in [('cow','奶牛',.86,1.85,.39,'#A96F43','cow'),('sheep','绵羊',.50,1.03,.28,'cream','sheep'),('goat','山羊',.62,1.00,.20,'wood','goat'),('donkey','驴',.99,1.45,.28,'#82766A','donkey'),('deer','鹿',1.08,1.27,.235,'#B0804D','deer','camp')]:hoofed(*cfg)
+ fox_limbs()
  for fox in [False,True]:
   id='fox' if fox else 'dog';name='狐狸' if fox else '牧羊犬';col='orange' if fox else '#9B7854';L=Q('body_length');front=mul(.31,L);back=mul(-.31,L)
-  wp('w.fauna.'+id+'.torso',name+'躯干 · 胸腰起伏','animal',[loft([[0,.49,-.43,.10,.16],[0,.50,-.29,.17,.20],[0,.5,.16,.14,.19],[0,.59,.36,.13,.15],[0,.68,.43,.085,.105]],col,10,bone='body')],[.37,.87,.97],material='mat.fur',theme='camp')
+  torso=([fox_surface([(-.46,.53,.075,.09,.09),(-.33,.55,.154,.145,.15),(-.12,.55,.135,.155,.125),(.10,.54,.140,.17,.16),(.28,.57,.165,.19,.23),(.40,.66,.119,.16,.19),(.48,.755,.075,.095,.105)],'body','orange','#EFE3CB')] if fox else
+         [loft([[0,.49,-.43,.10,.16],[0,.50,-.29,.17,.20],[0,.5,.16,.14,.19],[0,.59,.36,.13,.15],[0,.68,.43,.085,.105]],col,10,bone='body')])
+  if fox:
+   for point in torso[0]['points']:point[1]-=.10
+  wp('w.fauna.'+id+'.torso',name+'躯干 · 胸腰起伏','animal',torso,[.37,.87,.97],material='mat.fur',theme='camp')
   tail=[loft([[0,0,0,.06,.06],[0,-.02,-.15,.11 if fox else .045,.09 if fox else .045],[0,.01,-.39,.10 if fox else .035,.08 if fox else .035],[.02,-.04,-.56,.032,.03]],col,8,bone='tail',frame_axis=[0,0,-1])]
   tail[0]['rings'][-2]['color']=C('cream') if fox else C(col)
-  wp('w.fauna.'+id+'.tail',name+'尾巴','animal',tail,[.23,.20,.72],anchor='center',material='mat.fur',theme='camp')
+  if fox:tail=[fox_surface([(0,0,.060,.065,.065),(-.14,-.045,.115,.12,.13),(-.33,-.14,.15,.155,.15),(-.51,-.23,.13,.13,.13),(-.65,-.29,.075,.08,.075),(-.78,-.29,.006,.007,.006)],'tail','orange',white_from=3)]
+  wp('w.fauna.'+id+'.tail',name+'尾巴','animal',tail,[.31,.46,.80] if fox else [.23,.20,.72],anchor='center',material='mat.fur',theme='camp')
   muzzle=.21 if fox else .16
   head=[loft([[0,.05,-.03,.095,.103],[0,.02,.07,.102,.088],[0,-.018,muzzle,.032,.037]],col,8),loft([[0,-.055,.055,.066,.042],[0,-.031,muzzle,.03,.025]],'cream',7),ico([.037,.028,.031],'ink',[0,-.015,muzzle+.009],0),*[ico([.022,.021,.021],'ink',[sg*.081,.057,.066],0) for sg in [-1,1]],*[poly([[sg*.036,.09,-.027],[sg*.11,.07,-.02],[sg*.09,.24,-.03],[sg*.04,.1,.02]],[[0,1,2],[3,2,1],[0,2,3],[0,3,1]],col) for sg in [-1,1]]]
   wp('w.fauna.'+id+'.head',name+'头部 · 立耳与吻部','animal',head,[.24,.31,.34],anchor='center',material='mat.fur',theme='camp')
-  rig=[{'name':'body','position':[0,.49,0]},{'name':'head','parent':'body','position':[0,.73,add(front,.19)]},{'name':'tail','parent':'body','position':[0,.53,mul(-.41,L)]}]
-  comps=[component('torso','w.fauna.'+id+'.torso',scale=[1,1,L]),component('tail','w.fauna.'+id+'.tail',[0,.53,mul(-.41,L)])]
+  head_y=.67 if fox else .73;head_z=add(front,.17 if fox else .19);hip_y=.40 if fox else .46;tail_y=.43 if fox else .53
+  rig=[{'name':'body','position':[0,.49,0]},{'name':'head','parent':'body','position':[0,head_y,head_z]},{'name':'tail','parent':'body','position':[0,tail_y,mul(-.41,L)]}]
+  comps=[component('torso','w.fauna.'+id+'.torso',scale=[1,1,L]),component('tail','w.fauna.'+id+'.tail',[0,tail_y,mul(-.41,L)])]
   for s,x,z in [('FL',-.10,front),('FR',.10,front),('HL',-.115,back),('HR',.115,back)]:
-   rig += [{'name':'leg'+s,'parent':'body','position':[x,.46,z]},{'name':'knee'+s,'parent':'leg'+s,'position':[x,.23,z]}]
-   comps += [component(s,'w.fauna.canine_leg',[x,.46,z],params={'palette':{P['orange']:C(col)}},bind={'leg':'leg'+s,'knee':'knee'+s}),component('paw'+s,'w.fauna.canine_paw',[x,0,add(z,.03)],bone='knee'+s)]
-  wp('w.fauna.'+id+'.body',name+'身体 · 可复用犬科肢体','animal',size=[.4,.9,1.6],components=comps,rig=rig,level=2,params=schema(body_length=number(1,.9,1.1,'体长')),material='mat.fur',theme='camp')
-  wa('world-'+id,name,'animal',[pi('skin','w.fauna.'+id+'.body',params={'body_length':L}),pi('head','w.fauna.'+id+'.head',parent='skin.rig.head')],theme='camp',params=schema(body_length=number(1,.9,1.1,'体长')));walk('world-'+id)
+   rig += [{'name':'leg'+s,'parent':'body','position':[x,hip_y,z]},{'name':'knee'+s,'parent':'leg'+s,'position':[x,.21 if fox else .23,z]}]
+   if fox:
+    comps += [component(s,'w.fauna.fox.'+('hindleg' if s.startswith('H') else 'foreleg'),[x,hip_y,z],bind={'leg':'leg'+s,'knee':'knee'+s}),component('paw'+s,'w.fauna.fox.paw',[x,0,add(z,-.005 if s.startswith('H') else .012)],bone='knee'+s)]
+   else:
+    comps += [component(s,'w.fauna.canine_leg',[x,.46,z],params={'palette':{P['orange']:C(col)}},bind={'leg':'leg'+s,'knee':'knee'+s}),component('paw'+s,'w.fauna.canine_paw',[x,0,add(z,.03)],bone='knee'+s)]
+  wp('w.fauna.'+id+'.body',name+('身体 · 专属胸腰与趾行轮廓' if fox else '身体 · 可复用犬科肢体'),'animal',size=[.43,.95,1.95] if fox else [.4,.9,1.6],components=comps,rig=rig,level=2,params=schema(body_length=number(1,.9,1.1,'体长')),material='mat.fur',theme='camp')
+  wa('world-'+id,name,'animal',[pi('skin','w.fauna.'+id+'.body',params={'body_length':L}),pi('head','w.fauna.'+id+'.head',parent='skin.rig.head',**({'params':{'palette':{'#B07843':C('orange')}}} if fox else {}))],theme='camp',params=schema(body_length=number(1,.9,1.1,'体长')));walk('world-'+id)
  # Pig: very short limbs and a broad, blunt snout, not a reskinned horse.
  pig=[loft([[0,.36,-.50,.13,.19],[0,.36,-.27,.24,.24],[0,.37,.22,.24,.23],[0,.36,.43,.15,.17]],'#E8A595',10),profile([[0,.24,.47,.13,.12],[0,.40,.47,.14,.12],[0,.50,.42,.09,.085]],'#E3A08F'),disk(.094,.067,'#D88983',[0,.35,.603],10,rotation=[90,0,0]),*[ico([.025,.027,.012],'woodDark',[sg*.037,.36,.641],0) for sg in [-1,1]],*[ico([.017,.019,.015],'ink',[sg*.104,.425,.532],0) for sg in [-1,1]],*[poly([[sg*.06,.49,.40],[sg*.18,.47,.40],[sg*.17,.55,.59],[sg*.05,.54,.48]],[[0,1,2,3]],'#D88E87') for sg in [-1,1]],*[profile([[x,.01,z,.046,.052],[x,.18,z,.054,.054],[x,.31,z,.067,.061]],'#D7998D') for x in [-.15,.15] for z in [-.30,.3]],loft([[0,.39,-.50,.018,.018],[.04,.44,-.58,.017,.017],[.05,.49,-.58,.015,.015],[0,.51,-.57,.012,.012]],'#D78E89',6)]
  simple('pig','家猪','animal',pig,[.53,.62,1.18],theme='farm',material='mat.fur')

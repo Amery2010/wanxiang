@@ -1,6 +1,6 @@
 {
   "category": "vehicle",
-  "description": "城市公交车；独立底盘 / 接地车轮 / 驾驶区 / city",
+  "description": "城市公交延长至实际三轴客车比例，形成连续车头/车厢、前中低位双扇乘客门和分区窗带。 保持轮径不变，客车轮位沿纵向迁移以匹配加长车身；无原动作被删除。detail仅控制次级饰件。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -31,46 +31,86 @@
   "instances": [
     {
       "id": "wheel0_-1",
-      "part": "r37.l3-vehicle-road-city_bus.wheel0_-1"
+      "part": "r37.l3-vehicle-road-city_bus.wheel0_-1",
+      "position": [
+        0,
+        0,
+        -0.7257600000000001
+      ]
     },
     {
       "id": "wheel0_1",
-      "part": "r37.l3-vehicle-road-city_bus.wheel0_1"
+      "part": "r37.l3-vehicle-road-city_bus.wheel0_1",
+      "position": [
+        0,
+        0,
+        -0.7257600000000001
+      ]
     },
     {
       "id": "wheel1_-1",
-      "part": "r37.l3-vehicle-road-city_bus.wheel1_-1"
+      "part": "r37.l3-vehicle-road-city_bus.wheel1_-1",
+      "position": [
+        0,
+        0,
+        -0.36288000000000004
+      ]
     },
     {
       "id": "wheel1_1",
-      "part": "r37.l3-vehicle-road-city_bus.wheel1_1"
+      "part": "r37.l3-vehicle-road-city_bus.wheel1_1",
+      "position": [
+        0,
+        0,
+        -0.36288000000000004
+      ]
     },
     {
       "id": "wheel2_-1",
-      "part": "r37.l3-vehicle-road-city_bus.wheel2_-1"
+      "part": "r37.l3-vehicle-road-city_bus.wheel2_-1",
+      "position": [
+        0,
+        0,
+        0.6652800000000002
+      ]
     },
     {
       "id": "wheel2_1",
-      "part": "r37.l3-vehicle-road-city_bus.wheel2_1"
-    },
-    {
-      "id": "frame",
-      "part": "r37.l3-vehicle-road-city_bus.frame"
+      "part": "r37.l3-vehicle-road-city_bus.wheel2_1",
+      "position": [
+        0,
+        0,
+        0.6652800000000002
+      ]
     },
     {
       "id": "body",
-      "part": "r37.l3-vehicle-road-city_bus.body"
+      "part": "a411.l3-vehicle-road-city_bus.body"
     },
     {
       "id": "glazing",
-      "part": "r37.l3-vehicle-road-city_bus.glazing"
+      "part": "a411.l3-vehicle-road-city_bus.glazing"
     },
     {
+      "enabled": {
+        "$param": "detail"
+      },
       "id": "fittings",
-      "part": "r37.l3-vehicle-road-city_bus.fittings"
+      "part": "a411.l3-vehicle-road-city_bus.fittings"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "0551f12e5e44f48ee2d260207c03199b7f21ac33a30a6c8757f6cdeead80fdb4",
+      "change": "城市公交延长至实际三轴客车比例，形成连续车头/车厢、前中低位双扇乘客门和分区窗带。 保持轮径不变，客车轮位沿纵向迁移以匹配加长车身；无原动作被删除。detail仅控制次级饰件。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "vehicle",
@@ -90,9 +130,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        2.1,
-        2.45,
-        6.7
+        2.3,
+        2.7600000000000002,
+        8.8392
       ],
       "family": "road",
       "features": [
@@ -102,8 +142,8 @@
         "city"
       ],
       "footprint_m": [
-        2.1,
-        6.7
+        2.3,
+        8.8392
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [
@@ -193,10 +233,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-vehicle",
@@ -215,5 +255,5 @@
     "驾驶区",
     "city"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

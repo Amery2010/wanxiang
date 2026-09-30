@@ -1,6 +1,6 @@
 {
   "category": "robot",
-  "description": "清洁机器人；移动底盘 / 感知组件 / bumper / proximity / cleaner",
+  "description": "四个原轮胎内补入同轴轮毂、轴帽与贯通底盘的车轴/轴承座，底板连续支承上部机体；保留所有原L2传感器、关节、检修盖与控制世界轴。两片清洁刷翻转为刷毛朝地，并前移避开前轮，支臂接回机架。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -232,13 +232,13 @@
         0.0
       ],
       "position": [
-        -0.35,
-        0.02,
-        0.3
+        -0.27,
+        0.12,
+        0.62
       ],
       "role": "functional_subpart",
       "rotation": [
-        0,
+        180,
         0,
         0
       ],
@@ -258,13 +258,13 @@
         0.0
       ],
       "position": [
-        0.35,
-        0.02,
-        0.3
+        0.27,
+        0.12,
+        0.62
       ],
       "role": "functional_subpart",
       "rotation": [
-        0,
+        180,
         0,
         0
       ],
@@ -273,9 +273,46 @@
         0.461538478467592,
         3.8888887343583343
       ]
+    },
+    {
+      "id": "wheel0_hub",
+      "parent": "wheel0",
+      "part": "a411.l3-robot-mobile-cleaner.wheel0_hub"
+    },
+    {
+      "id": "wheel1_hub",
+      "parent": "wheel1",
+      "part": "a411.l3-robot-mobile-cleaner.wheel1_hub"
+    },
+    {
+      "id": "wheel2_hub",
+      "parent": "wheel2",
+      "part": "a411.l3-robot-mobile-cleaner.wheel2_hub"
+    },
+    {
+      "id": "wheel3_hub",
+      "parent": "wheel3",
+      "part": "a411.l3-robot-mobile-cleaner.wheel3_hub"
+    },
+    {
+      "id": "chassis_wheel_connections",
+      "part": "a411.l3-robot-mobile-cleaner.chassis_wheel_connections"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "ea944bae97df36c89474c9e373d5d37c89c0bf3fd07f506d4ddc405836a2af93",
+      "change": "四个原轮胎内补入同轴轮毂、轴帽与贯通底盘的车轴/轴承座，底板连续支承上部机体；保留所有原L2传感器、关节、检修盖与控制世界轴。两片清洁刷翻转为刷毛朝地，并前移避开前轮，支臂接回机架。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "sensor.pitch_cycle"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "robot",
@@ -356,10 +393,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/robot.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -396,5 +433,5 @@
     "proximity",
     "cleaner"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

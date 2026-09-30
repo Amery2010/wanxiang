@@ -66,11 +66,11 @@
     {
       "id": "shell",
       "params": {},
-      "part": "l1.robot.housing.compute",
+      "part": "a411.l2-robot-housing-compute.remaining_wrap__shell",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
@@ -84,9 +84,9 @@
         0
       ],
       "scale": [
-        0.9,
-        0.9777778036800439,
-        0.9714285879719018
+        1,
+        1,
+        1
       ]
     },
     {
@@ -265,11 +265,11 @@
       },
       "id": "serviceLid",
       "params": {},
-      "part": "l1.architecture.floor.plank",
+      "part": "a411.l2-robot-housing-compute.remaining__serviceLid",
       "pivot": [
-        0.0,
-        0.05000000074505806,
-        -0.6000000238418579
+        0,
+        0,
+        0
       ],
       "position": [
         0,
@@ -283,14 +283,15 @@
         0
       ],
       "scale": [
-        0.2999999880790715,
-        0.3499999947845937,
-        0.21666665805710722
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "heatsink",
       "params": {},
+      "parent": "serviceLid",
       "part": "l1.industry.power.transformer_fin",
       "pivot": [
         0.0,
@@ -299,8 +300,8 @@
       ],
       "position": [
         0,
-        0.28,
-        0
+        0.0040000000000000036,
+        0.13
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -411,6 +412,28 @@
       }
     ],
     "level": 2,
+    "motion_design_migration": {
+      "dependent_consumers": "Copied L3 body__lid axes must also use -X; inherited controls update from the L2 source.",
+      "from_axis": [
+        1,
+        0,
+        0
+      ],
+      "node": "serviceLid",
+      "preserved": [
+        "clip names",
+        "target paths",
+        "time/degrees samples",
+        "control names and 0-100 range",
+        "rest-world hinge frame"
+      ],
+      "reason": "Rear hinge with forward (+Z) cover: positive +X rotated into the case. Approved signed-axis correction; numeric range and samples retained.",
+      "to_axis": [
+        -1,
+        0,
+        0
+      ]
+    },
     "parameter_schema": {
       "additionalProperties": false,
       "properties": {
@@ -427,6 +450,11 @@
       "approval": "implemented; not external production certification",
       "review_scope": "L2",
       "status": "l2"
+    },
+    "remodel_closure": {
+      "before_sha256": "07ef1b29b3a56c988bd4d9f3457cceafb3223304edc50fde841359faae4d9cc8",
+      "change": "Replace the loose wooden service flap by a metal lid, move compute fins with that lid, and correct the approved lid-opening axis from +X to -X so unchanged positive 0-100 degree values lift away from the housing.",
+      "visual_status": "pending-actual-six-view-review"
     },
     "runtime": {
       "collision": {
@@ -462,16 +490,16 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l2_expansion/robot.py",
+      "authoring": "tools/aesthetic411/remaining_l2.py",
       "license": "project-authored",
-      "revision": "3.2.0",
+      "revision": "3.11.0",
       "type": "original_functional_recipe"
     },
     "source_bounds": "authoring/l1-bounds.json",
     "state_controls": [
       {
         "axis": [
-          1,
+          -1,
           0,
           0
         ],
@@ -499,5 +527,5 @@
     "compute",
     "functional-subassembly"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

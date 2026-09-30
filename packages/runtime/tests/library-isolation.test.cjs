@@ -42,6 +42,17 @@ const spec = {
   exports: [socket],
 };
 
+test("private nested assemblies build without weakening assembly validation", () => {
+  const wx = runtime(), input = data();
+  input.assemblies["test.private"] = { ...spec, id: "test.private", internal: true };
+  const library = new wx.WXRuntime.Library(input);
+  const built = library.buildSync({ ...spec, instances: [{ id: "private", assembly: "test.private" }] }, { noTextures: true });
+  assert.ok(built.report.triangles > 0);
+  wx.WXBuildExport.disposeBuild(built.root);
+  assert.throws(() => library.buildSync({ ...spec, internal: "yes" }), /internal flag must be boolean/);
+  assert.throws(() => library.buildSync({ ...spec, unexpected: true }), /Unknown assembly field/);
+});
+
 test("Library registries are isolated from construction and legacy singleton mutation", () => {
   const wx = runtime(),
     input = data(),

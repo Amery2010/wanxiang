@@ -2326,16 +2326,36 @@
             ]
           },
           {
-            "$op": "mul",
+            "$op": "add",
             "args": [
-              0.04,
               {
-                "$op": "div",
+                "$op": "mul",
                 "args": [
+                  0.04,
                   {
-                    "$param": "depth"
-                  },
-                  0.155
+                    "$op": "div",
+                    "args": [
+                      {
+                        "$param": "depth"
+                      },
+                      0.155
+                    ]
+                  }
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  0.007,
+                  {
+                    "$op": "div",
+                    "args": [
+                      {
+                        "$param": "depth"
+                      },
+                      0.155
+                    ]
+                  }
                 ]
               }
             ]
@@ -2347,7 +2367,7 @@
         "size": [
           0.12,
           0.12,
-          0.09
+          0.12
         ],
         "style_overrides": {
           "toon": {
@@ -2363,9 +2383,9 @@
     0.155
   ],
   "source": {
-    "authoring": "tools/game410/dungeon.py",
+    "authoring": "tools/aesthetic411/remaining_l1a.py",
     "license": "project-authored",
-    "revision": "3.10.0",
+    "revision": "3.11.0",
     "type": "original_game_asset_profiles"
   },
   "status": "implemented",
@@ -2381,5 +2401,5 @@
     "地牢与城堡"
   ],
   "theme": "l1-architecture",
-  "version": "3.10.0"
+  "version": "3.11.0"
 }

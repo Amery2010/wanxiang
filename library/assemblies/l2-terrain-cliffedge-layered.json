@@ -1,6 +1,6 @@
 {
   "category": "terrain",
-  "description": "层理岩壁剖面崖顶崖脚组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "description": "保留全部米制装配端口；柱岩与冰体重建为有连续岩基、宽窄高低与前后层级的簇群，层岩重建为连续错层地质实体。其余剖面保留端部主轮廓并加入嵌入主体的大破面岩块。取消悬空统一薄板帽，脚部用低土石坡过渡，detail 控制次级碎石。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -124,7 +124,7 @@
     {
       "id": "rockface",
       "params": {},
-      "part": "l1.terrain.cliff.layered",
+      "part": "a411.l2-terrain-cliffedge-layered.terrain__rockface",
       "pivot": [
         0.012499988079071045,
         0.0,
@@ -154,7 +154,7 @@
           "$param": "detail"
         }
       },
-      "part": "l1.terrain.edge.riprap",
+      "part": "a411.l2-terrain-cliffedge-layered.terrain__foot",
       "pivot": [
         0.0,
         0.0,
@@ -180,7 +180,7 @@
     {
       "id": "top",
       "params": {},
-      "part": "l1.terrain.surface.bedrock",
+      "part": "a411.l2-terrain-cliffedge-layered.terrain__top",
       "pivot": [
         0.0,
         0.0,
@@ -213,7 +213,7 @@
           "$param": "detail"
         }
       },
-      "part": "l1.nature.bark.moss_collar",
+      "part": "a411.l2-terrain-cliffedge-layered.terrain__moss",
       "pivot": [
         0.0,
         0.0,
@@ -403,6 +403,12 @@
       "review_scope": "L2",
       "status": "l2"
     },
+    "remodel_terrain": {
+      "cap_note": "Old separate cap plank removed. Layered, columnar, ice and pinnacle masses are fully redesigned, with public metric ports preserved; their old geometric cut profiles are not asserted byte-identical.",
+      "change": "保留全部米制装配端口；柱岩与冰体重建为有连续岩基、宽窄高低与前后层级的簇群，层岩重建为连续错层地质实体。其余剖面保留端部主轮廓并加入嵌入主体的大破面岩块。取消悬空统一薄板帽，脚部用低土石坡过渡，detail 控制次级碎石。",
+      "public_ports_retained": true,
+      "rockface_lateral_vertices_retained": false
+    },
     "runtime": {
       "collision": {
         "source": "L1 collider recipes; moving-node overrides explicit",
@@ -437,9 +443,9 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l2_expansion/terrain.py",
+      "authoring": "tools/aesthetic411/remaining_l2_terrain.py",
       "license": "project-authored",
-      "revision": "3.2.0",
+      "revision": "3.11.0",
       "type": "original_functional_recipe"
     },
     "source_bounds": "authoring/l1-bounds.json",
@@ -457,5 +463,5 @@
     "layered",
     "functional-subassembly"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

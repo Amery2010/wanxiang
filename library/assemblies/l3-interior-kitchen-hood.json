@@ -1,6 +1,6 @@
 {
   "category": "interior",
-  "description": "落地排烟工作站；基柜 / 功能台面 / 储物抽屉 / hood_filter",
+  "description": "连续金属烟罩与双后支柱/横托；底部滤网和烟道形成主次层次。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,15 +30,29 @@
   "id": "l3-interior-kitchen-hood",
   "instances": [
     {
-      "id": "structure",
-      "part": "r37.l3-interior-kitchen-hood.structure"
+      "id": "hood",
+      "part": "a411.l3-interior-kitchen-hood.hood"
     },
     {
-      "id": "functional_details",
-      "part": "r37.l3-interior-kitchen-hood.functional_details"
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-interior-kitchen-hood.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "96878211691d83824cec182ae8195cafc5a8bb4a9b61c77c2eef610f22400732",
+      "change": "连续金属烟罩与双后支柱/横托；底部滤网和烟道形成主次层次。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "interior",
@@ -132,10 +146,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3_props.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-interior",
@@ -154,5 +168,5 @@
     "储物抽屉",
     "hood_filter"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

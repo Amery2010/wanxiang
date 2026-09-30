@@ -66,11 +66,11 @@
     {
       "id": "shaft",
       "params": {},
-      "part": "l1.props.handle.wrapped",
+      "part": "a411.l2-props-tool-snip.remaining__shaft",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
@@ -84,9 +84,9 @@
         0
       ],
       "scale": [
-        0.5978260857945692,
-        0.8749999869614841,
-        0.5978260857945692
+        1,
+        1,
+        1
       ]
     },
     {
@@ -96,11 +96,11 @@
       },
       "id": "head",
       "params": {},
-      "part": "l1.props.toolhead.snip",
+      "part": "a411.l2-props-tool-snip.remaining_wrap__head",
       "pivot": [
-        0.03999999910593033,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
@@ -114,23 +114,23 @@
         0
       ],
       "scale": [
-        1.5000000335276134,
-        0.777777798381853,
-        1.3750000307336456
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "collar",
       "params": {},
-      "part": "l1.industry.pipe.socket",
+      "part": "a411.l2-props-tool-snip.remaining__collar",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
-        0.27999999999999997,
+        0,
         0
       ],
       "role": "functional_subpart",
@@ -140,9 +140,9 @@
         0
       ],
       "scale": [
-        0.2281250050989912,
-        0.15740740115259927,
-        0.2281250050989912
+        1,
+        1,
+        1
       ]
     },
     {
@@ -153,14 +153,14 @@
       "params": {},
       "part": "l1.props.fastener.eye_bolt",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0.16249999403953552,
+        0
       ],
       "position": [
-        0,
-        0.035,
-        0.027
+        -0.079,
+        0.02,
+        0.013
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -169,9 +169,9 @@
         0
       ],
       "scale": [
-        0.14666666083865718,
-        0.11076923483222208,
-        0.45833332934934234
+        0.12307692759135788,
+        0.12307692759135788,
+        0.12307692759135788
       ]
     },
     {
@@ -182,11 +182,11 @@
       },
       "id": "opposingHead",
       "params": {},
-      "part": "l1.props.toolhead.snip",
+      "part": "a411.l2-props-tool-snip.remaining_wrap__opposingHead",
       "pivot": [
-        0.03999999910593033,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
@@ -200,61 +200,62 @@
         0
       ],
       "scale": [
-        1.5000000335276134,
-        0.777777798381853,
-        1.3750000307336456
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "secondHandle",
       "params": {},
-      "part": "l1.props.handle.lever",
+      "parent": "opposingHead",
+      "part": "a411.l2-props-tool-snip.remaining__secondHandle",
       "pivot": [
-        0.022456711158156395,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
-        0.08,
         0,
+        -0.33,
         0
       ],
       "role": "functional_subpart",
       "rotation": [
         0,
-        0,
+        180,
         0
       ],
       "scale": [
-        0.36204000670036207,
-        0.7567708886767425,
-        0.44999999329447754
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "pivot",
       "params": {},
-      "part": "l1.props.fastener.clevis_pin",
+      "part": "a411.l2-props-tool-snip.remaining__pivot",
       "pivot": [
-        0.0,
-        0.0,
-        0.032499998807907104
+        0,
+        0,
+        0
       ],
       "position": [
         0,
-        0.36,
+        0,
         0
       ],
       "role": "functional_subpart",
       "rotation": [
-        90,
+        0,
         0,
         0
       ],
       "scale": [
-        0.40909091130761077,
-        0.16071428503004873,
-        0.5142857230439479
+        1,
+        1,
+        1
       ]
     }
   ],
@@ -371,6 +372,11 @@
       "review_scope": "L2",
       "status": "l2"
     },
+    "remodel_closure": {
+      "before_sha256": "d2bcfdf86ea73b72cd1ed135a4a886d5a163502b15d821607a7d5fbf51b95097",
+      "change": "Fit the existing public jaws at near-native slender proportions with content-only handed alignment, rebuild converging handles around the actual jaw pivot and parent the second grip to the moving jaw while retaining original clip values and jaw world axis.",
+      "visual_status": "pending-actual-six-view-review"
+    },
     "runtime": {
       "collision": {
         "source": "L1 collider recipes; moving-node overrides explicit",
@@ -405,9 +411,9 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l2_expansion/props.py",
+      "authoring": "tools/aesthetic411/remaining_l2.py",
       "license": "project-authored",
-      "revision": "3.2.0",
+      "revision": "3.11.0",
       "type": "original_functional_recipe"
     },
     "source_bounds": "authoring/l1-bounds.json",
@@ -442,5 +448,5 @@
     "snip",
     "functional-subassembly"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

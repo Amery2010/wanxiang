@@ -1,6 +1,6 @@
 {
   "category": "gameplay",
-  "description": "机关宝箱；完整安装结构 / 交互机构 / 稳定可寻址节点 / treasure",
+  "description": "机关宝箱：完整四壁与箱底、封闭拱盖端面，闭合盖边落座；原竖向抬升控制保留，双后导套与随盖伸缩杆贯穿全行程，前锁滑动机构保留原动作。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -31,86 +31,15 @@
   "instances": [
     {
       "id": "foundation",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#8F998C"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        2.8,
-        0.6818181855126846,
-        4.761904910578484
-      ]
+      "part": "a411.l3-gameplay-interactive-treasure.foundation"
     },
     {
       "id": "chest",
-      "params": {},
-      "part": "l1.props.container.trunk_shell",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0.15,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        2.0000000340597976,
-        2.0000000529819077,
-        2.285714324639769
-      ]
+      "part": "a411.l3-gameplay-interactive-treasure.chest"
     },
     {
       "id": "lid",
-      "params": {},
-      "part": "l1.props.container.chest_lid",
-      "pivot": [
-        0.0,
-        -0.03902721405029297,
-        0.0
-      ],
-      "position": [
-        0,
-        1.03,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.657186806429106,
-        1.2819022368245114,
-        1.428571422489322
-      ]
+      "part": "a411.l3-gameplay-interactive-treasure.lid"
     },
     {
       "assembly": "l2-gameplay-lock-latch",
@@ -121,28 +50,49 @@
         }
       },
       "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0.75,
-        0.46
-      ],
-      "rotation": [
         0,
         0,
         0
       ],
+      "position": [
+        0,
+        0.88,
+        0.467
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
       "scale": [
-        0.5681818212605705,
-        0.9677419280410433,
-        0.5357142834334957
+        0.6,
+        0.6,
+        0.6
       ]
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-gameplay-interactive-treasure.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "2a429ac5171ab70fa248e84ac270946b1d9a3eb94e854016c6cba1bdcbe6a185",
+      "change": "机关宝箱：完整四壁与箱底、封闭拱盖端面，闭合盖边落座；原竖向抬升控制保留，双后导套与随盖伸缩杆贯穿全行程，前锁滑动机构保留原动作。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "mechanism.release_cycle",
+        "open_inspect"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "gameplay",
@@ -238,10 +188,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/gameplay.py",
+      "authoring": "tools/aesthetic411/remaining_l3_mechanisms.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -293,5 +243,5 @@
     "稳定可寻址节点",
     "treasure"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

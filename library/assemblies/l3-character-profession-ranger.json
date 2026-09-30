@@ -1,6 +1,6 @@
 {
   "category": "wear",
-  "description": "巡林者；完整人体与蒙皮 / 骨骼挂接服饰 / explorer / quiver",
+  "description": "巡林者背负长包内移到背侧，双固定环与越肩斜背带连到躯干前胸，消除无支承悬包；不改变原人物骨帧/行走动作。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -66,7 +66,7 @@
       "position": [
         0.18,
         -0.2,
-        -0.2
+        -0.145
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -134,9 +134,50 @@
         0.7500000167638067,
         0.25000000558793556
       ]
+    },
+    {
+      "id": "quiver_sling",
+      "parent": "skin.rig.chest",
+      "part": "a411.l3-character-profession-ranger.quiver_sling"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "1cc9f866789b8385428eaf0ed413bedcb329b6e42404def168790606a7086b8c",
+      "change": "巡林者背负长包内移到背侧，双固定环与越肩斜背带连到躯干前胸，消除无支承悬包；不改变原人物骨帧/行走动作。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "character",
@@ -242,10 +283,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-character",
@@ -264,5 +305,5 @@
     "explorer",
     "quiver"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

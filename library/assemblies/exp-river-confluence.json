@@ -41,29 +41,64 @@
           "$param": "layout"
         }
       },
-      "part": "exp.terrain.water_channel",
+      "part": "a411.exp-river-confluence.remaining_water_detail",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
       "position": [
         0,
         0,
         0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "bank",
-      "part": "exp.terrain.river_bank",
+      "params": {
+        "layout": {
+          "$param": "layout"
+        }
+      },
+      "part": "a411.exp-river-confluence.remaining_layered_banks",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
       "position": [
         0,
         0,
-        -2
+        0
       ],
       "rotation": [
         0,
-        90,
+        0,
         0
+      ],
+      "scale": [
+        1,
+        1,
+        1
       ]
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "8af53fc803720135d5ea1397af7903b1c0a241638c5549f97d3aca447b9dee0b",
+      "change": "Author curved/T/Y water silhouettes with paired banks while preserving every exported river socket, exact 2 m flow-port frame and both confluence layout parameter branches.",
+      "visual_status": "pending-real-glb-review"
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "expansion-2.2",
     "interfaces": [],
@@ -88,6 +123,11 @@
       "review_scope": "A-C",
       "status": "expansion"
     },
+    "remodel_closure": {
+      "before_sha256": "ecf29f51ce1fead7f1fd089d4f143bbcfc73b8a1fdd9b9b905f9a2b00abefc75",
+      "change": "Keep the validated bend/T/Y water silhouettes and exact exported flow ports, but replace uniform rectangular bank strips by graded faceted shore cross-sections with sparse embedded stones/grass and restrained current highlights.",
+      "visual_status": "pending-actual-six-view-review"
+    },
     "runtime": {
       "collision": {
         "source": "authored child collider recipes",
@@ -104,6 +144,11 @@
       "units": "m",
       "up": "+Y"
     },
+    "source": {
+      "authoring": "tools/aesthetic411/remaining_l2.py",
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
+    },
     "theme": "shared",
     "units": "metres"
   },
@@ -117,5 +162,5 @@
     "河流",
     "汇流"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

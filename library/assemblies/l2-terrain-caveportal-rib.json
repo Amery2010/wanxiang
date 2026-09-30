@@ -1,6 +1,6 @@
 {
   "category": "terrain",
-  "description": "溶洞岩肋芯洞口框组；L1 实例组合，保留 BOM、维护节点和米制安装接口。",
+  "description": "洞口重建连续非对称岩壁与厚拱顶，保留中央通行净空和安装接口；前后错位岩肋形成可读厚度。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -66,7 +66,7 @@
     {
       "id": "archL",
       "params": {},
-      "part": "l1.terrain.cave.rib",
+      "part": "a411.l2-terrain-caveportal-rib.terrain__archL",
       "pivot": [
         0.0,
         -0.02033648081123829,
@@ -92,7 +92,7 @@
     {
       "id": "archR",
       "params": {},
-      "part": "l1.terrain.cave.rib",
+      "part": "a411.l2-terrain-caveportal-rib.terrain__archR",
       "pivot": [
         0.0,
         -0.02033648081123829,
@@ -118,7 +118,7 @@
     {
       "id": "lintel",
       "params": {},
-      "part": "l1.terrain.cliff.layered",
+      "part": "a411.l2-terrain-caveportal-rib.terrain__lintel",
       "pivot": [
         0.012499988079071045,
         0.0,
@@ -145,7 +145,7 @@
       "id": "floor",
       "material": "mat.stone",
       "params": {},
-      "part": "l1.architecture.floor.plank",
+      "part": "a411.l2-terrain-caveportal-rib.terrain__floor",
       "pivot": [
         0.0,
         0.0,
@@ -265,6 +265,12 @@
       "review_scope": "L2",
       "status": "l2"
     },
+    "remodel_terrain": {
+      "cap_note": "Old separate cap plank removed. Layered, columnar, ice and pinnacle masses are fully redesigned, with public metric ports preserved; their old geometric cut profiles are not asserted byte-identical.",
+      "change": "洞口重建连续非对称岩壁与厚拱顶，保留中央通行净空和安装接口；前后错位岩肋形成可读厚度。",
+      "public_ports_retained": true,
+      "rockface_lateral_vertices_retained": false
+    },
     "runtime": {
       "collision": {
         "source": "L1 collider recipes; moving-node overrides explicit",
@@ -284,9 +290,9 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l2_expansion/terrain.py",
+      "authoring": "tools/aesthetic411/remaining_l2_terrain.py",
       "license": "project-authored",
-      "revision": "3.2.0",
+      "revision": "3.11.0",
       "type": "original_functional_recipe"
     },
     "source_bounds": "authoring/l1-bounds.json",
@@ -304,5 +310,5 @@
     "rib",
     "functional-subassembly"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

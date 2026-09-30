@@ -595,16 +595,36 @@
             ]
           },
           {
-            "$op": "mul",
+            "$op": "add",
             "args": [
-              0.045,
               {
-                "$op": "div",
+                "$op": "mul",
                 "args": [
+                  0.045,
                   {
-                    "$param": "depth"
-                  },
-                  0.9
+                    "$op": "div",
+                    "args": [
+                      {
+                        "$param": "depth"
+                      },
+                      0.9
+                    ]
+                  }
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  -0.025,
+                  {
+                    "$op": "div",
+                    "args": [
+                      {
+                        "$param": "depth"
+                      },
+                      0.9
+                    ]
+                  }
                 ]
               }
             ]
@@ -640,9 +660,9 @@
     0.9
   ],
   "source": {
-    "authoring": "tools/l1_expansion/gameplay.py",
+    "authoring": "tools/aesthetic411/remaining_l1a.py",
     "license": "project-authored",
-    "revision": "3.1.0",
+    "revision": "3.11.0",
     "type": "original_semantic_profiles"
   },
   "status": "implemented",
@@ -655,5 +675,5 @@
     "trail_socket"
   ],
   "theme": "l1-gameplay",
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

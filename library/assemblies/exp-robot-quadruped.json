@@ -1,120 +1,302 @@
 {
   "category": "mech",
   "description": "",
+  "exports": [
+    {
+      "frame_node": "body",
+      "id": "leg0-1.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        -0.5,
+        0.91,
+        -0.43
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "frame_node": "body",
+      "id": "leg1-1.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        -0.5,
+        0.91,
+        0.43
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "frame_node": "body",
+      "id": "leg01.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0.5,
+        0.91,
+        -0.43
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "frame_node": "body",
+      "id": "leg11.mount",
+      "interface": "surface",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0.5,
+        0.91,
+        0.43
+      ],
+      "tangent": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
   "id": "exp-robot-quadruped",
   "instances": [
     {
       "id": "body",
-      "part": "exp.robot.chassis",
-      "position": [
-        0,
-        0.84,
-        0
-      ],
-      "rotation": [
-        90,
-        0,
-        0
-      ],
-      "scale": [
-        1.3,
-        1.55,
-        1.35
-      ]
+      "part": "a411.exp-robot-quadruped.body"
     },
     {
       "id": "head",
-      "part": "exp.robot.sensor",
+      "part": "a411.exp-robot-quadruped.head"
+    },
+    {
+      "id": "leg0-1.hip",
+      "part": "a411.exp-robot-quadruped.leg0-1.hip",
       "position": [
-        0,
-        1.1,
-        0.75
+        -0.5,
+        0.91,
+        -0.43
       ]
     },
     {
-      "assembly": "exp-robot-leg",
-      "id": "leg0-1",
+      "id": "leg0-1.upper",
+      "parent": "leg0-1.hip",
+      "part": "a411.exp-robot-quadruped.leg0-1.upper"
+    },
+    {
+      "id": "leg0-1.knee",
+      "parent": "leg0-1.hip",
+      "part": "a411.exp-robot-quadruped.leg0-1.knee",
       "position": [
-        -0.62,
-        1.02,
-        -0.45
-      ],
-      "rotation": [
-        0,
-        0,
-        -9
-      ],
-      "scale": [
-        0.66,
-        0.66,
-        0.66
+        -0.17000000000000004,
+        -0.37,
+        -0.10000000000000003
       ]
     },
     {
-      "assembly": "exp-robot-leg",
-      "id": "leg01",
+      "id": "leg0-1.lower",
+      "parent": "leg0-1.knee",
+      "part": "a411.exp-robot-quadruped.leg0-1.lower"
+    },
+    {
+      "id": "leg0-1.ankle",
+      "parent": "leg0-1.knee",
+      "part": "a411.exp-robot-quadruped.leg0-1.ankle",
       "position": [
-        0.62,
-        1.02,
-        -0.45
-      ],
-      "rotation": [
-        0,
-        0,
-        9
-      ],
-      "scale": [
-        0.66,
-        0.66,
-        0.66
+        0.040000000000000036,
+        -0.405,
+        0.020000000000000018
       ]
     },
     {
-      "assembly": "exp-robot-leg",
-      "id": "leg1-1",
+      "id": "leg1-1.hip",
+      "part": "a411.exp-robot-quadruped.leg1-1.hip",
       "position": [
-        -0.62,
-        1.02,
-        0.45
-      ],
-      "rotation": [
-        0,
-        0,
-        -9
-      ],
-      "scale": [
-        0.66,
-        0.66,
-        0.66
+        -0.5,
+        0.91,
+        0.43
       ]
     },
     {
-      "assembly": "exp-robot-leg",
-      "id": "leg11",
+      "id": "leg1-1.upper",
+      "parent": "leg1-1.hip",
+      "part": "a411.exp-robot-quadruped.leg1-1.upper"
+    },
+    {
+      "id": "leg1-1.knee",
+      "parent": "leg1-1.hip",
+      "part": "a411.exp-robot-quadruped.leg1-1.knee",
       "position": [
-        0.62,
-        1.02,
-        0.45
-      ],
-      "rotation": [
-        0,
-        0,
-        9
-      ],
-      "scale": [
-        0.66,
-        0.66,
-        0.66
+        -0.17000000000000004,
+        -0.37,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "leg1-1.lower",
+      "parent": "leg1-1.knee",
+      "part": "a411.exp-robot-quadruped.leg1-1.lower"
+    },
+    {
+      "id": "leg1-1.ankle",
+      "parent": "leg1-1.knee",
+      "part": "a411.exp-robot-quadruped.leg1-1.ankle",
+      "position": [
+        0.040000000000000036,
+        -0.405,
+        -0.020000000000000018
+      ]
+    },
+    {
+      "id": "leg01.hip",
+      "part": "a411.exp-robot-quadruped.leg01.hip",
+      "position": [
+        0.5,
+        0.91,
+        -0.43
+      ]
+    },
+    {
+      "id": "leg01.upper",
+      "parent": "leg01.hip",
+      "part": "a411.exp-robot-quadruped.leg01.upper"
+    },
+    {
+      "id": "leg01.knee",
+      "parent": "leg01.hip",
+      "part": "a411.exp-robot-quadruped.leg01.knee",
+      "position": [
+        0.17000000000000004,
+        -0.37,
+        -0.10000000000000003
+      ]
+    },
+    {
+      "id": "leg01.lower",
+      "parent": "leg01.knee",
+      "part": "a411.exp-robot-quadruped.leg01.lower"
+    },
+    {
+      "id": "leg01.ankle",
+      "parent": "leg01.knee",
+      "part": "a411.exp-robot-quadruped.leg01.ankle",
+      "position": [
+        -0.040000000000000036,
+        -0.405,
+        0.020000000000000018
+      ]
+    },
+    {
+      "id": "leg11.hip",
+      "part": "a411.exp-robot-quadruped.leg11.hip",
+      "position": [
+        0.5,
+        0.91,
+        0.43
+      ]
+    },
+    {
+      "id": "leg11.upper",
+      "parent": "leg11.hip",
+      "part": "a411.exp-robot-quadruped.leg11.upper"
+    },
+    {
+      "id": "leg11.knee",
+      "parent": "leg11.hip",
+      "part": "a411.exp-robot-quadruped.leg11.knee",
+      "position": [
+        0.17000000000000004,
+        -0.37,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "leg11.lower",
+      "parent": "leg11.knee",
+      "part": "a411.exp-robot-quadruped.leg11.lower"
+    },
+    {
+      "id": "leg11.ankle",
+      "parent": "leg11.knee",
+      "part": "a411.exp-robot-quadruped.leg11.ankle",
+      "position": [
+        -0.040000000000000036,
+        -0.405,
+        -0.020000000000000018
       ]
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "54e84ecaaa211272759d12f03d9f7ee6c30922e2e9bb32fd30eee538aa314fb7",
+      "change": "重塑低重心机体与连续髋-膝-踝四腿；保留四条Step片段名称和髋旋转通道，将原继承动作显式绑定到相同路径的新局部关节。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_leg_mount_compatibility": {
+      "behavior": "Static under all Step and hip/knee controls, matching the old unanimated leg-root mount semantics",
+      "frame": "Existing static body node at each real hip centre",
+      "geometry_unchanged": true,
+      "migration": "Installation centres now at x=+-0.50, y=0.91, z=+-0.43 with unit scale and downward normal; old centres were x=+-0.62,y=1.02,z=+-0.45 with scale0.66 and 9-degree tilt",
+      "motion_unchanged": true,
+      "paths": [
+        "leg0-1.mount",
+        "leg1-1.mount",
+        "leg01.mount",
+        "leg11.mount"
+      ]
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "leg0-1.Step",
+        "leg01.Step",
+        "leg1-1.Step",
+        "leg11.Step"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "expansion-3.0",
     "domain": "robotics",
     "interfaces": [],
-    "kinematics": "four independent forward-kinematic leg chains",
+    "kinematics": "Four editable forward-kinematic hip/knee chains; four inherited Step motion names explicitly preserved; no IK or dynamics added",
     "level": 3,
+    "production": {
+      "dimensions_design_m": [
+        1.54,
+        1.18,
+        1.57
+      ],
+      "footprint_m": [
+        1.54,
+        1.57
+      ]
+    },
     "quality": {
       "domain": "robotics",
       "review_scope": "D-E",
@@ -136,7 +318,134 @@
       "units": "m",
       "up": "+Y"
     },
+    "source": {
+      "authoring": "tools/aesthetic411/robot_hero.py",
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
+    },
     "stage": "E",
+    "state_controls": [
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg0-1.hip",
+        "max": 45,
+        "min": -45,
+        "mode": "rotation",
+        "node": "leg0-1.hip",
+        "title": "leg0-1髋关节",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg0-1.knee",
+        "max": 25,
+        "min": -75,
+        "mode": "rotation",
+        "node": "leg0-1.knee",
+        "title": "leg0-1膝关节",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg1-1.hip",
+        "max": 45,
+        "min": -45,
+        "mode": "rotation",
+        "node": "leg1-1.hip",
+        "title": "leg1-1髋关节",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg1-1.knee",
+        "max": 25,
+        "min": -75,
+        "mode": "rotation",
+        "node": "leg1-1.knee",
+        "title": "leg1-1膝关节",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg01.hip",
+        "max": 45,
+        "min": -45,
+        "mode": "rotation",
+        "node": "leg01.hip",
+        "title": "leg01髋关节",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg01.knee",
+        "max": 25,
+        "min": -75,
+        "mode": "rotation",
+        "node": "leg01.knee",
+        "title": "leg01膝关节",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg11.hip",
+        "max": 45,
+        "min": -45,
+        "mode": "rotation",
+        "node": "leg11.hip",
+        "title": "leg11髋关节",
+        "unit": "deg"
+      },
+      {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "default": 0,
+        "id": "leg11.knee",
+        "max": 25,
+        "min": -75,
+        "mode": "rotation",
+        "node": "leg11.knee",
+        "title": "leg11膝关节",
+        "unit": "deg"
+      }
+    ],
     "theme": "robotics",
     "units": "metres"
   },
@@ -150,5 +459,5 @@
     "D-E",
     "robotics"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

@@ -1,6 +1,6 @@
 {
   "category": "architecture",
-  "description": "塌落阶梯；结构性断口 / 独立残片 / 可拆地基 / rubble_wedge",
+  "description": "塌落阶梯将上半部踏步切出不规则断边与真实缺失段，最后平台由后端残墩承托，较大断踏块斜落在侧方；不再用完整等宽楼梯加四个方块暗示坍塌。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,15 +30,29 @@
   "id": "l3-architecture-ruin-stair",
   "instances": [
     {
-      "id": "ruin",
-      "part": "r37.l3-architecture-ruin-stair.ruin"
+      "id": "broken_stair_and_buttress",
+      "part": "a411.l3-architecture-ruin-stair.broken_stair_and_buttress"
     },
     {
-      "id": "ruin_detail",
-      "part": "r37.l3-architecture-ruin-stair.ruin.detail_group"
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-architecture-ruin-stair.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "400c0c0e82b2eccc134ea38e2a54b39def97bb0c37934752ca63feeace0d9ada",
+      "change": "塌落阶梯将上半部踏步切出不规则断边与真实缺失段，最后平台由后端残墩承托，较大断踏块斜落在侧方；不再用完整等宽楼梯加四个方块暗示坍塌。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "architecture",
@@ -58,9 +72,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        4,
-        2.3,
-        3.8
+        3.2,
+        2.12,
+        3.5
       ],
       "family": "ruin",
       "features": [
@@ -70,8 +84,8 @@
         "rubble_wedge"
       ],
       "footprint_m": [
-        4,
-        3.8
+        3.2,
+        3.5
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [],
@@ -135,10 +149,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-architecture",
@@ -157,5 +171,5 @@
     "可拆地基",
     "rubble_wedge"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

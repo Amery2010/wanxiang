@@ -1,6 +1,6 @@
 {
   "category": "mechanism",
-  "description": "蒸馏装置；整体撬装底座 / 主处理机构 / 可拆管路 / heat_tube / eccentric",
+  "description": "蒸馏装置：铜锅、密封接颈、连通上升汽管与水冷冷凝器、下接收集罐形成清晰流程，全部主部件实接于撬架。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -31,14 +31,32 @@
   "instances": [
     {
       "id": "frame",
-      "part": "r37.l3-industry-process-distiller.frame"
+      "part": "a411.l3-industry-process-distiller.frame"
     },
     {
       "id": "working_parts",
-      "part": "r37.l3-industry-process-distiller.working_parts"
+      "part": "a411.l3-industry-process-distiller.working_parts"
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-industry-process-distiller.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "bd2383cb055ef952bc26579e2751f6c4b53b0cfbe8b514d8b58a9125a4f83ef5",
+      "change": "蒸馏装置：铜锅、密封接颈、连通上升汽管与水冷冷凝器、下接收集罐形成清晰流程，全部主部件实接于撬架。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "industry",
@@ -138,10 +156,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3_mechanisms.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-industry",
@@ -161,5 +179,5 @@
     "heat_tube",
     "eccentric"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

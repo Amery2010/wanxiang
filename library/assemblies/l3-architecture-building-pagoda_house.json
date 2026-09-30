@@ -1,6 +1,6 @@
 {
   "category": "architecture",
-  "description": "双檐楼阁；可进入围护结构 / 分层楼板 / 独立屋顶 / traditional / hip",
+  "description": "双檐楼阁重排为两层连续墙柱和上下两道环绕主体的主檐，腰檐有真实中央开口及木托梁，不再将首层门雨篷冒充第二道檐；原行人门铰轴与控制保留。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,28 +30,31 @@
   "id": "l3-architecture-building-pagoda_house",
   "instances": [
     {
-      "id": "foundation",
-      "part": "r37.l3-architecture-building-pagoda_house.foundation"
+      "id": "floors",
+      "part": "a411.l3-architecture-building-pagoda_house.floors"
     },
     {
       "id": "walls",
-      "part": "r37.l3-architecture-building-pagoda_house.walls"
+      "part": "a411.l3-architecture-building-pagoda_house.walls"
     },
     {
-      "id": "frames",
-      "part": "r37.l3-architecture-building-pagoda_house.frames"
+      "id": "timber_frames",
+      "part": "a411.l3-architecture-building-pagoda_house.timber_frames"
     },
     {
-      "id": "glazing",
-      "part": "r37.l3-architecture-building-pagoda_house.glazing"
+      "id": "two_main_eaves",
+      "part": "a411.l3-architecture-building-pagoda_house.two_main_eaves"
     },
     {
-      "id": "roof",
-      "part": "r37.l3-architecture-building-pagoda_house.roof"
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-architecture-building-pagoda_house.detail"
     },
     {
       "id": "entrance",
-      "part": "r37.l3-architecture-building-pagoda_house.entrance",
+      "part": "a411.l3-architecture-building-pagoda_house.entrance",
       "position": [
         0.32499999999999996,
         0.27,
@@ -60,6 +63,19 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "94b701562ddf6e467f800af6bcb82383a6ad47c0cf51475c27911415c93519ae",
+      "change": "双檐楼阁重排为两层连续墙柱和上下两道环绕主体的主檐，腰檐有真实中央开口及木托梁，不再将首层门雨篷冒充第二道檐；原行人门铰轴与控制保留。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "open_inspect"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "architecture",
@@ -79,9 +95,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        4.0,
-        9.03,
-        5.4
+        4.54,
+        6.8,
+        4.54
       ],
       "family": "building",
       "features": [
@@ -92,8 +108,8 @@
         "hip"
       ],
       "footprint_m": [
-        4.0,
-        5.4
+        4.54,
+        4.54
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [
@@ -191,10 +207,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -231,5 +247,5 @@
     "traditional",
     "hip"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

@@ -1,6 +1,6 @@
 {
   "category": "animal",
-  "description": "长牙象；完整身体 / 四肢与识别特征 / heavy / elephant",
+  "description": "长牙象使用当前公共象体的胸肩/臀部和四肢承重塑形，完整复用具连续象鼻、耳与牙根的公共象头，并作轻微侧望姿态；头根与前胸实体交接，替代筒体加直柱。原模型无动作，未虚增行走。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,35 +30,46 @@
   "id": "l3-creature-mammal-elephant",
   "instances": [
     {
-      "id": "torso",
-      "part": "r37.l3-creature-mammal-elephant.torso"
-    },
-    {
-      "id": "leg0",
-      "part": "r37.l3-creature-mammal-elephant.leg0"
-    },
-    {
-      "id": "leg1",
-      "part": "r37.l3-creature-mammal-elephant.leg1"
-    },
-    {
-      "id": "leg2",
-      "part": "r37.l3-creature-mammal-elephant.leg2"
-    },
-    {
-      "id": "leg3",
-      "part": "r37.l3-creature-mammal-elephant.leg3"
+      "assembly": "exp-creature-elephant_body",
+      "id": "anatomy",
+      "position": [
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": "head",
-      "part": "r37.l3-creature-mammal-elephant.head"
-    },
-    {
-      "id": "tail",
-      "part": "r37.l3-creature-mammal-elephant.tail"
+      "part": "exp.creature.elephant_head",
+      "position": [
+        0,
+        1.95,
+        1.25
+      ],
+      "rotation": [
+        0,
+        10,
+        0
+      ],
+      "scale": [
+        1.18,
+        1.18,
+        1.18
+      ]
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "a339214bfada207c28dfe7f2d59832b0d0a6e57b719758ea968b2c778b0b19d1",
+      "change": "长牙象使用当前公共象体的胸肩/臀部和四肢承重塑形，完整复用具连续象鼻、耳与牙根的公共象头，并作轻微侧望姿态；头根与前胸实体交接，替代筒体加直柱。原模型无动作，未虚增行走。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "creature",
@@ -134,10 +145,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-creature",
@@ -156,5 +167,5 @@
     "heavy",
     "elephant"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

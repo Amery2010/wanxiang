@@ -1,6 +1,6 @@
 {
   "category": "robot",
-  "description": "八旋翼货运机；完整机身 / 旋翼支臂 / 起落架 / 8旋翼 / depth",
+  "description": "按当前旋翼子装配shaft安装根帧为每个机臂增加偏置电机座，真实连接桨轴而不平移旋翼本身；起落架重建连续滑橇/立柱/横联并接入机身底部，原传感器控制及全部子装配世界轴保留。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -528,58 +528,6 @@
       ]
     },
     {
-      "id": "skid0",
-      "params": {},
-      "part": "l1.interior.leg.sled",
-      "pivot": [
-        0.0,
-        -0.02500000037252903,
-        0.0
-      ],
-      "position": [
-        -0.22,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.10909090672642736,
-        0.2684563653951597,
-        1.0909090672642736
-      ]
-    },
-    {
-      "id": "skid1",
-      "params": {},
-      "part": "l1.interior.leg.sled",
-      "pivot": [
-        0.0,
-        -0.02500000037252903,
-        0.0
-      ],
-      "position": [
-        0.22,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.10909090672642736,
-        0.2684563653951597,
-        1.0909090672642736
-      ]
-    },
-    {
       "id": "cargo",
       "params": {},
       "part": "l1.props.container.case_foam",
@@ -604,9 +552,44 @@
         1.428571422489322,
         0.777777798381853
       ]
+    },
+    {
+      "id": "skid0",
+      "part": "a411.l3-robot-drone-octo.skid0",
+      "position": [
+        -0.22,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "skid1",
+      "part": "a411.l3-robot-drone-octo.skid1",
+      "position": [
+        0.22,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "motor_and_landing_mounts",
+      "part": "a411.l3-robot-drone-octo.motor_and_landing_mounts"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "7eb2c14eec9340cfb74385f27a78f02640657e47454360c82c3b3dc8b2203ec0",
+      "change": "按当前旋翼子装配shaft安装根帧为每个机臂增加偏置电机座，真实连接桨轴而不平移旋翼本身；起落架重建连续滑橇/立柱/横联并接入机身底部，原传感器控制及全部子装配世界轴保留。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "sensor.pitch_cycle"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "robot",
@@ -687,10 +670,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/robot.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -727,5 +710,5 @@
     "8旋翼",
     "depth"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

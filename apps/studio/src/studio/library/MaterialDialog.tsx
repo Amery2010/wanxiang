@@ -3,7 +3,12 @@ import { useRef } from "react";
 import { Download, FileJson, X } from "lucide-react";
 import type { MaterialDialogProps } from "./types";
 import { LibraryModal } from "./modal";
-import { materialName, materialPreview, readString } from "./utils";
+import {
+  hasMaterialImage,
+  materialName,
+  materialPreview,
+  readString,
+} from "./utils";
 
 export function MaterialDialog({ material, onClose }: MaterialDialogProps) {
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -13,7 +18,7 @@ export function MaterialDialog({ material, onClose }: MaterialDialogProps) {
       ? material.record
       : material;
   const preview = materialPreview(material);
-  const palette = readString((record as { kind?: unknown }).kind) === "palette";
+  const hasImage = hasMaterialImage(record);
   return (
     <LibraryModal
       title="材质详情"
@@ -26,9 +31,9 @@ export function MaterialDialog({ material, onClose }: MaterialDialogProps) {
           <span className="library-overline">材质角色</span>
           <h2 id="library-material-title">{materialName(material)}</h2>
           <p>
-            {palette
-              ? "纯色材质参数（没有伪造贴图）"
-              : "原创表面纹理 · 可平铺 · GLB 内嵌"}
+            {hasImage
+              ? "原始图片与可复用材质参数"
+              : "参数材质示意图 · 无贴图，模型颜色由顶点色提供"}
           </p>
         </div>
         <Button
@@ -51,9 +56,9 @@ export function MaterialDialog({ material, onClose }: MaterialDialogProps) {
             </div>
           )}
           <p>
-            {palette
-              ? "颜色与参数会在导出时保留。"
-              : "预览来源来自当前材质记录，未生成额外替代贴图。"}
+            {hasImage
+              ? "预览使用当前材质记录中的原图。"
+              : "这里是参数示意图，不会作为纹理导出。"}
           </p>
         </div>
         <div className="library-material-details">

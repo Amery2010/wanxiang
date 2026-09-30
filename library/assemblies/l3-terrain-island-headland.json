@@ -1,6 +1,6 @@
 {
   "category": "terrain",
-  "description": "岬角；独立水域 / 多片岸线 / headland / convex",
+  "description": "岛屿按具体地貌重建不对称岸线、宽窄变化的沙岸和主次地势；长主脊指向海端，岩角与宽陆根有明确方向。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -34,11 +34,29 @@
       "part": "r37.l3-terrain-island-headland.water"
     },
     {
-      "id": "island",
-      "part": "r37.l3-terrain-island-headland.island"
+      "id": "authored_landform",
+      "part": "a411.l3-terrain-island-headland.authored_landform"
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "secondary_landform",
+      "part": "a411.l3-terrain-island-headland.secondary_landform"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "07e724a607244c5dc9fe10bff8decde04dcc7664f251dd283eb5445ccfd2c3e9",
+      "change": "岛屿按具体地貌重建不对称岸线、宽窄变化的沙岸和主次地势；长主脊指向海端，岩角与宽陆根有明确方向。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "terrain",
@@ -135,10 +153,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3_islands.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-terrain",
@@ -157,5 +175,5 @@
     "headland",
     "convex"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

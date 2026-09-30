@@ -1,6 +1,6 @@
 {
   "category": "wear",
-  "description": "学者；完整人体与蒙皮 / 骨骼挂接服饰 / scribe / robe",
+  "description": "职业外衣改为贴合肩背和腰侧的开襟短外套，前后同一色系并有连贯肩片/翻领及明确短衣摆分缝，替代前腰白色细条和背后硬三角披风；衣摆止于大腿上段以适配原行走。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -50,62 +50,14 @@
     },
     {
       "id": "hat",
+      "params": {
+        "palette": {
+          "#B95343": "#5A6860",
+          "#D47E61": "#5A6860"
+        }
+      },
       "parent": "skin.rig.head",
       "part": "w.wear.cap"
-    },
-    {
-      "id": "cape",
-      "params": {},
-      "parent": "skin.rig.chest",
-      "part": "l1.character.clothing.cape_panel",
-      "pivot": [
-        0.01000000536441803,
-        0.3424999942071736,
-        0.01962687447667122
-      ],
-      "position": [
-        0,
-        -0.27,
-        -0.17
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.8333333320597298,
-        1.2587412803180298,
-        2.042683628272567
-      ]
-    },
-    {
-      "id": "skirt",
-      "params": {},
-      "parent": "skin.rig.pelvis",
-      "part": "l1.character.clothing.skirt_panel",
-      "pivot": [
-        0.0,
-        0.2991504773381166,
-        0.007250000722706318
-      ],
-      "position": [
-        0,
-        -0.16,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.6571428683339335,
-        0.8309801457416891,
-        5.050504887825304
-      ]
     },
     {
       "assembly": "l2-character-servicekit-scribe",
@@ -161,9 +113,63 @@
         1.7142857069871864,
         0.08163265147242933
       ]
+    },
+    {
+      "id": "cape",
+      "parent": "skin.rig.chest",
+      "part": "a411.l3-character-profession-scholar.cape"
+    },
+    {
+      "id": "skirt",
+      "parent": "skin.rig.pelvis",
+      "part": "a411.l3-character-profession-scholar.skirt"
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "coat_fasteners",
+      "parent": "skin.rig.chest",
+      "part": "a411.l3-character-profession-scholar.coat_fasteners"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "01ae40c519596af0f97c98e1119da7162947f430104246e2be224f39bb4ae078",
+      "change": "职业外衣改为贴合肩背和腰侧的开襟短外套，前后同一色系并有连贯肩片/翻领及明确短衣摆分缝，替代前腰白色细条和背后硬三角披风；衣摆止于大腿上段以适配原行走。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "character",
@@ -271,10 +277,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-character",
@@ -293,5 +299,5 @@
     "scribe",
     "robe"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

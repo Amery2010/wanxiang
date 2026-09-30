@@ -1,6 +1,6 @@
 {
   "category": "vehicle",
-  "description": "轮式装载机；底盘驾驶舱 / 工具臂 / 作业端 / hopper / loader",
+  "description": "装载机双举升臂重定端点到铲斗后上铰接点，加入真实横向销轴、叉耳和两段液压缸；铲斗重建有厚度后板/底板/侧颊的向前开放容积，连接不再悬空。当前仍为原合同中的静态工作姿态。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -38,15 +38,33 @@
       "part": "r37.l3-vehicle-utility-loader.body"
     },
     {
-      "id": "working_attachment",
-      "part": "r37.l3-vehicle-utility-loader.working_attachment"
-    },
-    {
       "id": "cab_glass",
       "part": "r37.l3-vehicle-utility-loader.cab_glass"
+    },
+    {
+      "id": "working_attachment",
+      "part": "a411.l3-vehicle-utility-loader.working_attachment"
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "service_fastener_caps",
+      "part": "a411.l3-vehicle-utility-loader.service_fastener_caps"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "1165e4662773a29179ca2f0bd6a52841f5f8ce80bed1f870ccb412864a181462",
+      "change": "装载机双举升臂重定端点到铲斗后上铰接点，加入真实横向销轴、叉耳和两段液压缸；铲斗重建有厚度后板/底板/侧颊的向前开放容积，连接不再悬空。当前仍为原合同中的静态工作姿态。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "vehicle",
@@ -151,10 +169,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-vehicle",
@@ -174,5 +192,5 @@
     "hopper",
     "loader"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

@@ -1,6 +1,6 @@
 {
   "category": "props",
-  "description": "公共信息终端；稳定接地 / 功能构造 / kiosk / keyboard_plate",
+  "description": "公共信息终端改为带嵌入屏幕、界面分区和低位操作板的封闭立式机体，顶面连续收口，移除刷毛阵列。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,95 +30,26 @@
   "id": "l3-props-street-kiosk",
   "instances": [
     {
-      "id": "footing",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#818F91"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.65,
-        0.45454545700845644,
-        1.190476227644621
-      ]
+      "id": "enclosure",
+      "part": "a411.l3-props-street-kiosk.enclosure"
     },
     {
-      "id": "upright",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#586E77"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0.1,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.1,
-        6.818181855126846,
-        0.2380952455289242
-      ]
-    },
-    {
-      "id": "function",
-      "params": {},
-      "part": "l1.props.device.keyboard_plate",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0.675,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.0483870887111304,
-        16.98113227599284,
-        1.739130403233837
-      ]
+      "id": "interface",
+      "part": "a411.l3-props-street-kiosk.interface"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "5228fc994881faf76564ee2faa502d195841245768f9840403123e5c30fe9850",
+      "change": "公共信息终端改为带嵌入屏幕、界面分区和低位操作板的封闭立式机体，顶面连续收口，移除刷毛阵列。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "props",
@@ -126,9 +57,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        0.65,
-        2.1,
-        0.6
+        0.64,
+        1.5,
+        0.46
       ],
       "family": "street",
       "features": [
@@ -138,8 +69,8 @@
         "keyboard_plate"
       ],
       "footprint_m": [
-        0.65,
-        0.6
+        0.64,
+        0.46
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [],
@@ -170,10 +101,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/props.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-props",
@@ -192,5 +123,5 @@
     "kiosk",
     "keyboard_plate"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

@@ -1,0 +1,639 @@
+{
+  "anchor": "origin",
+  "category": "terrain",
+  "connectors": [
+    {
+      "allowed_scale": "none",
+      "gender": "neutral",
+      "id": "north",
+      "interface": "terrain.river.2m.v1",
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "position": [
+        0,
+        0,
+        -2
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 2,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "enabled": {
+        "$switch": "layout",
+        "cases": {
+          "bend": false,
+          "straight": true,
+          "t": false,
+          "y": false
+        },
+        "default": null
+      },
+      "gender": "neutral",
+      "id": "south",
+      "interface": "terrain.river.2m.v1",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "position": [
+        0,
+        0,
+        2
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 2,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "enabled": {
+        "$switch": "layout",
+        "cases": {
+          "bend": true,
+          "straight": false,
+          "t": true,
+          "y": false
+        },
+        "default": null
+      },
+      "gender": "neutral",
+      "id": "east",
+      "interface": "terrain.river.2m.v1",
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "position": [
+        2,
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 2,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "enabled": {
+        "$switch": "layout",
+        "cases": {
+          "bend": false,
+          "straight": false,
+          "t": true,
+          "y": false
+        },
+        "default": null
+      },
+      "gender": "neutral",
+      "id": "west",
+      "interface": "terrain.river.2m.v1",
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "position": [
+        -2,
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 2,
+      "tangent": [
+        0,
+        0,
+        1
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "enabled": {
+        "$switch": "layout",
+        "cases": {
+          "y": true
+        },
+        "default": false
+      },
+      "gender": "neutral",
+      "id": "south-east",
+      "interface": "terrain.river.2m.v1",
+      "normal": [
+        0.7071067811865476,
+        0,
+        0.7071067811865476
+      ],
+      "position": [
+        1.5,
+        0,
+        1.5
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 2,
+      "tangent": [
+        0.7071067811865476,
+        0,
+        -0.7071067811865476
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "enabled": {
+        "$switch": "layout",
+        "cases": {
+          "y": true
+        },
+        "default": false
+      },
+      "gender": "neutral",
+      "id": "south-west",
+      "interface": "terrain.river.2m.v1",
+      "normal": [
+        -0.7071067811865476,
+        0,
+        0.7071067811865476
+      ],
+      "position": [
+        -1.5,
+        0,
+        1.5
+      ],
+      "profile": [
+        0,
+        0
+      ],
+      "span": 2,
+      "tangent": [
+        0.7071067811865476,
+        0,
+        0.7071067811865476
+      ],
+      "tolerance": 0.0001,
+      "version": 1
+    }
+  ],
+  "description": "Private editable art-directed geometry for exp-river-confluence",
+  "id": "a411.exp-river-confluence.water",
+  "internal": true,
+  "level": 1,
+  "material": "mat.matte",
+  "name": "water",
+  "parameter_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "layout": {
+        "default": "straight",
+        "enum": [
+          "straight",
+          "bend",
+          "t",
+          "y"
+        ],
+        "title": "河道结构",
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "quality": {
+    "review_scope": "current-source before/after required",
+    "status": "foundation"
+  },
+  "runtime": {
+    "collision": {
+      "static_only": true,
+      "type": "authored-mesh"
+    },
+    "forward": "+Z",
+    "lod": {
+      "levels": []
+    },
+    "origin": "authored",
+    "schema": "wx.runtime-metadata/1.0",
+    "triangle_budget": 30000,
+    "units": "m",
+    "up": "+Y"
+  },
+  "schema": "wx.part/1.0",
+  "shape": "faceted",
+  "shape_params": {
+    "forms": [
+      {
+        "color": "#669CAA",
+        "enabled": {
+          "$switch": "layout",
+          "cases": {
+            "t": true,
+            "y": false
+          },
+          "default": false
+        },
+        "faces": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            15,
+            14,
+            13,
+            12,
+            11,
+            10,
+            9,
+            8
+          ],
+          [
+            8,
+            9,
+            1,
+            0
+          ],
+          [
+            9,
+            10,
+            2,
+            1
+          ],
+          [
+            10,
+            11,
+            3,
+            2
+          ],
+          [
+            11,
+            12,
+            4,
+            3
+          ],
+          [
+            12,
+            13,
+            5,
+            4
+          ],
+          [
+            13,
+            14,
+            6,
+            5
+          ],
+          [
+            14,
+            15,
+            7,
+            6
+          ],
+          [
+            15,
+            8,
+            0,
+            7
+          ]
+        ],
+        "kind": "poly",
+        "points": [
+          [
+            -1.0,
+            -0.07,
+            -2.0
+          ],
+          [
+            1.0,
+            -0.07,
+            -2.0
+          ],
+          [
+            1.0,
+            -0.07,
+            -1.0
+          ],
+          [
+            2.0,
+            -0.07,
+            -1.0
+          ],
+          [
+            2.0,
+            -0.07,
+            1.0
+          ],
+          [
+            -2.0,
+            -0.07,
+            1.0
+          ],
+          [
+            -2.0,
+            -0.07,
+            -1.0
+          ],
+          [
+            -1.0,
+            -0.07,
+            -1.0
+          ],
+          [
+            -1.0,
+            0.0,
+            -2.0
+          ],
+          [
+            1.0,
+            0.0,
+            -2.0
+          ],
+          [
+            1.0,
+            0.0,
+            -1.0
+          ],
+          [
+            2.0,
+            0.0,
+            -1.0
+          ],
+          [
+            2.0,
+            0.0,
+            1.0
+          ],
+          [
+            -2.0,
+            0.0,
+            1.0
+          ],
+          [
+            -2.0,
+            0.0,
+            -1.0
+          ],
+          [
+            -1.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      },
+      {
+        "color": "#669CAA",
+        "enabled": {
+          "$switch": "layout",
+          "cases": {
+            "t": false,
+            "y": true
+          },
+          "default": false
+        },
+        "faces": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            17,
+            16,
+            15,
+            14,
+            13,
+            12,
+            11,
+            10,
+            9
+          ],
+          [
+            9,
+            10,
+            1,
+            0
+          ],
+          [
+            10,
+            11,
+            2,
+            1
+          ],
+          [
+            11,
+            12,
+            3,
+            2
+          ],
+          [
+            12,
+            13,
+            4,
+            3
+          ],
+          [
+            13,
+            14,
+            5,
+            4
+          ],
+          [
+            14,
+            15,
+            6,
+            5
+          ],
+          [
+            15,
+            16,
+            7,
+            6
+          ],
+          [
+            16,
+            17,
+            8,
+            7
+          ],
+          [
+            17,
+            9,
+            0,
+            8
+          ]
+        ],
+        "kind": "poly",
+        "points": [
+          [
+            -1.0,
+            -0.07,
+            -2.0
+          ],
+          [
+            1.0,
+            -0.07,
+            -2.0
+          ],
+          [
+            1.0,
+            -0.07,
+            0.0
+          ],
+          [
+            2.2071067811865475,
+            -0.07,
+            0.7928932188134524
+          ],
+          [
+            0.7928932188134524,
+            -0.07,
+            2.2071067811865475
+          ],
+          [
+            0.0,
+            -0.07,
+            1.4142135623730951
+          ],
+          [
+            -0.7928932188134524,
+            -0.07,
+            2.2071067811865475
+          ],
+          [
+            -2.2071067811865475,
+            -0.07,
+            0.7928932188134524
+          ],
+          [
+            -1.0,
+            -0.07,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            -2.0
+          ],
+          [
+            1.0,
+            0.0,
+            -2.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            2.2071067811865475,
+            0.0,
+            0.7928932188134524
+          ],
+          [
+            0.7928932188134524,
+            0.0,
+            2.2071067811865475
+          ],
+          [
+            0.0,
+            0.0,
+            1.4142135623730951
+          ],
+          [
+            -0.7928932188134524,
+            0.0,
+            2.2071067811865475
+          ],
+          [
+            -2.2071067811865475,
+            0.0,
+            0.7928932188134524
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "roundable": false,
+        "style_overrides": {
+          "toon": {
+            "smooth_angle": 65
+          }
+        }
+      }
+    ]
+  },
+  "size": [
+    1,
+    1,
+    1
+  ],
+  "source": {
+    "authoring": "tools/aesthetic411/",
+    "license": "project-authored",
+    "revision": "3.11.0",
+    "type": "original_aesthetic_refinement"
+  },
+  "tags": [
+    "aesthetic411-internal"
+  ],
+  "version": "3.11.0"
+}

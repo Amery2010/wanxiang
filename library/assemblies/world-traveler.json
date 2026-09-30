@@ -1,6 +1,6 @@
 {
   "category": "body",
-  "description": "",
+  "description": "背包按当前胸背厚度内移至贴背位置，增设从包体跨肩到胸前、侧腰返回包体的连续双肩带与胸扣；保留原共享背包、人物骨架、体格/身高参数及动作。",
   "id": "world-traveler",
   "instances": [
     {
@@ -154,9 +154,53 @@
       "part": "w.wear.backpack",
       "position": [
         0,
-        -0.02,
-        -0.19
+        {
+          "$op": "mul",
+          "args": [
+            -0.02,
+            {
+              "$op": "div",
+              "args": [
+                {
+                  "$param": "height"
+                },
+                1.82
+              ]
+            }
+          ]
+        },
+        {
+          "$op": "mul",
+          "args": [
+            -0.137,
+            {
+              "$param": "build"
+            }
+          ]
+        }
       ],
+      "scale": [
+        {
+          "$param": "build"
+        },
+        {
+          "$op": "div",
+          "args": [
+            {
+              "$param": "height"
+            },
+            1.82
+          ]
+        },
+        {
+          "$param": "build"
+        }
+      ]
+    },
+    {
+      "id": "load_bearing_shoulder_straps",
+      "parent": "skin.rig.chest",
+      "part": "a411.world-traveler.load_bearing_shoulder_straps",
       "scale": [
         {
           "$param": "build"
@@ -177,6 +221,42 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "5498ea530e1d2516bae9c99d3b71f830382cdfa888809c2759cb65262650eb77",
+      "change": "背包按当前胸背厚度内移至贴背位置，增设从包体跨肩到胸前、侧腰返回包体的连续双肩带与胸扣；保留原共享背包、人物骨架、体格/身高参数及动作。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "worlds-1.9",
     "level": 3,
@@ -208,6 +288,11 @@
       "review_scope": "P3-P4",
       "status": "worlds"
     },
+    "source": {
+      "authoring": "tools/aesthetic411/remaining_l3.py",
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
+    },
     "theme": "camp",
     "units": "metres"
   },
@@ -219,5 +304,5 @@
     "camp",
     "body"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

@@ -1,4 +1,9 @@
 {
+  "aesthetic411": {
+    "before_definition_sha256": "d0fb218ef44a9ee3af889310c77bf47bed72da26e2592d510a9363e3c4c89988",
+    "change": "Shape waist/chest/haunch transitions through rig-weighted private torso geometry; retain every bone, bind and component frame. Dog/fox neck now overlaps the unchanged head frame across body_length range.",
+    "visual_status": "pending-real-glb-review"
+  },
   "anchor": "base",
   "category": "animal",
   "connectors": [],
@@ -26,13 +31,18 @@
     "review_scope": "P3-P4",
     "status": "worlds"
   },
+  "remodel_closure": {
+    "before_sha256": "a16891dd1556fc290927ae6533a81b46625bbef0961eca5ae67ee3503ef33aaf",
+    "change": "Integrate shoulder/haunch roots with species-proportioned weighted upper sections instead of exposed flat limb caps; preserve the exact rig and original knee/foot geometry, consume the current public cow torso, and smooth the canine waist / sheep head contact.",
+    "visual_status": "pending-actual-six-view-review"
+  },
   "schema": "wx.part/1.0",
   "shape": "faceted",
   "shape_params": {
     "components": [
       {
         "id": "torso",
-        "part": "w.fauna.dog.torso",
+        "part": "a411.w.fauna.dog.body.remaining_sculpted_torso",
         "position": [
           0,
           0,
@@ -74,7 +84,7 @@
             "#D0783C": "#9B7854"
           }
         },
-        "part": "w.fauna.canine_leg",
+        "part": "a411.w.fauna.dog.body.remaining_integrated_FL",
         "position": [
           -0.1,
           0.46,
@@ -124,7 +134,7 @@
             "#D0783C": "#9B7854"
           }
         },
-        "part": "w.fauna.canine_leg",
+        "part": "a411.w.fauna.dog.body.remaining_integrated_FR",
         "position": [
           0.1,
           0.46,
@@ -174,7 +184,7 @@
             "#D0783C": "#9B7854"
           }
         },
-        "part": "w.fauna.canine_leg",
+        "part": "a411.w.fauna.dog.body.remaining_integrated_HL",
         "position": [
           -0.115,
           0.46,
@@ -224,7 +234,7 @@
             "#D0783C": "#9B7854"
           }
         },
-        "part": "w.fauna.canine_leg",
+        "part": "a411.w.fauna.dog.body.remaining_integrated_HR",
         "position": [
           0.115,
           0.46,
@@ -458,10 +468,10 @@
     1.6
   ],
   "source": {
-    "authoring": "tools/worlds/",
+    "authoring": "tools/aesthetic411/remaining_l2.py",
     "license": "project-authored",
-    "revision": "1.9.1",
-    "type": "original_authored_modular_profiles"
+    "revision": "3.11.0",
+    "type": "original_aesthetic_refinement"
   },
   "status": "implemented",
   "tags": [
@@ -470,5 +480,5 @@
     "animal"
   ],
   "theme": "camp",
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

@@ -1,6 +1,6 @@
 {
   "category": "architecture",
-  "description": "山麓石屋；可进入围护结构 / 分层楼板 / 独立屋顶 / chimney / pitched",
+  "description": "山麓石屋重建较大的墙体石质体块、厚窗门木框、分组红瓦/屋脊与烟囱，屋顶山墙封合并形成暖瓦冷石层级；保留原开门节点、尺寸和世界铰轴。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,32 +30,31 @@
   "id": "l3-architecture-building-cottage",
   "instances": [
     {
-      "id": "foundation",
-      "part": "r37.l3-architecture-building-cottage.foundation"
+      "id": "stone_foundation",
+      "part": "a411.l3-architecture-building-cottage.stone_foundation"
     },
     {
       "id": "walls",
-      "part": "r37.l3-architecture-building-cottage.walls"
+      "part": "a411.l3-architecture-building-cottage.walls"
     },
     {
-      "id": "frames",
-      "part": "r37.l3-architecture-building-cottage.frames"
-    },
-    {
-      "id": "glazing",
-      "part": "r37.l3-architecture-building-cottage.glazing"
+      "id": "timber_frames",
+      "part": "a411.l3-architecture-building-cottage.timber_frames"
     },
     {
       "id": "roof",
-      "part": "r37.l3-architecture-building-cottage.roof"
+      "part": "a411.l3-architecture-building-cottage.roof"
     },
     {
-      "id": "programme",
-      "part": "r37.l3-architecture-building-cottage.programme"
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-architecture-building-cottage.detail"
     },
     {
       "id": "entrance",
-      "part": "r37.l3-architecture-building-cottage.entrance",
+      "part": "a411.l3-architecture-building-cottage.entrance",
       "position": [
         0.32499999999999996,
         0.27,
@@ -64,6 +63,19 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "6ddbe59f73904f7fe03832d693a225b772de9933fbb254fb8cf146dbcb8e3008",
+      "change": "山麓石屋重建较大的墙体石质体块、厚窗门木框、分组红瓦/屋脊与烟囱，屋顶山墙封合并形成暖瓦冷石层级；保留原开门节点、尺寸和世界铰轴。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "open_inspect"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "architecture",
@@ -84,8 +96,8 @@
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
         4.0,
-        3.73,
-        5.4
+        4.66,
+        4.0
       ],
       "family": "building",
       "features": [
@@ -97,7 +109,7 @@
       ],
       "footprint_m": [
         4.0,
-        5.4
+        4.0
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [
@@ -174,10 +186,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -214,5 +226,5 @@
     "chimney",
     "pitched"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

@@ -47,6 +47,8 @@ def generate(include_l2=True, include_l34=True):
         repair_advanced()
         from game410 import author as expand_game410
         expand_game410()
+        from remodel411 import author as remodel_current
+        remodel_current()
     return {'parts':deepcopy(common.PARTS),'assemblies':deepcopy(common.ASSEMBLIES),'motions':deepcopy(common.MOTIONS),'materials':materials}
 if __name__=='__main__':
     import json

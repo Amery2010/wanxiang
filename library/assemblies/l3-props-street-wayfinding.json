@@ -1,6 +1,6 @@
 {
   "category": "props",
-  "description": "多向导视牌；稳定接地 / 功能构造 / wayfinding / arrow",
+  "description": "多向导视牌重建三块不同朝向的薄箭头字牌，各自固定同一连续木柱，留出平面标识区，不再用厚块/竖箭头互穿。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,173 +30,22 @@
   "id": "l3-props-street-wayfinding",
   "instances": [
     {
-      "id": "footing",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#818F91"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.65,
-        0.45454545700845644,
-        1.190476227644621
-      ]
-    },
-    {
-      "id": "upright",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#586E77"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0.1,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.1,
-        6.818181855126846,
-        0.2380952455289242
-      ]
-    },
-    {
-      "id": "function",
-      "params": {},
-      "part": "l1.props.sign.arrow",
-      "pivot": [
-        0.0,
-        -0.10000000149011612,
-        0.0
-      ],
-      "position": [
-        0,
-        0.675,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.928571444384906,
-        1.7999999731779102,
-        8.888888535676193
-      ]
-    },
-    {
-      "id": "arrow0",
-      "params": {},
-      "part": "l1.props.sign.arrow",
-      "pivot": [
-        0.0,
-        -0.10000000149011612,
-        0.0
-      ],
-      "position": [
-        0,
-        1.5,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.1428571623198844,
-        0.359999994635582,
-        1.3333332803514288
-      ]
-    },
-    {
-      "id": "arrow1",
-      "params": {},
-      "part": "l1.props.sign.arrow",
-      "pivot": [
-        0.0,
-        -0.10000000149011612,
-        0.0
-      ],
-      "position": [
-        0,
-        1.35,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        90,
-        0
-      ],
-      "scale": [
-        1.1428571623198844,
-        0.359999994635582,
-        1.3333332803514288
-      ]
-    },
-    {
-      "id": "arrow2",
-      "params": {},
-      "part": "l1.props.sign.arrow",
-      "pivot": [
-        0.0,
-        -0.10000000149011612,
-        0.0
-      ],
-      "position": [
-        0,
-        1.2,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        180,
-        0
-      ],
-      "scale": [
-        1.1428571623198844,
-        0.359999994635582,
-        1.3333332803514288
-      ]
+      "id": "direction_boards",
+      "part": "a411.l3-props-street-wayfinding.direction_boards"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "a0132cf4666efb1cc5c03e8effeb8e1a47a42f57829186865f7e9a93331af617",
+      "change": "多向导视牌重建三块不同朝向的薄箭头字牌，各自固定同一连续木柱，留出平面标识区，不再用厚块/竖箭头互穿。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "props",
@@ -204,9 +53,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        0.65,
-        2.1,
-        0.6
+        1.0,
+        2.02,
+        0.31
       ],
       "family": "street",
       "features": [
@@ -216,8 +65,8 @@
         "arrow"
       ],
       "footprint_m": [
-        0.65,
-        0.6
+        1.0,
+        0.31
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [],
@@ -248,10 +97,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/props.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-props",
@@ -270,5 +119,5 @@
     "wayfinding",
     "arrow"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

@@ -1,6 +1,6 @@
 {
   "category": "architecture",
-  "description": "双通道检查站；可进入围护结构 / 分层楼板 / 独立屋顶 / awning / flat",
+  "description": "双通道检查站重建中央值班亭、左右各2.8米宽贯通车道、跨车道雨棚及双向信号柱；不再由带普通门窗的实心平房代替通行结构。原行人门及其铰轴保持原位。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,24 +30,23 @@
   "id": "l3-architecture-building-checkpoint",
   "instances": [
     {
-      "id": "foundation",
-      "part": "r37.l3-architecture-building-checkpoint.foundation"
+      "id": "platform_canopy",
+      "part": "a411.l3-architecture-building-checkpoint.platform_canopy"
     },
     {
-      "id": "walls",
-      "part": "r37.l3-architecture-building-checkpoint.walls"
+      "id": "booth_walls",
+      "part": "a411.l3-architecture-building-checkpoint.booth_walls"
     },
     {
-      "id": "frames",
-      "part": "r37.l3-architecture-building-checkpoint.frames"
+      "id": "booth_windows",
+      "part": "a411.l3-architecture-building-checkpoint.booth_windows"
     },
     {
-      "id": "glazing",
-      "part": "r37.l3-architecture-building-checkpoint.glazing"
-    },
-    {
-      "id": "roof",
-      "part": "r37.l3-architecture-building-checkpoint.roof"
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-architecture-building-checkpoint.detail"
     },
     {
       "id": "entrance",
@@ -60,6 +59,19 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "937d454acdc0adbcaccffe75c276dc174bd7ca9c7038e4d3beb8902df3829063",
+      "change": "双通道检查站重建中央值班亭、左右各2.8米宽贯通车道、跨车道雨棚及双向信号柱；不再由带普通门窗的实心平房代替通行结构。原行人门及其铰轴保持原位。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "open_inspect"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "architecture",
@@ -79,9 +91,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        7.3999999999999995,
-        3.73,
-        3.7
+        7.8,
+        4.0,
+        4.2
       ],
       "family": "building",
       "features": [
@@ -92,8 +104,8 @@
         "flat"
       ],
       "footprint_m": [
-        7.3999999999999995,
-        3.7
+        7.8,
+        4.2
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [
@@ -173,10 +185,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -213,5 +225,5 @@
     "awning",
     "flat"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

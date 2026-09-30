@@ -1,22 +1,49 @@
 """Catalogue data for the Studio development server."""
 from __future__ import annotations
 from .paths import require_resources
-import base64,io
-from PIL import Image
+import base64
+from html import escape
 from .util import ROOT,read_json,read_data,safe_id
 
 LEAD_ASSEMBLIES=['exp-scene-medieval','exp-scene-castle','exp-scene-industrial','exp-scene-rail','exp-scene-airport','exp-scene-dungeon','exp-scene-forest','exp-scene-desert','exp-scene-snow','exp-scene-swamp','exp-scene-mountain','exp-scene-cave','world-scene-harbor','world-scene-space','world-scene-cyber','world-scene-cross-theme','world-rowboat','world-sailboat','world-habitat-docked','world-moon-rover','world-service-robot','world-astronaut','world-neon-kiosk','world-hovercar','world-treasure-chest','world-scene-camp','world-scene-farm','world-scene-city','world-scene-home','world-scene-construction','world-scene-depot','world-scene-outpost','fnd-adult','fnd-cat','fnd-horse']
+
+def _palette_preview(record):
+    name=escape(str(record['name']))
+    color=escape(str(record.get('displayColor','#B6BDB7')),quote=True)
+    rough=float(record.get('roughnessFactor',1))
+    metal=float(record.get('metallicFactor',0))
+    shine=max(0,min(1,(1-rough)*.55+metal*.1))
+    emissive=record.get('emissiveFactor') or [0,0,0]
+    accent='#%02x%02x%02x'%tuple(round(min(1,max(0,v))*255) for v in emissive) if any(emissive) else '#547362'
+    svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<rect width="256" height="256" fill="#eef1ef"/>
+<path d="M0 184 256 104v152H0Z" fill="#e1e8e3"/>
+<text x="18" y="28" fill="#607168" font-family="Arial,sans-serif" font-size="11" letter-spacing="1.3">MATERIAL ROLE / NO TEXTURE</text>
+<ellipse cx="128" cy="181" rx="68" ry="13" fill="#718078" opacity=".18"/>
+<path d="m128 58 65 35-65 36-65-36Z" fill="{color}" stroke="#899b90"/>
+<path d="m63 93 65 36v68l-65-36Z" fill="{color}" stroke="#899b90"/>
+<path d="m193 93-65 36v68l65-36Z" fill="{color}" stroke="#899b90"/>
+<path d="m128 58 65 35-65 36-65-36Z" fill="#fff" opacity="{shine:.2f}"/>
+<path d="m63 93 65 36v68l-65-36Z" fill="#27372d" opacity=".12"/>
+<path d="m193 93-65 36v68l65-36Z" fill="#fff" opacity=".14"/>
+<path d="m128 58 65 35-65 36" fill="none" stroke="{accent}" stroke-width="4" opacity=".85"/>
+<rect x="0" y="206" width="256" height="50" fill="#fff"/>
+<text x="18" y="230" fill="#263a30" font-family="Arial,sans-serif" font-size="19" font-weight="700" textLength="{min(210,max(0,len(name)*11))}" lengthAdjust="spacingAndGlyphs">{name}</text>
+<text x="18" y="246" fill="#66756b" font-family="Arial,sans-serif" font-size="10">ROUGH {rough:.2f}   METAL {metal:.2f}</text>
+</svg>'''
+    return 'data:image/svg+xml;base64,'+base64.b64encode(svg.encode()).decode()
 
 def _materials():
     mats=[]
     for p in sorted((ROOT/'library/materials').glob('*/material.json')):
         r=read_json(p);c=r.get('channels',{});m={'id':r['id'],'name':r['name'],'record':r,'files':{}}
-        if 'basecolor' in c:
-            m['preview']='data:image/png;base64,'+base64.b64encode((p.parent/c['basecolor']['file']).read_bytes()).decode();m['files']['basecolor.png']=base64.b64encode((p.parent/c['basecolor']['file']).read_bytes()).decode()
-        else:
-            im=Image.new('RGB',(8,8),r.get('displayColor','#ffffff'));bio=io.BytesIO();im.save(bio,format='PNG');m['preview']='data:image/png;base64,'+base64.b64encode(bio.getvalue()).decode()
-        if 'emissive' in c:
-            m['emissive']='data:image/png;base64,'+base64.b64encode((p.parent/c['emissive']['file']).read_bytes()).decode();m['files']['emissive.png']=base64.b64encode((p.parent/c['emissive']['file']).read_bytes()).decode()
+        for kind,channel in c.items():
+            file=channel['file'];encoded=base64.b64encode((p.parent/file).read_bytes()).decode()
+            m['files'][file]=encoded
+            if kind=='basecolor':m['preview']='data:image/png;base64,'+encoded
+            elif kind in ('normal','orm','emissive'):m[kind]='data:image/png;base64,'+encoded
+        if 'preview' not in m:
+            m['preview']=_palette_preview(r)
         mats.append(m)
     return mats
 
@@ -56,7 +83,7 @@ def bundle_data(thumbnails=True):
     registry={r['id']:r for r in read_json(ROOT/'library/registry.json')['records']}
     def row(d,part):return _asset_row(d,part,registry,preview_index,thumbnails)
     # Deliberately lead with the requested new domains rather than legacy final tanks.
-    items=[row(assemblies[k],False) for k in LEAD_ASSEMBLIES if k in assemblies]+[row(d,False) for k,d in assemblies.items() if k not in LEAD_ASSEMBLIES]+[row(d,True) for d in parts.values() if not d.get('internal')]
+    items=[row(assemblies[k],False) for k in LEAD_ASSEMBLIES if k in assemblies and not assemblies[k].get('internal')]+[row(d,False) for k,d in assemblies.items() if k not in LEAD_ASSEMBLIES and not d.get('internal')]+[row(d,True) for d in parts.values() if not d.get('internal')]
     items=sorted(items,key=lambda r:(0 if r['id']=='l3-architecture-building-cottage' else 1 if r['id'].startswith('l3-') else 2 if r['id'].startswith('l4-') else 3))
     return {'game_expansion':read_json(ROOT/'library/game-expansion.json'),'thumbnail_policy':read_json(ROOT/'authoring/thumbnail-policy.json'),'l3':read_json(ROOT/'library/l3.json'),'l4':read_json(ROOT/'library/l4.json'),'l2':read_json(ROOT/'library/l2.json'),'l1':read_json(ROOT/'library/l1.json'),'version':'3.10.0','title':'万象工坊 3D · LowPoly Studio','offline':True,'aliases':read_json(ROOT/'library/aliases.json'),'retired':read_json(ROOT/'library/retired.json'),'foundation':read_json(ROOT/'library/foundation.json'),'worlds':read_json(ROOT/'library/worlds.json'),'expansion':read_json(ROOT/'library/expansion.json'),'interfaces':read_json(ROOT/'library/interfaces.json'),'registry':registry,'build_context':build_context(),'parts':parts,'assemblies':assemblies,'motions':motions,'materials':mats,'assets':items,'architecture':'The browser and Node share geometry.js; compile definitions on demand, export an immutable recipe snapshot, independent of preview transforms.'}
 

@@ -230,7 +230,7 @@ export class Library {
       spec.max_triangles !== undefined &&
       (!Number.isFinite(spec.max_triangles) ||
         spec.max_triangles < 1 ||
-        spec.max_triangles > 400000)
+        spec.max_triangles > 500000)
     )
       fail("Invalid triangle budget");
     const style = Styles.resolve(spec.style || "lowpoly").id;
@@ -369,7 +369,7 @@ export class Library {
         ctx.geos.set(key, g);
       }
       ctx.triangles += (g.index?.count ?? g.attributes.position.count) / 3;
-      if (ctx.triangles > Math.min(400000, spec.max_triangles || 400000))
+      if (ctx.triangles > Math.min(500000, spec.max_triangles || 400000))
         fail("Expanded triangle budget");
       style = Styles.resolve(style).id;
       const defaultMat = d.material || "mat.matte",
@@ -549,10 +549,13 @@ export class Library {
               "style",
               "max_triangles",
               "metadata",
+              "internal",
             ].includes(k),
         )
       )
         fail("Unknown assembly field");
+      if (input.internal !== undefined && typeof input.internal !== "boolean")
+        fail("Assembly internal flag must be boolean");
       const items = expand(input.instances);
       if (!items.length) fail("Empty assembly");
       const root = new T.Group();
@@ -875,7 +878,7 @@ export class Library {
           });
         }
       });
-      if (report.triangles > Math.min(400000, spec.max_triangles || 400000))
+      if (report.triangles > Math.min(500000, spec.max_triangles || 400000))
         fail("Triangle budget");
       report.unique_gltf_meshes = gset.size;
       for (const [id, s] of out.sockets)

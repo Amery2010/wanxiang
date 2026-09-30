@@ -1,6 +1,6 @@
 {
   "category": "vehicle",
-  "description": "三厢轿车；独立底盘 / 接地车轮 / 驾驶区 / boot",
+  "description": "三厢轿车重塑连续低腰线、倾斜风挡/后窗和有余量的轮拱；前后灯、车门缝与把手形成完整层次。 保留原轮径/轴距；detail关闭仅移除灯具与次级门饰，主轮廓仍完整。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -46,23 +46,33 @@
       "part": "r37.l3-vehicle-road-sedan.wheel1_1"
     },
     {
-      "id": "frame",
-      "part": "r37.l3-vehicle-road-sedan.frame"
-    },
-    {
       "id": "body",
-      "part": "r37.l3-vehicle-road-sedan.body"
+      "part": "a411.l3-vehicle-road-sedan.body"
     },
     {
       "id": "glazing",
-      "part": "r37.l3-vehicle-road-sedan.glazing"
+      "part": "a411.l3-vehicle-road-sedan.glazing"
     },
     {
+      "enabled": {
+        "$param": "detail"
+      },
       "id": "fittings",
-      "part": "r37.l3-vehicle-road-sedan.fittings"
+      "part": "a411.l3-vehicle-road-sedan.fittings"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "4bf185fa51091cace398b43bcf2176c24d07631dbec6280ef988174434072a89",
+      "change": "三厢轿车重塑连续低腰线、倾斜风挡/后窗和有余量的轮拱；前后灯、车门缝与把手形成完整层次。 保留原轮径/轴距；detail关闭仅移除灯具与次级门饰，主轮廓仍完整。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "vehicle",
@@ -82,9 +92,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        2.1,
-        2.45,
-        4.3
+        1.96,
+        1.4,
+        4.28
       ],
       "family": "road",
       "features": [
@@ -94,8 +104,8 @@
         "boot"
       ],
       "footprint_m": [
-        2.1,
-        4.3
+        1.96,
+        4.28
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [
@@ -174,10 +184,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-vehicle",
@@ -196,5 +206,5 @@
     "驾驶区",
     "boot"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

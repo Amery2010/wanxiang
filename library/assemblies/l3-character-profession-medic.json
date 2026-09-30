@@ -1,6 +1,6 @@
 {
   "category": "wear",
-  "description": "战地医护；完整人体与蒙皮 / 骨骼挂接服饰 / medic / belt",
+  "description": "战地医护重建前髋可读的医疗肩挎箱、连续斜挎带及带医疗标识的低矮软帽，原器械服务包仍保留；职业关键装备从被手臂遮挡的小挂件提升为清楚主轮廓。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -51,11 +51,6 @@
       "id": "hair",
       "parent": "skin.rig.head",
       "part": "r37.l3-character-profession-medic.hair"
-    },
-    {
-      "id": "hat",
-      "parent": "skin.rig.head",
-      "part": "w.wear.cap"
     },
     {
       "id": "belt",
@@ -112,10 +107,56 @@
     {
       "id": "medical_case",
       "parent": "skin.rig.pelvis",
-      "part": "r37.l3-character-profession-medic.medical_case"
+      "part": "a411.l3-character-profession-medic.medical_case"
+    },
+    {
+      "id": "medical_sling",
+      "parent": "skin.rig.chest",
+      "part": "a411.l3-character-profession-medic.medical_sling"
+    },
+    {
+      "id": "hat",
+      "parent": "skin.rig.head",
+      "part": "a411.l3-character-profession-medic.hat"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "84c3a3f82d083a81846058f9c4a2ff66d2f2c20abdac0d044f97f49afd13ea1b",
+      "change": "战地医护重建前髋可读的医疗肩挎箱、连续斜挎带及带医疗标识的低矮软帽，原器械服务包仍保留；职业关键装备从被手臂遮挡的小挂件提升为清楚主轮廓。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "character",
@@ -191,10 +232,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-character",
@@ -213,5 +254,5 @@
     "medic",
     "belt"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

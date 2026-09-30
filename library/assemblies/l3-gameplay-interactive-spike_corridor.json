@@ -1,6 +1,6 @@
 {
   "category": "gameplay",
-  "description": "尖刺通道；完整安装结构 / 交互机构 / 稳定可寻址节点 / spike_corridor",
+  "description": "尖刺通道：有明确入口/出口的长底座、三列三组公共尖刺与真实穿刺孔，组间保留落脚段；九刺及承板共同绑定原 hazard 节点，原0–0.35米行程和继承曲线保留。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -25,43 +25,76 @@
       "tolerance": 0.0001,
       "units": "m",
       "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "frame_node": "mechanism.carrier",
+      "gender": "neutral",
+      "id": "mechanism.mount",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "position": [
+        0,
+        0,
+        -1.4
+      ],
+      "profile": [
+        1.38,
+        0.08
+      ],
+      "span": 1.38,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
+    },
+    {
+      "allowed_scale": "none",
+      "frame_node": "mechanism.mount",
+      "gender": "neutral",
+      "id": "mechanism.service",
+      "interface": "l2.gameplay.mount.v1",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "position": [
+        0.175,
+        0.395,
+        0
+      ],
+      "profile": [
+        0.15,
+        3.0
+      ],
+      "span": 0.15,
+      "tangent": [
+        1,
+        0,
+        0
+      ],
+      "tolerance": 0.0001,
+      "units": "m",
+      "version": 1
     }
   ],
   "id": "l3-gameplay-interactive-spike_corridor",
   "instances": [
     {
       "id": "foundation",
-      "material": "mat.paint",
-      "params": {
-        "palette": {
-          "#E5DCC8": "#8F998C"
-        }
-      },
-      "part": "l1.architecture.stair.closed_tread",
-      "pivot": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        2.8,
-        0.6818181855126846,
-        4.761904910578484
-      ]
+      "part": "a411.l3-gameplay-interactive-spike_corridor.foundation"
     },
     {
-      "assembly": "l2-gameplay-trap-spike",
+      "assembly": "a411.l3-gameplay-interactive-spike_corridor.array_mechanism",
       "id": "mechanism",
       "params": {
         "detail": {
@@ -69,13 +102,13 @@
         }
       },
       "pivot": [
-        0.0,
-        0.0,
-        -0.01000000536441803
+        0,
+        0,
+        0
       ],
       "position": [
         0,
-        0.15,
+        0.28,
         0
       ],
       "rotation": [
@@ -84,65 +117,70 @@
         0
       ],
       "scale": [
-        2.2499999664723878,
-        2.7272726189006504,
-        2.031249950814528
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "guard0",
-      "params": {},
-      "part": "l1.gameplay.cover.barricade_leg",
-      "pivot": [
-        0.0,
-        -0.03889087215065956,
-        0.0
-      ],
-      "position": [
-        -1.15,
-        0.15,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.4426203497914177,
-        0.8114706725048563,
-        4.545454570084564
-      ]
+      "part": "a411.l3-gameplay-interactive-spike_corridor.guard0"
     },
     {
       "id": "guard1",
-      "params": {},
-      "part": "l1.gameplay.cover.barricade_leg",
-      "pivot": [
-        0.0,
-        -0.03889087215065956,
-        0.0
-      ],
-      "position": [
-        1.15,
-        0.15,
-        0
-      ],
-      "role": "functional_subpart",
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.4426203497914177,
-        0.8114706725048563,
-        4.545454570084564
-      ]
+      "part": "a411.l3-gameplay-interactive-spike_corridor.guard1"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "9e90b0a3c4b109332340dea26f291cedff74e64a8485975e5cf581842c2ff680",
+      "change": "尖刺通道：有明确入口/出口的长底座、三列三组公共尖刺与真实穿刺孔，组间保留落脚段；九刺及承板共同绑定原 hazard 节点，原0–0.35米行程和继承曲线保留。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "mechanism.stroke_cycle"
+      ]
+    },
+    "aesthetic411_socket_compat": {
+      "aliases": {},
+      "authoring": "tools/aesthetic411/remaining_l3_socket_compat.py",
+      "dimensions_migrated_to_actual_carrier": true,
+      "geometry_unchanged": true,
+      "local_motion_unchanged": true,
+      "original_interface_type_and_version_preserved": true,
+      "original_interface_version_dimensions_preserved": false,
+      "restored_paths": [
+        "mechanism.mount",
+        "mechanism.service"
+      ],
+      "six_real_light_units_restored": false,
+      "world_frames_migrated_to_current_geometry": true
+    },
+    "aesthetic411_socket_dimensions": {
+      "all_positions_are_local_to_declared_real_carrier": true,
+      "authoring": "tools/aesthetic411/remaining_l3_socket_dimensions.py",
+      "changed_fields": {
+        "mechanism.mount": [
+          "span",
+          "profile"
+        ],
+        "mechanism.service": [
+          "span",
+          "profile",
+          "position"
+        ]
+      },
+      "geometry_and_motion_unchanged": true,
+      "legacy_nominal_l2_frames_unchanged": true,
+      "semantics": {
+        "mechanism.mount": "固定后横梁平底面：1.4×.10m横梁扣除两侧10mm倒角，实际平底X长1.38m、Z深.08m；保留后横梁中心Z=-1.4，不冒充整阵列外包",
+        "mechanism.service": "固定穿孔地板中X=.10至.25之间的连续纵向实体带，宽.15m、长3m；基准从厚板中面Y=.36迁至实际顶面Y=.395"
+      }
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "gameplay",
@@ -238,10 +276,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/gameplay.py",
+      "authoring": "tools/aesthetic411/remaining_l3_mechanisms.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
@@ -277,5 +315,5 @@
     "稳定可寻址节点",
     "spike_corridor"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

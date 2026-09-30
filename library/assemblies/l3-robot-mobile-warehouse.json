@@ -1,6 +1,6 @@
 {
   "category": "robot",
-  "description": "仓储搬运机器人；移动底盘 / 感知组件 / compute / lidar_dome / warehouse",
+  "description": "四个原轮胎内补入同轴轮毂、轴帽与贯通底盘的车轴/轴承座，底板连续支承上部机体；保留所有原L2传感器、关节、检修盖与控制世界轴。检修盖沿公共修正版−X轴向上开启，原0–100数值保持；传感立柱移至后铰链扫掠区外，货框有独立前置支承，不压在检修盖上。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -179,7 +179,7 @@
       "position": [
         0,
         0.45,
-        -0.15
+        -0.62
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -209,7 +209,7 @@
       "position": [
         0,
         0.9500000000000001,
-        -0.15
+        -0.62
       ],
       "rotation": [
         0,
@@ -233,8 +233,8 @@
       ],
       "position": [
         0,
-        0.62,
-        0.07
+        0.46,
+        0.64
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -247,9 +247,48 @@
         1.555555558131065,
         1.1
       ]
+    },
+    {
+      "id": "wheel0_hub",
+      "parent": "wheel0",
+      "part": "a411.l3-robot-mobile-warehouse.wheel0_hub"
+    },
+    {
+      "id": "wheel1_hub",
+      "parent": "wheel1",
+      "part": "a411.l3-robot-mobile-warehouse.wheel1_hub"
+    },
+    {
+      "id": "wheel2_hub",
+      "parent": "wheel2",
+      "part": "a411.l3-robot-mobile-warehouse.wheel2_hub"
+    },
+    {
+      "id": "wheel3_hub",
+      "parent": "wheel3",
+      "part": "a411.l3-robot-mobile-warehouse.wheel3_hub"
+    },
+    {
+      "id": "chassis_wheel_connections",
+      "part": "a411.l3-robot-mobile-warehouse.chassis_wheel_connections"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "6333e6027f79e88c56883594e7bbbf846195942dfddb9e2fd990e46d9d8bdc66",
+      "change": "四个原轮胎内补入同轴轮毂、轴帽与贯通底盘的车轴/轴承座，底板连续支承上部机体；保留所有原L2传感器、关节、检修盖与控制世界轴。",
+      "control_migration": "body__lid explicitly follows repaired public lid axis +X to -X; same 0--100 values, node, step and inherited animation. Rear sensor column / forward cargo clear lid sweep.",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "body.lid_cycle",
+        "sensor.aim_cycle"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "robot",
@@ -330,15 +369,15 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l34_expansion/robot.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.4.0",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [
       {
         "axis": [
-          1,
+          -1,
           0,
           0
         ],
@@ -386,5 +425,5 @@
     "lidar_dome",
     "warehouse"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

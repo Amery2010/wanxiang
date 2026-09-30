@@ -36,8 +36,10 @@
         "grip": false,
         "height": 1.82,
         "palette": {
+          "#624632": "#42545A",
           "#634530": "#42545A",
           "#707952": "#354F5B",
+          "#93724F": "#597786",
           "#DDAA85": "#425D69",
           "#EFE3CB": "#384E59",
           "#F8F3E7": "#597786"
@@ -139,8 +141,53 @@
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "5c53375c6a1cac45b9dcde693622141196556ad01551ddf64784df36e9a6a931",
+      "change": "保留当前公共短靴几何与足骨绑定，仅在该角色本地skin配色里将新靴面/鞋带颜色映射回原工作服指定色系；不改变公共靴或其它人物。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_inspection_motion_migration": {
+      "actual_pose_acceptance": "Required separately",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "clip": "Arm inspection",
+      "duration_and_other_tracks_unchanged": true,
+      "new_degrees": [
+        0,
+        25,
+        0
+      ],
+      "previous_degrees": [
+        0,
+        -45,
+        0
+      ],
+      "reason": "Original inward sweep intersects torso and hides a geometrically connected elbow. Modest outward lift keeps inspection visible.",
+      "target": "skin.rig.armR"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": [
+        "Arm inspection",
+        "Walk inspection"
+      ]
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
+    "dependency_regression_repair": {
+      "cause": "new fixed form colours #624632/#93724F bypassed role old #634530 mapping",
+      "maps": {
+        "#624632": "#42545A",
+        "#93724F": "#597786"
+      },
+      "scope": "per-instance palette-only; geometry, nodes, parameters, connectors, skin weights and motions retained",
+      "shared_root": "core.human.boot"
+    },
     "domain": "character",
     "level": 3,
     "production": {
@@ -214,10 +261,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3_dependency_regressions.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-character",
@@ -236,5 +283,5 @@
     "diver",
     "belt"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

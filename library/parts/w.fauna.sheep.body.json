@@ -1,4 +1,9 @@
 {
+  "aesthetic411": {
+    "before_definition_sha256": "b767f652472cbe6836aa5c87fde97b7ace719eca47a33bbe14f07924fd8b6648",
+    "change": "Shape waist/chest/haunch transitions through rig-weighted private torso geometry; retain every bone, bind and component frame. Dog/fox neck now overlaps the unchanged head frame across body_length range.",
+    "visual_status": "pending-real-glb-review"
+  },
   "anchor": "base",
   "category": "animal",
   "connectors": [],
@@ -26,13 +31,18 @@
     "review_scope": "P3-P4",
     "status": "worlds"
   },
+  "remodel_closure": {
+    "before_sha256": "30d5d5624d27d7bdda98301b2e51ff11dd88fb8c6cc7e553275fb549a65688b4",
+    "change": "Integrate shoulder/haunch roots with species-proportioned weighted upper sections instead of exposed flat limb caps; preserve the exact rig and original knee/foot geometry, consume the current public cow torso, and smooth the canine waist / sheep head contact.",
+    "visual_status": "pending-actual-six-view-review"
+  },
   "schema": "wx.part/1.0",
   "shape": "faceted",
   "shape_params": {
     "components": [
       {
         "id": "torso",
-        "part": "w.fauna.sheep.torso",
+        "part": "a411.w.fauna.sheep.body.remaining_sculpted_torso",
         "position": [
           0,
           0,
@@ -77,7 +87,7 @@
           },
           "thickness": 0.0504
         },
-        "part": "w.fauna.hoofleg",
+        "part": "a411.w.fauna.sheep.body.remaining_integrated_FL",
         "position": [
           -0.15400000000000003,
           0.65,
@@ -124,7 +134,7 @@
           },
           "thickness": 0.0504
         },
-        "part": "w.fauna.hoofleg",
+        "part": "a411.w.fauna.sheep.body.remaining_integrated_FR",
         "position": [
           0.15400000000000003,
           0.65,
@@ -171,7 +181,7 @@
           },
           "thickness": 0.0504
         },
-        "part": "w.fauna.hoofleg",
+        "part": "a411.w.fauna.sheep.body.remaining_integrated_HL",
         "position": [
           -0.16240000000000002,
           0.65,
@@ -218,7 +228,7 @@
           },
           "thickness": 0.0504
         },
-        "part": "w.fauna.hoofleg",
+        "part": "a411.w.fauna.sheep.body.remaining_integrated_HR",
         "position": [
           0.16240000000000002,
           0.65,
@@ -457,10 +467,10 @@
     1.545
   ],
   "source": {
-    "authoring": "tools/worlds/",
+    "authoring": "tools/aesthetic411/remaining_l2.py",
     "license": "project-authored",
-    "revision": "1.9.1",
-    "type": "original_authored_modular_profiles"
+    "revision": "3.11.0",
+    "type": "original_aesthetic_refinement"
   },
   "status": "implemented",
   "tags": [
@@ -469,5 +479,5 @@
     "animal"
   ],
   "theme": "farm",
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

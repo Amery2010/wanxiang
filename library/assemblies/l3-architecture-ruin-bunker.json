@@ -1,6 +1,6 @@
 {
   "category": "architecture",
-  "description": "废弃掩体；结构性断口 / 独立残片 / 可拆地基 / exposed_rebar",
+  "description": "废弃掩体重建低矮厚壁围护、水平射孔与侧入口，厚顶板/侧墙有有目的坍塌缺口，后缘覆土与混凝土碎块顺断口布置，摆脱通用薄墙模板。",
   "exports": [
     {
       "allowed_scale": "none",
@@ -30,15 +30,37 @@
   "id": "l3-architecture-ruin-bunker",
   "instances": [
     {
-      "id": "ruin",
-      "part": "r37.l3-architecture-ruin-bunker.ruin"
+      "id": "slab",
+      "part": "a411.l3-architecture-ruin-bunker.slab"
     },
     {
-      "id": "ruin_detail",
-      "part": "r37.l3-architecture-ruin-bunker.ruin.detail_group"
+      "id": "armored_shell",
+      "part": "a411.l3-architecture-ruin-bunker.armored_shell"
+    },
+    {
+      "id": "broken_roof",
+      "part": "a411.l3-architecture-ruin-bunker.broken_roof"
+    },
+    {
+      "enabled": {
+        "$param": "detail"
+      },
+      "id": "detail",
+      "part": "a411.l3-architecture-ruin-bunker.detail"
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "7ec87d206800e92d2f27dd31cdba4ac6cb67922c11c0bd118f3d4b4c29e85db3",
+      "change": "废弃掩体重建低矮厚壁围护、水平射孔与侧入口，厚顶板/侧墙有有目的坍塌缺口，后缘覆土与混凝土碎块顺断口布置，摆脱通用薄墙模板。",
+      "generated_art_is_not_model_evidence": true,
+      "reference": "user-provided lowpoly art direction, 2026-09-30",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_motion_contract": {
+      "actual_runtime_pose_validation": "required separately",
+      "preserved_clip_names": []
+    },
     "art_direction": "designed-faceted-surfaces",
     "collection": "l3-3.4",
     "domain": "architecture",
@@ -58,9 +80,9 @@
     "production": {
       "counting": "distinct functional topology; excludes palette, scale, handedness, seed and LOD",
       "dimensions_design_m": [
-        4,
-        2.3,
-        3.8
+        5.2,
+        2.5,
+        4.2
       ],
       "family": "ruin",
       "features": [
@@ -70,8 +92,8 @@
         "exposed_rebar"
       ],
       "footprint_m": [
-        4,
-        3.8
+        5.2,
+        4.2
       ],
       "interaction_contract": "rigid and inherited clips are previews; consumer owns physics and gameplay",
       "notes": [],
@@ -133,10 +155,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/repair37/__init__.py",
+      "authoring": "tools/aesthetic411/remaining_l3.py",
       "license": "project-authored",
-      "revision": "3.7.1",
-      "type": "original_production_prefab"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "state_controls": [],
     "theme": "l3-architecture",
@@ -155,5 +177,5 @@
     "可拆地基",
     "exposed_rebar"
   ],
-  "version": "3.7.1"
+  "version": "3.11.0"
 }

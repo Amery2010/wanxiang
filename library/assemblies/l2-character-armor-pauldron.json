@@ -71,39 +71,39 @@
       "params": {},
       "part": "l1.character.armor.pauldron",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
-        0.08,
-        0
+        0.12,
+        0.04
       ],
       "role": "functional_subpart",
       "rotation": [
-        0,
+        -55,
         0,
         0
       ],
       "scale": [
-        0.8260869415360725,
-        1.68,
-        0.5294117591372823
+        1.0,
+        1.0,
+        1.0
       ]
     },
     {
       "id": "lining",
       "params": {},
-      "part": "l1.character.clothing.cuff",
+      "part": "a411.l2-character-armor-pauldron.lining",
       "pivot": [
-        0.0,
-        0.0,
-        0.0
+        0,
+        0,
+        0
       ],
       "position": [
         0,
-        0.075,
+        0,
         0
       ],
       "role": "functional_subpart",
@@ -113,23 +113,23 @@
         0
       ],
       "scale": [
-        1.8888888138311912,
-        0.461538478467592,
-        0.9346330909376416
+        1,
+        1,
+        1
       ]
     },
     {
       "id": "strap",
       "params": {},
-      "part": "l1.character.clothing.belt",
+      "part": "a411.l2-character-armor-pauldron.strap",
       "pivot": [
-        0.0,
-        0.0,
-        0.009000003337860107
+        0,
+        0,
+        0
       ],
       "position": [
         0,
-        0.18,
+        0,
         0
       ],
       "role": "functional_subpart",
@@ -139,9 +139,9 @@
         0
       ],
       "scale": [
-        0.8,
-        0.692307717701388,
-        0.5830903879254543
+        1,
+        1,
+        1
       ]
     },
     {
@@ -150,16 +150,16 @@
       },
       "id": "rivet0",
       "params": {},
-      "part": "l1.props.fastener.rivet",
+      "part": "a411.l2-character-armor-pauldron.rivet0",
       "pivot": [
-        -0.0012435317039489746,
-        0.0,
-        -0.0006218906491994858
+        0,
+        0,
+        0
       ],
       "position": [
-        -0.14,
-        0.31,
-        0.082
+        0,
+        0,
+        0
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -168,9 +168,9 @@
         0
       ],
       "scale": [
-        0.27368421396060005,
-        0.08124052063549349,
-        0.27368420322846193
+        1,
+        1,
+        1
       ]
     },
     {
@@ -179,16 +179,16 @@
       },
       "id": "rivet1",
       "params": {},
-      "part": "l1.props.fastener.rivet",
+      "part": "a411.l2-character-armor-pauldron.rivet1",
       "pivot": [
-        -0.0012435317039489746,
-        0.0,
-        -0.0006218906491994858
+        0,
+        0,
+        0
       ],
       "position": [
-        0.14,
-        0.31,
-        0.082
+        0,
+        0,
+        0
       ],
       "role": "functional_subpart",
       "rotation": [
@@ -197,13 +197,52 @@
         0
       ],
       "scale": [
-        0.27368421396060005,
-        0.08124052063549349,
-        0.27368420322846193
+        1,
+        1,
+        1
       ]
     }
   ],
   "metadata": {
+    "aesthetic411": {
+      "before_definition_sha256": "84e05f4a371f7bd89d54f9bbfc22edd8537445411079cba5d56e8923dc655aac",
+      "change": "按当前公共甲片恢复等比比例，内衬贴合甲面、窄束带按实际横截面生成；两铆钉使用分散真实表面落点，面甲附件随shell抬起。",
+      "visual_status": "pending-real-glb-review"
+    },
+    "aesthetic411_surface_bindings": [
+      {
+        "default_surface_point": [
+          -0.12076894211796603,
+          0.3031003096213039,
+          0.045416547732958286
+        ],
+        "node": "rivet0",
+        "normal": [
+          -0.4589518241724054,
+          0.1646620536921006,
+          0.8730690872793064
+        ],
+        "owner": "shell",
+        "previous_gap_m": 0.04190212756363253,
+        "stem_overlap_m": 0.018
+      },
+      {
+        "default_surface_point": [
+          0.12121275746208769,
+          0.3048487715909388,
+          0.04626082252827382
+        ],
+        "node": "rivet1",
+        "normal": [
+          0.4615619910431476,
+          0.12655456148002198,
+          0.8780344363365739
+        ],
+        "owner": "shell",
+        "previous_gap_m": 0.04070361707092137,
+        "stem_overlap_m": 0.018
+      }
+    ],
     "art_direction": "designed-faceted-surfaces",
     "collection": "l2-3.2",
     "domain": "character",
@@ -345,10 +384,10 @@
       "up": "+Y"
     },
     "source": {
-      "authoring": "tools/l2_expansion/character.py",
+      "authoring": "tools/aesthetic411/remaining_l2_wear.py",
       "license": "project-authored",
-      "revision": "3.2.0",
-      "type": "original_functional_recipe"
+      "revision": "3.11.0",
+      "type": "original_aesthetic_refinement"
     },
     "source_bounds": "authoring/l1-bounds.json",
     "state_controls": [],
@@ -365,5 +404,5 @@
     "pauldron",
     "functional-subassembly"
   ],
-  "version": "3.4.0"
+  "version": "3.11.0"
 }

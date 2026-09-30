@@ -1676,16 +1676,36 @@
             ]
           },
           {
-            "$op": "mul",
+            "$op": "add",
             "args": [
-              0.102,
               {
-                "$op": "div",
+                "$op": "mul",
                 "args": [
+                  0.102,
                   {
-                    "$param": "depth"
-                  },
-                  0.13
+                    "$op": "div",
+                    "args": [
+                      {
+                        "$param": "depth"
+                      },
+                      0.13
+                    ]
+                  }
+                ]
+              },
+              {
+                "$op": "mul",
+                "args": [
+                  -0.006,
+                  {
+                    "$op": "div",
+                    "args": [
+                      {
+                        "$param": "depth"
+                      },
+                      0.13
+                    ]
+                  }
                 ]
               }
             ]
@@ -1713,9 +1733,9 @@
     0.13
   ],
   "source": {
-    "authoring": "tools/game410/equipment.py",
+    "authoring": "tools/aesthetic411/remaining_l1a.py",
     "license": "project-authored",
-    "revision": "3.10.0",
+    "revision": "3.11.0",
     "type": "original_game_asset_profiles"
   },
   "status": "implemented",
@@ -1731,5 +1751,5 @@
     "冒险装备"
   ],
   "theme": "l1-character",
-  "version": "3.10.0"
+  "version": "3.11.0"
 }
